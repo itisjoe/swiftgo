@@ -1,2 +1,4 @@
-# First Chapter
+# 第 1 章 基本語法
+
+介紹 Swift 的基本語法
 
