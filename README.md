@@ -1,4 +1,9 @@
-My Awesome Book
+Swift 起步走
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+version 1.0.0
+
+使用 Swift 2.1 版本
+
+適合完全未接觸過程式的朋友，進入程式領域的第一本書
+
