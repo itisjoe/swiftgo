@@ -1,7 +1,7 @@
 Swift 起步走
 =======
 
-version 1.0.0
+Version 1.0.0
 
 使用 Swift 2.1 版本
 
