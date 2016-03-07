@@ -62,7 +62,7 @@ print(string) // 印出 My score is 80 .
 元組是將多個值組合成一個複合值，其內的型別可以不同，以小括弧 `()` 前後包起來，每個值以逗號 `,` 分隔。
 
 ```swift
-// 宣告一個 Tuple 並填值進去 依序是字串、整數、浮點數
+// 宣告一個元組並填值進去 依序是字串、整數、浮點數
 let myInfo = ("Kevin Chang", 25, 178.25)
 
 ```
@@ -95,7 +95,7 @@ print("My height is \(myHeight) .") // 印出 My height is 178.25 .
 
 ```
 
-或是在宣告 tuples 時就個別給裡面的值一個名稱也可以
+或是在宣告元組時就個別給裡面的值一個名稱也可以
 
 ```swift
 let herInfo = (name:"Jess", age:24, height:160.5)
