@@ -59,7 +59,7 @@ print(string) // 印出 My score is 80 .
 
 ### Tuples 元組
 
-元組是將多個值組合成一個複合值，其內的類型可以不同，以小括弧 `()` 前後包起來，每個值以逗號 `,` 分隔。
+元組是將多個值組合成一個複合值，其內的型別可以不同，以小括弧 `()` 前後包起來，每個值以逗號 `,` 分隔。
 
 ```swift
 // 宣告一個 Tuple 並填值進去 依序是字串、整數、浮點數
@@ -104,6 +104,43 @@ let herInfo = (name:"Jess", age:24, height:160.5)
 print("Her name is \(herInfo.name) . ") // 印出 Her name is Jess .
 
 ```
+
+
+### Type annotation 型別標註
+
+宣告變數或常數時，可以加上型別標註，說明這個值的型別。使用方法是在值的後面加上冒號 `:` 接著加上型別名稱。
+
+```swift
+// 宣告一個整數變數
+var number: Int
+
+// 宣告一個字串常數
+let str: String = "It is a string ."
+
+```
+
+通常很少需要寫型別標註，如果在宣告時給了一個初始值， Swift 則會自動判斷出型別。不過有些情況可能仍然需要寫。
+
+```swift
+// 宣告浮點數時 如果沒有型別標註 通常會將他判斷為 Double 
+let height = 165.25 // 型別為 Double
+let anotherHeight: Float = 175.5 // 除非型別標註填寫為 Float
+
+// 宣告字串時 不論字數多少 都會判斷為 String
+let str1 = "It is a string." // 型別為 String
+let str2 = "b" // 型別仍然是 String
+let str3: Character = "c" // 除非型別標註填寫為 Character
+
+
+```
+
+
+
+
+
+
+
+
 
 
 
