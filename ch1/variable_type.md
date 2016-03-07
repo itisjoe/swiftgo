@@ -1,6 +1,6 @@
-# 變數及常數的類型
+# 變數及常數的型別
 
-依據不同需求，變數會需要不同的類型來執行動作，像是身高體重需要有小數點的數字，計算人數需要整數，姓名、名稱需要文字字串。
+依據不同需求，變數會需要不同的型別來執行動作，像是身高體重需要有小數點的數字，計算人數需要整數，姓名、名稱需要文字字串。
 
 ### Int 整數
 
@@ -8,11 +8,11 @@
 
 ```swift
 let number = 12
-var anotherNumber = 24
+var anotherNumber = -240
 
 ```
 
-### Float 及 Double 浮點數
+### Float, Double 浮點數
 
 浮點數指的是有包含小數點的數字， Float 跟 Double 的差別在於精確度， Float 有 6 位數，而 Double 可以達到 15 位數，選擇使用哪一個則是看你程式需要處理值的範圍而定。
 
@@ -32,7 +32,15 @@ let forFree = false
 
 ```
 
-### String 字串
+### Character, String 字元及字串
+
+字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合，皆是以兩個雙引號 `"` 前後包起來
+
+```swift
+let firstString = "Nice to meet you."
+let secondString = "Nice to meet you,too."
+
+```
 
 
 
