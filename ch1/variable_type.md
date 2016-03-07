@@ -127,7 +127,7 @@ let height = 165.25 // 型別為 Double
 let anotherHeight: Float = 175.5 // 除非型別標註填寫為 Float
 
 // 宣告字串時 不論字數多少 都會判斷為 String
-let str1 = "It is a string." // 型別為 String
+let str1 = "It is a string ." // 型別為 String
 let str2 = "b" // 型別仍然是 String
 let str3: Character = "c" // 除非型別標註填寫為 Character
 
@@ -135,10 +135,33 @@ let str3: Character = "c" // 除非型別標註填寫為 Character
 ```
 
 
+### 整數和浮點數轉換
 
+整數和浮點數的轉換必須指定型別
 
+```swift
+// 型別為整數 Int
+let number1 = 3
 
+// 型別為浮點數 Double
+let number2 = 0.1415926
 
+// 相加前 需要將 Int 轉換成 Double 否則會報錯誤
+let pi = Double(number1) + number2
+
+// 這個值的型別也就是 Double
+print(pi) // 印出 3.1415926
+```
+
+相反來說也行，可以將浮點數轉換成整數，但小數點後的數字就會被截斷
+
+```swift
+let integerPi = Int(pi)
+
+// 型別為 Int 小數點後的數字被截斷 所以只會印出 3
+print(integerPi) // 印出 3
+
+```
 
 
 
