@@ -67,10 +67,10 @@ let myInfo = ("Kevin Chang", 25, 178.25)
 
 ```
 
-要使用其中一個值，可以依照順序取得 (這裡的順序從 0 開始算起，接著依序 1,2,3 ...)
+要使用其中一個值，可以依照順序的索引值取得 (這裡的順序從 0 開始算起，接著依序 1,2,3 ...)
 
 ```swift
-// 取得前面的 myInfo 的第三個值 因為是從 0 開始算 所以是 2
+// 取得前面宣告的 myInfo 的第三個值 因為是從 0 開始算 所以是 2
 let myHeight = myInfo.2
 print("My height is \(myHeight)") // 印出 My height is 178.25
 
@@ -79,19 +79,29 @@ print("My height is \(myHeight)") // 印出 My height is 178.25
 你也可將一個元組分解成單獨的常數或變數。
 
 ```swift
-// 將前面的 myInfo 分解成三個常數
+// 將前面宣告的 myInfo 分解成三個常數
 let (myName, myAge, myHeight) = myInfo
 print("My name is \(myName) .") // 印出 My name is Kevin Chang .
 print("I am \(myAge) years old .") // 印出 I am 25 years old . 
 
 ```
 
-或是在宣告 tuples 時就給裡面的值一個名稱也可以
+如果只需要其中某些值時，分解時可以把不需要的用底線 `_` 標記
+
+```swift
+let (_, _, myHeight) = myInfo
+print("My height is \(myHeight) .") // 印出 My height is 178.25 .
+
+
+```
+
+或是在宣告 tuples 時就個別給裡面的值一個名稱也可以
 
 ```swift
 let herInfo = (name:"Jess", age:24, height:160.5)
-print()
 
+// 除了用順序取得外 如果有設定名稱 也可以直接取用
+print("Her name is \(herInfo.name) . ") // 印出 Her name is Jess .
 
 ```
 
