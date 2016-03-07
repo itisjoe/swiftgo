@@ -12,6 +12,7 @@ var anotherNumber = -240
 
 ```
 
+
 ### Float, Double 浮點數
 
 浮點數指的是有包含小數點的數字， Float 跟 Double 的差別在於精確度， Float 有 6 位數，而 Double 可以達到 15 位數，選擇使用哪一個則是看你程式需要處理值的範圍而定。
@@ -21,6 +22,7 @@ let pi = 3.1415926
 var height = 178.25
 
 ```
+
 
 ### Bool 布林值
 
@@ -32,6 +34,7 @@ let forFree = false
 
 ```
 
+
 ### Character, String 字元及字串
 
 字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合，皆是以兩個雙引號 `"` 前後包起來
@@ -42,7 +45,16 @@ let secondString = "Nice to meet you,too."
 
 ```
 
+如果要在字串中加入其他變數或常數，要使用 `\()` 這個方式
 
+```swift
+let score = 80
+let string = "My score is \(score) ."
+print(string) // 印出 My score is 80 .
+
+```
+
+更多字串的操作會在後面章節中繼續講解。
 
 
 ### Tuples 元組
@@ -55,13 +67,31 @@ let myInfo = ("Kevin Chang", 25, 178.25)
 
 ```
 
+要使用其中一個值，可以依照順序取得 (這裡的順序從 0 開始算起，接著依序 1,2,3 ...)
+
+```swift
+// 取得前面的 myInfo 的第三個值 因為是從 0 開始算 所以是 2
+let myHeight = myInfo.2
+print("My height is \(myHeight)") // 印出 My height is 178.25
+
+```
+
 你也可將一個元組分解成單獨的常數或變數。
 
 ```swift
 // 將前面的 myInfo 分解成三個常數
 let (myName, myAge, myHeight) = myInfo
-print("My name is \(myName)")
-print("I am \(myAge) years old")
+print("My name is \(myName) .") // 印出 My name is Kevin Chang .
+print("I am \(myAge) years old .") // 印出 I am 25 years old . 
+
+```
+
+或是在宣告 tuples 時就給裡面的值一個名稱也可以
+
+```swift
+let herInfo = (name:"Jess", age:24, height:160.5)
+print()
+
 
 ```
 
