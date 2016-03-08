@@ -66,7 +66,7 @@ let forFree = false
 
 ### Character, String 字元及字串
 
-字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合，皆是以兩個雙引號 `"` 前後包起來
+字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合(簡單說就是一段文字)，皆是以兩個雙引號`"`前後包起來
 
 ```swift
 let firstString = "Nice to meet you."
