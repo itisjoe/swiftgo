@@ -1,2 +1,2 @@
-# variable_optionals
+# 變數及常數的可選型別
 
