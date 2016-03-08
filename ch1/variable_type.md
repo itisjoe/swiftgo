@@ -166,7 +166,7 @@ let str3: Character = "c" // 除非型別標註填寫為 Character
 
 ### Optionals 可選型別
 
-這是 Swift 的一個特性，讓變數或常數可以有**沒有值**的情況，這與零`0`或是空字串`""`不同，當沒有值時，變數或常數會返回`nil`。而`nil`代表的就是**沒有值**，任何型別只要有加上`optionals`都可以設置成`nil`。使用方法如下：
+這是 Swift 的一個特性，讓變數或常數可以有**沒有值**的情況，這與零`0`或是空字串`""`不同，當沒有值時，變數或常數會返回`nil`。而`nil`代表的就是**沒有值**，任何型別只要有加上`可選型別`都可以設置成`nil`。使用方法如下：
 
 ```swift
 // 在宣告變數時 型別標註後面加上一個問號 ?
@@ -179,7 +179,6 @@ totalScore = nil // 也不能設成 nil 這行同樣也會報錯誤
 
 // 宣告常數也是一樣
 let myName: String?
-
 
 ```
 
@@ -195,10 +194,28 @@ let newNumber = Int(number) // 嘗試將這個字串轉換成整數
 這時如果原字串內容不是單純的數字，轉換後則是會返回`nil`，來避免發生錯誤的情況。也就是說返回的是一個可選型別`Int?`，他可能會是整數，也可能是`nil`。
 
 
+### Forced unwrapping 強制解析
+
+當你確認一個**可選型別**一定有值，則可以在這個變數後面加上一個驚嘆號`!`，表示**這個可選型別有值，請使用它**。
+
+```swift
+let number: Int? = 500 // 宣告一個整數常數 並賦值
+print(number!) // 以這個例子來說 常數確實有值 所以加上驚嘆號 表示這個可選型別有值 可以直接使用
+
+var number2: Int? // 尚未賦值 所以目前是 nil
+print(number2!) // 仍然要使用的話 這行則會報錯誤
+```
 
 
+### Implicitly unwrapped optionals 隱式解析可選型別
 
+當**可選型別**第一次被賦值後，如果可以確定他之後都會有值，這時可以將其改為**隱式解析可選型別**，這樣便不需要每次都判斷及解析，作法則是將可選型別的問號`?`改成驚嘆號`!`，如下說明
 
+```swift
+let firstString: String? = "Good morning ." // 可選型別
+let anotherString: String = firstString! // 需要驚嘆號來取值
 
+let secondString: String! = "Good night ." // 如果改成隱式解析可選型別
+let finalString: String = secondString // 則可以直接使用
 
-
+```
