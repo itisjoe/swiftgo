@@ -5,5 +5,5 @@
    * [變數、常數及註解](ch1/variable.md)
    * [變數及常數的型別](ch1/variable_type.md)
    * [控制流程](ch1/control_flow.md)
-   * [variable_optionals](ch1/variable_optionals.md)
+   * [變數及常數的可選及隱式解析](ch1/variable_optionals.md)
 
