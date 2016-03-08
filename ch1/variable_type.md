@@ -24,6 +24,35 @@ var height = 178.25
 ```
 
 
+### 整數和浮點數轉換
+
+整數和浮點數的轉換必須指定型別
+
+```swift
+// 型別為整數 Int
+let number1 = 3
+
+// 型別為浮點數 Double
+let number2 = 0.1415926
+
+// 相加前 需要將 Int 轉換成 Double 否則會報錯誤
+let pi = Double(number1) + number2
+
+// 這個值的型別也就是 Double
+print(pi) // 印出 3.1415926
+```
+
+相反來說也行，可以將浮點數轉換成整數，但小數點後的數字就會被截斷
+
+```swift
+let integerPi = Int(pi)
+
+// 型別為 Int 小數點後的數字被截斷 所以只會印出 3
+print(integerPi) // 印出 3
+
+```
+
+
 ### Bool 布林值
 
 布林值指的是邏輯上的值，只能為真或假。 Swift 有兩個布林常數：`true`跟`false`
@@ -135,33 +164,28 @@ let str3: Character = "c" // 除非型別標註填寫為 Character
 ```
 
 
-### 整數和浮點數轉換
+### Optionals 可選型別
 
-整數和浮點數的轉換必須指定型別
-
-```swift
-// 型別為整數 Int
-let number1 = 3
-
-// 型別為浮點數 Double
-let number2 = 0.1415926
-
-// 相加前 需要將 Int 轉換成 Double 否則會報錯誤
-let pi = Double(number1) + number2
-
-// 這個值的型別也就是 Double
-print(pi) // 印出 3.1415926
-```
-
-相反來說也行，可以將浮點數轉換成整數，但小數點後的數字就會被截斷
+這是 Swift 的一個特性，讓變數或常數可以有**沒有值**的情況，這與零`0`或是空字串`""`不同，當沒有值時，變數或常數會返回`nil`。而`nil`代表的就是**沒有值**，任何型別只要有加上`optionals`都可以設置成`nil`。使用方法如下：
 
 ```swift
-let integerPi = Int(pi)
+// 在宣告變數時 型別標註後面加上一個問號 ?
+var score: Int? // 因為目前尚未賦值 所以目前 score 會被設置成 nil 也就是沒有值的狀態
+score = 100 // 設值為 100
+score = nil // 再將變數設為 nil 目前又是沒有值的狀態
 
-// 型別為 Int 小數點後的數字被截斷 所以只會印出 3
-print(integerPi) // 印出 3
+var totalScore: Int // 但如果沒有加上 ? 則是尚未賦值的狀態 這時如果直接使用會報錯誤
+totalScore = nil // 也不能設成 nil 這行同樣也會報錯誤
+
+// 宣告常數也是一樣
+let myName: String?
+
 
 ```
+
+
+
+
 
 
 
