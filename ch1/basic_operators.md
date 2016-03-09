@@ -335,11 +335,37 @@ if isSunday || isWeekend {
 
 ### 括號優先
 
+以上介紹很多運算子，當一個運算式太複雜時，可以使用括號來標示清楚，同時也用來表明優先級(如同傳統學習數學計算一樣，括號括起來的部份要優先計算)。
 
+```swift
+// 數值運算
+var number = 3 + 2 * 5 // 先乘除後加減 所以 number 等於 13
+var anotherNumber = (3 + 2) * 5 // 括號括起來的優先 所以 anotherNumber 等於 25
 
+// 邏輯運算
+let isOpen = false
+let isWeekend = true
+let isSunday = true
 
+// 由左至右依序判斷
+if isOpen && isWeekend || isSunday {
+    print("Success !")
+} else {
+    print("Failure !")
+}
+// 先作"邏輯且"判斷 isOpen && isWeekend 會返回 false
+// 再與後面的 isSunday 作"邏輯或"的判斷 會返回 true
+// 所以這邊會印出 Success !
 
+// 括號有優先權
+if isOpen && (isWeekend || isSunday) {
+    print("Success !")
+} else {
+    print("Failure !")
+}
+// 括號優先 所以先做"邏輯或"判斷 isWeekend || isSunday 會返回 true
+// 再與前面的 isOpen 作"邏輯且"的判斷 會返回 false
+// 所以這邊會印出 Failure !
 
-
-
+```
 
