@@ -36,7 +36,7 @@ Swift 支援 Unicode 編碼，所以除了系統保留字(像是 if, self, class
 ```swift
 let score = 100
 let myFullName = "Kevin Chen"
-var 1myName = "Jess" // 不能以數字開頭 所以這行會報錯誤
+var 123myName = "Jess" // 不能以數字開頭 所以這行會報錯誤
 var myClass55 = "101" // 在其他部分使用數字則是沒問題
 
 ```
