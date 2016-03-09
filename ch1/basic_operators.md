@@ -322,7 +322,7 @@ if isOpen && isWeekend {
 ```swift
 let isSunday = true
 let isWeekend = false
-if isSunday && isWeekend {
+if isSunday || isWeekend {
     print("Success !")
 } else {
     print("Failure !")
