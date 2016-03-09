@@ -287,7 +287,7 @@ Swift 支援三個標準邏輯運算。
 
 #### 邏輯非
 
-對一個布林值取相反值，即將`true`變`false`，或是將`false`變`true`。這是一個前綴運算子，且不加空格，例子如下：
+`!a`對一個布林值取相反值，即將`true`變`false`，或是將`false`變`true`。這是一個前綴運算子，且不加空格，例子如下：
 
 ```swift
 let isOpen = false
@@ -299,10 +299,38 @@ if !isOpen {
 
 #### 邏輯且
 
+`a && b`表示只有當`a`跟`b`都為`true`時，才會返回`true`，否則如果`a`或`b`其中一個為`false`，就會返回`false`。
+
+```swift
+let isOpen = true
+let isWeekend = false
+if isOpen && isWeekend {
+    print("Success !")
+} else {
+    print("Failure !")
+}
+
+// 因為其中一個為 false 所以會返回 false 即印出 Failure !
+
+```
+
+
 #### 邏輯或
 
+`a || b`表示只要`a`跟`b`其中一個值為`true`時，就會返回`true`，除非`a`和`b`皆為`false`，才會返回`false`。
 
+```swift
+let isSunday = true
+let isWeekend = false
+if isSunday && isWeekend {
+    print("Success !")
+} else {
+    print("Failure !")
+}
 
+// 因為其中一個為 true 就會返回 true 即印出 Success !
+
+```
 
 
 ### 括號優先
