@@ -188,6 +188,28 @@ score = score + (score < 60 ? 50 : 20)
 
 ### 空值聚合運算子
 
+前面章節介紹過的可選型別， Swift 提供一個簡潔的使用方法：`a ?? b`。先判斷`a`是否為`nil`，如果`a`有值，不是`nil`，就會解析`a`並返回，但如果`a`為`nil`，則返回預設值`b`。也就是下面這個寫法的簡寫：
+```swift
+a != nil ? a! : b
+
+```
+
+這裡用到前面提到的三元運算子，如果`a`不等於`nil`，則強制解析`a`並返回，否則就返回`b`。以下為一個例子：
+
+```swift
+let defaultColor = "red"
+var userDefinedColor: String? // 未賦值 所以預設為 nil
+var colorToUse = userDefinedColor ?? defaultColor
+print(colorToUse) // 未賦值給 userDefinedColor ,所以會返回 defaultColor, 這邊即印出 red
+
+// 反之如果有賦值
+var userAnotherDefinedColor: String? = "green"
+var anotherColorToUse = userAnotherDefinedColor ?? defaultColor
+print(anotherColorToUse) // 這邊即印出 green
+
+```
+
+
 ### 區間運算子
 
 ### 邏輯運算子
