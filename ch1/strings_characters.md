@@ -115,7 +115,7 @@ if str2.hasPrefix("It is") {
 }
 
 // str3 沒有後綴字串 Sunday . 所以不成立 印出 Failure
-if str3.hasPrefix("Sunday .") {
+if str3.hasSuffix("Sunday .") {
     print("Success")
 } else {
     print("Failure")
@@ -127,7 +127,7 @@ if str3.hasPrefix("Sunday .") {
 
 可以看到有`str.characters`、`str.characters.count`或是`str.hasPrefix()`這種以小數點`.`連接的表示方式，代表的是這個變數的屬性或是方法。
 
-使用方法會依照其預設的規則表示，像是`str.characters`就是這個字串的字元集合，`str.characters.count`是字元集合的字元數量。而`str.hasPrefix()`則是會對原變數作處理後再返回。往後會很常見到這種用法。
+使用方法會依照其設定的規則表示，像是`str.characters`就是這個字串的字元集合，`str.characters.count`是字元集合的字元數量。而`str.hasPrefix()`則是會對變數作處理後再返回。往後會很常見到這種用法。
 
 
 
