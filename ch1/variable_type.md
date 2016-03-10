@@ -26,7 +26,7 @@ var height = 178.25
 
 ### 整數和浮點數轉換
 
-整數和浮點數的轉換必須指定型別
+整數和浮點數的轉換必須指定型別。
 
 ```swift
 // 型別為整數 Int
@@ -42,7 +42,7 @@ let pi = Double(number1) + number2
 print(pi) // 印出 3.1415926
 ```
 
-相反來說也行，可以將浮點數轉換成整數，但小數點後的數字就會被截斷
+相反來說也行，可以將浮點數轉換成整數，但小數點後的數字就會被截斷。
 
 ```swift
 let integerPi = Int(pi)
@@ -55,7 +55,7 @@ print(integerPi) // 印出 3
 
 ### Bool 布林值
 
-布林值指的是邏輯上的值，只能為真或假。 Swift 有兩個布林常數：`true`跟`false`
+布林值指的是邏輯上的值，只能為真或假。 Swift 有兩個布林常數：`true`跟`false`。
 
 ```swift
 let storeOpen = true
@@ -66,7 +66,7 @@ let forFree = false
 
 ### Character, String 字元及字串
 
-字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合(簡單說就是一段文字)，皆是以兩個雙引號`"`前後包起來
+字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合(簡單說就是一段文字)，皆是以兩個雙引號`"`前後包起來。
 
 ```swift
 let firstString = "Nice to meet you."
@@ -74,7 +74,7 @@ let secondString = "Nice to meet you,too."
 
 ```
 
-如果要在字串中加入其他變數或常數，要使用 `\()` 這個方式
+如果要在字串中加入其他變數或常數，要使用 `\()` 這個方式。
 
 ```swift
 let score = 80
