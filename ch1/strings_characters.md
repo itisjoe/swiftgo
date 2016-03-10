@@ -100,6 +100,26 @@ let blackHeart = "\u{2665}"      // ♥,  Unicode 純量 U+2665
 - 後綴相同 `hasSuffix`
 
 ```swift
+let str = "It is Sunday ."
+let str2 = "It is Sunday ."
+let str3 = "It is Saturday ."
+
+// 兩個字串相同 所以成立 印出 Success
+if str == str2 {
+    print("Success")
+}
+
+// str2 有前綴字串 It is 所以成立 印出 Success
+if str2.hasPrefix("It is") {
+    print("Success")
+}
+
+// str3 沒有後綴字串 Sunday . 所以不成立 印出 Failure
+if str3.hasPrefix("Sunday .") {
+    print("Success")
+} else {
+    print("Failure")
+}
 
 ```
 
