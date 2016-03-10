@@ -6,4 +6,5 @@
    * [變數及常數的型別](ch1/variable_type.md)
    * [基本運算子](ch1/basic_operators.md)
    * [控制流程](ch1/control_flow.md)
+   * 字串及字元
 
