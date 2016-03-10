@@ -123,6 +123,12 @@ if str3.hasPrefix("Sunday .") {
 
 ```
 
+##### Hint
+
+可以看到有`str.characters`、`str.characters.count`或是`str.hasPrefix()`這種以小數點`.`連接的表示方式，代表的是這個變數的屬性或是方法。
+
+使用方法會依照其預設的規則表示，像是`str.characters`就是這個字串的字元集合，`str.characters.count`是字元集合的字元數量。而`str.hasPrefix()`則是會對原變數作處理後再返回。往後會很常見到這種用法。
+
 
 
 
