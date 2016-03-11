@@ -162,6 +162,16 @@ for item in arr {
 // Eggs
 // Milk
 
+// 當你同時也需要獲得陣列值時 可以使用 enumerate() 方法
+for (index, value) in arr.enumerate() {
+    print("Item \(index + 1): \(value)")
+}
+// 會依序印出
+// Item 1: Rice
+// Item 2: Apples
+// Item 3: Eggs
+// Item 4: Milk
+
 ```
 
 後面章節會正式介紹`for-in`的使用方法
