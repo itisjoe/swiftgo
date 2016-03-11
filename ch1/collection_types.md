@@ -85,6 +85,8 @@ var anotherList = ["Rice", "Apples"]
 
 一開始說過陣列是有序的集合，所以可以依照索引值(依照順序的排列序號)來取得陣列內的值。
 
+##### Hint：陣列的索引值是從 0 開始算起
+
 ```swift
 var arr = ["Apples", "Eggs", "Milk", "Rice", "Water"]
 
@@ -136,6 +138,7 @@ arr.insert("Rice" ,atIndex:0 )
 
 // 移除一個索引位置的值 使用 removeAtIndex(_:) 方法
 arr.removeAtIndex(1) // 將排在第二個的 Apples 移除
+// 所有後面的值都會遞補向前一個位置
 // 現在 arr 會變成 ["Rice", "Eggs", "Milk"]
 
 // 或者是移除最後一個值 使用 removeLast() 方法
