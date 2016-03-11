@@ -3,7 +3,7 @@
 Swift 提供三種基本的集合型別：`Arrays`、`Sets`、`Dictionaries`來儲存集合資料。儲存的資料**型別必須明確**，且都**只能儲存同一種型別**的資料。
 
 - Array 陣列：按順序儲存資料。
-- Set 集合：沒有順序、也不能重複儲存資料。
+- Set 集合：沒有順序、不能重複儲存資料。
 - Dictionary 字典：沒有順序，鍵值對 `key : value` ，也就是可以經由唯一的識別鍵找到需要的值。
 
 
@@ -42,7 +42,7 @@ var anotherArr: [Int] = []
 
 #### 創建一個帶有預設值的陣列
 
-陣列型別還提供一個可以創建特定大小並且所有資料都被預設的建構方法。將準備加入新陣列的資料項數量（count）和適當型別的初始值（repeatedValue）傳入陣列建構函式：
+陣列型別還提供一個可以創建特定大小並且所有資料都被預設的建構方法。將準備加入新陣列的資料項數量`count`和適當型別的初始值`repeatedValue`傳入陣列建構函式：
 
 ```swift
 var threeInts = [Int](count: 3, repeatedValue:0)
@@ -73,7 +73,7 @@ var SixInts = threeInts + anotherThreeInts
 
 ```swift
 var shoppingList: [String] = ["Eggs", "Milk"]
-// 即創建了一個型別為 String 包含兩個值的陣列
+// 即創建了一個型別為 [String] 且包含兩個值的陣列
 
 // 因為 Swift 會自動的型別推斷 所以陣列中如果明確的表示了是什麼型別的值 便不用再標註型別
 var anotherList = ["Rice", "Apples"]
@@ -95,14 +95,14 @@ print(arr[2]) // 印出 Milk
 arr[2] = "Oranges"
 print(arr[2]) // 這時已將 Milk 改成 Oranges 所以會印出 Oranges
 
-// 如果要修改一個區間內的值 可以用到前面章節講到的區間寫法一次修改
+// 如果要修改一個區間內的值 可以用到前面章節講到的區間寫法修改
 arr[1...4] = ["Milk"]
 // 這樣會將原本索引值 1 到 4 的值修改成 Milk
 print(arr) // 所以現在 arr 會變成 ["Apples", "Milk"]
 
 ```
 
-可以使用屬性`count`來表示陣列內值的個數，會返回一個非負的整數。另外也可以使用屬性`isEmpty`來檢查陣列內是否有值，會返回一個布林值。
+可以使用屬性`count`來表示陣列內值的數量，會返回一個非負的整數。另外也可以使用屬性`isEmpty`來檢查陣列內是否有值，會返回一個布林值。
 
 ```swift
 var arr = ["Apples", "Eggs", "Milk"]
@@ -128,7 +128,8 @@ var arr = ["Apples", "Eggs"]
 arr.append("Milk") // 加入新的值 順序會在最後一個
 // 現在 arr 會變成 ["Apples", "Eggs", "Milk"]
 
-// 如果要選擇加入的索引位置的值 使用 insert(_:atIndex:) 方法
+// 如果要選擇加入的索引值的位置 使用 insert(_:atIndex:) 方法
+// arr.insert(要加入的值, atIndex:要加入的索引值位置)
 arr.insert("Rice" ,atIndex:0 )
 // 現在 arr 會變成 ["Rice" ,"Apples", "Eggs", "Milk"]
 // 所有索引值在後面的都會順延往後一個位置
