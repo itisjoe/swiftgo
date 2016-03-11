@@ -170,11 +170,11 @@ let str3: Character = "c" // 除非型別標註填寫為 Character
 
 ```swift
 // 在宣告變數時 型別標註後面加上一個問號 ?
-var score: Int? // 因為目前尚未賦值 所以目前 score 會被設置成 nil 也就是沒有值的狀態
+var score: Int? // 因為目前尚未指派 所以目前 score 會被設置成 nil 也就是沒有值的狀態
 score = 100 // 設值為 100
 score = nil // 再將變數設為 nil 目前又是沒有值的狀態
 
-var totalScore: Int // 但如果沒有加上 ? 則是尚未賦值的狀態 這時如果直接使用會報錯誤
+var totalScore: Int // 但如果沒有加上 ? 則是尚未指派的狀態 這時如果直接使用會報錯誤
 totalScore = nil // 也不能設成 nil 這行同樣也會報錯誤
 
 // 宣告常數也是一樣
