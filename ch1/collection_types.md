@@ -274,6 +274,8 @@ Swift 提供以下幾個方法，依據兩個 Set 之間交集(有相同的值)�
 - `union(_:)` 創建一個新的 Set，其內的值**包含兩個 Set 中所有的值**。
 - `subtract(_:)` 創建一個新的 Set，其內的值**在一個 Set 內,但不在另一個 Set 內**。
 
+圖
+
 ```swift
 let oddDigits: Set = [1, 3, 5, 7, 9]
 let evenDigits: Set = [0, 2, 4, 6, 8]
@@ -302,6 +304,8 @@ Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林
 - `isStrictSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中，且兩個 Set 不相等。
 - `isStrictSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值，且兩個 Set 不相等。
 - `isDisjointWith(_:)` 判斷兩個集合是否不含有相同的值(是否沒有交集)。
+
+圖
 
 ```swift
 let houseAnimals: Set = ["狗", "貓"]
