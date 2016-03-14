@@ -308,16 +308,18 @@ Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林
 `isDisjointWith(_:)` 判斷兩個集合是否不含有相同的值(是否沒有交集)。
 
 ```swift
-let houseAnimals: Set = ["🐶", "🐱"]
-let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
-let cityAnimals: Set = ["🐦", "🐭"]
+let houseAnimals: Set = ["狗", "貓"]
+let farmAnimals: Set = ["牛", "雞", "羊", "狗", "貓"]
+let cityAnimals: Set = ["鳥", "鼠"]
 
 houseAnimals.isSubsetOf(farmAnimals)
-// true
+// 返回 true 因為 farmAnimals 包含 houseAnimals 內所有的值
+
 farmAnimals.isSupersetOf(houseAnimals)
-// true
+// 與上一行意思一樣 只是效果相反 所以也是返回 true
+
 farmAnimals.isDisjointWith(cityAnimals)
-// true
+// 返回 true 因為 farmAnimals 跟 cityAnimals 沒有交集
 
 ```
 
