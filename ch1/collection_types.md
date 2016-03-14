@@ -179,6 +179,82 @@ for (index, value) in arr.enumerate() {
 
 ### Sets 集合
 
+集合(Set)用來儲存相同型別且沒有順序、沒有重複的值，當順序不重要或是需要每個值只能出現一次時，可以選擇使用`Set`。
+
+宣告`Set`型別時，使用`Set<Element>`這個方式，這裡的`Element`表示`Set`中儲存的型別。
+
+```swift
+// 宣告一個集合型別
+var mySet: Set<String>
+
+```
+
+與陣列使用上有點類似，基本使用方法如下：
+
+```swift
+//創建一個空的 Set
+var mySet = Set<Int>()
+
+// 可以在宣告時直接填入值
+var anotherSet: Set<String> = ["Rock", "Classical", "Hip hop"]
+
+// 指派為一個空 Set, 雖然長得跟陣列使用方法一樣 
+// 但因為前面已經有明確宣告是 Set 型別 所以這仍然是 Set<String> 型別
+anotherSet = []
+
+// Set 所含的值的數量
+print(anotherSet.count) // 印出 0 因為目前是空 Set
+
+// 使用 isEmpty 檢查 Set 內是否有值
+if anotherSet.isEmpty {
+    print("Empty !")
+} else {
+    print("Not empty !")
+}
+// 印出 Empty !
+
+```
+
+加入或移除 Set 內的值
+
+```swift
+var mySet: Set<String> = ["Rock", "Classical"]
+// 使用 insert(_:) 來加入新的值
+mySet.insert("Hip hop")
+// 目前為 ["Rock", "Classical", "Hip hop"] (無順序)
+
+// 使用 remove(_:) 來移除一個值
+// 如果這個值是 mySet 裡的一個值, 會移除掉這個值並返回此值
+// 反之 不存在裡面的話 則是返回 nil
+mySet.remove("Rock")
+// 目前為 ["Classical", "Hip hop"] (無順序)
+
+// 使用 contains(_:) 來檢查 Set 裡是否包含一個特定的值
+if mySet.contains("Classical") {
+    print("Classical is here !")
+} else {
+    print("Not Here !")
+}
+// 印出 Classical is here !
+
+// 使用 removeAll() 來移除其內所有的值
+mySet.removeAll()
+
+```
+
+可以使用`for-in`遍歷`Set`中的所有值
+
+```swift
+var mySet: Set<String> = ["Rice" ,"Apples", "Eggs"]
+for item in mySet {
+    print(item)
+}
+// 會印出
+// Rice
+// Apples
+// Eggs
+
+```
 
 
 
