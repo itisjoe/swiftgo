@@ -269,7 +269,7 @@ for item in mySet.sort() {
 
 Swift 提供以下幾個方法，依據兩個 Set 之間交集(有相同的值)與否的關係來創建新的 Set。
 
-- `intersect(_:)` 創建一個新的 Set，其內的值為**兩個 Set 中都包含的值**。
+- `intersect(_:)` 創建一個新的 Set，其內的值為**兩個 Set 中個別都包含的值**。
 - `exclusiveOr(_:)` 創建一個新的 Set，其內的值為**兩個 Set 中只單獨存在其中一個 Set 的值**。
 - `union(_:)` 創建一個新的 Set，其內的值**包含兩個 Set 中所有的值**。
 - `subtract(_:)` 創建一個新的 Set，其內的值**在一個 Set 內,但不在另一個 Set 內**。
@@ -297,15 +297,11 @@ oddDigits.subtract(singleDigitPrimeNumbers).sort()
 
 Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林值。
 
-`isSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中。
-
-`isSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值。
-
-`isStrictSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中，且兩個 Set 不相等。
-
-`isStrictSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值，且兩個 Set 不相等。
-
-`isDisjointWith(_:)` 判斷兩個集合是否不含有相同的值(是否沒有交集)。
+- `isSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中。
+- `isSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值。
+- `isStrictSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中，且兩個 Set 不相等。
+- `isStrictSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值，且兩個 Set 不相等。
+- `isDisjointWith(_:)` 判斷兩個集合是否不含有相同的值(是否沒有交集)。
 
 ```swift
 let houseAnimals: Set = ["狗", "貓"]
