@@ -242,19 +242,29 @@ mySet.removeAll()
 
 ```
 
-可以使用`for-in`遍歷`Set`中的所有值
+使用`for-in`遍歷`Set`中的所有值
 
 ```swift
 var mySet: Set<String> = ["Rice" ,"Apples", "Eggs"]
 for item in mySet {
     print(item)
 }
-// 會印出
+// 會印出 (順序不一定) 
 // Rice
 // Apples
 // Eggs
 
+// 因為 Set 沒有順序, 可以使用 sort() 方法來返回一個有序的陣列
+for item in mySet.sort() {
+    print(item)
+}
+// 會印出
+// Apples
+// Eggs
+// Rice
+
 ```
+
 
 
 
