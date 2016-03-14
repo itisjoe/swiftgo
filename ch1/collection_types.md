@@ -199,7 +199,7 @@ var mySet = Set<Int>()
 var anotherSet: Set<String> = ["Rock", "Classical", "Hip hop"]
 
 // 指派為一個空 Set, 雖然長得跟陣列使用方法一樣 
-// 但因為前面已經有明確宣告是 Set 型別 所以這仍然是 Set<String> 型別
+// 但因為前面已經有明確宣告是 Set, 所以這仍然是 Set<String> 型別
 anotherSet = []
 
 // Set 所含的值的數量
@@ -265,7 +265,61 @@ for item in mySet.sort() {
 
 ```
 
+#### 集合(Sets)操作
 
+Swift 提供以下幾個方法，依據兩個 Set 之間交集(有相同的值)與否的關係來創建新的 Set。
+
+- `intersect(_:)` 創建一個新的 Set，其內的值為**兩個 Set 中都包含的值**。
+- `exclusiveOr(_:)` 創建一個新的 Set，其內的值為**兩個 Set 中只單獨存在其中一個 Set 的值**。
+- `union(_:)` 創建一個新的 Set，其內的值**包含兩個 Set 中所有的值**。
+- `subtract(_:)` 創建一個新的 Set，其內的值**在一個 Set 內,但不在另一個 Set 內**。
+
+```swift
+let oddDigits: Set = [1, 3, 5, 7, 9]
+let evenDigits: Set = [0, 2, 4, 6, 8]
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+
+oddDigits.intersect(evenDigits).sort()
+// [] 空陣列 因為兩個 Set 沒有交集
+
+oddDigits.exclusiveOr(singleDigitPrimeNumbers).sort()
+// [1, 2, 9] 因為兩個 Set 都有 3,5,7 
+// 所以返回兩個 Set 中 除了這三個值以外的值
+
+oddDigits.union(evenDigits).sort()
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 包含兩個 Set 中所有的值
+
+oddDigits.subtract(singleDigitPrimeNumbers).sort()
+// [1, 9] 因為 3,5,7 在 singleDigitPrimeNumbers 內
+// 所以返回 oddDigits 中 除了這三個值之外的值
+
+```
+
+Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林值。
+
+`isSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中。
+
+`isSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值。
+
+`isStrictSubsetOf(_:)` 判斷一個 Set 是否被包含在另一個 Set 中，且兩個 Set 不相等。
+
+`isStrictSupersetOf(_:)` 判斷一個 Set 是否包含另一個 Set 所有的值，且兩個 Set 不相等。
+
+`isDisjointWith(_:)` 判斷兩個集合是否不含有相同的值(是否沒有交集)。
+
+```swift
+let houseAnimals: Set = ["🐶", "🐱"]
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+let cityAnimals: Set = ["🐦", "🐭"]
+
+houseAnimals.isSubsetOf(farmAnimals)
+// true
+farmAnimals.isSupersetOf(houseAnimals)
+// true
+farmAnimals.isDisjointWith(cityAnimals)
+// true
+
+```
 
 
 ### Dictionaries 字典
