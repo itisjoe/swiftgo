@@ -325,3 +325,26 @@ farmAnimals.isDisjointWith(cityAnimals)
 
 
 ### Dictionaries 字典
+
+宣告字典型別時，使用`Dictionary<Key, Value>`這個方式，這裡的`Key`表示字典裡鍵的型別，`Value`表示字典裡儲存的型別。
+
+```swift
+// 宣告一個字典型別
+var myDict: Dictionary<String, String>
+
+```
+
+創建一個空的字典。
+
+```swift
+var myDict = [String: String]()
+
+```
+
+
+
+
+
+
+
+
