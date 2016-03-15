@@ -81,7 +81,7 @@ var anotherList = ["Rice", "Apples"]
 
 ```
 
-#### 存取與修改陣列
+#### 讀取與修改陣列
 
 一開始說過陣列是有序的集合，所以可以依照索引值(依照順序的排列序號)來取得陣列內的值。
 
@@ -147,9 +147,7 @@ arr.removeLast()
 
 ```
 
-#### 陣列遍歷
-
-可以使用`for-in`遍歷陣列中的所有值
+使用`for-in`遍歷陣列中的所有值
 
 ```swift
 var arr = ["Rice" ,"Apples", "Eggs", "Milk"]
@@ -326,25 +324,131 @@ farmAnimals.isDisjointWith(cityAnimals)
 
 ### Dictionaries 字典
 
-宣告字典型別時，使用`Dictionary<Key, Value>`這個方式，這裡的`Key`表示字典裡鍵的型別，`Value`表示字典裡儲存的型別。
+字典用來儲存多個相同型別的值。每個值(`value`)都屬於一個唯一的鍵(`key`)，鍵作為字典中這個值的識別符號，所有鍵的型別也必須相同(鍵與值的型別不一定要相同)。
+
+因為字典內的值沒有順序，所以需要根據這個鍵(`key`)來找到需要的值(`value`)。宣告字典型別時，使用`Dictionary<Key, Value>`這個方式，這裡的`Key`表示字典裡鍵的型別，`Value`表示字典裡儲存的型別。
 
 ```swift
 // 宣告一個字典型別
 var myDict: Dictionary<String, String>
 
+// 或是這樣也可以
+var anothierDict: [String: String]
+
 ```
 
-創建一個空的字典。
+創建一個空字典。如果已經有型別標註了，則可以使用`[:]`設為空字典。
 
 ```swift
-var myDict = [String: String]()
+// 創建一個空字典 鍵的型別是 String , 值的型別是 Int
+var myDict = [String: Int]()
+
+// 在字典中新增一個值
+myDict["one"] = 1
+
+// 再將字典設為空字典 因為前面已經有型別標註過了 所以使用 [:] 
+myDict = [:]
 
 ```
 
+一個`key`跟一個`value`組成一組鍵值對，一個字典以中括號`[]`前後包起來，可以包含多組鍵值對，每組以逗號`,`分隔。
 
+```swift
+[key1:value1, key2:value2, key3:value3]
 
+```
 
+#### 讀取與修改字典
 
+使用下標語法(`subscript`)來讀取或是修改字典的值。其餘使用方法與陣列類似
 
+##### Hint : 下標語法(`subscript`)的表示方法為字典變數後加一個中括號`[]`，中括號裡面填入鍵(`key`)，以取得對應的值(`value`)。
+
+```swift
+// 宣告一個型別為 [String: String] 的字典
+var myDict = ["TYO": "Tokyo", "DUB": "Dublin"]
+
+// 字典裡值的數量
+print(myDict.count) // 印出 2 
+
+// 檢查字典裡是否有值
+if myDict.isEmpty {
+    print("Empty !")
+} else {
+    print("Not empty !")
+}
+// 印出 Not empty !
+
+// 如果這個 key 沒有對應到字典裡的值, 就新增一個值
+myDict["LHR"] = "London"
+
+// 如果 key 有對應到字典裡的值, 則是修改這個值
+myDict["LHR"] = "London Heathrow"
+
+// 如果要移除這個值 則是將其設為 nil
+myDict["LHR"] = nil
+
+```
+
+除了使用下標語法，字典也提供方法可以修改或刪除。
+
+```swift
+var myDict = ["LHR": "London", "DUB": "Dublin"]
+
+// 使用 updateValue(_:forKey:) 更新一個值
+// 返回一個對應值的型別的可選值 (這邊就是返回一個 String? )
+myDict.updateValue("London Heathrow", forKey: "LHR")
+print(myDict["LHR"]) // 印出 London Heathrow
+
+// 使用 removeValueForKey(_:) 移除一個值
+// 返回被刪除的值, 如果沒有對應的值的話則會返回 nil
+myDict.removeValueForKey("DUB")
+
+```
+
+只需要字典中的鍵或值時，可以使用`keys`或`values`屬性。這時會建立一個鍵或值的新陣列。
+
+```swift
+var myDict = ["LHR": "London", "DUB": "Dublin"]
+
+// 只需要鍵時, 使用 keys 屬性, 取得一個只有鍵的陣列
+var arr1 = [String](myDict.keys)
+// arr1 為 ["LHR", "DUB"]
+
+// 只需要值時, 使用 values 屬性, 取得一個只有值的陣列
+var arr2 = [String](myDict.values)
+// arr2 為 ["London", "Dublin"]
+
+// 如果需要固定順序的話 可以加上 sort() 方法
+arr1.sort()
+arr2.sort()
+
+```
+
+使用`for-in`遍歷字典中的所有值
+
+```swift
+var myDict = ["LHR": "London", "DUB": "Dublin"]
+
+for (code, n) in myDict {
+    print("\(code): \(n)")
+}
+// LHR: London
+// DUB: Dublin
+
+// 如果只需要鍵或值時, 使用 keys 或 values 屬性
+for code in myDict.keys {
+    print(code)
+}
+// LHR
+// DUB
+
+for n in myDict.values {
+    print(n)
+}
+// London
+// Dublin
+
+```
 
 
