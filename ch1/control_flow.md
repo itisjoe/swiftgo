@@ -96,6 +96,56 @@ for var index = 0; index < 3; ++index {
 ```
 
 
+### While 循環
+
+Swift 提供兩種`while`循環方式：`while`及`repeat-while`，兩者都是循環地執行程式直到條件表達式返回`false`，兩者的差別在於，後者一開始在檢查條件表達式之前，一定會先執行一次內部程式。
+
+#### While
+
+`while` 循環格式如下
+
+```swift
+while 條件表達式 {
+    每次循環執行的程式
+}
+
+```
+
+`while` 會循環地執行程式直到條件表達式返回`false`。
+
+```swift
+var n = 2
+while n < 20 {
+    n = n * 2
+}
+print(n) // 印出 32
+```
+
+#### Repeat-while
+
+`repeat-while` 循環格式如下
+
+```swift
+repeat {
+    每次循環執行的程式
+} while 條件表達式
+
+```
+
+`repeat-while` 會先執行一次程式，再檢查條件表達式，接著循環地執行程式直到條件表達式返回`false`。
+
+```swift
+var n = 512
+repeat {
+    n = n * 2
+} while n < 100
+print(n) // 印出 1024
+// 因為不論如何 都會先執行一次程式 所以 n 會先乘一次 2 為 1024
+// 接著檢查條件表達式 會返回 false 即結束這個循環
+
+```
+
+
 ### if
 ```
 if var v = vvv {
@@ -118,18 +168,6 @@ default:
 
 
 
-###while and repeat-while
-```
-var n = 2
-while n < 20 {
-    n = n * 2
-}
 
-// 一定會先執行一次再看 while 條件
-repeat {
-    n = n * 2
-} while n < 100
-
-```
 
 
