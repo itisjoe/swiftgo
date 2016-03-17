@@ -409,7 +409,7 @@ let number = 5
 var str = ""
 switch number {
 case 2,3,5,7,11,13,17,19:
-    str += "It is a prime. "
+    str += "It is a prime number. "
     fallthrough
 case 100,200:
     str += "Fallthrough once. "
@@ -418,7 +418,7 @@ default:
     str += "Fallthrough twice."
 }
 print(str)
-// 印出 It is a prime. Fallthrough once. Fallthrough twice.
+// 印出 It is a prime number. Fallthrough once. Fallthrough twice.
 // 雖然只比對到第一個 case 但兩個 case 都有使用 fallthrough
 // 所以最後 str 是將所有字串相加
 
