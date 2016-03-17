@@ -463,14 +463,55 @@ print(number)
 ```
 
 
-
-
 #### 提前退出
 
-`guard`
+有點類似`if`的用法，`guard`同樣會有一個條件表達式且會返回一個布林值，不同的地方在於，`guard`後面一定要接一個`else`，如果條件表達式返回`false`時，會執行其內的程式。
 
+```swift
+guard 條件表達式 else {
+    // 條件表達式返回 false 時 執行的程式
+}
 
+```
 
+以下是一個例子：
 
+```swift
+// 建立一個名叫 post() 的函式
+// 需要傳入一個型別為`[String: String]`的字典(`dictionary`)
+func post(article: [String: String]) {
 
+    // 首先會取得傳入字典中 鍵為 title 的值 並指派給一個常數
+    guard let insideTitle = article["title"] else {
+        // 如果沒有鍵為 title 的值 這裡面的程式就會被執行
+        // 函式中的 return 表示會直接結束這個函式
+        return
+    }
+    
+    // 上面的 insideTitle 如果有正確的被指派值 則會繼續進行到這裡
+    print("標題是 \(insideTitle) ，")
+    
+    // 接著取得傳入字典中 鍵為 content 的值 並指派給一個常數
+    guard let insideContent = article["content"] else {
+        // 如果沒有鍵為 content 的值 這裡面的程式就會被執行
+        print("但是沒有內容。")
+        return
+    }
+    
+    // 上面的 insideContent 如果有正確的被指派值 則會繼續進行到這裡
+    print("內容為 \(insideContent)。")
+}
+
+post(["title": "Article_1"])
+// 印出 "標題是 Article_1 ，"
+// 印出 "但是沒有內容。"
+post(["title": "Article_2", "content": "Article_2_full_content"])
+// 印出 "標題是 Article_2 ，"
+// 印出 "內容為 Article_2_full_content。"
+
+```
+
+##### Hint：`guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在`{}`範圍裡接著的程式中使用。
+
+後面章節會正式介紹函式(`func`)。
 
