@@ -274,7 +274,7 @@ default:
 
 ##### Hint
 
-與其他程式語言不一樣的是，有些程式語言的`switch`需要在每個`case`內的程式最後一行加上`break`來結束，否則會繼續執行底下其他`case`中的程式直到`default`之前。
+與其他程式語言不一樣的是，有些程式語言的`switch`需要在每個`case`內的程式最後一行加上`break`來結束，否則會繼續執行底下其他`case`中的程式。
 
 Swift 在遇到第一個情況`case`比對成功後，即會結束`switch`這部份的動作，繼續執行`}`之後的程式。(除非使用`fallthrough`，稍後即會提到。)
 
@@ -402,8 +402,68 @@ for n in 1...10 {
 
 #### Fallthrough
 
+Swift 的`switch`中，只要比對到一個`case`即會執行其內的程式，並結束這整個`switch`的動作，如果在特殊情況下需要執行緊接著的下一個`case`內的程式，就要用到`fallthrough`。
+
+```swift
+let number = 5
+var str = ""
+switch number {
+case 2,3,5,7,11,13,17,19:
+    str += "It is a prime. "
+    fallthrough
+case 100,200:
+    str += "Fallthrough once. "
+    fallthrough
+default:
+    str += "Fallthrough twice."
+}
+print(str)
+// 印出 It is a prime. Fallthrough once. Fallthrough twice.
+// 雖然只比對到第一個 case 但兩個 case 都有使用 fallthrough
+// 所以最後 str 是將所有字串相加
+
+```
+
+##### Hint：加上`fallthrough`後進入到的下一個`case`，不會對其條件做比對，而是直接執行其內的程式。
+
 
 #### 帶標籤的語句 Labeled Statements
+
+有時會需要較複雜的混用多個`switch`、`for`或是`while`，當需要對其中一個循環流程使用`continue`或`break`來跳轉或停止時，可以額外地對`continue`或`break`指名是屬於哪個循環流程。格式如下：
+
+```swift
+名稱: while 條件 {
+    循環執行的程式
+}
+
+```
+
+以下是個例子：
+
+```swift
+var number = 1
+gameLoop: while number < 10 {
+    switch number {
+    case 1...4:
+        ++number
+    case 5:
+        number *= 10
+        break gameLoop
+    default:
+        ++number
+    }
+}
+print(number)
+// 在 1...4 區間內時 會將 number 加 1
+// 直到 n==5 時 會乘以 10 並結束 while 循環
+// 因為有將 while 加上名為 gameLoop 的標籤
+// 所以可以很明白的了解 case 5 中的 break 是要結束 while
+// 因此這個 while 其實只循環 5 次即結束
+
+```
+
+
+
 
 #### 提前退出
 
