@@ -478,10 +478,9 @@ guard 條件表達式 else {
 
 ```swift
 // 建立一個名叫 post() 的函式
-// 需要傳入一個型別為`[String: String]`的字典(`dictionary`)
+// 需要傳入一個型別為 [String: String] 的字典(dictionary)
 func post(article: [String: String]) {
-
-    // 首先會取得傳入字典中 鍵為 title 的值 並指派給一個常數
+    // 首先取得傳入字典中 鍵為 title 的值 並指派給一個常數
     guard let insideTitle = article["title"] else {
         // 如果沒有鍵為 title 的值 這裡面的程式就會被執行
         // 函式中的 return 表示會直接結束這個函式
@@ -511,7 +510,9 @@ post(["title": "Article_2", "content": "Article_2_full_content"])
 
 ```
 
-##### Hint：`guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在`{}`範圍裡接著的程式中使用。
+##### Hint：`guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在函式`{}`範圍裡接著的程式中使用。
+
+雖然`guard`用法與`if`類似，但使用`guard`可以一次專注於一種條件的情況，提高程式的可靠性，也可以讓函式內容更清晰好讀。
 
 後面章節會正式介紹函式(`func`)。
 
