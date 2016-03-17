@@ -261,12 +261,12 @@ default:
 ```swift
 let number = 2
 switch number {
-    case 1:
-    case 2:
-        print("It is 2 .")
-    case 3:
-    default:
-        print("沒有比對到")
+case 1:
+case 2:
+    print("It is 2 .")
+case 3:
+default:
+    print("沒有比對到")
 }
 // case 1 以及 case 3 內部都沒有執行的程式 所以這邊會報錯誤
 
@@ -286,14 +286,14 @@ Swift 在遇到第一個情況`case`比對成功後，即會結束`switch`這部
 let number = 120
 var str: String
 switch number {
-    case 0...10:
-        str = "幾"
-    case 11...100:
-        str = "很多"
-    case 101...1000:
-        str = "非常多"
-    default:
-        str = "超級多"
+case 0...10:
+    str = "幾"
+case 11...100:
+    str = "很多"
+case 101...1000:
+    str = "非常多"
+default:
+    str = "超級多"
 }
 print("我有\(str)顆蘋果")
 // 印出 我有非常多顆蘋果 因為 120 在 101...1000 這個區間內
@@ -324,21 +324,46 @@ default:
 
 圖
 
+#### 值綁定 value binding
 
+`case`可以將比對的值綁定到一個臨時的常數或變數，以便在其內的程式中使用。
 
-
-
-
-```
-switch vegetable {
-case "celery":
-    print("Add some raisins and make ants on a log.")
-case let x where x.hasSuffix("pepper"):
-    print("Is it a spicy \(x)?")
-default:
-    print("Everything tastes good in soup.")
+```swift
+let onePoint = (2, 0)
+switch onePoint {
+case (let x, 0):
+    print("在 X 軸上, x 的值為 \(x)")
+case (0, let y):
+    print("在 Y 軸上, y 的值為 \(y)")
+case let (x, y):
+    print("(\(x), \(y)) 不在 X 軸也不在 Y 軸上")
 }
+// 印出 在 X 軸上, x 的值為 2
+
 ```
+
+圖
+
+另外可以使用`where`來判斷額外的條件。
+
+```swift
+let number = 20
+switch number {
+case 1...100 where number == 50:
+    print("在 1...100 區間內 且值為 50")
+case 1...100 where number == 20:
+    print("在 1...100 區間內 且值為 20")
+default:
+    print("沒有比對到")
+}
+
+```
+
+### 控制轉移語句 Control Transfer Statements
+
+
+
+
 
 
 
