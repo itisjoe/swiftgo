@@ -1,7 +1,7 @@
 Swift 起步走
 =======
 
-Version 1.0.0
+Version 1.0
 
 本書內容包含：
 
@@ -10,5 +10,5 @@ Version 1.0.0
 - 10 個以上的範例 App
 - 3 個以上的完整實戰 App
 
-本書使用 Swift 2.1 版本
+使用 Swift 2.1 版本
 
