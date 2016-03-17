@@ -300,6 +300,31 @@ print("我有\(str)顆蘋果")
 
 ```
 
+#### 元組 Tuple
+
+`switch`可以使用元組(`tuple`)來一次比對多個值，元組內可以是值也可以是區間，如果要忽略比對其中一項的話，可以填入下底線`_`。
+
+```switch
+let somePoint = (1, 1)
+switch somePoint {
+case (0, 0):
+    print("(0, 0) 在原點")
+case (_, 0):
+    print("(\(somePoint.0), 0) 在 X 軸上")
+case (0, _):
+    print("(0, \(somePoint.1)) 在 Y 軸上")
+case (-2...2, -2...2):
+    print("(\(somePoint.0), \(somePoint.1)) 在方形內")
+default:
+    print("(\(somePoint.0), \(somePoint.1)) 在方形外")
+}
+// 印出 (1, 1) 在方形內
+
+```
+
+圖
+
+
 
 
 
