@@ -8,5 +8,5 @@
    * [字串及字元](ch1/strings_characters.md)
    * [集合型別](ch1/collection_types.md)
    * [控制流程](ch1/control_flow.md)
-   * 函式
+   * [函式](ch1/functions.md)
 
