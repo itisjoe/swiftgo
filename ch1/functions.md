@@ -154,13 +154,76 @@ someFunction() // 沒有傳入值 則會使用預設值 印出 12
 
 #### 可變參數
 
+函式的可變參數(variadic parameter)可以接受零個或多個值，呼叫函式時，使用可變參數來傳入數量不確定的參數，使用方法是在參數的型別後面加上三個點(`...`)，以下是個例子：
+
+這個函式有一個型別為`Double...`的可變參數，在函數內會轉成一個型別為`[Double]`的陣列常數。
+
+```swift
+func arithmeticMean(numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total / Double(numbers.count)
+}
+arithmeticMean(1, 2, 3, 4, 5) // 返回 3.0
+arithmeticMean(3, 8, 19) // 返回 10.0
+
+```
+
+##### Hint
+
+- 一個函式只能有一個可變參數
+- 函式如果有預設值參數，也有可變參數時，必須把可變參數放在參數列表的最後。
+
 
 #### 常數參數和變數參數
+
+函數參數傳入後預設為常數，如果在函式內改變其值會發生錯誤，所以在需要的時候，可以將參數設為變數，使用方法為在參數名稱前加上`var`，以下是個例子：
+
+```swift
+// 將傳入參數設為變數 在參數前加上 var
+func newNumber(var number: Int) -> Int {
+    if number < 10 {
+        // 所以這邊可以修改變數
+        // 當 number 小於 10 時 乘以 10
+        number *= 10
+    }
+
+    return number
+}
+
+newNumber(8) // 印出 80
+newNumber(20) // 印出 20
+
+```
+
+##### Hint：這個變數參數只會在函式內部存在，外部無法使用。
 
 
 #### 輸入輸出參數
 
+前面剛說過的變數參數只能在函式內部中使用，如果想要一個可以修改參數的函式，並在呼叫函式結束後，這個修改仍然存在，則必須將參數設定為**輸入輸出參數**(In-Out Parameters)。使用方式為：
 
+- 建立函式時，在參數名稱前加上`inout`。此參數不能有預設值，也不能再設為可變參數，也不能再加上`var`或`let`。
+- 當呼叫函式，傳入的參數作為輸入輸出參數時，需要在參數前加上`&`。這個參數只能是一個**變數**，不能是常數、字面量(單純的數值或字串)。
+
+以下是個例子：
+
+```swift
+func newNumber(inout number: Int) {
+    number *= 2
+}
+
+var n = 10
+print(n) // 這時 n 為 10
+
+// 傳入的參數在函式結束後 改變仍然存在
+newNumber(&n)
+
+print(n) // 所以這時再印出 就會是 20
+
+```
 
 
 ### 函式返回值
