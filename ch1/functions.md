@@ -311,23 +311,127 @@ if let numbers = findNumbers([]) {
 ```
 
 
-
-
 ### 函式型別
 
+函式也是一種型別，由函式的參數型別和返回值型別組成。
+
+```swift
+func someFunction(a: String, b: Int) -> Int {
+    // 函式內部程式
+}
+
+```
+
+上述程式中的函式，這個函式型別就標註為`(String, Int) -> Int`，意思就是有兩個型別依序為`String`跟`Int`的參數，會返回一個型別為`Int`的值。
+
+以下是另一個例子，如果沒有參數也沒有返回值時，函式型別標註為`() -> Void`。
+
+```swift
+func hello() {
+    print("Hello !")
+}
+
+```
+
+這個函式型別也可以標註為`() -> ()`。實際上，沒有返回值的函式，會返回一個特殊的值，叫做`Void`，也就是一個空的元組(tuple)，沒有任何元素，可以寫成`()`。
 
 
 ### 使用函式型別
 
+前面剛提過函式是一種型別，所以也可以將變數或常數宣告為一個函式，然後可以指派一個適當的函式。
+
+以下是一個例子，宣告一個變數`mathFunction`，是一個型別為`(Int, Int) -> Int`的函式，最後指派一個已經存在且型別相同的函式：
+
+```swift
+var mathFunction: (Int, Int) -> Int = addTwoInts
+
+```
+
+
 #### 函式型別作為參數型別
+
+函式可以作為另一個函式的參數，以下是個例子：
+
+```swift
+// 建立一個將兩個整數相加的函式
+func addTwoInts(number1: Int, number2: Int) -> Int {
+    return number1 + number2
+}
+
+// 建立另一個函式，有三個參數依序為
+// 型別為 (Int, Int) -> Int 的函式, Int, Int
+func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("Result: \(mathFunction(a, b))")
+}
+
+// 將一個函式(addTwoInts)傳入函式(printMathResult)
+printMathResult(addTwoInts, 3, 5)
+
+```
+
+上述程式中，作為參數的函式只需要型別正確，不用了解其內的程式如何運作，這表示可以將`printMathResult`函式一部分的操作交給呼叫函式的人來實作，也是以一種型別安全(`type-safe`)的方式來保證傳入函式的呼叫是正確的。
+
 
 #### 函式型別作為返回型別
 
+函式可以作為另一個函式的返回值，使用方式為在返回箭頭(`->`)後寫一個完整的函式型別。以下是個例子：
+
+```swift
+// 建立一個將傳入的參數加一的函式
+func stepForward(input: Int) -> Int {
+    return input + 1
+}
+
+// 建立一個將傳入的參數減一的函式
+func stepBackward(input: Int) -> Int {
+    return input - 1
+}
+
+// 建立一個參數為布林值的函式 會返回一個函式
+// 根據布林值返回上述兩個函式的其中一個
+func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
+    return backwards ? stepBackward : stepForward
+}
+
+// 宣告一個整數常數
+let number = 3
+// 宣告一個函式常數
+let someFunction = chooseStepFunction(number > 0)
+// 根據 chooseStepFunction 函式的內容 傳入 true 時 會返回 stepBackward 函式
+// 所以 someFunction 會被指派為 stepBackward
+
+someFunction(10) // 返回 9
+
+```
+
+##### Hint：這邊宣告函式常數時沒有標註型別，因為就如同其他變數或常數宣告時，Swift 會根據指派的函式自動判斷出型別。
 
 
 ### 嵌套函式 Nested Functions
 
+到目前為止所使用的函式都叫全域函式(global functions)，定義在全區域中，每個地方都可以使用。
 
+如果將函式建立在另一個函式中，稱作嵌套函式(nested functions)，被建立在其內的函式只能在裡面使用，也可以當做返回值返回以讓其他地方也可以使用，以下為一個例子：
 
+```swift
+// 改寫前面的內容 將兩個函式建立在這個函式內
+// 同樣是依據傳入的布林值 返回不同的函式
+func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int {
+        return input + 1
+    }
 
+    func stepBackward(input: Int) -> Int {
+        return input - 1
+    }
+
+    return backwards ? stepBackward : stepForward
+}
+
+let number = -35
+let someFunction = chooseStepFunction(number > 0)
+
+someFunction(10) // 返回 11
+
+```
 
