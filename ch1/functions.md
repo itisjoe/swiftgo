@@ -39,7 +39,7 @@ simpleOne()
 
 ```swift
 func 函式名稱(參數指派給的常數: 型別標註) {
-    獨立的程式碼區塊
+    內部執行的程式
 }
 
 ```
@@ -55,8 +55,7 @@ func addOne(number: Int) {
 }
 
 // 呼叫函式 傳入整數 12
-addOne(12)
-// 印出 13
+addOne(12) // 印出 13
 
 ```
 
@@ -90,7 +89,7 @@ hello("Jack", age: 25)
 
 ```swift
 func 函式名稱(外部參數名稱1 內部參數名稱1: 型別1, 外部參數名稱2 內部參數名稱2: 型別2) {
-    // 函式內部執行的程式
+    // 內部執行的程式
 }
 
 ```
@@ -374,7 +373,7 @@ func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print("Result: \(mathFunction(a, b))")
 }
 
-// 將一個函式(addTwoInts)傳入函式(printMathResult)
+// 將一個函式 addTwoInts 傳入函式 printMathResult
 printMathResult(addTwoInts, 3, 5)
 
 ```
