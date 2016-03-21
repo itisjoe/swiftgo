@@ -2,6 +2,9 @@
 
 列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
 
+列舉支援很多特性，例如計算型屬性(computed properties)、實例方法(instance methods)、定義建構函式(initializers)、擴展(extensions)及協定(protocols)，後面章節會正式介紹這些內容。
+
+
 ### 列舉語法
 
 列舉使用`enum`關鍵字建立，並將列舉定義放在一組大括號`{}`內，格式如下：
@@ -150,7 +153,6 @@ print(today.rawValue) // 印出 5
 
 - 原始值可以是字串、字元或者任何整數值或浮點數值。
 - 每個原始值在它的列舉宣告中必須是唯一的。
-- 當整數值被用於原始值，如果其他列舉成員沒有值時，它們會自動遞增。
 
 原始值(`raw value`)跟相關值(`associated value`)是不同的。原始值在定義列舉時即被設置，對於一個特定的列舉成員，它的原始值始終是相同的。而相關值是在列舉成員被指派為一個變數(或常數)時才一併設置的值，列舉成員的相關值是可以不同的。
 
@@ -217,12 +219,4 @@ if let targetPlanet = Planet(rawValue: positionToFind) {
 ```
 
 上述程式先使用了一個可選綁定(`optional binding`)，使用原始值`9`來尋找是否有星球，但可以看到列舉`Planet`中沒有原始值為`9`的成員，所以會返回一個`nil`，接著則執行`else`內部程式。
-
-
-### 遞迴列舉 Recursive Enumerations
-
-
-
-
-
 
