@@ -10,4 +10,5 @@
    * [控制流程](ch1/control_flow.md)
    * [函式](ch1/functions.md)
    * [閉包](ch1/closures.md)
+   * [列舉](ch1/enumerations.md)
 
