@@ -18,7 +18,7 @@ struct 結構名稱 {
 ##### Hint
 
 - 類別或結構內的變數或常數，會稱作屬性(`property`)。而類別或結構內的函式，會稱作方法(`method`)。
-- 每次定義一個新的類別或結構時，實際上你是定義了一個新的 Swift 型別，所以在習慣上會以大駝峰式(`UpperCamelCase`)來為類別與結構命名，以符合標準 Swift 型別的大寫命名風格(像是`String`、`Int`)。相對地，使用小駝峰式(`lowerCamelCase`)為屬性與方法命名(與常數、變數及函式相同)，以便與類別區分。
+- 每次定義一個新的類別或結構時，實際上你是定義了一個新的 Swift 型別，所以在習慣上會以大駝峰式(`UpperCamelCase` 首字母大寫)來為類別與結構命名，以符合標準 Swift 型別的大寫命名風格(像是`String`、`Int`)。相對地，使用小駝峰式(`lowerCamelCase` 首字母小寫)為屬性與方法命名(與常數、變數及函式相同)，以便與類別區分。
 
 以下是定義結構與類別的例子：
 
@@ -58,6 +58,8 @@ let someGameCharacter = GameCharacter()
 上述程式中，`someStats`就是一個`CharacterStats`結構的實體，`someGameCharacter`則為一個`GameCharacter`類別的實體。
 
 後面章節會正式介紹建構器。
+
+可以看到生成實體的方式與函式相似，所以習慣上兩種命名方式會不一樣，一個使用駝峰式(`UpperCamelCase` 首字母大寫)，另一個使用小駝峰式(`lowerCamelCase` 首字母小寫)，來作區別。
 
 
 ### 類別與結構的比較
