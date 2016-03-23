@@ -141,7 +141,7 @@ Swift 中以記憶體配置的方式不同來說，可以分為值型別(`value 
 ```swift
 // 這邊使用前面定義的 CharacterStats 結構
 var oneStats = CharacterStats(hp: 120, mp: 100)
-var anotherStats = someoneStats
+var anotherStats = oneStats
 
 // 這時修改 anotherStats 的 hp 屬性
 anotherStats.hp = 300
