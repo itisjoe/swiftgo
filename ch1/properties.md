@@ -221,8 +221,60 @@ oneChar.hpValue = 90 // 因為有 willSet 所以會印出 新的血量為90.0
 
 ### 型別屬性 Type Properties
 
+型別屬性是屬於這個**型別**(類別、結構或列舉)的屬性，無論生成了多少這個型別的實體，型別屬性都只有唯一一份。
 
+型別屬性使用於定義所有從這個型別生成的實體共享的資料。
 
+##### Hint
 
+- 儲存型的型別屬性一定要有預設值，因為型別本身沒有建構器，無法在初始化過程中設值給型別屬性。
+- 儲存型的型別屬性是延遲初始化的，只有在第一次被呼叫時才會被初始化，所以不需要對其使用`lazy`。
 
+型別屬性是使用`static`關鍵字作宣告變數或常數。而在為類別宣告計算型的型別屬性時，可以改用關鍵字`class`來支持子類對父類的實作覆寫(`override`)。設置儲存型跟計算型的型別屬性如下：
+
+```swift
+struct SomeStructure {
+    static var storedTypeProperty = "Some value in structure."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value in enumeration."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value in class."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+```
+
+上述程式中，計算型的型別屬性只有`getter`，實際上可以定義有`getter`跟`setter`的計算型的型別屬性，使用方法與先前介紹的計算型屬性相同。
+
+##### Hint：後面章節會正式介紹繼承(子類與父類的關係)
+
+#### 存取或設置型別屬性的值
+
+與實體的屬性一樣，型別屬性的存取也是使用點語法(dot syntax)，但是型別屬性是向**型別本身**存取和設置，而不是向**實體**，例子如下：
+
+```swift
+// 這邊使用前面定義的結構 SomeStructure, 列舉 SomeEnumeration, 類別 SomeClass
+
+print(SomeStructure.storedTypeProperty) // 印出 Some value in structure.
+
+SomeStructure.storedTypeProperty = "Another value."
+print(SomeStructure.storedTypeProperty) // 印出 Another value.
+
+print(SomeEnumeration.computedTypeProperty) // 印出 6
+print(SomeClass.computedTypeProperty) // 印出 27
+
+```
 
