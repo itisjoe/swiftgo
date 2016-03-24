@@ -12,6 +12,7 @@
    * [閉包](ch1/closures.md)
    * [列舉](ch1/enumerations.md)
    * [類別及結構](ch1/classes_structures.md)
+   * [屬性](ch1/properties.md)
 * [補充](chz.md)
    * 系統關鍵字
 
