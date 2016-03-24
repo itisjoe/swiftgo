@@ -10,7 +10,7 @@
 
 ### 儲存屬性 Stored Properties
 
-**儲存屬性**就是一個儲存在特定型別(類別、結構或列舉)的常數或變數。可以在定義儲存屬性時指定預設值，也可以在建構過程中設置或修改儲存屬性的值，以下是個例子：
+**儲存屬性**就是一個儲存在特定型別(類別或結構)的常數或變數。可以在定義儲存屬性時指定預設值，也可以在建構過程中設置或修改儲存屬性的值，以下是個例子：
 
 ```swift
 // 定義一個遊戲角色的血量與法力最大值
@@ -93,7 +93,7 @@ print(manager.importer.fileName)
 
 ### 計算屬性 Computed Properties
 
-除了儲存屬性外，類別、結構和列舉還可以定義**計算屬性**，計算屬性不直接儲存值，而是提供一個`getter`(使用關鍵字`get`)來獲取值，及一個可選的`setter`(使用關鍵字`set`)來間接設置其他屬性的值。以下是個例子：
+除了儲存屬性外，類別、結構和列舉還可以定義**計算屬性**，計算屬性不直接儲存值，而是提供一個`getter`(使用關鍵字`get`)來存取值，及一個可選的`setter`(使用關鍵字`set`)來間接設置其他屬性的值。以下是個例子：
 
 ```swift
 // 定義一個遊戲角色的狀態
@@ -172,14 +172,14 @@ class GameCharacter {
 
 ```
 
-上述程式中，因為計算屬性只有`getter`，所以可以省略掉關鍵字`get`及大括號`{}`。
+上述程式中，因為計算屬性只有`getter`，所以`getter`可以省略掉關鍵字`get`及大括號`{}`。
 
 
 ### 屬性觀察器 Property Observers
 
 屬性觀察器會監控和回應屬性值的變化，每次屬性被設置新的值都會呼叫屬性觀察器。以下為兩個可以使用的屬性觀察器：
 
-- `willSet`：在設置新的值之前呼叫，可以傳入一個常數參數，如果不設置這個參數名稱時，會有一個內建的參數名稱`newValue`。
+- `willSet`：在設置新的值之前呼叫，會將這個新的值當做一個常數參數傳入，如果不命名這個參數名稱時，會有一個內建的參數名稱`newValue`。
 - `didSet`：在新的值被設置之後立即呼叫，會將舊的屬性值當做參數傳入，這個參數可以自己命名，或直接使用內建的參數名稱`oldValue`。
 
 以下是一個例子：
@@ -216,7 +216,7 @@ oneChar.hpValue = 90 // 因為有 willSet 所以會印出 新的血量為90.0
 
 ```
 
-上述程式中的`willSet`有設置參數名稱`hpChange`，所以其內是使用`hpChange`，而`didSet`沒有設置參數名稱，所以其內是使用內建的參數名稱`oldValue`。
+上述程式中的`willSet`有命名參數名稱`hpChange`，所以其內是使用`hpChange`，而`didSet`沒有命名參數名稱，所以其內是使用內建的參數名稱`oldValue`。
 
 
 ### 型別屬性 Type Properties
@@ -267,13 +267,14 @@ class SomeClass {
 
 #### 存取或設置型別屬性的值
 
-與實體的屬性一樣，型別屬性的存取也是使用點語法(dot syntax)，但是型別屬性是向**型別本身**存取和設置，而不是向**實體**，例子如下：
+與實體的屬性一樣，型別屬性的存取也是使用點語法(`dot syntax`)，但是型別屬性是向**型別本身**存取和設置，而不是向**實體**，例子如下：
 
 ```swift
 // 這邊使用前面定義的結構 SomeStructure, 列舉 SomeEnumeration, 類別 SomeClass
 
 print(SomeStructure.storedTypeProperty) // 印出 Some value in structure.
 
+// 設置一個型別屬性
 SomeStructure.storedTypeProperty = "Another value."
 print(SomeStructure.storedTypeProperty) // 印出 Another value.
 
