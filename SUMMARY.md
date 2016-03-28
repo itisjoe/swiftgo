@@ -10,10 +10,12 @@
    * [控制流程](ch1/control_flow.md)
    * [函式](ch1/functions.md)
    * [閉包](ch1/closures.md)
+* [Swift 進階](ch2/ch2.md)
    * [列舉](ch1/enumerations.md)
    * [類別及結構](ch1/classes_structures.md)
    * [屬性](ch1/properties.md)
    * [方法](ch1/methods.md)
+   * [下標](ch2/subscripts.md)
 * [補充](chz.md)
    * 系統關鍵字
 
