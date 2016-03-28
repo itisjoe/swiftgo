@@ -16,8 +16,6 @@ Swift 中沒有一個通用的基礎類別，只要一個類別沒有繼承於�
 ```swift
 // 定義一個遊戲角色職業通用的類別
 class GameCharacter {
-    // 血量
-    var hp = 500
     // 攻擊速度
     var attackSpeed = 1.5
     
@@ -138,9 +136,8 @@ class Hunter: Archer {
             print(newValue)
         }
     }
-    
+
     // 省略其他內容
-    
 }
 
 ```
@@ -166,7 +163,6 @@ class Archer: GameCharacter {
         didSet {
             print("Archer didSet")
         }
-
     }
 
     // 省略其他內容
@@ -182,7 +178,6 @@ class Hunter: Archer {
         didSet {
             print("Hunter didSet")
         }
-
     }
     
     // 省略其他內容
