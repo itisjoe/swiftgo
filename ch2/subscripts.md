@@ -14,7 +14,6 @@ arr[3] = 12
 
 
 // 宣告一個 [String:String] 型別的字典
-
 var dict = ["name":"Kevin","city":"Taipei"]
 
 // 印出鍵為 name 的值
@@ -28,7 +27,7 @@ dict["city"] = "New York"
 下標也可以定義在類別(`class`)、結構(`structure`)及列舉(`enumeration`)中，在其內的定義方式如下：
 
 ```swift
-subscript(索引值名稱: 索引值型別) -> 返回值型別 {
+subscript(索引值: 索引值型別) -> 返回值型別 {
     get {
         // 存取值的程式操作
         // 必須返回一個前面定義的型別的值
@@ -44,14 +43,14 @@ subscript(索引值名稱: 索引值型別) -> 返回值型別 {
 
 ```swift
 // 當下標為唯獨時 可以將 get 關鍵字及大括號 {} 省略掉 如下
-subscript(索引值名稱: 索引值型別) -> 返回值型別 {
+subscript(索引值: 索引值型別) -> 返回值型別 {
     // 存取值的程式操作
     // 必須返回一個前面定義的型別的值
 }
 
 
 // 省略 setter 傳入的設置值名稱 會有一個內建預設名稱 newValue
-subscript(索引值名稱: 索引值型別) -> 返回值型別 {
+subscript(索引值: 索引值型別) -> 返回值型別 {
     get {
     }
     set{
@@ -91,8 +90,8 @@ class SimpleMath {
     }
 }
 
-// 宣告一個類別 SimpleMath 的變數
-var oneMath = SimpleMath()
+// 宣告一個類別 SimpleMath 的常數
+let oneMath = SimpleMath()
 
 print(oneMath["simple"]) // 印出 1000
 
@@ -109,7 +108,7 @@ print(oneMath[100]) // 印出 15
 
 ```
 
-下標可以定義多個索引值，可以是任意型別，返回值也可以是任意型別，可以使用變數參數或可變參數，但不能使用輸入輸出參數(`inout`)，也不能給參數設值預設值。
+下標可以定義多個索引值，可以是任意型別的參數或可變參數，返回值也可以是任意型別，但不能使用輸入輸出參數(`inout`)，也不能給參數設置預設值。
 
 如上述程式，類別或結構可以定義多個下標，使用下標時會依據索引值數量及型別，自動推斷使用合適的下標。
 
