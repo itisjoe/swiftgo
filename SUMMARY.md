@@ -17,6 +17,7 @@
    * [方法](ch2/methods.md)
    * [下標](ch2/subscripts.md)
    * [繼承](ch2/inheritance.md)
+   * [建構過程及解構過程](ch2/initialization_deinitialization.md)
 * [補充](chz.md)
    * 系統關鍵字
 
