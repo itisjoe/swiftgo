@@ -449,16 +449,185 @@ if anotherAnimal == nil {
 
 #### 列舉型別的可失敗建構器
 
-#### 帶原始值的列舉型別的可失敗構造器
+可以定義一個帶一個或多個參數的可失敗建構器，來取得列舉型別中特定的成員，當參數無法匹配任何成員時，則為建構失敗。以下是個例子：
 
-#### 類別的可失敗建構器
+```swift
+enum TemperatureUnit {
+    case Kelvin, Celsius, Fahrenheit
+    init?(symbol: Character) {
+        switch symbol {
+        case "K":
+            self = .Kelvin
+        case "C":
+            self = .Celsius
+        case "F":
+            self = .Fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+```
+
+上述程式是定義一個溫度單位的列舉，當失敗建構器的參數為`K`、`C`或`F`時，可以匹配到成員，則建構成功。相反地，輸入其他參數則不會匹配成功，則稱為建構失敗，則會返回`nil`，如下：
+
+```swift
+let oneUnit = TemperatureUnit(symbol: "F")
+if oneUnit != nil {
+    print("這是一個溫度單位")
+}
+
+let anotherUnit = TemperatureUnit(symbol: "X")
+if anotherUnit == nil {
+    print("這不是一個溫度單位")
+}
+
+```
+
+如果不為列舉定義一個可失敗建構器，其本身會自動建立一個帶有參數的可失敗建構器`init?(rawValue:)`，這個參數名稱`rawValue`是固定的，其型別與列舉成員原始值的型別相同。所以可以此來簡化上面定義的`TemperatureUnit`列舉，如下：
+
+```swift
+enum TemperatureUnit: Character {
+    case Kelvin = "K", Celsius = "C", Fahrenheit = "F"
+}
+
+// 可以匹配到成員的原始值 所以建構成功
+let oneUnit = TemperatureUnit(rawValue: "F")
+
+// 無法匹配到成員的原始值 所以建構失敗
+let anotherUnit = TemperatureUnit(rawValue: "X")
+
+```
+
+#### 建構失敗的傳遞
+
+可失敗建構器的委任關係及規則如下：
+
+- 類別、結構或列舉的**可失敗建構器**可以**橫向委任**到同一個類別、結構或列舉裡的**另一個可失敗建構器**。
+- 類別的**可失敗建構器**可以**向上委任**到父類別的**可失敗建構器**。
+- **可失敗建構器**可以委任到其他**非可失敗建構器**。可用來為已定義好的建構過程，增加可失敗的條件。
+- 只要委任傳遞過程中，遇到一個建構器失敗時，則整個建構過程會立即返回失敗，之後的程式碼都不會再執行。
+
+以下是一個例子：
+
+```swift
+// 定義一個類別 GameCharacter 有一個可失敗建構器 當名稱參數為空字串時會建構失敗
+class GameCharacter {
+    let name: String
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+
+// 定義一個繼承自 GameCharacter 的類別 Archer
+// 有一個可失敗建構器 當攻速參數小於 1 時會建構失敗
+class Archer: GameCharacter {
+    let attackSpeed: Int
+    init?(name: String, attackSpeed: Int) {
+        if attackSpeed < 1 { return nil }
+        self.attackSpeed = attackSpeed
+        super.init(name: name)
+    }
+}
+
+// 作為參數的名稱跟攻速都符合規則 建構成功 會生成一個 Archer 的實體
+let oneArcher = Archer(name: "Jim", attackSpeed: 2)
+
+// 作為參數的攻速為 0 會建構失敗
+// 在 Archer 中即返回 nil 不會再向上傳遞至父類別 GameCharacter
+let anotherArcher = Archer(name: "Zack", attackSpeed: 0)
+
+// 作為參數的名稱為空字串 會建構失敗
+// 建構過程一直到父類別 GameCharacter 的建構器 才會失敗
+let finalArcher = Archer(name: "", attackSpeed: 1)
+
+```
 
 #### 覆寫一個可失敗建構器
 
-#### 可失敗建構器 init!
+你可以在類別中覆寫**父類別的可失敗建構器**，可覆寫成為**可失敗建構器**或**非可失敗建構器**。以下是個例子：
+
+##### Hint：不能將一個父類別的**非可失敗建構器**，覆寫成為**可失敗建構器**。
+
+```swift
+定義一個類別 Document
+class Document {
+    // 可選型別的屬性
+    var name: String?
+    // 使用這個建構器 會生成一個屬性 name 為 nil 的實體
+    init() {}
+    // 使用這個建構器 會生成一個屬性 name 不為空字串的實體
+    // 或是建構失敗 返回 nil
+    init?(name: String) {
+        self.name = name
+        if name.isEmpty { return nil }
+    }
+}
+
+// 定義一個繼承自 Document 的類別 AutomaticallyNamedDocument
+class AutomaticallyNamedDocument: Document {
+    // 覆寫父類別的建構器 會指派值給屬性
+    override init() {
+        super.init()
+        self.name = "[未命名]"
+    }
+    // 覆寫父類別的可失敗建構器 成為 非可失敗建構器
+    // 可以看到他將條件修改成為 不會有失敗的狀況發生
+    override init(name: String) {
+        super.init()
+        if name.isEmpty {
+            self.name = "[未命名]"
+        } else {
+            self.name = name
+        }
+    }
+}
+
+```
+
+當你用**非可失敗建構器**覆寫一個父類別的可失敗建構器，又需要向上委任到父類別的這個可失敗建構器時，必須強制解析這個父類別建構器，在`super.init()`後面加上一個驚嘆號`!`，表示這時建構過程一定會成功，不會返回`nil`，如下：
+
+```swift
+// 定義一個繼承自 Document 的類別 UntitledDocument
+class UntitledDocument: Document {
+    // 覆寫一個父類別的可失敗建構器 並向上委任到這個建構器
+    override init() {
+        // 這時必須強制解析這個父類別的建構器
+        // 表示不會有失敗的狀況
+        super.init(name: "[未命名]")!
+    }
+}
+
+```
+
+就如同前面章節提過的，變數或常數的**可選型別(`optional type`)**及**隱式解析可選型別(`Implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
 
 
 ### 必要建構器
+
+在類別的建構器前加上`required`，表示所有繼承這個類別的子類別，都必須實作這個建構器：
+
+```swift
+class SomeClass {
+    required init() {
+        // 建構器執行程式的實作
+    }
+}
+
+```
+
+繼承這個類別的子類別，定義這個建構器時，前面同樣需要加上`required`(不需要`override`)：
+
+```swift
+class SomeSubclass: SomeClass {
+    required init() {
+        // 必要建構器執行程式的實作
+    }
+}
+
+```
 
 
 ### 解構器
