@@ -412,6 +412,41 @@ let anotherHunter = Hunter(name: "Dwight", attackRange: 3)
 
 ### 可失敗的建構器
 
+類別、結構或是列舉在建構過程中可能失敗，這個失敗可能是傳入無效的參數、缺少某種外部需要的資源或是沒有滿足某種必要條件。
+
+為了處理這種可能失敗的情況，可以定義一個**可失敗建構器(`failable initializer`)**，使用方式為在`init`後面加上一個問號`?`：`init?`。
+
+##### Hint
+
+- 可失敗建構器的**參數名稱及型別**，不能與其他**非可失敗建構器**相同。
+- 嚴格來說，建構器都沒有返回值，但當必須表示一個建構器在建構過程中失敗時，會以`return nil`來表示。
+
+以下是一個例子：
+
+```swift
+// 定義一個結構 Animal 當傳入的參數為空字串時 建構過程會失敗
+struct Animal {
+    let name: String
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+
+// 傳入 Lion 當參數
+var oneAnimal = Animal(name: "Lion")
+if let one = oneAnimal {
+    print("動物的名字為 \(one.name)")
+}
+
+// 傳入一個空字串當參數 (請注意 空字串與 nil 完全不一樣)
+var anotherAnimal = Animal(name: "")
+if anotherAnimal == nil {
+    print("沒有傳入名字 所以建構過程中失敗了")
+}
+
+```
+
 #### 列舉型別的可失敗建構器
 
 #### 帶原始值的列舉型別的可失敗構造器
