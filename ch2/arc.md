@@ -2,7 +2,7 @@
 
 Swift 使用自動參考計數(`ARC`, `Automatic Reference Counting`)機制來追蹤與管理記憶體使用狀況，所以大部分情況下，你不需要自己管理，Swift 會自動釋放掉不需要的記憶體。
 
-##### Hint：參考計數只應用在類別的實體。結構與列舉為值型別，也不是通過參考的方式儲存與傳遞。
+##### Hint：參考計數只應用在類別(也就是參考型別)的實體。結構與列舉為值型別，也不是通過參考的方式儲存與傳遞。
 
 當一個類別實體被指派值(給一個屬性、常數或變數)的時候，會建立一個該實體的**強參考**(`strong reference`)，同時會將**參考計數**(`reference counting`)加 1 ，強參考表示會將這個實體保留住，只要強參考還在(也就是參考計數不為 0 )，儲存這個實體的記憶體就不會被釋放掉。
 
@@ -54,12 +54,157 @@ reference3 = nil
 
 ### 類別實體間的強參考循環
 
+ARC 在大部分時間都可以運作順利，但在有些情況下會造成強參考永遠不會歸零，進而發生記憶體洩漏(`memory leak`)的問題。
+
+以下是一個例子，兩個類別彼此都擁有對方強參考的屬性，一個實體要釋放記憶體前，必須先釋放對方強參考，而對方要釋放前也是要原本實體先釋放，進而產生**強參考循環**：
+
+```swift
+// 定義一個類別 Person
+// 有一個屬性為可選 Apartment 型別 因為人不一定住在公寓內
+class Person {
+    let name: String
+    init(name: String) { self.name = name }
+    var apartment: Apartment?
+}
+
+// 定義一個類別 Apartment
+// 有一個屬性為可選 Person 型別 因為公寓不一定有住戶
+class Apartment {
+    let unit: String
+    init(unit: String) { self.unit = unit }
+    var tenant: Person?
+}
+
+// 宣告一個變數為可選 Person 型別 並生成一個實體
+var joe: Person? = Person(name: "Joe")
+// 生成實體後 其內的 apartment 屬性沒有指派值 初始化為 nil
+// 目前這個實體的強參考有 1 個 參考計數為 1
+
+// 宣告一個變數為可選 Apartment 型別 並生成一個實體
+var oneUnit: Apartment? = Apartment(unit: "5A")
+// 生成實體後 其內的 tenant 屬性沒有指派值 初始化為 nil
+// 目前這個實體的強參考有 1 個 參考計數為 1
+
+```
+
+接著把這兩個不同的實體聯繫起來，如下：
+
+```swift
+joe!.apartment = oneUnit
+oneUnit!.tenant = joe
+// 這時這兩個實體 各別都有 2 個強參考
+
+//如果此時將 2 個變數斷開強參考
+joe = nil
+oneUnit = nil
+
+// 這時這 2 個實體 各別仍還是有 1 個指向對方的強參考
+// 也就造成記憶體無法釋放
+
+```
+
+##### Hint：前面章節提過，上述程式中，在實體後的驚嘆號(`!`)指的是將一個可選型別強制解析。
+
 
 ### 解決實體間的強參考循環
 
+Swift 提供了兩種辦法來解決強參考循環，分別是弱參考(`weak reference`)及無主參考(`unowned reference`)。
+
+這兩種參考也能參考實體，但因為不是強參考，所以不會保留住實體的參考(也就是這個實體的參考計數不會增加)。
+
+而兩者的差別在於，如果一個**參考這個實體的變數**在生命週期中，可能會為`nil`時，就使用弱參考，而在初始化之後不會再變為`nil`的則是使用無主參考。
+
 #### 弱參考
 
+弱參考(`weak reference`)也能參考實體，但不會保留住參考的實體(所以這個實體的參考計數不會增加)。而一個**參考這個實體的變數**在生命週期中可能沒有值(為`nil`)時，就使用弱參考。
+
+弱參考必須宣告為**變數**，表示可以被修改，同時也必須是**可選型別**(`optional`)，因為可能沒有值(為`nil`)。
+
+弱參考使用`weak`關鍵字來定義，以下將前面強參考循環的例子改寫，將類別`Apartment`內的屬性`tenant`改為弱參考(因為公寓可能有時沒有住戶，即有時會沒有值，適合使用弱參考)：
+
+```swift
+class Person {
+    let name: String
+    init(name: String) { self.name = name }
+    var apartment: Apartment?
+}
+
+class Apartment {
+    let unit: String
+    init(unit: String) { self.unit = unit }
+    
+    // 將這個屬性定義為弱參考 使用 weak 關鍵字
+    weak var tenant: Person?
+}
+
+var joe: Person? = Person(name: "Joe")
+var oneUnit: Apartment? = Apartment(unit: "5A")
+joe!.apartment = oneUnit
+
+// 因為是弱參考
+// 所以這個指派為實體的屬性 不會增加 joe 參考的實體的參考計數
+oneUnit!.tenant = joe
+
+// 當斷開這個變數的強參考時 目前該實體的參考計數會減為 0
+// 所以會將這個實體釋放
+// 而所有指向這個實體的弱參考 都會被設為 nil
+joe = nil
+
+// 隨著上面的 joe 被釋放
+// 目前 oneUnit 參考的實體的參考計數減為 1
+// 以下再將原本的強參考斷開 參考計數減為 0 則也會將此實體釋放
+oneUnit = nil
+
+```
+
 #### 無主參考
+
+與弱參考一樣，無主參考(`unowned reference`)不會保留住參考的實體(所以這個實體的參考計數不會增加)，但不同的是，無主參考會被視為永遠有值，所以需要被定義為**非可選型別**，而因此可以直接存取，不需要強制解析(即加上驚嘆號`!`)。
+
+無主參考使用`unowned`關鍵字來定義，以下例子將介紹一個使用者類別`Customer`與信用卡類別`CreditCard`之間的關係，使用者不一定有信用卡，但當產生出信用卡時，這信用卡一定屬於某個使用者：
+
+```swift
+// 定義一個類別 Customer
+class Customer {
+    let name: String
+    var card: CreditCard?
+    init(name: String) {
+        self.name = name
+    }
+}
+
+// 定義一個類別 CreditCard
+class CreditCard {
+    let number: Int
+    
+    // 定義一個無主參考 非可選型別 因為一定會有使用者(一定有值)
+    unowned let customer: Customer
+    init(number: Int, customer: Customer) {
+        self.number = number
+        self.customer = customer
+    }
+}
+
+// 宣告一個可選 Customer 的變數
+var joe: Customer? = Customer(name: "Joe")
+
+// 接著生成一個 CreditCard 實體並指派給 joe 的 card 屬性
+joe!.card = CreditCard(number: 123456789, customer: joe!)
+// 這個 CreditCard 實體的 customer 屬性 則使用無主參考指向 joe
+
+// 現在 joe 指向的實體 參考計數為 1 (即 joe 這個變數強參考指向的)
+// joe 內的屬性 card 指向的實體 參考計數也為 1 (即這個 card 屬性強參考指向的)
+
+// 而 CreditCard 實體的 customer 屬性 因為是無主參考指向 joe
+// 所以不會增加參考計數
+
+// 這時將 joe 指向的實體強參考斷開
+joe = nil
+// 這時這個實體的參考計數為 0 則實體會被釋放
+// 指向 CreditCard 實體的強參考也會隨之斷開
+// 因此也被釋放了
+
+```
 
 #### 無主參考和隱式解析可選型別
 
