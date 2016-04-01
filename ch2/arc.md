@@ -179,6 +179,7 @@ class CreditCard {
     
     // 定義一個無主參考 非可選型別 因為一定會有使用者(一定有值)
     unowned let customer: Customer
+
     init(number: Int, customer: Customer) {
         self.number = number
         self.customer = customer
@@ -202,11 +203,59 @@ joe!.card = CreditCard(number: 123456789, customer: joe!)
 joe = nil
 // 這時這個實體的參考計數為 0 則實體會被釋放
 // 指向 CreditCard 實體的強參考也會隨之斷開
-// 因此也被釋放了
+// 因此也就被釋放了
 
 ```
 
 #### 無主參考和隱式解析可選型別
+
+除了上述兩種情況，還有一種情況為，兩個互相參考實體的屬性都必須有值，且初始化後永遠不為`nil`，這時要在其中一個類別使用**無主參考**，另一個類別使用**隱式解析可選型別**。
+
+當初始化完成後，這兩個屬性都能被直接存取(不需要強制解析，即不用加上驚嘆號`!`)，且也避免了參考循環。
+
+以下的例子分別定義了類別`Country`及類別`City`，每個類別都有一個儲存對方類別實體的屬性，也就是每個國家(`Country`)都有一個首都(`capitalCity`)，而一個城市(`City`)必須屬於一個國家(`country`)：
+
+```swift
+class Country {
+    let name: String
+
+    // 定義為 隱式解析可選型別
+    var capitalCity: City!
+
+    init(name: String, capitalName: String) {
+        self.name = name
+        self.capitalCity = City(name: capitalName, country: self)
+    }
+}
+
+class City {
+    let name: String
+
+    // 定義為 無主參考
+    unowned let country: Country
+
+    init(name: String, country: Country) {
+        self.name = name
+        self.country = country
+    }
+}
+
+var country = Country(name: "Japan", capitalName: "Tokyo")
+
+```
+
+上述程式中，為了建立兩個類別的依賴關係，`City`的建構函式有一個`Country`實體的參數，並儲存為`country`屬性。`Country`的建構函式則呼叫了`City`的建構函式。
+
+以`Country`來說：
+
+1. 在建構器中要使用`self`代表自己本身，必須要在自己初始化完成後才行。而`Country`的建構函式中，在`name`設置完值後就完成了初始化，所以可以將`self`(即本身)當做參數傳給`City`的建構函式。
+2. 而因為`Country`將屬性`capitalCity`定義為**隱式解析可選型別**，所以不需要使用可選綁定(`optional binding`)或強制解析(即在後面加驚嘆號`!`)去參考`City`，可以直接存取。
+
+以`City`來說：
+
+1. `City`在`country`屬性使用了無主參考，因為一個城市一定屬於一個國家，所以一定有值，且不會增加`Country`實體的參考計數。(其實就如同前面例子`Customer`之於`CreditCard`的關係)
+   
+以上的意義在於可以通過一條語句同時生成`Country`跟`City`的實體，而不會產生強參考循環，並且`capitalCity`屬性可以被直接存取，不需要被強制解析(即加上驚嘆號`!`)。
 
 
 ### 閉包的強參考循環
