@@ -602,7 +602,7 @@ class UntitledDocument: Document {
 
 ```
 
-就如同前面章節提過的，變數或常數的**可選型別(`optional type`)**及**隱式解析可選型別(`Implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
+就如同前面章節提過的，變數或常數的**可選型別(`optional type`)**及**隱式解析可選型別(`implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
 
 
 ### 必要建構器
