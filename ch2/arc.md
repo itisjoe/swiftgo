@@ -260,15 +260,106 @@ var country = Country(name: "Japan", capitalName: "Tokyo")
 
 ### 閉包的強參考循環
 
+除了前面提到的類別實體之間可能產生強參考循環，當將一個閉包(`closure`，也就是匿名函式)設置給一個類別實體的屬性時，這個閉包函式內存取了這個實體的某個屬性，或是呼叫了實體的一個方法，都會導致閉包捕獲(`capture`)了`self`，進而產生了強參考循環。
+
+##### Hint：閉包所捕獲的參考會被自動視為強參考。
+
+這個強參考循環的產生，是因為閉包也是參考型別，當把閉包設置給一個屬性時，實際上是設置了閉包的參考。
+
+以下是一個閉包與類別實體的強參考循環的例子：
+
+```swift
+// 定義一個代表 HTML 元素的類別 HTMLElement
+class HTMLElement {
+    let name: String
+    let text: String?
+
+    // 定義為 lazy 屬性 表示只有當初始化完成以及 self 確實存在後
+    // 才能存取這個屬性
+    lazy var asHTML: Void -> String = {
+        if let text = self.text {
+            return "<\(self.name)>\(text)</\(self.name)>"
+        } else {
+            return "<\(self.name) />"
+        }
+    }
+
+    init(name: String, text: String? = nil) {
+        self.name = name
+        self.text = text
+    }
+
+}
+
+// 宣告為可選 HTMLElement 型別 以便後面設為 nil
+var paragraph: HTMLElement? = HTMLElement(name: "p", text: "Hello, world")
+
+// 初始化完成後 就可以存取這個屬性
+print(paragraph!.asHTML())
+
+// 這時 paragraph 指向的實體的參考計數為 2
+// 一個是自己 一個是閉包
+
+// 而這個實體也有一個強參考指向閉包
+
+// 這時將變數指向的強參考斷開 參考計數減為 1
+// 參考仍然不會被釋放 造成強參考循環
+paragraph = nil
+
+```
+
+##### Hint：閉包中雖然多次使用了`self`，但只捕獲了 1 個強參考(也就是參考計數只算 1 次)
+
 
 ### 解決閉包的強參考循環
 
+在定義閉包時，同時定義**捕獲列表**(`capture list`)作為閉包的一部分，通過這種方式可以解決閉包和類別實體之間的強參考循環。捕獲列表中必須定義每個閉包中捕獲的參考為弱參考或無主參考(依其相互關係來決定)。
+
 #### 定義捕獲列表
 
-#### 弱參考和無主參考
+**捕獲列表**(`capture list`)中每一項都以`weak`或`unowned`關鍵字與類別實體的參考(如`self`)或初始化過的變數(如`delegate = self.delegate!`)成對組成，每一項以逗號`,`隔開，並寫在中括號`[]`內。
 
+以下為捕獲列表的格式：
 
+```swift
+// 如果閉包有參數及返回型別 則將捕獲列表寫在他們前面
+lazy var someClosure: (Int, String) -> String = {
+    [unowned self, weak delegate = self.delegate!] (index: Int, stringToProcess: String) -> String in
+    // 閉包內執行的程式
+}
 
+// 或是省略閉包定義的參數或返回型別 讓他們可以通過上下文自動推斷
+// 這時將捕獲列表放在關鍵字 in 的前面
+lazy var someClosure: Void -> String = {
+    [unowned self, weak delegate = self.delegate!] in
+    // 閉包內執行的程式
+}
 
+```
 
+以下則是將前面的例子`HTMLElement`中的閉包加上捕獲列表，便可以避免強參考循環：
+
+```swift
+class HTMLElement {
+    let name: String
+    let text: String?
+
+    lazy var asHTML: Void -> String = {
+        // 這邊使用無主參考 unowned
+        [unowned self] in
+        if let text = self.text {
+            return "<\(self.name)>\(text)</\(self.name)>"
+        } else {
+            return "<\(self.name) />"
+        }
+    }
+
+    init(name: String, text: String? = nil) {
+        self.name = name
+        self.text = text
+    }
+
+}
+
+```
 
