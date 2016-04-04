@@ -190,7 +190,8 @@ var testScores = [
 testScores["Dave"]?[0] = 91
 testScores["Bev"]?[0] += 1
 
-// 因為沒有 Brian 這個鍵 會是 nil 所以底下這行不會有任何事情發生
+// 因為沒有 Brian 這個鍵 會是 nil 
+// 所以指派值會失敗 底下這行不會有任何事情發生
 testScores["Brian"]?[0] = 72
 
 ```
