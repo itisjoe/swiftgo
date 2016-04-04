@@ -2,29 +2,29 @@
 
 可選鏈(`optional chaining`)是一個可以存取或呼叫屬性(`property`)、方法(`method`)及下標(`subscript`)的過程。
 
-稱呼其為**可選**(`optional`)是因為當前存取或呼叫的目標可能為空(`nil`)，而多次存取或呼叫可以用**點語法**(`dot syntax`，即`.`)將其全部連結在一起，所以稱為鏈(`chaining`)。
+稱其為**可選**(`optional`)是因為當前存取或呼叫的目標可能為空(`nil`)，而多次存取或呼叫可以用**點語法**(`dot syntax` 即`.`)將其全部鏈結在一起，所以稱為鏈(`chaining`)。
 
-可選鏈中，只要其中一個節點為空(`nil`)，則會立即返回`nil`。相對地，如果存取或呼叫至最後一個節點都有值，則會返回一個可選型別的值。
+可選鏈中，只要其中一個節點為空(`nil`)，則會立即返回`nil`。相對地，如果存取或呼叫至最後一個節點都有值，則會返回一個**可選型別**的值。
 
 
 ### 以可選鏈替代強制解析
 
 可選鏈中，如果其中一個節點為可選值時，必須在這個值後面加上問號(`?`)，來表示這是一個可選值，也就是當這個值為空(`nil`)時，會立即返回`nil`。
 
-與強制解析(`forced unwrapping`)的在值後面加上驚嘆號(`!`)不同，強制解析的值如果為空(`nil`)時，會觸發程式運行錯誤。而可選鏈中的可選值(加上問號`?`)如果為空(`nil`)，則只會單純的返回`nil`。
+與強制解析(`forced unwrapping`)在值後面加上驚嘆號(`!`)不同，強制解析的值如果為空(`nil`)時，會觸發程式運行錯誤。而可選鏈中的可選值(加上問號`?`)如果為空(`nil`)，則只會單純的返回`nil`。
 
 不論可選鏈最後返回的屬性、方法或下標是不是可選型別的值，都是返回一個可選值，所以可以用來判斷這個可選鏈是否成功，有返回值是成功，返回`nil`則是失敗。像是原本返回應該是一個`Int`型別的值，經由可選鏈後返回會是一個`Int?`可選型別的值。以下是一個例子：
 
 ```swift
 // 定義一個類別 Person
 class Person {
-    // 有一個屬性為可選的 Residence 型別 residence
+    // residence 屬性為可選的 Residence 型別
     var residence: Residence?
 }
 
 // 定義一個類別 Residence
 class Residence {
-    // 有一個屬性為 Int 型別 numberOfRooms
+    // numberOfRooms 屬性為 Int 型別
     var numberOfRooms = 1
 }
 
@@ -42,7 +42,7 @@ if let roomCount = joe.residence?.numberOfRooms {
     print("無法取得房間數量")
 }
 
-// 上述 if 語句目前會印出： 無法取得房間數量
+// 上述 if 語句目前會印出：無法取得房間數量
 // 接著為 joe.residence 設置一個 Residence 實體
 joe.residence = Residence()
 
@@ -64,7 +64,7 @@ class Person {
 
 // 定義一個類別 Room
 class Room {
-    // 有一個屬性為 String 型別 name
+    // name 屬性為 String 型別
     let name: String
 
     // 生成實體時同時設置屬性 name 的值
@@ -73,7 +73,7 @@ class Room {
 
 // 重新定義類別 Residence
 class Residence {
-    // 新增一個屬性 型別為 [Room] 的陣列 預設值是空陣列
+    // rooms 屬性為一個陣列 型別為 [Room] 預設值是空陣列
     var rooms = [Room]()
 
     // 將 numberOfRooms 改為一個計算屬性 並返回 rooms 的數量
@@ -103,7 +103,7 @@ class Residence {
 
 #### 存取屬性
 
-前面的例子就是示範存取屬性，還要提的一點是，你可以嘗試使用可選鏈來給屬性指派值，如下：
+前面的例子就是示範存取屬性，還要提的一點是，你也可以嘗試使用可選鏈來給屬性指派值，如下：
 
 ```swift
 // 使用上面生成的實體 joe 設置新的值
@@ -130,7 +130,7 @@ if kevin.residence?.printNumberOfRooms() != nil {
     print("無法呼叫函式")
 }
 
-// 這時因為都有值且有預設值 所以會印出： 有 0 間房間
+// 這時因為都有值且有預設值 所以會印出：有 0 間房間
 
 ```
 
