@@ -13,21 +13,17 @@
 
 與強制解析(`forced unwrapping`)的在值後面加上驚嘆號(`!`)不同，強制解析的值如果為空(`nil`)時，會觸發程式運行錯誤。而可選鏈中的可選值(加上問號`?`)如果為空(`nil`)，則只會單純的返回`nil`。
 
-不論可選鏈最後返回的屬性、方法或下標是不是可選型別的值，都是返回一個可選值，所以可以用來判斷這個可選鏈是否成功，有返回值是成功，返回`nil`則是失敗。像是原本返回應該是一個`Int`型別的值，經由可選鏈後返回會是一個`Int?`可選型別的值。
-
-以下是一個例子：
+不論可選鏈最後返回的屬性、方法或下標是不是可選型別的值，都是返回一個可選值，所以可以用來判斷這個可選鏈是否成功，有返回值是成功，返回`nil`則是失敗。像是原本返回應該是一個`Int`型別的值，經由可選鏈後返回會是一個`Int?`可選型別的值。以下是一個例子：
 
 ```swift
 // 定義一個類別 Person
 class Person {
-    
     // 有一個屬性為可選的 Residence 型別 residence
     var residence: Residence?
 }
 
 // 定義一個類別 Residence
 class Residence {
-    
     // 有一個屬性為 Int 型別 numberOfRooms
     var numberOfRooms = 1
 }
@@ -46,7 +42,7 @@ if let roomCount = joe.residence?.numberOfRooms {
     print("無法取得房間數量")
 }
 
-// 上述 if 語句目前會印出 無法取得房間數量
+// 上述 if 語句目前會印出： 無法取得房間數量
 // 接著為 joe.residence 設置一個 Residence 實體
 joe.residence = Residence()
 
@@ -57,26 +53,17 @@ print(joe.residence?.numberOfRooms)
 ```
 
 
-### 通過可選鏈存取屬性
+### 通過可選鏈存取屬性、下標及呼叫方法
 
-前面的例子就是示範存取屬性，還要提的一點是，你可以嘗試通過可選鏈來給屬性指派值，如下：
-
-```swift
-// 使用上面生成的實體 joe 設置新的值
-joe.residence?.numberOfRooms = 12
-
-```
-
-何以說**嘗試**指派值，因為如果`joe.residence`尚未有值(為`nil`)時就將值指派給他，這時不會發生任何事，因為`joe.residence`仍為`nil`，需要直到他有一個`Residence`的實體後，才能正確指派值。
-
-### 通過可選鏈呼叫方法及存取下標
-
-接著將前面例子中的`Residence`重新定義，並新增一個類別`Room`，類別`Person`則是沿用，如下：
+這邊定義三個類別以供後續示範，沿用先前的類別`Person`，並新增一個類別`Room`，最後將`Residence`重新定義，如下：
 
 ```swift
+class Person {
+    var residence: Residence?
+}
+
 // 定義一個類別 Room
 class Room {
-
     // 有一個屬性為 String 型別 name
     let name: String
 
@@ -86,7 +73,6 @@ class Room {
 
 // 重新定義類別 Residence
 class Residence {
-
     // 新增一個屬性 型別為 [Room] 的陣列 預設值是空陣列
     var rooms = [Room]()
 
@@ -115,7 +101,21 @@ class Residence {
 
 ```
 
-首先示範呼叫方法，可以看到`printNumberOfRooms()`方法沒有返回值，前面章節提過，其實是會返回一個`Void`(即返回一個`()`的值或稱為空的元組`tuple`)。
+#### 存取屬性
+
+前面的例子就是示範存取屬性，還要提的一點是，你可以嘗試使用可選鏈來給屬性指派值，如下：
+
+```swift
+// 使用上面生成的實體 joe 設置新的值
+joe.residence?.numberOfRooms = 12
+
+```
+
+何以說**嘗試**指派值，因為如果`joe.residence`尚未有值(為`nil`)時就將值指派給他，這時不會發生任何事，因為`joe.residence`仍為`nil`，必須直到他有一個`Residence`的實體後，才能正確指派值。
+
+#### 呼叫方法
+
+前面定義的類別中可以看到`printNumberOfRooms()`方法沒有返回值，前面章節提過，其實是會返回一個`Void`(即返回一個`()`的值或稱為空的元組`tuple`)。
 
 這時在可選鏈中呼叫這個方法的話，則是會返回`Void?`，而不是`Void`(因為可選鏈一定會返回可選值)，所以仍然可以依照是否返回`nil`來判斷這個可選鏈是否成功，如下：
 
@@ -134,9 +134,75 @@ if kevin.residence?.printNumberOfRooms() != nil {
 
 ```
 
+#### 存取下標
 
+與屬性相同，你可以使用可選鏈存取下標，也可以指派新的值給下標。底下是一個例子：
 
+```swift
+// 先生成一個實體
+let kevin = Person()
 
+// 這邊嘗試存取放在陣列中第一個房間的名稱
+if let firstRoomName = kevin.residence?[0].name {
+    print("第一個房間的名稱為 \(firstRoomName).")
+} else {
+    print("無法取得第一個房間的名稱")
+}
 
+// 這邊嘗試用下標指派一個值
+kevin.residence?[0] = Room(name: "臥房")
 
+// 上面兩個返回的都是 nil 因為目前 kevin.residence 尚未有值
+
+// 先生成一個 Residence 實體
+let kevinHouse = Residence()
+
+// 接著為其內型別為 [Room] 的陣列屬性加上值
+kevinHouse.rooms.append(Room(name: "廚房"))
+kevinHouse.rooms.append(Room(name: "浴室"))
+
+// 最後將其設置為 kevin.residence
+kevin.residence = kevinHouse
+
+// 這時再存取 即會有值 這邊會印出：第一個房間名稱為 廚房
+if let firstRoomName = kevin.residence?[0].name {
+    print("第一個房間名稱為 \(firstRoomName)")
+} else {
+    print("無法取得第一個房間的名稱")
+}
+
+```
+
+##### Hint：如果可選鏈中的下標的值為一個可選值，記得要將問號`?`放在中括號`[]`的前面而不是後面。可選鏈的問號一定是緊接在可選表達式的後面。
+
+#### 存取可選型別的下標
+
+這邊以一個字典`Dictionary`型別的變數做示範，可選鏈的問號`?`必須放在下標的中括號`[]`後面來鏈接可選返回值，如下：
+
+```swift
+// 宣告一個字典的變數
+var testScores = [
+    "Dave": [86, 82, 84],
+    "Bev": [79, 94, 81]
+]
+
+// 為下標設置新的值
+testScores["Dave"]?[0] = 91
+testScores["Bev"]?[0] += 1
+
+// 因為沒有 Brian 這個鍵 會是 nil 所以底下這行不會有任何事情發生
+testScores["Brian"]?[0] = 72
+
+```
+
+#### 可選鏈的方法返回一個可選值
+
+前面的例子說明可以使用可選鏈來存取可選型別的值，同樣地，也可以使用可選鏈來呼叫一個會**返回可選型別的值**的方法，如果需要的話仍然可以對該返回值繼續進行鏈接，如下：
+
+```swift
+john.someProperty?.someMethod()?.hasPrefix("The")
+
+```
+
+##### Hint：可選鏈的問號`?`是放在方法的小括號`()`後面，因為可選值是`someMethod()`方法的返回值，而不是`someMethod()`方法本身。
 
