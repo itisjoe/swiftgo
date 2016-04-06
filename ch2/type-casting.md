@@ -121,7 +121,7 @@ let someObjects: [AnyObject] = [
 ]
 
 // 我們明確的知道這個陣列只包含著 Archer 實體
-// 所以可以使用強制型的 as! 來向下轉換至 Archer 型別
+// 所以可以使用強制性的 as! 來向下轉換至 Archer 型別
 for object in someObjects {
     let oneChar = object as! Archer
     print("弓箭手的名字：\(oneChar.name)，介紹：\(oneChar.intro)")
