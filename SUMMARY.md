@@ -21,6 +21,7 @@
    * [自動參考計數](ch2/arc.md)
    * [可選鏈](ch2/optional-chaining.md)
    * [錯誤處理](ch2/error-handling.md)
+   * [型別轉換](ch2/type-casting.md)
 * [補充](chz.md)
    * 系統關鍵字
 
