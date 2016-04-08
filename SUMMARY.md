@@ -23,6 +23,7 @@
    * [錯誤處理](ch2/error-handling.md)
    * [型別轉換](ch2/type-casting.md)
    * [巢狀型別](ch2/nested-types.md)
+   * [擴展](ch2/extensions.md)
 * [補充](chz.md)
    * 系統關鍵字
 
