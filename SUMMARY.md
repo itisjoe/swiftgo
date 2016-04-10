@@ -24,6 +24,7 @@
    * [型別轉換](ch2/type-casting.md)
    * [巢狀型別](ch2/nested-types.md)
    * [擴展](ch2/extensions.md)
+   * [存取控制](ch2/access-control.md)
 * [補充](chz.md)
    * 系統關鍵字
 
