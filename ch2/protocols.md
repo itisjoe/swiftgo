@@ -274,6 +274,66 @@ print(twoInstance.oneMember.method())
 
 ### 委任模式
 
+委任(`delegation`)是一種設計模式，它允許類別或結構將一些需要它們負責的功能委任給其他型別的實體。
+
+委任模式的實作就是定義協定來封裝那些需要被委任的功能，而遵循這個協定的型別就能提供這些功能。委任模式可以用來回應特定的動作或是接收外部資料，而不需要知道外部資料的型別。
+
+以下是一個例子：
+
+```swift
+// 定義一個協定 遵循這個協定的類別都要實作 attack() 方法
+protocol GameCharacterProtocol {
+    func attack()
+}
+
+// 定義一個委任協定 將一些其他功能委任給別的實體實作
+protocol GameCharacterProtocolDelegate {
+    // 這邊是定義一個在攻擊後需要做的整理工作
+    func didAttackDelegate()
+}
+
+// 定義一個類別 表示一個遊戲角色 
+class GameCharacter: GameCharacterProtocol {
+    // 首先定義一個變數屬性 delegate 型別為 GameCharacterProtocolDelegate
+    // 定義為可選型別 會先初始化為 nil 之後再將其設置為負責其他動作的另一個型別的實體
+    var delegate: GameCharacterProtocolDelegate?
+
+    // 因為遵循[協定 GameCharacterProtocol]
+    // 所以需要實作 attack() 這個方法
+    func attack() {
+        print("攻擊！")
+
+        // 最後將其他動作委任給另一個型別的實體實作
+        delegate?.didAttackDelegate()
+    }
+}
+
+// 定義一個類別 遵循[協定 GameCharacterProtocolDelegate]
+// 這個類別生成的實體會被委任其他動作
+class GameCharacterDelegate: GameCharacterProtocolDelegate {
+    // 必須實作這個方法
+    func didAttackDelegate() {
+        print("攻擊後的整理工作")
+    }
+}
+
+// 首先生成一個遊戲角色的實體
+let oneChar = GameCharacter()
+
+// 接著生成一個委任類別的實體 要負責其他的動作
+let charDelegate = GameCharacterDelegate()
+
+// 將遊戲角色的 delegate 屬性設為委任的實體
+oneChar.delegate = charDelegate
+
+// 接著呼叫攻擊方法
+oneChar.attack()
+// 會依序印出：
+// 攻擊！
+// 攻擊後的整理工作
+
+```
+
 
 ### 為擴展添加協定
 
