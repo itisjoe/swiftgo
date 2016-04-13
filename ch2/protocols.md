@@ -335,22 +335,190 @@ oneChar.attack()
 
 ### 為擴展添加協定
 
+你也可以讓擴展遵循協定，這樣就可以在不修改原始程式碼的情況下，讓已存在的型別經由擴展來遵循一個協定。當已存在型別經由擴展遵循協定時，這個型別的所有實體也會隨之獲得協定中定義的功能。
+
+```swift
+// 定義另一個協定 增加一個防禦方法 defend
+protocol GameCharacterDefend {
+    func defend()
+}
+
+// 定義一個擴展 會遵循新定義的協定 GameCharacterDefend
+extension GameCharacter: GameCharacterDefend {
+    // 必須實作這個方法
+    func defend() {
+        print("防禦！")
+    }
+}
+
+// 使用前面生成的實體 oneChar
+// 這樣這個被擴展的類別生成的實體 也隨即可以使用這個方法
+oneChar.defend()
+// 印出：防禦！
+
+```
+
+#### 經由擴展遵循協定
+
+當一個型別已經符合某個協定的所有要求，但卻沒有在型別的定義中宣告時，可以經由一個空的擴展來遵循這個協定，以下是個例子：
+
+```swift
+// 定義一個協定
+protocol SomeProtocol {
+    var name: String { get set }
+}
+
+// 定義一個類別 滿足了[協定 SomeProtocol]的要求 但尚未遵循它
+class SomeClass {
+    var name = "good day"
+}
+
+// 這時可以使用擴展來遵循
+extension SomeClass: SomeProtocol {}
+
+```
+
+##### Hint
+
+- 即使滿足了協定的所有要求，型別也不會自動遵循協定，必須顯式地為它加上遵循協定才行。
+
 
 ### 協定型別的集合
+
+協定型別也可以作為陣列或字典內成員的型別，以下是個例子：
+
+```swift
+// 生成另外兩個實體
+let twoChar = GameCharacter()
+let threeChar = GameCharacter()
+
+// 宣告一個型別為 [GameCharacterProtocol] 的陣列
+let team: [GameCharacterProtocol] = [oneChar, twoChar, threeChar]
+
+// 因為都遵循這個協定 所以這個 attack() 方法一定存在可以呼叫
+for member in team {
+    member.attack()
+}
+
+```
 
 
 ### 協定的繼承
 
+協定也可以像類別一樣繼承另外一個或多個協定，可以在繼承的協定的基礎上增加新的功能，繼承的多個協定一樣是使用逗號`,`隔開，如下：
 
-### 只用於類別的協定
+```swift
+protocol 新協定: 繼承的協定, 繼承的另一個協定 {
+    協定新增加的功能
+}
+
+```
+
+#### 只用於類別的協定
+
+你可以在協定的繼承列表中，增加關鍵字`class`來限制這個協定只能被類別型別遵循，而列舉跟結構不能遵循這個協定。`class`必須擺在繼承列表的第一個，在其他要繼承的協定之前，如下：
+
+```swift
+protocol 只用於類別的協定: class, 其他要遵循的協定 {
+    只用於類別的協定的功能
+}
+
+```
 
 
 ### 協定合成
 
-協定合成(`protocol composition`)
+如果你需要一個型別同時遵循多個協定，你可以將多個協定使用`protocol<SomeProtocol, AnotherProtocol>`這種格式組合起來，這種方式稱為**協定合成**(`protocol composition`)，在`<>`中可以填入多個需要遵循的協定，並以逗號`,`隔開，如下：
+
+```swift
+// 定義一個協定 有一個 name 屬性
+protocol Named {
+    var name: String { get }
+}
+
+// 定義另一個協定 有一個 age 屬性
+protocol Aged {
+    var age: Int { get }
+}
+
+// 定義一個結構 遵循上面兩個定義的協定
+struct Person: Named, Aged {
+    var name: String
+    var age: Int
+}
+
+// 定義一個函式 有一個參數 定義為遵循這兩個協定的型別
+// 所以寫成 protocol<Named, Aged> 格式
+func wishHappyBirthday(celebrator: protocol<Named, Aged>) {
+    print("生日快樂！ \(celebrator.name) ， \(celebrator.age) 歲囉！")
+}
+
+let birthdayPerson = Person(name: "Brian", age: 25)
+wishHappyBirthday(birthdayPerson)
+// 印出：生日快樂！ Brian ， 25 歲囉！
+
+```
 
 
 ### 檢查協定
+
+你可以使用前面章節提過的`is`與`as`來檢查是否符合某協定或是轉換到指定的協定型別，使用方式與型別檢查與轉換一樣：
+
+- `is`用來檢查實體是否符合某協定，符合會返回`true`，反之則返回`false`。
+- `as?`返回一個可選值。當實體符合某協定時，會返回協定型別的可選值，反之則返回`nil`。
+- `as!`將實體強制向下轉換到某協定型別，如果失敗則會引發運行時錯誤。
+
+以下是一個例子：
+
+```swift
+// 定義一個協定 有一個 area 屬性 表示面積
+protocol HasArea {
+    var area: Double { get }
+}
+
+// 定義一個圓的類別 遵循[協定 HasArea] 所以會有 area 屬性
+class Circle: HasArea {
+    var area: Double
+    init(radius: Double) { self.area = 3.14 * radius * radius }
+}
+
+// 定義一個國家的類別 遵循[協定 HasArea] 所以會有 area 屬性
+class Country: HasArea {
+    var area: Double
+    init(area: Double) { self.area = area }
+}
+
+// 定義一個動物的類別 沒有面積
+class Animal {
+    var legs: Int
+    init(legs: Int) { self.legs = legs }
+}
+
+// 以上三個類別的實體都可以作為 [AnyObject] 陣列的成員
+let objects: [AnyObject] = [
+    Country(area: 243610),
+    Circle(radius: 2.0),
+    Animal(legs: 4)
+]
+
+// 遍歷這個陣列
+for object in objects {
+    // 使用可選綁定來將成員綁定為 HasArea 的實體
+    if let objectWithArea = object as? HasArea {
+        // 符合協定 就會綁定成功 也就可以取得 area 屬性
+        print("面積為 \(objectWithArea.area)")
+    } else {
+        // 不符合協定 則是返回 nil
+        print("沒有面積！")
+    }
+}
+
+// 依序印出：
+// 面積為 243610.0
+// 面積為 12.56
+// 沒有面積！
+
+```
 
 
 ### 可選協定的規則
