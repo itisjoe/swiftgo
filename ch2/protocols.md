@@ -523,25 +523,134 @@ for object in objects {
 
 ### 可選協定的規則
 
+你可以在`protocol`前面加上`@objc`特性來讓協定可以定義它的功能(像是屬性或方法)為可選。要定義一個可選功能，必須在前面加上`optional`關鍵字。
+
+如果將功能變為可選後，它們的型別會自動變成可選的。像是一個型別為`(Int) -> String`的方法會變成`((Int) -> String)?`，是**方法的型別**為可選，不是方法返回值的型別。
+
+而這些定義為可選的功能，可以使用**可選鏈**來呼叫。
+
+以下是一個例子：
+
+```swift
+// 要加上 @objc 必須引入 Foundation
+import Foundation
+// 這邊不詳細說明 因為可選協定與 Objective-C 程式語言有關係
+// 而 Objective-C 大量使用到 Foundation 的功能 所以需要引入
+
+// 定義一個可選協定 用於計數 分別有兩種不同的增量值
+@objc protocol CounterDataSource {
+    // 定義一個可選方法 可以傳入一個要增加的整數
+    optional func incrementForCount(count: Int) -> Int
+    
+    // 定義一個可選屬性 為一個固定增加的整數
+    optional var fixedIncrement: Int { get }
+}
+
+// 定義一個遵循可選協定的類別 計數用
+class CounterSource: CounterDataSource {
+    // 一個經由遵循協定而擁有的可選屬性 設值為 3
+    // 前面必須加上 @objc
+    @objc let fixedIncrement = 3
+    
+    // 不過因為是可選的 所以另一個可選方法可以不用實作 這邊將其註解起來
+    /*
+    @objc func incrementForCount(count: Int) -> Int {
+        return count
+    }
+    */
+
+}
+
+// 用來計數的變數
+var count = 0
+
+// 生成一個型別為[可選協定 CounterDataSource]的實體
+// 因為類別 CounterSource 有遵循這個協定 所以可以指派為這個類別的實體
+var dataSource: CounterDataSource = CounterSource()
+
+// 迴圈跑 4 次
+for _ in 1...4 {
+    // 使用可選綁定
+    // 首先呼叫 incrementForCount() 方法 但因為這是個可選方法 所以需要加上 ?
+    // 而目前這個 incrementForCount 沒有實作這個方法
+    // 所以會返回 nil 也就不會執行 if 內的程式
+    if let amount = dataSource.incrementForCount?(count){
+        count += amount
+    }
+    // 接著依舊使用可選綁定 取得屬性 fixedIncrement
+    // 因為有設置這個屬性 所以會有值 流程則會進入此 else if 內的程式
+    else if let amount = dataSource.fixedIncrement{
+        count += amount
+    }
+}
+
+// 因為迴圈跑了 4 次,每次都是加上 3 ,所以最後計為 12
+print("最後計數為 \(count)")
+// 印出：最後計數為 12
+
+```
+
 
 ### 協定擴展
 
-#### 為協定提供預設的實作
+你也可以擴展一個協定來為遵循這個協定的型別新增屬性、方法或下標，而不需要在每個遵循這個協定的型別內實作一樣的功能。以下是個例子：
+
+```swift
+// 擴展前面定義的協定 GameCharacterProtocol
+// 此協定原本只有定義一個 attack() 方法
+// 這邊增加一個新的方法
+extension GameCharacterProtocol {
+    func superAttack() {
+        print("額外的攻擊！")
+        attack()
+    }
+}
+
+// 生成一個遊戲角色的實體
+let member = GameCharacter()
+
+// 可以直接呼叫擴展協定後新增的方法
+member.superAttack()
+// 依序印出：
+// 額外的攻擊！
+// 攻擊！
+// 攻擊後的整理工作
+
+```
+
+由上述程式可知，經由擴展一個協定，可以直接建立屬性、方法及下標預設的實作功能，而這些遵循協定的型別如果自己又另外實作的話，則這些自定義的實作會替代擴展中的預設實作功能。
 
 #### 為協定擴展添加限制條件
 
+在擴展一個協定時，可以指定一些限制條件，當遵循協定的型別滿足這些限制條件時，才能獲得這個擴展的協定提供的預設實作。使用方式為在協定名稱後面加上`where`子句並接著限制條件。例子如下：
 
+```swift
+// 先為[協定 GameCharacterProtocol]經由擴展增加一個新的屬性
+extension GameCharacterProtocol {
+    var description: String {
+        return "成員"
+    }
+}
 
+// 接著擴展[集合型別的協定 CollectionType] 且其內成員必須遵循[協定 GameCharacterProtocol]
+extension CollectionType where Generator.Element: GameCharacterProtocol {
+    var allDescription: String {
+        let itemsAsText = self.map { $0.description }
+        return "[" + itemsAsText.joinWithSeparator(", ") + "]"
+    }
+}
 
+// 生成三個實體並放入一個陣列中
+let oneMember = GameCharacter()
+let twoMember = GameCharacter()
+let threeMember = GameCharacter()
+let myTeam = [oneMember, twoMember, threeMember]
 
+// 因為陣列為一個集合型別 所以有遵循[協定 CollectionType]
+// 且其內成員都遵循[協定 GameCharacterProtocol]
+// 所以這個 allDescription 屬性會自動獲得
+print(myTeam.allDescription)
+// 印出：[成員, 成員, 成員]
 
-
-
-
-
-
-
-
-
-
+```
 
