@@ -618,7 +618,7 @@ member.superAttack()
 
 ```
 
-由上述程式可知，經由擴展一個協定，可以直接建立屬性、方法及下標預設的實作功能，而這些遵循協定的型別如果自己又另外實作的話，則這些自定義的實作會替代擴展中的預設實作功能。
+由上述程式可知，經由擴展一個協定，可以直接為屬性、方法及下標建立預設的實作功能，而這些遵循協定的型別如果自己又另外實作的話，則這些自定義的實作會替代擴展中的預設實作功能。
 
 #### 為協定擴展添加限制條件
 
@@ -646,7 +646,7 @@ let twoMember = GameCharacter()
 let threeMember = GameCharacter()
 let myTeam = [oneMember, twoMember, threeMember]
 
-// 因為陣列為一個集合型別 所以有遵循[協定 CollectionType]
+// 因為陣列定義時有遵循[協定 CollectionType]
 // 且其內成員都遵循[協定 GameCharacterProtocol]
 // 所以這個 allDescription 屬性會自動獲得
 print(myTeam.allDescription)
