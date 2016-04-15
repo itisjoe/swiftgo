@@ -317,12 +317,13 @@ stackOfStrings.push("one")
 stackOfStrings.push("two")
 stackOfStrings.push("three")
 
-// 宣告一個陣列
+// 宣告一個陣列 也放置了三個字串
 var arrayOfStrings = ["one", "two", "three"]
 
-// 呼叫這個函式
-// 因為先前已將 Stack 跟 Array 都遵循了協定 Container
-// 所以可以比對這兩個 Container 的實體
+// 雖然 Stack 跟 Array 不是相同型別
+// 但先前已將兩者都遵循了協定 Container
+// 且都包含相同型別的值
+// 所以可以把這兩個 Container 的實體當做參數傳入函式
 if allItemsMatch(stackOfStrings, arrayOfStrings) {
     print("所有元素都符合")
 } else {
@@ -331,8 +332,4 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 // 印出：所有元素都符合
 
 ```
-
-
-
-
 
