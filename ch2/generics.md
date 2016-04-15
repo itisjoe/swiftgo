@@ -168,7 +168,7 @@ if let topItem = stackOfStrings.topItem {
 
 像是 Swift 內建的字典(`Dictionary`)便對字典的鍵的型別作了些限制。字典的鍵的型別必須是**可雜湊的(`hashable`)**，也就是必須只有唯一一種方式可以表示這個鍵。
 
-而實際上為了實現這個限制，字典的鍵的型別符合了`Hashable`協定。**`Hashable`**是 Swift 標準函式庫中定義的一個特定協定，所有 Swift 的基本型別(像是`Int`、`Double`、`Bool`和`String`)預設都是可雜湊的(`hashable`)。
+而實際上為了實現這個限制，字典的鍵的型別符合了`Hashable`協定。`Hashable`是 Swift 標準函式庫中定義的一個特定協定，所有 Swift 的基本型別(像是`Int`、`Double`、`Bool`和`String`)預設都是可雜湊的(`hashable`)。
 
 #### 型別約束語法
 
@@ -212,12 +212,125 @@ let stringIndex = findIndex(["Adam", "Kevin", "Jess"], "Kevin")
 
 ### 關聯型別
 
-#### 使用關聯型別
+關聯型別(`associated type`)表示會為協定中的某個型別提供一個佔位名稱(`placeholder name`)，其代表的實際型別會在協定被遵循時才會被指定。使用`associatedtype`關鍵字來指定一個關聯型別。
+
+底下是一個例子，定義一個協定`Container`，協定中定義了一個關聯型別`ItemType`：
+
+```swift
+protocol Container {
+    associatedtype ItemType
+    mutating func append(item: ItemType)
+    var count: Int { get }
+    subscript(i: Int) -> ItemType { get }
+}
+
+```
+
+上述程式中可以看到，協定定義的**方法`append()`參數的型別**及**下標的返回值型別**都是`ItemType`，目前仍是佔位名稱，實際型別要等到這個協定被遵循後才會被指定。
+
+接著我們將前面定義的堆疊(`Stack`)遵循這個協定`Container`，在實作協定`Container`的全部功能後，Swift 會自動推斷`ItemType`的型別就是`Element`，如下：
+
+```swift
+struct Stack<Element>: Container {
+    // Stack<Element> 原實作的內容
+    var items = [Element]()
+    mutating func push(item: Element) {
+        items.append(item)
+    }
+    mutating func pop() -> Element {
+        return items.removeLast()
+    }
+
+    // 原本應該要寫 typealias 
+    // 但因為 Swift 會自動推斷型別 所以下面這行可以省略
+    // typealias ItemType = Element
+
+    // 協定 Container 實作的內容
+    mutating func append(item: Element) {
+        self.push(item)
+    }
+    var count: Int {
+        return items.count
+    }
+    subscript(i: Int) -> Element {
+        return items[i]
+    }
+}
+
+```
 
 #### 經由擴展一個已存在的型別來設置關聯型別
 
+前面章節有提過，可以利用擴展來讓一個已存在的型別符合協定，使用了關聯型別的協定也一樣可以。
+
+Swift 內建的陣列(`Array`)型別恰恰好已經有前面提過的協定`Container`需要實作的功能(分別是方法`append()`、屬性`count`及下標返回一個依索引值取得的元素)。所以現在可以很簡單的利用一個空的擴展來讓`Array`遵循這個協定，如下：
+
+```swift
+extension Array: Container {}
+
+```
+
 
 ### Where 語句
+
+有時候你也可能需要對關聯型別定義更多的限制，這時可以經由在參數列表加上一個`where`語句，並緊接著限制條件來定義。你可以限制一個關聯型別要遵循某個協定，或是某個型別參數和關聯型別的型別必須相同。
+
+底下定義一個泛型函式`allItemsMatch()`，功能為檢查兩個`Container`的實體是否包含相同順序的相同元素，如果條件都符合會返回`true`，否則返回`false`：
+
+```swift
+func allItemsMatch<
+    C1: Container, C2: Container
+    where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
+    (someContainer: C1, _ anotherContainer: C2) -> Bool {
+    
+    // 檢查兩個 Container 的實體含有相同數量的元素
+    if someContainer.count != anotherContainer.count {
+        return false
+    }
+    
+    // 檢查每一對元素是否相等
+    for i in 0..<someContainer.count {
+        if someContainer[i] != anotherContainer[i] {
+            return false
+        }
+    }
+    
+    // 所有條件都符合 返回 true
+    return true
+}
+
+```
+
+從上述定義可以看到，這個函式的型別參數列表還定義了對兩個型別參數的要求：
+
+- C1 必須符合協定`Container`(即`C1: Container`)。
+- C2 必須符合協定`Container`(即`C2: Container`)。
+- C1 的`ItemType`必須與 C2 的`ItemType`型別相同(即`C1.ItemType == C2.ItemType`)。
+- C1 的`ItemType`必須符合協定`Equatable`(即`C1.ItemType: Equatable`)。
+
+接著可以實際使用這個函式，如下：
+
+```swift
+// 宣告一個型別為 Stack 的變數 並依序放入三個字串
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("one")
+stackOfStrings.push("two")
+stackOfStrings.push("three")
+
+// 宣告一個陣列
+var arrayOfStrings = ["one", "two", "three"]
+
+// 呼叫這個函式
+// 因為先前已將 Stack 跟 Array 都遵循了協定 Container
+// 所以可以比對這兩個 Container 的實體
+if allItemsMatch(stackOfStrings, arrayOfStrings) {
+    print("所有元素都符合")
+} else {
+    print("不符合")
+}
+// 印出：所有元素都符合
+
+```
 
 
 
