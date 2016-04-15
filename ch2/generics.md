@@ -19,7 +19,7 @@ func swapTwoInts(inout a: Int, inout _ b: Int) {
     b = temporaryA
 }
 
-// 定義兩個整數變數 並當做參數傳入函式
+// 宣告兩個整數變數 並當做參數傳入函式
 var oneInt = 12
 var anotherInt = 500
 swapTwoInts(&oneInt, &anotherInt)
@@ -54,7 +54,7 @@ func swapTwoValues<T>(inout a: T, inout _ b: T) {
 
 上述程式中的函式使用了**佔位型別名稱**(`placeholder type name`，習慣以字母`T`來表示)來代替實際型別名稱(像是`Int`、`Double`或`String`)。
 
-可以注意到函式名稱後面緊接著一組**角括號`<>`**，且將`T`包含著。這代表角括號內的`T`是函式定義的一個佔位型別名稱，因此 Swift 不會去查找名稱為`T`的實際型別。
+可以注意到函式名稱後面緊接著一組**角括號`<>`**，且包著`T`。這代表角括號內的`T`是函式定義的一個佔位型別名稱，因此 Swift 不會去查找名稱為`T`的實際型別。
 
 定義佔位型別名稱時不會明確表示`T`是什麼型別，但參數`a`與`b`都必須是這個`T`型別。而只有當這個函式被呼叫時，才會根據傳入參數的實際型別，來決定`T`所代表的型別。
 
@@ -121,7 +121,7 @@ struct Stack<Element> {
 接著就可以使用這個剛定義好的`Stack`型別，如下：
 
 ```swift
-// 先宣告一個空的 Stack
+// 先宣告一個空的 Stack 這時才決定其內元素的型別為 String
 var stackOfStrings = Stack<String>()
 
 // 依序放入三個字串
@@ -151,7 +151,7 @@ extension Stack {
 
 ```
 
-上述程式可以看到，擴展中可以直接使用`Element`。而返回值為一個可選值，所以以下使用可選綁定來取得最後一個元素：
+上述程式可以看到，擴展中可以直接使用`Element`。而返回值為一個可選值，所以底下使用可選綁定來取得最後一個元素：
 
 ```swift
 if let topItem = stackOfStrings.topItem {
@@ -270,12 +270,11 @@ extension Array: Container {}
 
 ```
 
-
-### Where 語句
+#### Where 語句
 
 有時候你也可能需要對關聯型別定義更多的限制，這時可以經由在參數列表加上一個`where`語句，並緊接著限制條件來定義。你可以限制一個關聯型別要遵循某個協定，或是某個型別參數和關聯型別的型別必須相同。
 
-底下定義一個泛型函式`allItemsMatch()`，功能為檢查兩個`Container`的實體是否包含相同順序的相同元素，如果條件都符合會返回`true`，否則返回`false`：
+底下定義一個泛型函式`allItemsMatch()`，功能為檢查兩個容器是否包含相同順序的相同元素，如果條件都符合會返回`true`，否則返回`false`：
 
 ```swift
 func allItemsMatch<
@@ -283,7 +282,7 @@ func allItemsMatch<
     where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
     (someContainer: C1, _ anotherContainer: C2) -> Bool {
     
-    // 檢查兩個 Container 的實體含有相同數量的元素
+    // 檢查兩個容器含有相同數量的元素
     if someContainer.count != anotherContainer.count {
         return false
     }
@@ -323,7 +322,7 @@ var arrayOfStrings = ["one", "two", "three"]
 // 雖然 Stack 跟 Array 不是相同型別
 // 但先前已將兩者都遵循了協定 Container
 // 且都包含相同型別的值
-// 所以可以把這兩個 Container 的實體當做參數傳入函式
+// 所以可以把這兩個容器當做參數傳入函式
 if allItemsMatch(stackOfStrings, arrayOfStrings) {
     print("所有元素都符合")
 } else {
