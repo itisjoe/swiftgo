@@ -160,6 +160,19 @@ let str1 = "It is a string ." // 型別為 String
 let str2 = "b" // 型別仍然是 String
 let str3: Character = "c" // 除非型別標註填寫為 Character
 
+```
+
+
+### 型別別名
+
+型別別名(`type aliases`)就是給已存在的型別定義另一個名字，必須使用關鍵字`typealias`來定義型別別名。當你想要給已存在的型別命名一個更有意義的名字時很有用，底下是一個例子：
+
+```swift
+// 將 Int 型別定義一個新的名字 MyType
+typealias MyType = Int
+
+// 這時就可以宣告一個 MyType 變數 其實也就是 Int 變數
+var number: MyType = 123
 
 ```
 
