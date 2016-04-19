@@ -227,7 +227,7 @@ alsoIncrementByTen() // 50
 
 ### 非逃逸閉包
 
-當一個閉包被當做參數傳入一個函式中，但是這個閉包在函式返回後才被執行(例如像是閉包被當做函式的返回值，然後接著去做別的操作)，這樣稱作閉包從函式中逃逸(`escape`)。而如果要明確表示一個當做參數的閉包不能從函式中逃逸，要在當做參數的閉包前標註`@noescape`，來表明這個閉包的生命週期只在這個函式體內。例子如下：
+當一個閉包被當做參數傳入一個函式中，但是這個閉包在函式返回後才被執行(例如像是閉包被當做函式的返回值，然後接著被拿去做別的操作)，這樣稱作閉包從函式中逃逸(`escape`)。而如果要明確表示一個當做參數的閉包不能從函式中逃逸，要在參數前標註`@noescape`，來表明這個閉包的生命週期只在這個函式體內。例子如下：
 
 ```swift
 // 參數為一個閉包的函式 參數前面標註 @noescape
@@ -368,7 +368,8 @@ func collectCustomerProviders(@autoclosure(escaping) customerProvider: () -> Str
     customerProviders.append(customerProvider)
 }
 
-// 呼叫兩次函式 會將 customersInLine 剩餘的兩個成員都轉加入新的陣列中
+// 呼叫兩次函式
+// 會將 customersInLine 剩餘的兩個成員都移除並轉加入新的陣列中
 collectCustomerProviders(customersInLine.removeAtIndex(0))
 collectCustomerProviders(customersInLine.removeAtIndex(0))
 
