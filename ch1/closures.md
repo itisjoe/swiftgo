@@ -1,11 +1,11 @@
 # 閉包 Closures
 
-閉包(`closure`)簡單來講就是一個匿名函式，同樣是一個獨立的程式區塊。像是前面章節提到的嵌套函式(nested functions)就是一種閉包，可以在程式中被傳遞和使用。
+閉包(`closure`)簡單來講就是一個匿名函式，同樣是一個獨立的程式區塊。像是前面章節提到的巢狀函式(`nested function`)就是一種閉包，可以在程式中被傳遞和使用。
 
 閉包有三種表現方式：
 
 - **函式**就是一種有名稱的閉包。
-- **嵌套函式**就是一種有名稱且被包含在另一個函式中的閉包。
+- **巢狀函式**就是一種有名稱且被包含在另一個函式中的閉包。
 - **閉包表達式**就是使用簡潔語法來描述的一種沒有名稱的函式，可以在程式中被傳遞和使用。
 
 
@@ -151,4 +151,93 @@ someFunction {
 }
 
 ```
+
+
+### 捕獲值
+
+閉包可以在其定義的上下文中捕獲(`capture`)常數或變數，即使定義這些常數或變數的原域已經不存在，閉包仍可以在閉包函式體內參考或修改這些值。
+
+Swift 中，可以捕獲值的閉包的最簡單形式是巢狀函式，也就是定義在其他函式內的函式。巢狀函式可以捕獲並存取**外部函式**(把它定義在其中的函式)內所有的參數以及定義的常數與變數，即使這個巢狀函式已經回傳，導致常數或變數的作用範圍不存在，閉包仍能對這些已經捕獲的值做操作。
+
+以下是一個例子：
+
+```swift
+// 定義一個函式 參數是一個整數 回傳是一個型別為 () -> Int 的閉包
+func makeIncrementor(forIncrement amount: Int) -> () -> Int {
+    // 用來儲存計數總數的變數
+    var runningTotal = 0
+
+    // 巢狀函式 簡單的將參數的數字加進計數並返回
+    // runningTotal 和 amount 都被捕獲了
+    func incrementer() -> Int {
+        runningTotal += amount
+        return runningTotal
+    }
+
+    // 返回捕獲變數參考的巢狀函式
+    return incrementer
+}
+
+```
+
+上述程式中可以看到，巢狀函式內部存取了的`runningTotal`及`amount`變數，是因為它從外部函式捕獲了這兩個變數的參考。而這個捕獲參考會讓`runningTotal`與`amount`在呼叫完`makeIncrementer`函式後不會消失，並且下次呼叫`incrementer`函式時，`runningTotal`仍會存在。
+
+以下是呼叫這個函式的例子：
+
+```swift
+// 宣告一個常數
+// 會被指配為一個每次呼叫就會將 runningTotal 加 10 的函式 incrementor
+let incrementByTen = makeIncrementor(forIncrement: 10)
+// 呼叫多次 可以觀察到每次返回值都是累加上去
+incrementByTen() // 10
+incrementByTen() // 20
+incrementByTen() // 30
+
+// 如果另外再宣告一個常數 會有屬於它自己的一個全新獨立的 runningTotal 變數參考
+// 與上面的常數無關
+let incrementBySix = makeIncrementor(forIncrement: 6)
+incrementBySix() // 6
+
+// 第一個常數仍然是對它自己捕獲的變數做操作
+incrementByTen() // 40
+
+```
+
+
+### 閉包是參考型別
+
+前面的例子中，`incrementByTen`和`incrementBySix`是常數，但這些常數指向的閉包仍可以增加其捕獲的變數值，這是因為函式與閉包都是參考型別。
+
+參考型別就是無論將函式(或閉包)指派給一個常數或變數，實際上都是將常數或變數的值設置為對應這個函式(或閉包)的參考(參考其在記憶體空間內配置的位置)。
+
+所以當你將閉包指派給了兩個不同的常數或變數，這兩個值都會指向同一個閉包(的參考)，如下：
+
+```swift
+// 指派給另一個常數
+let alsoIncrementByTen = incrementByTen
+
+// 仍然是對原本的 runningTotal 操作
+alsoIncrementByTen() // 50
+
+```
+
+##### Hint
+
+- 後面章節會正式介紹值型別與參考型別的不同。
+
+### 非逃逸閉包
+
+
+
+### 自動閉包
+
+
+
+
+
+
+
+
+
+
 
