@@ -227,17 +227,161 @@ alsoIncrementByTen() // 50
 
 ### 非逃逸閉包
 
+當一個閉包被當做參數傳入一個函式中，但是這個閉包在函式返回後才被執行(例如像是閉包被當做函式的返回值，然後接著去做別的操作)，這樣稱作閉包從函式中逃逸(`escape`)。而如果要明確表示一個當做參數的閉包不能從函式中逃逸，要在當做參數的閉包前標註`@noescape`，來表明這個閉包的生命週期只在這個函式體內。例子如下：
+
+```swift
+// 參數為一個閉包的函式 參數前面標註 @noescape
+func someFunctionWithNoescapeClosure(@noescape closure: () -> Void) {
+    // 而這個閉包的生命週期只在這個函式內
+    closure()
+}
+
+```
+
+而下面這個例子是說明一個逃逸的閉包：
+
+```swift
+// 宣告一個函式之外的變數 是一個陣列 陣列成員的型別為閉包 () -> Void
+var completionHandlers: [() -> Void] = []
+
+// 接著定義一個函式 參數為一個閉包 型別與上面陣列成員的型別一樣
+func someFunctionWithEscapingClosure(completionHandler: () -> Void) {
+    // 這個函式將閉包加入一個函式之外的陣列變數中
+    completionHandlers.append(completionHandler)
+}
+
+// 如果將這個函式的參數前面加上 @noescape 的話會報錯誤 因為閉包逃逸了
+
+```
+
+另外還有一點，將閉包標註為`@noescape`，可以讓你在閉包中隱式的參考`self`，以下利用到前面定義的兩個示範函式做例子：
+
+```swift
+// 定義一個類別
+class SomeClass {
+    var x = 10
+    func doSomething() {
+        // 使用到前面定義的兩個函式 都使用了尾隨閉包來讓語法更為簡潔
+        // 傳入當參數的閉包 內部都是將實體的屬性指派為新的值
+        someFunctionWithEscapingClosure { self.x = 100 }
+        // 可以看到這個標註 @noescape 的參數的閉包 其內可以隱式的參考 self
+        someFunctionWithNoescapeClosure { x = 200 }
+    }
+}
+
+// 生成一個實體
+let instance = SomeClass()
+
+// 呼叫其內的方法
+instance.doSomething()
+// 接著那兩個前面定義的函式都會被呼叫到 所以最後實體的屬性 x 為 200
+print(instance.x)
+
+// 接著呼叫陣列中的第一個成員
+// 也就是示範逃逸閉包的函式中 會將閉包加入陣列的這個動作
+// 而這個第一個成員就是 { self.x = 100 }
+completionHandlers.first?()
+// 所以這時實體的屬性 x 便為 100
+print(instance.x)
+
+```
 
 
 ### 自動閉包
 
+自動閉包(`autoclosure`)是一種自動被建立的閉包，用於包裝後傳遞給函式作為參數的表達式。這種閉包沒有參數，而當被使用時，會返回被包裝在其內的表達式的值。
 
+也就是說，自動閉包是一種簡化的語法，讓你可以用一個普通的表達式代替顯式的閉包，進而省略了閉包的大括號`{}`。
 
+自動閉包讓你可以延遲求值，因為這個閉包會直到被你呼叫時才會執行其內的程式，以下先示範一個普通的閉包如何延遲求值：
 
+```swift
+// 首先宣告一個有五個成員的陣列
+var customersInLine = ["Albee", "Alex", "Eddie", "Zack", "Kevin"]
 
+// 印出：5
+print(customersInLine.count)
 
+// 接著宣告一個閉包 會移除掉陣列的第一個成員
+let customerProvider = { customersInLine.removeAtIndex(0) }
 
+// 這時仍然是印出：5
+print(customersInLine.count)
 
+// 直到這個閉包被呼叫時 才會執行
+// 印出：開始移除 Albee ！
+print("開始移除 \(customerProvider()) ！")
 
+// 這時就只剩下 4 個成員了
+print(customersInLine.count)
 
+```
+
+上述程式可以看到閉包直到被呼叫時，才會移除成員，所以如果不呼叫閉包的話，則陣列成員都不會被移除。另外要注意一點，這個閉包`customerProvider`的型別為`() -> String`，而不是`String`。
+
+將閉包作為參數傳遞給函式時，一樣可以延遲求值，如下：
+
+```swift
+// 這時 customersInLine 為 ["Alex", "Eddie", "Zack", "Kevin"]
+
+// 定義一個閉包作為參數的函式
+func serveCustomer(customerProvider: () -> String) {
+    // 函式內部會呼叫這個閉包
+    print("開始移除 \(customerProvider()) ！")
+}
+
+// 呼叫函式時 [移除陣列第一個成員]這個動作被當做閉包的內容
+// 閉包被當做參數傳入函式
+// 這時才會移除陣列第一個成員
+serveCustomer( { customersInLine.removeAtIndex(0) } )
+
+```
+
+接著則介紹如何使用自動閉包完成上述一樣的動作。你必須在參數前面標註`@autoclosure`，以表示這個參數可以是一個自動閉包的簡化寫法，這時就可以將該函式當做接受`String`型別參數的函式來呼叫。這個前面標註`@autoclosure`的參數會將自己轉換成一個閉包，如下：
+
+```swift
+// 這時 customersInLine 為 ["Eddie", "Zack", "Kevin"]
+
+// 這個函式的參數前面標註了 @autoclosure 表示這參數可以是一個自動閉包的簡化寫法
+func serveCustomer(@autoclosure customerProvider: () -> String) {
+    print("開始移除 \(customerProvider()) ！")
+}
+
+// 因為函式的參數有標註 @autoclosure 這個參數可以不用大括號 {}
+// 而僅僅只需要[移除第一個成員]這個表達式 而這個表達式會返回[被移除的成員的值]
+serveCustomer(customersInLine.removeAtIndex(0))
+
+```
+
+自動閉包含有**非逃逸閉包**的特性，所以你如果想讓這個閉包可以**逃逸**
+，則必須標註為`@autoclosure(escaping)`，以下是一個例子：
+
+```swift
+// 這時 customersInLine 為 ["Zack", "Kevin"]
+
+// 宣告另一個變數 為一個陣列 其內成員的型別為 () -> String
+var customerProviders: [() -> String] = []
+
+// 定義一個函式 參數標註 @autoclosure(escaping) 表示參數是一個可逃逸自動閉包
+func collectCustomerProviders(@autoclosure(escaping) customerProvider: () -> String) {
+    // 函式內部的動作是將當做參數的這個閉包 再加入新的陣列中 因為可逃逸 所以不會出錯
+    customerProviders.append(customerProvider)
+}
+
+// 呼叫兩次函式 會將 customersInLine 剩餘的兩個成員都轉加入新的陣列中
+collectCustomerProviders(customersInLine.removeAtIndex(0))
+collectCustomerProviders(customersInLine.removeAtIndex(0))
+
+// 印出：獲得了 2 個成員
+print("獲得了 \(customerProviders.count) 個成員")
+
+// 最後將這兩個成員也從新陣列中移除
+for customerProvider in customerProviders {
+    print("開始移除 \(customerProvider()) ！")
+}
+// 依序印出：
+// 開始移除 Zack ！
+// 開始移除 Kevin ！
+
+```
 
