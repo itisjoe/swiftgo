@@ -163,7 +163,7 @@ Swift 中，可以捕獲值的閉包的最簡單形式是巢狀函式，也就�
 
 ```swift
 // 定義一個函式 參數是一個整數 回傳是一個型別為 () -> Int 的閉包
-func makeIncrementor(forIncrement amount: Int) -> () -> Int {
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
     // 用來儲存計數總數的變數
     var runningTotal = 0
 
@@ -186,8 +186,8 @@ func makeIncrementor(forIncrement amount: Int) -> () -> Int {
 
 ```swift
 // 宣告一個常數
-// 會被指配為一個每次呼叫就會將 runningTotal 加 10 的函式 incrementor
-let incrementByTen = makeIncrementor(forIncrement: 10)
+// 會被指派為一個每次呼叫就會將 runningTotal 加 10 的函式 incrementer
+let incrementByTen = makeIncrementer(forIncrement: 10)
 // 呼叫多次 可以觀察到每次返回值都是累加上去
 incrementByTen() // 10
 incrementByTen() // 20
@@ -195,7 +195,7 @@ incrementByTen() // 30
 
 // 如果另外再宣告一個常數 會有屬於它自己的一個全新獨立的 runningTotal 變數參考
 // 與上面的常數無關
-let incrementBySix = makeIncrementor(forIncrement: 6)
+let incrementBySix = makeIncrementer(forIncrement: 6)
 incrementBySix() // 6
 
 // 第一個常數仍然是對它自己捕獲的變數做操作
