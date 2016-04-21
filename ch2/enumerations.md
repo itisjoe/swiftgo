@@ -1,8 +1,8 @@
-# 列舉 Enumerations
+# 列舉
 
 列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
 
-列舉支援很多特性，例如計算型屬性(computed properties)、實例方法(instance methods)、定義建構函式(initializers)、擴展(extensions)及協定(protocols)，後面章節會正式介紹這些內容。
+列舉支援很多特性，例如計算型屬性(`computed property`)、實例方法(`instance method`)、定義建構器(`initializer`)、擴展(`extension`)及協定(`protocol`)，後面章節會正式介紹這些內容。
 
 
 ### 列舉語法
@@ -37,9 +37,11 @@ enum Planet {
 
 每個列舉都定義了一個全新的型別。像 Swift 中其他型別一樣，列舉的名稱(如上述程式中的`CompassPoint`及`Planet`)應該以一個大寫字母開頭且為單數。
 
-定義完列舉後，接著將其指派給一個變數，與一般指派方式相同：(這邊使用上面定義過的指南針方位的列舉)
+定義完列舉後，接著將其指派給一個變數，與一般指派方式相同：
 
 ```swift
+// 這邊使用上面定義過的指南針方位的列舉
+
 // 型別為 CompassPoint 的一個變數 值為其列舉內的 West 
 var directionToHead = CompassPoint.West
 
@@ -70,7 +72,7 @@ switch directionToHead {
 ```
 
 
-### 相關值 Associated Values
+### 相關值
 
 列舉中的每個成員值，視需求可以在需要的時候，一併儲存自定義的一個或以上**其他型別**的**相關值**(`associated values`)。使用方法為在成員值後面加上小括號`()`，並將**相關值型別**放在小括號內(就像使用元組`tuple`一樣)。往後在程式中將該列舉成員值指派給變數或常數時，這個(或這些)相關值才會被設置，且可以是不同的。
 
@@ -128,7 +130,7 @@ case let .QRCode(productCode):
 ```
 
 
-### 原始值 Raw Values
+### 原始值
 
 除了使用相關值的列舉，其內的成員值可以儲存不同型別的相關值。Swift 也提供列舉先設置原始值(`raw value`)來代替相關值，這些原始值的**型別必須相同**。使用方法為在列舉名稱後加上冒號`:`並接著**原始值型別**，例子如下：
 
@@ -145,7 +147,8 @@ enum WeekDay: Int {
 
 let today = WeekDay.Friday
 // 使用 rawValue 屬性來取得原始值
-print(today.rawValue) // 印出 5
+// 印出：5
+print(today.rawValue)
 
 ```
 
@@ -157,9 +160,9 @@ print(today.rawValue) // 印出 5
 原始值(`raw value`)跟相關值(`associated value`)是不同的。原始值在定義列舉時即被設置，對於一個特定的列舉成員，它的原始值始終是相同的。而相關值是在列舉成員被指派為一個變數(或常數)時才一併設置的值，列舉成員的相關值是可以不同的。
 
 
-#### 原始值的隱式指派 Implicitly Assigned Raw Values
+#### 原始值的隱式指派
 
-在使用原始值為**整數**型別的列舉時，可以不需要為每個成員設置原始值，Swift 會將每個成員的原始值依次遞增`1`。成員都沒有原始值時，則會將第一個成員的原始值設置為`0`，再依序遞增`1`，例子如下：
+在使用原始值為**整數**型別的列舉時，可以不需要為每個成員設置原始值，Swift 會將每個成員的原始值依次遞增`1`，這個特性稱為原始值的隱式指派(`implicitly assigned raw value`)。成員都沒有原始值時，則會將第一個成員的原始值設置為`0`，再依序遞增`1`，例子如下：
 
 ```swift
 // 第一個成員有設置原始值 1, 接著下去成員的原始值就是 2, 3, 4 這樣遞增下去
@@ -168,7 +171,9 @@ enum Planet: Int {
 }
 
 let ourPlanet = Planet.Earth
-print(ourPlanet.rawValue) // 印出 3
+
+// 印出：3
+print(ourPlanet.rawValue)
 
 ```
 
@@ -180,12 +185,14 @@ enum CompassPoint: String {
 }
 
 let directionPoint = CompassPoint.East
-print(directionPoint.rawValue) // 印出 East
+
+// 印出：East
+print(directionPoint.rawValue)
 
 ```
 
 
-### 使用原始值初始化列舉實體 Initializing from a Raw Value
+### 使用原始值初始化列舉實體
 
 在定義列舉時，如果使用了原始值，則這個列舉會有一個初始化方法(`method`)，這個方法有一個名稱為`rawValue`的參數，其參數型別就是列舉原始值的型別，返回值為列舉成員或`nil`。例子如下：
 
