@@ -159,7 +159,7 @@ ovenLight.next() // 現在 ovenLight 為 .Off
 // 定義一個類別
 class SomeClass {
     // 定義一個型別方法
-    static func someTypeMethod() {
+    class func someTypeMethod() {
         print("型別方法")
     }
 }
