@@ -6,9 +6,9 @@
 - 型別方法(`type method`)：屬於**特定型別(類別、結構或列舉)本身**的方法。
 
 
-### 實體方法 Instance Methods
+### 實體方法
 
-實體方法是屬於一個特定型別(類別、結構或列舉)的實體，可以用來存取和設置實體屬性或是提供實體需要的功能。
+實體方法(`instance method`)是屬於一個特定型別(類別、結構或列舉)的實體，可以用來存取和設置實體屬性或是提供實體需要的功能。
 
 實體方法的語法跟使用方式與前面章節提到的**函式**一樣，使用`func`關鍵字建立，並需要放在這個定義的特定型別(類別、結構或列舉)的大括號`{}`內，例子如下：
 
@@ -69,7 +69,6 @@ func increment() {
 
 而有一個情況是，當一個實體方法的參數名稱與實體的一個屬性名稱相同時(像是方法的參數名稱為`count`，而屬性也命名為`count`)，這時在這個方法中使用`count`的話，都會將其當做參數，除非加上`self`為`self.count`，才會當做是實體的屬性。
 
-
 #### 在實體方法中修改值型別
 
 一般情況下，一個值型別(結構或列舉)實體的屬性，不能在它的實體方法中被修改。但如果有特殊需求需要修改屬性，可以使用變異(`mutating`)這個方法。要使用變異方法，將關鍵字`mutating`放在方法的`func`之前就可以了，如下：
@@ -94,7 +93,8 @@ var somePoint = Point(x: 1.0, y: 1.0)
 somePoint.moveByX(2.0, y: 3.0)
 
 // 現在兩個屬性已經被改變了
-print("x: \(somePoint.x), y: \(somePoint.y)") // 印出 x: 3.0, y: 4.0
+// 印出：x: 3.0, y: 4.0
+print("x: \(somePoint.x), y: \(somePoint.y)")
 
 ```
 
@@ -141,13 +141,15 @@ enum TriStateSwitch {
 var ovenLight = TriStateSwitch.Low
 
 // 每次呼叫這個變異方法 都會在三個成員中依序切換
-ovenLight.next() // 現在 ovenLight 為 .High
-ovenLight.next() // 現在 ovenLight 為 .Off
+ovenLight.next()
+// 現在 ovenLight 為 .High
+ovenLight.next()
+// 現在 ovenLight 為 .Off
 
 ```
 
 
-### 型別方法 Type Methods
+### 型別方法
 
 型別方法(`type method`)為定義在特定型別(類別、結構與列舉)上的方法。不是屬於實體，而是屬於這個**型別(類別、結構或列舉)**本身的方法，與實體方法一樣使用點語法(`dot syntax`)呼叫。
 
@@ -172,3 +174,4 @@ SomeClass.someTypeMethod()
 上述程式中可以看到，不用生成實體就可以直接呼叫型別方法，因為型別方法是屬於一個特定型別(類別、結構與列舉)而不是一個實體。
 
 後面章節會正式介紹繼承(子類別與父類別的關係)。
+

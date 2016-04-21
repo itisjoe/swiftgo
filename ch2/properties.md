@@ -8,14 +8,15 @@
 - 屬性觀察器(`property observer`)：用來觀察屬性值的變化，並以此觸發一個自定義的操作。
 
 
-### 儲存屬性 Stored Properties
+### 儲存屬性
 
-**儲存屬性**就是一個儲存在特定型別(類別或結構)的常數或變數。可以在定義儲存屬性時指定預設值，也可以在建構過程中設置或修改儲存屬性的值，以下是個例子：
+**儲存屬性**(`stored property`)就是一個儲存在特定型別(類別或結構)的常數或變數。可以在定義儲存屬性時指定預設值，也可以在建構過程中設置或修改儲存屬性的值，以下是個例子：
 
 ```swift
 // 定義一個遊戲角色的血量與法力最大值
 struct CharacterStats {
-    var hpValueMax: Double = 300 // 指定一個預設值
+    // 指定一個預設值
+    var hpValueMax: Double = 300
     let mpValueMax: Double
 }
 
@@ -49,9 +50,9 @@ someStats.hpValue = 1200
 而相對地，類別(`class`)是屬於參考型別(`reference type`)，一個類別實體的常數，仍可以修改其內的屬性，因為這時候這個常數儲存的是參考(參考其在記憶體空間內配置的位置)，而不是儲存這個實體。
 
 
-#### 延遲儲存屬性 Lazy Stored Properties
+#### 延遲儲存屬性
 
-延遲儲存屬性是指當第一次被呼叫的時候才會計算其初始值的屬性。在屬性宣告前使用`lazy`來表示一個延遲儲存屬性。
+延遲儲存屬性(`lazy stored property`)是指當第一次被呼叫的時候才會計算其初始值的屬性。在屬性宣告前使用`lazy`來表示一個延遲儲存屬性。
 
 ##### Hint
 
@@ -92,9 +93,9 @@ print(manager.importer.fileName)
 ```
 
 
-### 計算屬性 Computed Properties
+### 計算屬性
 
-除了儲存屬性外，類別、結構和列舉還可以定義**計算屬性**，計算屬性不直接儲存值，而是提供一個`getter`(使用關鍵字`get`)來存取值，及一個可選的`setter`(使用關鍵字`set`)來間接設置其他屬性的值。以下是個例子：
+除了儲存屬性外，類別、結構和列舉還可以定義**計算屬性**(`computed property`)，計算屬性不直接儲存值，而是提供一個`getter`(使用關鍵字`get`)來存取值，及一個可選的`setter`(使用關鍵字`set`)來間接設置其他屬性的值。以下是個例子：
 
 ```swift
 // 定義一個遊戲角色的狀態
@@ -117,20 +118,21 @@ class GameCharacter {
             defenceValue = defenceValue * (1 + levelUp)
         }
     }
-    
 }
 
 // 生成一個類別 GameCharacter 的實體常數 oneChar
 let oneChar = GameCharacter();
 
 // 取得目前角色的總防禦力
-print(oneChar.totalDefence) // 印出 310.0
+// 印出：310.0
+print(oneChar.totalDefence)
 
 // 升級時 角色狀態各數值會乘上的倍數 0.05
 oneChar.totalDefence = 0.05
 
 // 則現在角色的血量與防禦力會變成 105 跟 315
-print("血量：\(oneChar.hpValue), 防禦力：\(oneChar.defenceValue)") // 印出 血量：105.0, 防禦力：315.0
+// 印出：血量：105.0, 防禦力：315.0
+print("血量：\(oneChar.hpValue), 防禦力：\(oneChar.defenceValue)")
 
 ```
 
@@ -174,9 +176,9 @@ class GameCharacter {
 上述程式中，因為計算屬性只有`getter`，所以`getter`可以省略掉關鍵字`get`及大括號`{}`。
 
 
-### 屬性觀察器 Property Observers
+### 屬性觀察器
 
-屬性觀察器會監控和回應屬性值的變化，每次屬性被設置新的值都會呼叫屬性觀察器。以下為兩個可以使用的屬性觀察器：
+屬性觀察器(`property observer`)會監控和回應屬性值的變化，每次屬性被設置新的值都會呼叫屬性觀察器。以下為兩個可以使用的屬性觀察器：
 
 - `willSet`：在設置新的值之前呼叫，會將這個新的值當做一個常數參數傳入，如果不命名這個參數名稱時，會有一個內建的參數名稱`newValue`。
 - `didSet`：在新的值被設置之後立即呼叫，會將舊的屬性值當做參數傳入，這個參數可以自己命名，或直接使用內建的參數名稱`oldValue`。
@@ -202,16 +204,16 @@ class GameCharacter {
             }
         }
     }
-    
 }
 
 // 生成一個類別 GameCharacter 的實體常數 oneChar
 let oneChar = GameCharacter();
 
 // 角色受到攻擊 血量降低
-oneChar.hpValue = 90 // 因為有 willSet 所以會印出 新的血量為90.0
+// 因為有 willSet 所以會印出：新的血量為90.0
+oneChar.hpValue = 90
 
-// 設置完新的血量後 因為有 didSet 所以會印出 我損血了！哦阿！
+// 設置完新的血量後 因為有 didSet 所以會印出：我損血了！哦阿！
 
 ```
 
@@ -219,12 +221,12 @@ oneChar.hpValue = 90 // 因為有 willSet 所以會印出 新的血量為90.0
 
 ##### Hint
 
-- 如果屬性經由輸入輸出參數(`In-Out Parameters`)方式傳入函式，，`willSet`和`didSet`也一樣會被觸發。
+- 如果屬性經由輸入輸出參數(`inout`)方式傳入函式，`willSet`和`didSet`也一樣會被觸發。
 
 
-### 型別屬性 Type Properties
+### 型別屬性
 
-型別屬性是屬於這個**型別**(類別、結構或列舉)的屬性，無論生成了多少這個型別的實體，型別屬性都只有唯一一份。
+型別屬性(`type property`)是屬於這個**型別**(類別、結構或列舉)的屬性，無論生成了多少這個型別的實體，型別屬性都只有唯一一份。
 
 型別屬性使用於定義所有從這個型別生成的實體共享的資料。
 
@@ -275,14 +277,19 @@ class SomeClass {
 ```swift
 // 這邊使用前面定義的結構 SomeStructure, 列舉 SomeEnumeration, 類別 SomeClass
 
-print(SomeStructure.storedTypeProperty) // 印出 Some value in structure.
+// 印出：Some value in structure.
+print(SomeStructure.storedTypeProperty)
 
 // 設置一個型別屬性
 SomeStructure.storedTypeProperty = "Another value."
-print(SomeStructure.storedTypeProperty) // 印出 Another value.
+// 印出：Another value.
+print(SomeStructure.storedTypeProperty)
 
-print(SomeEnumeration.computedTypeProperty) // 印出 6
-print(SomeClass.computedTypeProperty) // 印出 27
+// 印出：6
+print(SomeEnumeration.computedTypeProperty)
+
+// 印出：27
+print(SomeClass.computedTypeProperty)
 
 ```
 
