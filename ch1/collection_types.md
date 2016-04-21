@@ -272,7 +272,11 @@ Swift 提供以下幾個方法，依據兩個 Set 之間交集(有相同的值)�
 - `union(_:)` 創建一個新的 Set，其內的值**包含兩個 Set 中所有的值**。
 - `subtract(_:)` 創建一個新的 Set，其內的值**在一個 Set 內,但不在另一個 Set 內**。
 
-圖
+或參考下圖依據兩個 Set 之間關係表現的圖：
+
+![Sets1](../images/collection_types_01.png)
+
+<img src="../../images/collection_types_01.png">
 
 ```swift
 let oddDigits: Set = [1, 3, 5, 7, 9]
