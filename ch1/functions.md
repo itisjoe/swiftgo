@@ -1,6 +1,6 @@
 # 函式
 
-函式是一個獨立的程式碼區塊，用來完成特定任務。函式命名的方式與常數變數一樣，但名稱後面需要加上小括號`()`，像是前面章節很常使用的`print()`，就是一個函式。建立一個函式要使用`func`關鍵字，函式格式如下：
+函式(`function`)是一個獨立的程式碼區塊，用來完成特定任務。函式命名的方式與常數變數一樣，但名稱後面需要加上小括號`()`，像是前面章節很常使用的`print()`，就是一個函式。建立一個函式要使用`func`關鍵字，函式格式如下：
 
 ```swift
 func 函式名稱(參數: 參數型別) -> 返回值型別 {
@@ -33,9 +33,10 @@ simpleOne()
 
 ```
 
+
 ### 函式參數
 
-函式可以**傳入參數**，參數需要明確標註型別，會將參數指派給一個常數，格式如下：
+函式可以傳入**參數**(`parameter`)，參數需要明確標註型別，會將參數指派給一個常數，格式如下：
 
 ```swift
 func 函式名稱(參數指派給的常數: 型別標註) {
@@ -55,7 +56,8 @@ func addOne(number: Int) {
 }
 
 // 呼叫函式 傳入整數 12
-addOne(12) // 印出 13
+// 印出：13
+addOne(12)
 
 ```
 
@@ -76,7 +78,9 @@ hello("Jack", age: 25)
 
 上述程式中可以看到呼叫函式時，第二個參數前需要標註其對應的名稱。
 
-##### Hint：如果函式有更多參數，除了第一個參數不用之外，第二個以及之後的參數都需要標註其對應的名稱。
+##### Hint
+
+- 如果函式有更多參數，除了第一個參數不用之外，第二個以及之後的參數都需要標註其對應的名稱。
 
 #### 函式參數名稱
 
@@ -141,7 +145,7 @@ func sayHello(to name: String, and name2: String) {
     print("Hello \(name) and \(name2) !")
 }
 // 外部參數名稱設為 to 跟 and
-// 這行看起來就像個完整的英文句子 可以明顯地知道這個函式要幹嘛
+// 這行看起來就像個完整的英文句子 可以明顯的知道這個函式要幹嘛
 sayHello(to: "Joe", and: "Amy")
 
 ```
@@ -154,12 +158,18 @@ sayHello(to: "Joe", and: "Amy")
 func someFunction(number: Int = 12) {
     print(number)
 }
-someFunction(6) // 印出 6
-someFunction() // 沒有傳入值 則會使用預設值 印出 12
+
+// 印出：6
+someFunction(6)
+
+// 沒有傳入值 則會使用預設值 印出：12
+someFunction()
 
 ```
 
-##### Hint：有多重參數時，最好將有預設值的參數放在參數列表的最後，這樣呼叫函式時，可以保證其他無預設值參數的順序是一致的。
+##### Hint
+
+- 有多重參數時，最好將有預設值的參數放在參數列表的最後，這樣呼叫函式時，可以保證其他無預設值參數的順序是一致的。
 
 #### 可變數量參數
 
@@ -187,14 +197,15 @@ arithmeticMean(3, 8, 19) // 返回 10.0
 
 #### 輸入輸出參數
 
-前面剛說過的變數參數只能在函式內部中使用，如果想要一個可以修改參數的函式，並在呼叫函式結束後，這個修改仍然存在，則必須將參數設定為**輸入輸出參數**(In-Out Parameters)。使用方式為：
+普通函式的參數使用範圍都只在函式程式體內，如果想要一個可以修改參數的函式，並在呼叫函式結束後，這個修改仍然存在，則必須將參數設定為**輸入輸出參數**(In-Out Parameters)。使用方式為：
 
-- 建立函式時，在參數名稱前加上`inout`。此參數不能有預設值，也不能再設為可變數量參數，也不能再加上`var`或`let`。
+- 定義函式時，在參數名稱前加上`inout`。此參數不能有預設值，也不能再設為可變數量參數。
 - 當呼叫函式，傳入的參數作為輸入輸出參數時，需要在參數前加上`&`。這個參數只能是一個**變數**，不能是常數、字面量(單純的數值或字串)。
 
 以下是個例子：
 
 ```swift
+// 定義一個[有一個輸入輸出參數]的函式 參數前要加上 inout
 func newNumber(inout number: Int) {
     number *= 2
 }
@@ -215,7 +226,7 @@ print(n) // 所以這時再印出 就會是 20
 函式除了可以傳入參數，同時也**可以返回值**，使用方式是在函式`()`後面接著一個**減號跟大於**`->`，然後再接著寫返回值的型別標註，函式內部要使用`return`語句後接著返回值來返回。使用`return`後會隨即終止函式的動作，函式內部其後的程式都不會繼續執行。以下是個例子：
 
 ```swift
-// 建立函式 有一個型別為 Int 的參數以及一個型別為 Int 的返回值
+// 定義函式 有一個型別為 Int 的參數以及一個型別為 Int 的返回值
 // 函式的功能是將帶入的參數加十 並返回
 func addTen(number: Int) -> Int {
     let n = number + 10
@@ -225,17 +236,18 @@ func addTen(number: Int) -> Int {
 
 // 呼叫函式 傳入整數 12 會返回 22
 let newNumber = addTen(12)
-print(newNumber) // 印出 22
+
+// 印出：22
+print(newNumber)
 
 ```
-
 
 #### 多重返回值函式
 
 函式可以有不只一個的返回值，返回值超過一個時以一個元組(`Tuple`)返回，元組內包含著要回傳的每個值的型別標註。在建立函式時也可以給返回元組的每個值加上名稱。以下是一個例子：
 
 ```swift
-// 建立函式 有一個型別為 Int 的參數, 返回兩個型別為 Int 的值
+// 定義函式 有一個型別為 Int 的參數, 返回兩個型別為 Int 的值
 func findNumbers(number: Int) -> (Int, Int) {
     let n = number + 10
     // 返回一個元組
@@ -248,10 +260,11 @@ func findNumbers(number: Int) -> (Int, Int) {
 // 呼叫函式 傳入整數 12 會返回 (12, 22)
 let numbers = findNumbers(12)
 // numbers 為一個元組 可以自 0 開始算 依序取得其內的值
-print("\(numbers.0) and \(numbers.1)") // 印出 12 and 22
+// 印出：12 and 22
+print("\(numbers.0) and \(numbers.1)")
 
 
-// 建立另一個函式 將上面函式中返回的元組內的值加上名稱
+// 定義另一個函式 將上面函式中返回的元組內的值加上名稱
 func findNumbers2(number: Int) -> (oldNumber: Int, newNumber: Int) {
     let n = number + 10
     return (number, n)
@@ -259,18 +272,18 @@ func findNumbers2(number: Int) -> (oldNumber: Int, newNumber: Int) {
 
 // 呼叫函式 傳入整數 24 會返回 (24, 34)
 let numbers2 = findNumbers2(24)
-// 這邊即可使用建立函式時 返回元組內的值設定的名稱
-print("\(numbers2.oldNumber) and \(numbers2.newNumber)") // 印出 24 and 34
+// 這邊即可使用定義函式時 返回元組內的值設定的名稱
+// 印出：24 and 34
+print("\(numbers2.oldNumber) and \(numbers2.newNumber)")
 
 ```
-
 
 #### 可選元組返回型別
 
 如果整個返回的元組可能會**沒有值**(`nil`)，可以將此返回元組設為可選元組型別，使用方式為在括號`()`後面接著一個問號`?`，像是`(Int, String)?`或是`(String, Int, Int)?`。以下是個例子：
 
 ```swift
-// 建立函式 參數為一個型別為 [Int] 的陣列
+// 定義函式 參數為一個型別為 [Int] 的陣列
 // 返回值為 包含兩個型別為 Int 的元組 或是 nil
 func findNumbers(arr: [Int]) -> (Int, Int)? {
     // 檢查傳入的陣列 如果其內沒有值的話 就直接返回 nil
@@ -331,18 +344,17 @@ var mathFunction: (Int, Int) -> Int = addTwoInts
 
 ```
 
-
 #### 函式型別作為參數型別
 
 函式可以作為另一個函式的參數，以下是個例子：
 
 ```swift
-// 建立一個將兩個整數相加的函式
+// 定義一個將兩個整數相加的函式
 func addTwoInts(number1: Int, number2: Int) -> Int {
     return number1 + number2
 }
 
-// 建立另一個函式，有三個參數依序為
+// 定義另一個函式，有三個參數依序為
 // 型別為 (Int, Int) -> Int 的函式, Int, Int
 func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print("Result: \(mathFunction(a, b))")
@@ -355,18 +367,17 @@ printMathResult(addTwoInts, 3, 5)
 
 上述程式中，作為參數的函式只需要型別正確，不用了解其內的程式如何運作，這表示可以將`printMathResult`函式一部分的操作交給呼叫函式的人來實作，也是以一種型別安全(`type-safe`)的方式來保證傳入函式的呼叫是正確的。
 
-
 #### 函式型別作為返回型別
 
 函式可以作為另一個函式的返回值，使用方式為在返回箭頭(`->`)後寫一個完整的函式型別。以下是個例子：
 
 ```swift
-// 建立一個將傳入的參數加一的函式
+// 定義一個將傳入的參數加一的函式
 func stepForward(input: Int) -> Int {
     return input + 1
 }
 
-// 建立一個將傳入的參數減一的函式
+// 定義一個將傳入的參數減一的函式
 func stepBackward(input: Int) -> Int {
     return input - 1
 }
@@ -388,10 +399,12 @@ someFunction(10) // 返回 9
 
 ```
 
-##### Hint：這邊宣告函式常數時沒有標註型別，因為就如同其他變數或常數宣告時，Swift 會根據指派的函式自動判斷出型別。
+##### Hint
+
+- 這邊宣告函式常數時沒有標註型別，因為就如同其他變數或常數宣告時，Swift 會根據指派的函式自動判斷出型別。
 
 
-### 巢狀函式 Nested Functions
+### 巢狀函式
 
 到目前為止所使用的函式都叫全域函式(`global functions`)，定義在全區域中，每個地方都可以使用。
 
