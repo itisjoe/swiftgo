@@ -24,8 +24,8 @@ var oneInt = 12
 var anotherInt = 500
 swapTwoInts(&oneInt, &anotherInt)
 
-print("互換後的 oneInt 為 \(oneInt)，anotherInt 為 \(anotherInt)")
 // 印出：互換後的 oneInt 為 500，anotherInt 為 12
+print("互換後的 oneInt 為 \(oneInt)，anotherInt 為 \(anotherInt)")
 
 // 與上面定義的函式功能相同 只是這時互換的變數型別為字串
 func swapTwoStrings(inout a: String, inout _ b: String) {
@@ -155,8 +155,8 @@ extension Stack {
 
 ```swift
 if let topItem = stackOfStrings.topItem {
-    print("最後一個元素為 \(topItem)")
     // 印出：最後一個元素為 two
+    print("最後一個元素為 \(topItem)")
 }
 
 ```
