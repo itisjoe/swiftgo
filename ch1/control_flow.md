@@ -1,24 +1,17 @@
 # 控制流程
 
-Swift 提供了可以循環執行任務的`for`和`while`迴圈，以及根據條件選擇執行不同程式碼分支的`if`和`switch`語句，還有控制流程跳轉到其他程式碼的`break`和`continue`語句。
+Swift 提供了可以循環執行任務的`for-in`和`while`迴圈，以及根據條件選擇執行不同程式碼分支的`if`和`switch`語句，還有控制流程跳轉到其他程式碼的`break`和`continue`語句。
 
-### For 循環
+### For-in 循環
 
-Swift 提供兩種`for`循環方式，按照指定的次數執行任務。
-
-- `for-in` 循環對一個集合(像是陣列`Array`、字典`Dictionary`)遍歷其內所有的元素，操作此元素並執行循環內的程式。
-- `for` 循環會重複執行內部的程式，直到設定的條件達成，通常會在每次循環完成後增加計數器的值來實現。
-
-#### For-in
-
-使用`for-in`遍歷一個集合內的所有元素，像是一個數字區間、陣列中的值或是字串內的字元。
+使用`for-in`遍歷一個集合內的所有元素，像是一個數字區間、陣列、字典中的值或是字串內的字元。
 
 ```swift
 // 一個一到三的閉區間
 for index in 1...3 {
     print(index)
 }
-// 會依序印出
+// 會依序印出：
 // 1
 // 2
 // 3
@@ -34,7 +27,9 @@ var total = 1
 for _ in 1...3 {
     total *= base
 }
-print(total) // 印出 8, 因為循環了三次 所以乘了三次
+
+// 印出：8, 因為循環了三次 所以乘了三次
+print(total)
 
 ```
 
@@ -61,40 +56,6 @@ for (key, values) in dict {
 
 ```
 
-#### For
-
-這種循環的格式如下：
-
-```swift
-for 初始化;條件表達式;計數器計數 {
-    每次循環執行的程式
-}
-
-```
-
-循環流程：
-
-1. 循環第一次啟動時，會初始化循環所需要的常數和變數，這只會被執行一次。
-2. 每次循環都會先看條件表達式，如果這個條件表達式返回`false`，則不會執行循環並結束，會繼續執行`}`之後的程式。反之如果返回`true`，則會執行一次`{}`內部程式。
-3. 執行完一次內部程式後，會對計數器計數，可能是增加或減少值，或是根據內容修改某一個初始化的變數。接著則重複執行第 2 步。
-
-```swift
-// 首先初始化一個變數 index 為 0
-// 條件表達式為 index < 3 第一次執行時會返回 true 因為 0 < 3
-// 接著會執行內部程式 這邊是一個 print()
-// 完成後做計數的動作 對 index 加 1 現在 index 為 1
-// 然後重複動作 繼續檢查條件表達式 
-// 直到 index 為 3 會導致條件表達式返回 false 則結束循環
-for var index = 0; index < 3; ++index {
-    print("index is \(index)")
-}
-// 會依序印出
-// index is 0
-// index is 1
-// index is 2
-
-```
-
 
 ### While 循環
 
@@ -118,7 +79,10 @@ var n = 2
 while n < 20 {
     n = n * 2
 }
-print(n) // 印出 32
+
+// 印出：32
+print(n)
+
 ```
 
 #### Repeat-while
@@ -139,7 +103,9 @@ var n = 512
 repeat {
     n = n * 2
 } while n < 100
-print(n) // 印出 1024
+
+// 印出：1024
+print(n)
 // 因為不論如何 都會先執行一次程式 所以 n 會先乘一次 2 為 1024
 // 接著檢查條件表達式 會返回 false 即結束這個循環
 
@@ -171,7 +137,7 @@ if number > 20 {
 } else {
     print ("Number is smaller than 20 or equal to 20 .")
 }
-// 印出 Number is smaller than 20 or equal to 20 .
+// 印出：Number is smaller than 20 or equal to 20 .
 
 ```
 
@@ -188,7 +154,7 @@ if number < 20 {
 } else {
     print ("Number is not smaller than 1000 .")
 }
-// 印出 Number is not smaller than 20 but smaller than 200 . 
+// 印出：Number is not smaller than 20 but smaller than 200 . 
 
 ```
 
@@ -318,6 +284,7 @@ case (-2...2, -2...2):
 default:
     print("(\(somePoint.0), \(somePoint.1)) 在方形外")
 }
+
 // 印出 (1, 1) 在方形內
 
 ```
@@ -413,14 +380,17 @@ case 100,200:
 default:
     str += "Fallthrough twice."
 }
+
+// 印出：It is a prime number. Fallthrough once. Fallthrough twice.
 print(str)
-// 印出 It is a prime number. Fallthrough once. Fallthrough twice.
 // 雖然只比對到第一個 case 但兩個 case 都有使用 fallthrough
 // 所以最後 str 是將所有字串相加
 
 ```
 
-##### Hint：加上`fallthrough`後進入到的下一個`case`，不會對其條件做比對，而是直接執行其內的程式。
+##### Hint
+
+- 加上`fallthrough`後進入到的下一個`case`，不會對其條件做比對，而是直接執行其內的程式。
 
 
 #### 帶標籤的語句 Labeled Statements
@@ -428,7 +398,7 @@ print(str)
 有時會需要較複雜的混用多個`switch`、`for`或是`while`，當需要對其中一個循環流程使用`continue`或`break`來跳轉或停止時，可以額外地對`continue`或`break`指名是屬於哪個循環流程。格式如下：
 
 ```swift
-名稱: while 條件 {
+標籤名稱: while 條件 {
     循環執行的程式
 }
 
@@ -458,7 +428,6 @@ print(number)
 
 ```
 
-
 #### 提前退出
 
 有點類似`if`的用法，`guard`同樣會有一個條件表達式且會返回一個布林值，不同的地方在於，`guard`後面一定要接一個`else`，如果條件表達式返回`false`時，會執行其內的程式。
@@ -466,7 +435,10 @@ print(number)
 ```swift
 guard 條件表達式 else {
     // 條件表達式返回 false 時 執行的程式
+    // 可以配合 continue, break 或 return 來控制轉移流程
 }
+
+// 條件表達式返回 true 時 則繼續執行接下來的程式
 
 ```
 
@@ -506,7 +478,9 @@ post(["title": "Article_2", "content": "Article_2_full_content"])
 
 ```
 
-##### Hint：`guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在函式`{}`範圍裡接著的程式中使用。
+##### Hint
+
+- `guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在函式`{}`範圍裡接著的程式中使用。
 
 雖然`guard`用法與`if`類似，但使用`guard`可以一次專注於一種條件的情況，提高程式的可靠性，也可以讓函式內容更清晰好讀。
 
@@ -538,4 +512,30 @@ assert(age > 0, "年齡必須大於零")
 - 數字可能過大或過小。
 - 需要給函式傳入一個值，但是非法的值可能導致函式不能正常執行。
 - 一個可選值為`nil`，但後面需要這個值為一個非`nil`值。
+
+
+### 檢測 API 可用性
+
+Swift 可以讓你檢查 API 的預設支持，可以防止不小心使用到了對於當前部屬目標不可用的 API。以下是使用方式：
+
+```swift
+if #available(平台名稱 版本號, ..., *) {
+    // 在某個平台或版本下使用特別的 API
+} else {
+    // 而其他的平台或版本則使用其他的 API
+}
+
+```
+
+平台名稱可以是`iOS`、`OSX`或`watchOS`。版本號可以是大版本號像是`iOS 9`，或是較小的版本像是`iOS 8.3`或`OSX 10.10.3`，以下是一個例子：
+
+```swift
+if #available(iOS 9, OSX 10.10.3, *) {
+    // 在 iOS 使用 iOS 9 的 API
+    // 在 OSX 使用 OSX 10.10.3 的 API
+} else {
+    // 使用先前版本的 iOS 和 OSX 的 API
+}
+
+```
 
