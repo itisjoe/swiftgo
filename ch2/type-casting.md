@@ -71,7 +71,7 @@ print("這隻隊伍有 \(archerCount) 個弓箭手跟 \(warriorCount) 個戰士�
 
 你也可以用`is`來檢查一個類別是否遵循了某個協定(`protocol`)。
 
-##### Hint：後面章節會正式介紹協定。
+後面章節會正式介紹協定。
 
 
 ### 向下型別轉換
@@ -93,7 +93,7 @@ for character in gameTeam {
     }
 }
 
-// 使用可選綁定來檢查是否轉換成功 會依序印出
+// 使用可選綁定來檢查是否轉換成功 會依序印出：
 // 弓箭手的名字：one，介紹：super power
 // 戰士的名字：two，描述：good fighter
 // 弓箭手的名字：three，介紹：not bad
@@ -108,7 +108,9 @@ Swift 為不確定的型別提供了兩種特殊型別別名：
 - AnyObject：可以表示任何類別型別的實體。
 - Any：可以表示為任何型別。
 
-##### Hint：為了型別安全，我們應該明確地指定值或實體的型別，除非是真的必要或確切需要才使用`Any`跟`AnyObject`。
+##### Hint
+
+- 為了型別安全，我們應該明確地指定值或實體的型別，除非是真的必要或確切需要才使用`Any`跟`AnyObject`。
 
 #### AnyObject
 
@@ -127,7 +129,7 @@ for object in someObjects {
     print("弓箭手的名字：\(oneChar.name)，介紹：\(oneChar.intro)")
 }
 
-// 依序會印出
+// 依序會印出：
 // 弓箭手的名字：one，介紹：super power
 // 弓箭手的名字：two，介紹：not bad
 
@@ -174,7 +176,7 @@ for thing in things {
     }
 }
 
-// 依序印出
+// 依序印出：
 // 浮點數為 3.1415926
 // 字串為 "Hello, world"
 // 元組為 3.0, 5.0
