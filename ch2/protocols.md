@@ -262,8 +262,8 @@ let oneInstance = OneClass();
 // 所以上面宣告的 oneInstance 可以被當做參數傳入
 let twoInstance = AnotherClass(member: oneInstance)
 
-print(twoInstance.oneMember.method())
 // 印出：5566
+print(twoInstance.oneMember.method())
 
 ```
 
@@ -585,8 +585,8 @@ for _ in 1...4 {
 }
 
 // 因為迴圈跑了 4 次,每次都是加上 3 ,所以最後計為 12
-print("最後計數為 \(count)")
 // 印出：最後計數為 12
+print("最後計數為 \(count)")
 
 ```
 
@@ -649,8 +649,8 @@ let myTeam = [oneMember, twoMember, threeMember]
 // 因為陣列定義時有遵循[協定 CollectionType]
 // 且其內成員都遵循[協定 GameCharacterProtocol]
 // 所以這個 allDescription 屬性會自動獲得
-print(myTeam.allDescription)
 // 印出：[成員, 成員, 成員]
+print(myTeam.allDescription)
 
 ```
 
