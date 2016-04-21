@@ -6,7 +6,7 @@
 // 宣告一個 [Int] 型別的陣列
 var arr = [1,2,3,4,5,6,7]
 
-// 印出其內第三個元素 記得：陣列的索引值是從 0 開始算起
+// 印出其內第三個元素(請記得 陣列的索引值是從 0 開始算起)
 print(arr[2])
 
 // 修改第四個元素為 12
@@ -93,7 +93,8 @@ class SimpleMath {
 // 宣告一個類別 SimpleMath 的常數
 let oneMath = SimpleMath()
 
-print(oneMath["simple"]) // 印出 1000
+// 印出：1000
+print(oneMath["simple"])
 
 // 傳入值為 3, 會將數字屬性乘以 3
 oneMath["star"] = 3
@@ -101,10 +102,12 @@ oneMath["star"] = 3
 // 這個下標例子中的字串索引值沒有被使用到
 // 其實是可以依照傳入的索引值 來做不同的需求及返回值
 
-print(oneMath.num) // 印出 1500
+// 印出：1500
+print(oneMath.num)
 
 // 使用到另一個下標 索引值型別為 Int
-print(oneMath[100]) // 印出 15
+// 印出：15
+print(oneMath[100])
 
 ```
 
