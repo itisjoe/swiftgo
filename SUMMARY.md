@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Swift 基礎](ch1/ch1.md)
-   * [基礎部分](ch1/basics.md)
-   * [變數及常數的型別](ch1/variable_type.md)
+   * [基本知識](ch1/basics.md)
+   * [基本型別](ch1/types.md)
    * [基本運算子](ch1/basic_operators.md)
    * [字串及字元](ch1/strings_characters.md)
    * [集合型別](ch1/collection_types.md)
