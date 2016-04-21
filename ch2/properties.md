@@ -217,6 +217,10 @@ oneChar.hpValue = 90 // 因為有 willSet 所以會印出 新的血量為90.0
 
 上述程式中的`willSet`有命名參數名稱`hpChange`，所以其內是使用`hpChange`，而`didSet`沒有命名參數名稱，所以其內是使用內建的參數名稱`oldValue`。
 
+##### Hint
+
+- 如果屬性經由輸入輸出參數(`In-Out Parameters`)方式傳入函式，，`willSet`和`didSet`也一樣會被觸發。
+
 
 ### 型別屬性 Type Properties
 
