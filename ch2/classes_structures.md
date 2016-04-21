@@ -41,11 +41,13 @@ class GameCharacter {
 接著定義了一個名為`GameCharacter`的類別，描述一個遊戲角色的基本資訊，這個類別包含了三個屬性，第一個為角色的狀態，會被初始化為一個`CharacterStats`結構的實體，其後兩個屬性為攻速及名字，攻速有預設值`1.0`，名字則為一個可選型別`String?`，會被自動指派為一個預設值`nil`，表示一開始沒有`name`值。
 
 
-### 類別與結構實體 Instances
+### 類別與結構實體
 
 定義類別與結構，就像是給了一個固定的規格，譬如說明一個遊戲角色會有血量、法力、攻速、名字這些資訊，但使用上，必須依照這個規格(即類別或結構)來實際建立一個角色，這個動作就是生成類別或結構的**實體(instance)**。
 
-##### Hint：實體有些地方會翻譯成實例，同樣都是指`instance`。
+##### Hint
+
+- 實體有些地方會翻譯成**實例**，同樣都是指`instance`。
 
 類別與結構都使用建構器語法來生成實體，建構器最簡單的形式就是在類別或結構名稱後面加上一個小括號`()`語法，這種方式建立的實體，其內的屬性都會被初始化為預設值，如下：
 
@@ -89,8 +91,8 @@ let someGameCharacter = GameCharacter()
 
 ```swift
 // 這邊使用前面定義的 CharacterStats 結構 及生成的實體 someStats
+// 因為沒有初始值 所以會使用預設值 這邊會印出：someStats 血量最大值為0.0
 print("someStats 血量最大值為\(someStats.hp)")
-// 因為沒有初始值 所以會使用預設值 這邊會印出 血量最大值為0.0
 
 ```
 
@@ -98,7 +100,8 @@ print("someStats 血量最大值為\(someStats.hp)")
 
 ```swift
 // 這邊使用前面定義的 GameCharacter 類別 及其生成的實體 someGameCharacter
-print("someGameCharacter 血量最大值為\(someGameCharacter.stats.hp)") // 印出 someGameCharacter 血量最大值為0.0
+// 印出：someGameCharacter 血量最大值為0.0
+print("someGameCharacter 血量最大值為\(someGameCharacter.stats.hp)")
 
 ```
 
@@ -107,32 +110,37 @@ print("someGameCharacter 血量最大值為\(someGameCharacter.stats.hp)") // �
 ```swift
 // 將 someGameCharacter 的血量最大值指派為 500
 someGameCharacter.stats.hp = 500
-print(someGameCharacter.stats.hp) // 再次印出 即會變成 500.0
+// 再次印出 即會變成：500.0
+print(someGameCharacter.stats.hp)
 
 ```
 
 
-### 結構型別的成員逐一建構器 Memberwise Initializers for structure Types
+### 結構型別的成員逐一建構器
 
 所有結構都有一個自動生成的**成員逐一建構器**(`memberwise initializer`)，當要生成一個結構的實體時，用來初始化實體內的屬性，如下：
 
 ```swift
 // 這邊使用前面定義的 CharacterStats 結構 生成新的實體 someoneStats
 let someoneStats = CharacterStats(hp: 120, mp: 100)
-print(someoneStats.hp) // 印出即為 120.0
+
+// 印出：120.0
+print(someoneStats.hp)
 
 ```
 
-##### Hint：類別實體沒有成員逐一建構器這個功能。
+##### Hint
+
+- 類別實體沒有成員逐一建構器這個功能。
 
 
 ### 值型別與參考型別
 
 Swift 中以記憶體配置的方式不同來說，可以分為值型別(`value type`)與參考型別(`reference type`)。**值型別**會儲存實際的值，而**參考型別**只是儲存其在記憶體空間中配置的位置。
 
-#### 結構和列舉是值型別 Value Types
+#### 結構和列舉是值型別
 
-**值型別**在被指派給一個變數、常數或被傳遞給一個函式時，實際上操作的是其拷貝(copy)。指派或傳遞後，兩者的值即各自獨立，不會互相影響。
+**值型別**(`value type`)在被指派給一個變數、常數或被傳遞給一個函式時，實際上操作的是其拷貝(copy)。指派或傳遞後，兩者的值即各自獨立，不會互相影響。
 
 在前面章節中，其實已經大量使用了值型別。實際上，在 Swift 中，所有的基本型別：整數、浮點數、布林值、字串、陣列和字典，都是值型別，並且背後都是以結構的形式實作。
 
@@ -145,21 +153,25 @@ var anotherStats = oneStats
 
 // 這時修改 anotherStats 的 hp 屬性
 anotherStats.hp = 300
-print(anotherStats.hp) // 印出 300.0 可以看出來已經改變了
+// 可以看出來已經改變了 印出：300.0
+print(anotherStats.hp)
 
 // 但 oneStats 的屬性不會改變
-print(oneStats.hp) // 仍然是被生成實體時的初始值 120.0
+// 仍然是被生成實體時的初始值 印出：120.0
+print(oneStats.hp)
 
 ```
 
 在`oneStats`被指派給`anotherStats`時，其實是將`oneStats`內的值進行拷貝(`copy`)，接著將拷貝的資料儲存給新的實體`anotherStats`，兩者是完全獨立的實體，彼此不會互相影響。
 
-##### Hint：雖然值型別的指派或傳遞是一個「拷貝」的動作，在程式碼中會大量的出現，但 Swift 在處理時只有在確實必要時才會執行實際的拷貝，系統會管理這部份的最優化性能，所以沒有必要為了性能特地避免指派值。
+##### Hint
+
+- 雖然值型別的指派或傳遞是一個「拷貝」的動作，在程式碼中會大量的出現，但 Swift 在處理時只有在確實必要時才會執行實際的拷貝，系統會管理這部份的最優化性能，所以沒有必要為了性能特地避免指派值。
 
 
-#### 類別是參考型別 Reference Types
+#### 類別是參考型別
 
-與值型別不同，參考型別在被指派給一個變數、常數或被傳遞給一個函式時，操作的不是其拷貝，而是已存在的實體本身。例子如下：
+與值型別不同，參考型別(`reference type`)在被指派給一個變數、常數或被傳遞給一個函式時，操作的不是其拷貝，而是已存在的實體本身。例子如下：
 
 ```swift
 // 這邊使用前面定義的 GameCharacter 類別
@@ -172,9 +184,9 @@ let superArcher = archer
 // 並修改這個新實體的屬性 attackSpeed
 superArcher.attackSpeed = 1.8
 
+// 可以看到這邊印出的都為：1.8
 print("archer 的攻速為 \(archer.attackSpeed)")
 print("superArcher 的攻速為 \(superArcher.attackSpeed)")
-// 可以看到這邊印出的都為 1.8
 
 ```
 
@@ -195,15 +207,16 @@ print("superArcher 的攻速為 \(superArcher.attackSpeed)")
 ```swift
 // 使用前面宣告的兩個常數 archer 與 superArcher
 if archer === superArcher {
-    print("沒錯！！！是同一個類別實體") // 這行會被印出來
+    print("沒錯！！！是同一個類別實體")
 }
 
 ```
 
-##### Hint： 請注意`===`與`==`的不同
+##### Hint
 
-- 等價於(`===`)為判斷兩個變數或常數是不是參考同一個類別實體
-- 等於(`==`)為判斷兩個值是否相等
+- 請注意`===`與`==`的不同
+  - 等價於(`===`)為判斷兩個變數或常數是不是參考同一個類別實體
+  - 等於(`==`)為判斷兩個值是否相等
 
 
 ### 選擇使用類別或結構
