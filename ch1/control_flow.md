@@ -17,7 +17,7 @@ for index in 1...3 {
 // 3
 ```
 
-上述程式內的`index`不用做宣告的動作，在每次遍歷開始時會被自動指派值。
+上述程式內的`index`不用做宣告的動作，在每次遍歷開始時會被自動指派值，預設是一個常數。
 
 另外如果只是要純粹的循環，不需要用到區間內的每一個值，可以用下底線`_`來代替。
 
@@ -28,19 +28,19 @@ for _ in 1...3 {
     total *= base
 }
 
-// 印出：8, 因為循環了三次 所以乘了三次
+// 因為循環了三次 所以乘了三次 印出：8
 print(total)
 
 ```
 
-使用`for-in`遍歷一個陣列(`Array`)或是字典(`Dictionary`)。遍歷字典時，會使用元組(`Tuple`)來分別表示鍵與值。
+使用`for-in`遍歷一個陣列(`array`)或是字典(`dictionary`)。遍歷字典時，會使用元組(`tuple`)來分別表示鍵與值，例子如下：
 
 ```swift
 let arr = ["Apple", "Book", "Cat"]
 for n in arr {
     print(n)
 }
-// 依序印出
+// 依序印出：
 // Apple
 // Book
 // Cat
@@ -49,7 +49,7 @@ let dict = ["Apple":12, "Book":3, "Cat":5]
 for (key, values) in dict {
     print("\(key) : \(values)")
 }
-// 印出 (因為字典沒有順序 所以不一定是這樣的順序)
+// 印出：(因為字典沒有順序 所以不一定是這樣的順序)
 // Apple : 12
 // Book : 3
 // Cat : 5
@@ -59,7 +59,7 @@ for (key, values) in dict {
 
 ### While 循環
 
-Swift 提供兩種`while`循環方式：`while`及`repeat-while`，兩者都是循環地執行程式直到條件表達式返回`false`，兩者的差別在於，後者一開始在檢查條件表達式之前，一定會先執行一次內部程式。
+Swift 提供兩種`while`循環方式：`while`及`repeat-while`，兩者都是循環地執行程式直到條件表達式返回`false`，差別在於，後者一開始在檢查條件表達式之前，一定會先執行一次內部程式。
 
 #### While
 
@@ -158,7 +158,7 @@ if number < 20 {
 
 ```
 
-上述程式中最後一個`else`不是一定要有，也可以省略，但就可能都沒有返回`true`的條件表達式。
+上述程式中最後一個`else`不是一定要有，也可以省略，但就可能會沒有返回`true`的條件表達式，例子如下：
 
 ```swift
 let number = 10
@@ -171,9 +171,10 @@ if number > 50 {
 
 ```
 
-### 可選綁定 optional binding
 
-使用可選綁定來判斷可選型別是否有值，如果有值的話就指派給一個臨時常數或臨時變數，並執行其內部的程式，這個臨時常數或變數只能在其內部使用。`if`跟`while`語句都可以使用可選綁定。格式如下：
+### 可選綁定
+
+使用**可選綁定**(`optional binding`)來判斷可選型別是否有值，如果有值的話就指派給一個臨時常數或臨時變數，並執行其內部的程式，這個臨時常數或變數只能在其內部使用。`if`跟`while`語句都可以使用可選綁定。格式如下：
 
 ```swift
 if let 臨時常數 = 可選型別 {
@@ -238,13 +239,11 @@ default:
 
 ```
 
-##### Hint
-
 與其他程式語言不一樣的是，有些程式語言的`switch`需要在每個`case`內的程式最後一行加上`break`來結束，否則會繼續執行底下其他`case`中的程式。
 
 Swift 在遇到第一個情況`case`比對成功後，即會結束`switch`這部份的動作，繼續執行`}`之後的程式。(除非使用`fallthrough`，稍後即會提到。)
 
-#### 區間匹配 range matching
+#### 區間匹配
 
 `case`中比對的情況也可以是一個區間。
 
@@ -261,12 +260,14 @@ case 101...1000:
 default:
     str = "超級多"
 }
+
+// 因為 120 在 101...1000 這個區間內
+// 印出：我有非常多顆蘋果
 print("我有\(str)顆蘋果")
-// 印出 我有非常多顆蘋果 因為 120 在 101...1000 這個區間內
 
 ```
 
-#### 元組 Tuple
+#### 元組
 
 `switch`可以使用元組(`tuple`)來一次比對多個值，元組內可以是值也可以是區間，如果要忽略比對其中一項的話，可以填入下底線`_`。
 
@@ -285,13 +286,13 @@ default:
     print("(\(somePoint.0), \(somePoint.1)) 在方形外")
 }
 
-// 印出 (1, 1) 在方形內
+// 印出：(1, 1) 在方形內
 
 ```
 
-#### 值綁定 value binding
+#### 值綁定
 
-`case`可以將比對的值綁定到一個臨時的常數或變數，以便在其內的程式中使用。
+`case`可以將比對的值綁定(`value binding`)到一個臨時的常數或變數，以便在其內的程式中使用。
 
 ```swift
 let onePoint = (2, 0)
@@ -303,7 +304,8 @@ case (0, let y):
 case let (x, y):
     print("(\(x), \(y)) 不在 X 軸也不在 Y 軸上")
 }
-// 印出 在 X 軸上, x 的值為 2
+
+// 印出：在 X 軸上, x 的值為 2
 
 ```
 
@@ -322,9 +324,9 @@ default:
 
 ```
 
-### 控制轉移語句 Control Transfer Statements
+### 控制轉移語句
 
-控制轉移語句可以改變程式的執行順序，或是跳轉執行程式。
+控制轉移語句(`control transfer statement`)可以改變程式的執行順序，或是跳轉執行程式。
 
 #### Continue
 
@@ -393,7 +395,7 @@ print(str)
 - 加上`fallthrough`後進入到的下一個`case`，不會對其條件做比對，而是直接執行其內的程式。
 
 
-#### 帶標籤的語句 Labeled Statements
+#### 帶標籤的語句
 
 有時會需要較複雜的混用多個`switch`、`for`或是`while`，當需要對其中一個循環流程使用`continue`或`break`來跳轉或停止時，可以額外地對`continue`或`break`指名是屬於哪個循環流程。格式如下：
 
@@ -414,6 +416,7 @@ gameLoop: while number < 10 {
         ++number
     case 5:
         number *= 10
+        // break 標註為 gameLoop 的 while 迴圈
         break gameLoop
     default:
         ++number
@@ -430,7 +433,7 @@ print(number)
 
 #### 提前退出
 
-有點類似`if`的用法，`guard`同樣會有一個條件表達式且會返回一個布林值，不同的地方在於，`guard`後面一定要接一個`else`，如果條件表達式返回`false`時，會執行其內的程式。
+有點類似`if`的用法，`guard`同樣會有一個條件表達式且會返回一個布林值，不同的地方在於，`guard`後面一定要接一個`else`，如果條件表達式返回`false`時，會執行`{}`內的程式。
 
 ```swift
 guard 條件表達式 else {
@@ -446,7 +449,7 @@ guard 條件表達式 else {
 
 ```swift
 // 建立一個名叫 post() 的函式
-// 需要傳入一個型別為 [String: String] 的字典(dictionary)
+// 需要傳入一個型別為 [String: String] 的字典
 func post(article: [String: String]) {
     // 首先取得傳入字典中 鍵為 title 的值 並指派給一個常數
     guard let insideTitle = article["title"] else {
@@ -472,6 +475,7 @@ func post(article: [String: String]) {
 post(["title": "Article_1"])
 // 印出 "標題是 Article_1 ，"
 // 印出 "但是沒有內容。"
+
 post(["title": "Article_2", "content": "Article_2_full_content"])
 // 印出 "標題是 Article_2 ，"
 // 印出 "內容為 Article_2_full_content。"
