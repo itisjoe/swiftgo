@@ -7,9 +7,9 @@ Swift 提供三種基本的集合型別：`Arrays`、`Sets`、`Dictionaries`來�
 - Dictionary 字典：沒有順序，鍵值對 `key : value` ，也就是可以經由唯一的識別鍵找到需要的值。
 
 
-### Arrays 陣列
+### 陣列
 
-陣列使用有序列表儲存同一型別的多個值。相同的值可以多次出現在一個陣列的不同位置中。
+陣列(`array`)使用有序列表儲存同一型別的多個值。相同的值可以多次出現在一個陣列的不同位置中。
 
 宣告陣列變數或常數時的型別，有`Array<Element>`及`[Element]`兩種方式(`Element`是需要明確表示的型別，如`Int`、`String`、`Double`等等)。
 
@@ -81,34 +81,41 @@ var anotherList = ["Rice", "Apples"]
 
 ```
 
-#### 讀取與修改陣列
+#### 存取與修改陣列
 
 一開始說過陣列是有序的集合，所以可以依照索引值(依照順序的排列序號)來取得陣列內的值。
 
-##### Hint：陣列的索引值是從 0 開始算起
+##### Hint
+
+- 陣列的索引值是從 0 開始算起。
 
 ```swift
 var arr = ["Apples", "Eggs", "Milk", "Rice", "Water"]
 
 // 陣列的索引值是由 0 開始計算 所以 arr[2] 指的是第三個
-print(arr[2]) // 印出 Milk
+// 印出：Milk
+print(arr[2])
 
 // 要修改一個索引值對應的值 直接將其指派新的值就可以了
 arr[2] = "Oranges"
-print(arr[2]) // 這時已將 Milk 改成 Oranges 所以會印出 Oranges
+// 這時已將 Milk 改成 Oranges 所以會印出：Oranges
+print(arr[2])
 
 // 如果要修改一個區間內的值 可以用到前面章節講到的區間寫法修改
 arr[1...4] = ["Milk"]
 // 這樣會將原本索引值 1 到 4 的值修改成 Milk
-print(arr) // 所以現在 arr 會變成 ["Apples", "Milk"]
+// 所以現在 arr 會變成 ["Apples", "Milk"]
+print(arr)
 
 ```
 
-可以使用屬性`count`來表示陣列內值的數量，會返回一個非負的整數。另外也可以使用屬性`isEmpty`來檢查陣列內是否有值，會返回一個布林值。
+可以使用屬性`count`來表示陣列內值的數量，會返回一個非負的整數。另外也可以使用屬性`isEmpty`來檢查陣列內是否有值，會返回一個布林值。例子如下：
 
 ```swift
 var arr = ["Apples", "Eggs", "Milk"]
-print(arr.count) // 印出陣列中的個數 3
+
+// 印出陣列中的個數：3
+print(arr.count)
 
 // 將陣列指派為空陣列
 arr = []
@@ -118,11 +125,11 @@ if arr.isEmpty {
 } else {
     print("Not Empty !")
 }
-// 因為為空陣列 內部沒有值 所以會印出 Empty !
+// 因為為空陣列 內部沒有值 所以會印出：Empty !
 
 ```
 
-加入或移除陣列內的值。
+加入或移除陣列內的值：
 
 ```swift
 // 使用 append(_:) 方法來加入新的值
@@ -154,7 +161,7 @@ var arr = ["Rice" ,"Apples", "Eggs", "Milk"]
 for item in arr {
     print(item)
 }
-// 會依序印出
+// 會依序印出：
 // Rice
 // Apples
 // Eggs
@@ -164,7 +171,7 @@ for item in arr {
 for (index, value) in arr.enumerate() {
     print("Item \(index + 1): \(value)")
 }
-// 會依序印出
+// 會依序印出：
 // Item 1: Rice
 // Item 2: Apples
 // Item 3: Eggs
@@ -172,12 +179,12 @@ for (index, value) in arr.enumerate() {
 
 ```
 
-後面章節會正式介紹`for-in`的使用方法
+後面章節會正式介紹`for-in`的使用方法。
 
 
 ### Sets 集合
 
-集合(Set)用來儲存相同型別且沒有順序、沒有重複的值，當順序不重要或是需要每個值只能出現一次時，可以選擇使用`Set`。
+集合(`Set`)用來儲存相同型別且沒有順序、沒有重複的值，當順序不重要或是需要每個值只能出現一次時，可以選擇使用`Set`。
 
 宣告`Set`型別時，使用`Set<Element>`這個方式，這裡的`Element`表示`Set`中儲存的型別。
 
@@ -201,7 +208,8 @@ var anotherSet: Set<String> = ["Rock", "Classical", "Hip hop"]
 anotherSet = []
 
 // Set 所含的值的數量
-print(anotherSet.count) // 印出 0 因為目前是空 Set
+// 因為目前是空 Set,印出：0
+print(anotherSet.count)
 
 // 使用 isEmpty 檢查 Set 內是否有值
 if anotherSet.isEmpty {
@@ -209,11 +217,11 @@ if anotherSet.isEmpty {
 } else {
     print("Not empty !")
 }
-// 印出 Empty !
+// 印出：Empty !
 
 ```
 
-加入或移除 Set 內的值
+加入或移除 Set 內的值：
 
 ```swift
 var mySet: Set<String> = ["Rock", "Classical"]
@@ -233,21 +241,21 @@ if mySet.contains("Classical") {
 } else {
     print("Not Here !")
 }
-// 印出 Classical is here !
+// 印出：Classical is here !
 
 // 使用 removeAll() 來移除其內所有的值
 mySet.removeAll()
 
 ```
 
-使用`for-in`遍歷`Set`中的所有值
+使用`for-in`遍歷`Set`中的所有值：
 
 ```swift
 var mySet: Set<String> = ["Rice" ,"Apples", "Eggs"]
 for item in mySet {
     print(item)
 }
-// 會印出 (順序不一定) 
+// 會印出；(順序不一定) 
 // Rice
 // Apples
 // Eggs
@@ -256,7 +264,7 @@ for item in mySet {
 for item in mySet.sort() {
     print(item)
 }
-// 會印出
+// 會印出：
 // Apples
 // Eggs
 // Rice
@@ -276,13 +284,15 @@ Swift 提供以下幾個方法，依據兩個 Set 之間交集(有相同的值)�
 
 ![Sets1](../images/collection_types01.png)
 
+例子如下：
+
 ```swift
 let oddDigits: Set = [1, 3, 5, 7, 9]
 let evenDigits: Set = [0, 2, 4, 6, 8]
 let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
 
 oddDigits.intersect(evenDigits).sort()
-// [] 空陣列 因為兩個 Set 沒有交集
+// [] 空 Set 因為兩個 Set 沒有交集
 
 oddDigits.exclusiveOr(singleDigitPrimeNumbers).sort()
 // [1, 2, 9] 因為兩個 Set 都有 3,5,7 
@@ -309,6 +319,8 @@ Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林
 
 ![Sets1](../images/collection_types02.png)
 
+例子如下：
+
 ```swift
 let houseAnimals: Set = ["狗", "貓"]
 let farmAnimals: Set = ["牛", "雞", "羊", "狗", "貓"]
@@ -326,9 +338,9 @@ farmAnimals.isDisjointWith(cityAnimals)
 ```
 
 
-### Dictionaries 字典
+### 字典
 
-字典用來儲存多個相同型別的值。每個值(`value`)都屬於一個唯一的鍵(`key`)，鍵作為字典中這個值的識別符號，所有鍵的型別也必須相同(鍵與值的型別不一定要相同)。
+字典(`dictionary`)用來儲存多個相同型別的值。每個值(`value`)都屬於一個唯一的鍵(`key`)，鍵作為字典中這個值的識別符號，所有鍵的型別也必須相同(鍵與值的型別不一定要相同)。
 
 因為字典內的值沒有順序，所以需要根據這個鍵(`key`)來找到需要的值(`value`)。宣告字典型別時，使用`Dictionary<Key, Value>`這個方式，這裡的`Key`表示字典裡鍵的型別，`Value`表示字典裡儲存的型別。
 
@@ -344,7 +356,7 @@ var anothierDict: [String: String]
 創建一個空字典。如果已經有型別標註了，則可以使用`[:]`設為空字典。
 
 ```swift
-// 創建一個空字典 鍵的型別是 String , 值的型別是 Int
+// 宣告一個空字典 鍵的型別是 String , 值的型別是 Int
 var myDict = [String: Int]()
 
 // 在字典中新增一個值
@@ -362,18 +374,21 @@ myDict = [:]
 
 ```
 
-#### 讀取與修改字典
+#### 存取與修改字典
 
-使用下標(`subscript`)來讀取或是修改字典的值。其餘使用方法與陣列類似
+使用下標(`subscript`)來存取或是修改字典的值。其餘使用方法與陣列類似。
 
-##### Hint : 下標(`subscript`)的表示方法為字典變數後加一個中括號`[]`，中括號裡面填入鍵(`key`)，以取得對應的值(`value`)。
+##### Hint
+
+- 下標(`subscript`)的表示方法為字典變數後加一個中括號`[]`，中括號裡面填入鍵(`key`)，以取得對應的值(`value`)。
 
 ```swift
 // 宣告一個型別為 [String: String] 的字典
 var myDict = ["TYO": "Tokyo", "DUB": "Dublin"]
 
 // 字典裡值的數量
-print(myDict.count) // 印出 2 
+// 印出：2
+print(myDict.count)
 
 // 檢查字典裡是否有值
 if myDict.isEmpty {
@@ -381,7 +396,7 @@ if myDict.isEmpty {
 } else {
     print("Not empty !")
 }
-// 印出 Not empty !
+// 印出：Not empty !
 
 // 如果這個 key 沒有對應到字典裡的值, 就新增一個值
 myDict["LHR"] = "London"
@@ -394,7 +409,7 @@ myDict["LHR"] = nil
 
 ```
 
-除了使用下標語法，字典也提供方法可以修改或刪除。
+除了使用下標語法，字典也提供方法可以修改或刪除，如下：
 
 ```swift
 var myDict = ["LHR": "London", "DUB": "Dublin"]
@@ -402,7 +417,8 @@ var myDict = ["LHR": "London", "DUB": "Dublin"]
 // 使用 updateValue(_:forKey:) 更新一個值
 // 返回一個對應值的型別的可選值 (這邊就是返回一個 String? )
 myDict.updateValue("London Heathrow", forKey: "LHR")
-print(myDict["LHR"]) // 印出 London Heathrow
+// 印出：London Heathrow
+print(myDict["LHR"])
 
 // 使用 removeValueForKey(_:) 移除一個值
 // 返回被刪除的值, 如果沒有對應的值的話則會返回 nil
@@ -410,7 +426,7 @@ myDict.removeValueForKey("DUB")
 
 ```
 
-只需要字典中的鍵或值時，可以使用`keys`或`values`屬性。這時會建立一個鍵或值的新陣列。
+只需要字典中的鍵或值時，可以使用`keys`或`values`屬性。這時會建立一個鍵或值的新陣列，例子如下：
 
 ```swift
 var myDict = ["LHR": "London", "DUB": "Dublin"]
@@ -429,7 +445,7 @@ arr2.sort()
 
 ```
 
-使用`for-in`遍歷字典中的所有值
+使用`for-in`遍歷字典中的所有值：
 
 ```swift
 var myDict = ["LHR": "London", "DUB": "Dublin"]
@@ -437,6 +453,7 @@ var myDict = ["LHR": "London", "DUB": "Dublin"]
 for (code, n) in myDict {
     print("\(code): \(n)")
 }
+// 印出：
 // LHR: London
 // DUB: Dublin
 
@@ -444,15 +461,16 @@ for (code, n) in myDict {
 for code in myDict.keys {
     print(code)
 }
+// 印出：
 // LHR
 // DUB
 
 for n in myDict.values {
     print(n)
 }
+// 印出：
 // London
 // Dublin
 
 ```
-
 
