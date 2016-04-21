@@ -14,7 +14,7 @@ var a = 5
 a = b
 // 現在 a 等於 10
 
-// 你也可以直接指派元組 會直接分解為多個常數會變數
+// 你也可以直接指派元組 會直接分解為多個常數或變數
 let (x, y) = (1, 2)
 // 現在 x 為 1, y 為 2
 
@@ -39,7 +39,9 @@ var d = 10.0 / 2.5 // d 等於 4.0
 let firstString = "Hello, "
 let secondString = "world."
 let finalString = firstString + secondString
-print(finalString) // 印出 Hello, world.
+
+// 印出：Hello, world.
+print(finalString)
 
 ```
 
@@ -138,7 +140,7 @@ if i == 1 {
     print("No, it is not 1 .")
 }
 
-// 因為 i 等於 1, 返回 true, 所以會印出 Yes, it is 1 .
+// 因為 i 等於 1, 返回 true, 所以會印出：Yes, it is 1 .
 
 ```
 
@@ -215,12 +217,15 @@ a != nil ? a! : b
 let defaultColor = "red"
 var userDefinedColor: String? // 未賦值 所以預設為 nil
 var colorToUse = userDefinedColor ?? defaultColor
-print(colorToUse) // 未賦值給 userDefinedColor ,所以會返回 defaultColor, 這邊即印出 red
+// 未賦值給 userDefinedColor ,所以會返回 defaultColor
+// 這邊即印出：red
+print(colorToUse)
 
 // 反之如果有賦值
 var userAnotherDefinedColor: String? = "green"
 var anotherColorToUse = userAnotherDefinedColor ?? defaultColor
-print(anotherColorToUse) // 這邊即印出 green
+// 這邊即印出：green
+print(anotherColorToUse)
 
 ```
 
@@ -291,7 +296,7 @@ if !isOpen {
 
 #### 邏輯且
 
-`a && b`表示只有當`a`跟`b`都為`true`時，才會返回`true`，否則如果`a`或`b`其中一個為`false`，就會返回`false`。
+`a && b`表示只有當`a`跟`b`都為`true`時，才會返回`true`，否則如果`a`或`b`其中一個為`false`，就會返回`false`，如下：
 
 ```swift
 let isOpen = true
@@ -301,15 +306,14 @@ if isOpen && isWeekend {
 } else {
     print("Failure !")
 }
-
-// 因為其中一個為 false 所以會返回 false 即印出 Failure !
+// 因為其中一個為 false 所以會返回 false
+// 即印出：Failure !
 
 ```
 
-
 #### 邏輯或
 
-`a || b`表示只要`a`跟`b`其中一個值為`true`時，就會返回`true`，除非`a`和`b`皆為`false`，才會返回`false`。
+`a || b`表示只要`a`跟`b`其中一個值為`true`時，就會返回`true`，除非`a`和`b`皆為`false`，才會返回`false`，如下：
 
 ```swift
 let isSunday = true
@@ -320,14 +324,15 @@ if isSunday || isWeekend {
     print("Failure !")
 }
 
-// 因為其中一個為 true 就會返回 true 即印出 Success !
+// 因為其中一個為 true 就會返回 true
+// 即印出：Success !
 
 ```
 
 
 ### 括號優先
 
-以上介紹很多運算子，當一個運算式太複雜時，可以使用括號來標示清楚，同時也用來表明優先級(如同傳統學習數學計算一樣，括號括起來的部份要優先計算)。
+以上介紹很多運算子，當一個運算式太複雜時，可以使用括號`()`來標示清楚，同時也用來表明優先級(如同傳統學習數學計算一樣，括號括起來的部份要優先計算)。例子如下：
 
 ```swift
 // 數值運算
@@ -347,7 +352,7 @@ if isOpen && isWeekend || isSunday {
 }
 // 先作"邏輯且"判斷 isOpen && isWeekend 會返回 false
 // 再與後面的 isSunday 作"邏輯或"的判斷 會返回 true
-// 所以這邊會印出 Success !
+// 所以這邊會印出：Success !
 
 // 括號有優先權
 if isOpen && (isWeekend || isSunday) {
@@ -357,7 +362,7 @@ if isOpen && (isWeekend || isSunday) {
 }
 // 括號優先 所以先做"邏輯或"判斷 isWeekend || isSunday 會返回 true
 // 再與前面的 isOpen 作"邏輯且"的判斷 會返回 false
-// 所以這邊會印出 Failure !
+// 所以這邊會印出：Failure !
 
 ```
 
