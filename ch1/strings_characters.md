@@ -2,9 +2,9 @@
 
 字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合(簡單說就是一段文字)，皆是以兩個雙引號`"`前後包起來。
 
-#### 字串字面量 String Literals
+#### 字串字面量
 
-在程式碼中包含一段預先定義的字串值作為字串字面量。字串字面量是由雙引號`""`包著的具有固定順序的文字字元集合，可以為常數和變數提供初始值。
+在程式碼中包含一段預先定義的字串值作為字串字面量(`string literal`)。字串字面量是由一對雙引號`""`包著的具有固定順序的文字字元集合，可以為常數和變數提供初始值。
 
 ```swift
 let someString = "Some string literal value"
@@ -13,12 +13,12 @@ let someString = "Some string literal value"
 
 #### 初始化空字串
 
-將空的字串字面量指派給變數，也可以初始化一個新的`String`實體：
+將空的字串字面量指派給變數，或是也可以初始化一個新的`String`變數：
 
 ```swift
+// 這兩個是一樣的意思
 var emptyString = ""
 var anotherEmptyString = String()
-// 這兩個是一樣的意思
 
 ```
 
@@ -44,7 +44,9 @@ for character in "Dog!".characters {
 
 ```swift
 let str = "What a lovely day !"
-print(str.characters.count) // 會印出字元數量 19
+
+// 印出字元數量：19
+print(str.characters.count)
 
 ```
 
@@ -56,10 +58,12 @@ print(str.characters.count) // 會印出字元數量 19
 let str = "Hello"
 let secondStr = ", world ."
 var anotherStr = str + secondStr
-print(anotherStr) // 印出 Hello, world .
+// 印出：Hello, world .
+print(anotherStr)
 
 anotherStr += " Have a nice day ."
-print(anotherStr) // 印出 Hello, world . Have a nice day .
+// 印出：Hello, world . Have a nice day .
+print(anotherStr)
 
 ```
 
@@ -70,10 +74,12 @@ print(anotherStr) // 印出 Hello, world . Have a nice day .
 ```swift
 let str = "Sunday"
 var anotherStr = "It is \(str) ."
-print(anotherStr) // 印出 It is Sunday .
+// 印出：It is Sunday .
+print(anotherStr)
 
 // 表達式也可以
-print("I have \(1 + 2 * 6) cars .") // 印出 I have 13 cars .
+// 印出：I have 13 cars .
+print("I have \(1 + 2 * 6) cars .")
 
 ```
 
@@ -93,7 +99,7 @@ let blackHeart = "\u{2665}"      // ♥,  Unicode 純量 U+2665
 
 #### 比較字串
 
-有三種方式來比較字串
+有三種方式來比較字串：
 
 - 字串相同 `==`
 - 前綴相同 `hasPrefix`
@@ -104,33 +110,30 @@ let str = "It is Sunday ."
 let str2 = "It is Sunday ."
 let str3 = "It is Saturday ."
 
-// 兩個字串相同 所以成立 印出 Success
+// 兩個字串相同 所以成立
 if str == str2 {
     print("Success")
 }
+// 印出：Success
 
-// str2 有前綴字串 It is 所以成立 印出 Success
+// str2 有前綴字串 It is 所以成立
 if str2.hasPrefix("It is") {
     print("Success")
 }
+// 印出：Success
 
-// str3 沒有後綴字串 Sunday . 所以不成立 印出 Failure
+// str3 沒有後綴字串 Sunday . 所以不成立
 if str3.hasSuffix("Sunday .") {
     print("Success")
 } else {
     print("Failure")
 }
+// 印出：Failure
+
 
 ```
-
-##### Hint
 
 可以看到有`str.characters`、`str.characters.count`或是`str.hasPrefix()`這種以小數點`.`連接的表示方式，代表的是這個變數的屬性或是方法。
 
 使用方法會依照其設定的規則表示，像是`str.characters`就是這個字串的字元集合，`str.characters.count`是字元集合的字元數量。而`str.hasPrefix()`則是會對變數作處理後再返回。往後會很常見到這種用法。
-
-
-
-
-
 
