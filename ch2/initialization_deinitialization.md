@@ -111,10 +111,12 @@ struct SimpleMath {
 }
 
 let oneSimpleMath = SimpleMath(huge: 30.0)
-print(oneSimpleMath.number) // 印出 3000.0
+// 印出 3000.0
+print(oneSimpleMath.number)
 
 let anotherSimpleMath = SimpleMath(tiny: 10.0)
-print(anotherSimpleMath.number) // 印出 1.0
+// 印出 1.0
+print(anotherSimpleMath.number)
 
 ```
 
@@ -549,7 +551,9 @@ let finalArcher = Archer(name: "", attackSpeed: 1)
 
 你可以在類別中覆寫**父類別的可失敗建構器**，可覆寫成為**可失敗建構器**或**非可失敗建構器**。以下是個例子：
 
-##### Hint：不能將一個父類別的**非可失敗建構器**，覆寫成為**可失敗建構器**。
+##### Hint
+
+- 不能將一個父類別的**非可失敗建構器**，覆寫成為**可失敗建構器**。
 
 ```swift
 定義一個類別 Document
@@ -645,5 +649,5 @@ deinit {
 
 Swift 有一個自動參考計數(ARC)的機制，會處理實體的記憶體管理，所以大部分的情況下，不需要手動清除，交給 Swift 來自動處理就好。
 
-##### Hint：後面章節會正式介紹自動參考計數(ARC)
+後面章節會正式介紹自動參考計數(ARC)
 
