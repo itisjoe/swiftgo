@@ -14,7 +14,7 @@
 
 依據不同需求，變數或常數會需要不同的**型別**來執行動作，像是身高體重需要有小數點的數字，計算人數需要整數，姓名、名稱需要文字字串。
 
-<a name=“type_annotation”></a>
+<a name="type_annotation"></a>
 ### 型別標註
 
 宣告變數或常數時，可以加上**型別標註**(`type annotation`)，說明這個值的型別。使用方法是在值的後面加上冒號 `:` 接著加上型別名稱。
@@ -30,7 +30,7 @@ let str: String = "It is a string ."
 
 通常很少需要寫型別標註，如果在宣告時給了一個初始值， Swift 則會自動推斷出型別。
 
-<a name=“int”></a>
+<a name="int"></a>
 ### 整數
 
 整數(`Int`)指的是沒有小數點的數字，可以**有符號 (正、負、零)**或是**無符號 (正、零)**。
@@ -51,7 +51,7 @@ var anotherNumber = -240
 
 - 還有一個特殊的**無符號**整數型別為`UInt`，這個型別的長度與目前平台的原生字長相同。但基於程式碼的可重複性，避免不同型別數字之間的轉換，以及數字的型別推斷，大部分情況都建議只使用`Int`即可。
 
-<a name=“float_double”></a>
+<a name="float_double"></a>
 ### Float, Double 浮點數
 
 浮點數指的是有包含小數點的數字，`Float`跟`Double`的差別在於精確度，`Float`有 6 位數，而`Double`可以達到 15 位數，選擇使用哪一個則是看你程式需要處理值的範圍而定。
@@ -66,7 +66,7 @@ let anotherHeight: Float = 175.5 // 除非型別標註填寫為 Float
 
 ```
 
-<a name=“int_float_conversion”></a>
+<a name="int_float_conversion"></a>
 ### 整數和浮點數轉換
 
 整數和浮點數的轉換必須指定型別。例子如下：
@@ -98,7 +98,7 @@ print(integerPi)
 
 ```
 
-<a name=“bool”></a>
+<a name="bool"></a>
 ### 布林值
 
 布林值(`bool`)指的是邏輯上的值，只能為真或假。 Swift 有兩個布林常數：`true`跟`false`。
@@ -109,7 +109,7 @@ let forFree = false
 
 ```
 
-<a name=“character_string”></a>
+<a name="character_string"></a>
 ### 字元及字串
 
 字元(`character`)指的是依照編碼格式的一個單位元組，而字串(`string`)是有序的字元集合(簡單說就是一段文字)，皆是以一對雙引號`"`前後包起來，如下：
@@ -137,7 +137,7 @@ print(string)
 
 後面章節會介紹更多字串的操作。
 
-<a name=“tuple”></a>
+<a name="tuple"></a>
 ### 元組
 
 元組(`tuple`)是將多個值組合成一個複合值，其內的型別可以不同，以一對小括號`()`前後包起來，每個值以逗號`,`分隔，如下：
@@ -194,7 +194,7 @@ print("Her name is \(herInfo.name) . ")
 
 ```
 
-<a name=“typealias”></a>
+<a name="typealias"></a>
 ### 型別別名
 
 型別別名(`type aliases`)就是給已存在的型別定義另一個名字，必須使用關鍵字`typealias`來定義型別別名。當你想要給已存在的型別命名一個更有意義的名字時很有用，底下是一個例子：
@@ -208,7 +208,7 @@ var number: MyType = 123
 
 ```
 
-<a name=“optional_type”></a>
+<a name="optional_type"></a>
 ### 可選型別
 
 這是 Swift 的一個特性，讓變數或常數可以有**沒有值**的情況，這與零`0`或是空字串`""`不同，當沒有值時，變數或常數會返回`nil`。而`nil`代表的就是**沒有值**，任何型別只要有加上**可選型別**(`optional type`)都可以設置成`nil`。使用方法為在型別標註後面加上一個問號`?`，如下：
@@ -244,7 +244,7 @@ let newNumber = Int(number)
 
 這時如果原字串內容不是單純的數字，轉換後則是會返回`nil`，來避免發生錯誤的情況。也就是說返回的是一個可選型別`Int?`，他可能會是整數，也可能是`nil`。
 
-<a name=“forced_unwrapping”></a>
+<a name="forced_unwrapping"></a>
 ### 強制解析
 
 當你確認一個**可選型別**一定有值，則可以在這個變數後面加上一個驚嘆號`!`，表示**這個可選型別有值，請使用它**，稱為強制解析(`forced unwrapping`)，例子如下：
@@ -264,7 +264,7 @@ print(number2!)
 
 ```
 
-<a name=“implicitly_unwrapped_optional”></a>
+<a name="implicitly_unwrapped_optional"></a>
 ### 隱式解析可選型別
 
 當**可選型別**第一次被指派值後，如果可以確定他之後都會有值，這時可以將其改為**隱式解析可選型別**(`implicitly unwrapped optional`)，這樣便不需要每次都判斷及解析，作法則是將可選型別的問號`?`改成驚嘆號`!`，如下說明
