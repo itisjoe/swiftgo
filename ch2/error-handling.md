@@ -1,8 +1,15 @@
 # 錯誤處理
 
+- [錯誤的描述與拋出](#representing_and_Throwing_errors)
+- [使用拋出函式傳遞錯誤](#throwing_function)
+- [錯誤的捕獲及處理](#error_hadle)
+- [轉換錯誤為可選值](#optional_value)
+- [禁用錯誤傳遞](#disabling_error_propagation)
+- [必定執行的程式區塊](#defer)
+
 程式運行中，有時會遇到錯誤需要處理，像是需要讀取一個檔案，但檔案可能不存在或是沒有讀取權限，還有像是一個購物車需要進行業務邏輯上的判斷，結帳前要檢查是否有商品或是超過數量限制等等。對此 Swift 提供了完整的對於錯誤的拋出、捕獲、傳遞及處理的支持。
 
-
+<a name="representing_and_Throwing_errors"></a>
 ### 錯誤的描述與拋出
 
 首先我們必須定義一組錯誤描述，來讓程式中遇到錯誤時，可以清楚知道當前是遇到了什麼錯誤，以及各自匹配後續的處理。Swift 中通常是使用一個遵循`ErrorType`協定(`protocol`)的列舉來表示一組錯誤描述(`ErrorType`是一個空的協定，只是為了告訴 Swift 這個列舉是用來表示錯誤描述)。
@@ -27,7 +34,7 @@ throw VendingMachineError.InsufficientFunds(coinsNeeded: 3)
 
 ```
 
-
+<a name="throwing_function"></a>
 ### 使用拋出函式傳遞錯誤
 
 前面說明了如何拋出錯誤，接著我們必須設計一個函式，其內部會經過邏輯判斷是否發生異常或錯誤，當發生時便會拋出錯誤。Swift 使用`throws`關鍵字來標記函式，稱其為**拋出函式**(`throwing function`)，格式如下：
@@ -99,7 +106,7 @@ class VendingMachine {
 
 ```
 
-
+<a name="error_hadle"></a>
 ### 錯誤的捕獲及處理
 
 前面定義的類別中有一個**拋出函式**，如果遇到錯誤時會將錯誤拋出並傳遞至錯誤處理的地方，目前尚未定義怎麼處理錯誤，所以這時 Swift 會自動處理，不過這可能會導致程式中止，所以我們還是自行定義錯誤處理的方式。
@@ -153,7 +160,7 @@ do {
 
 而上述這個例子依序判斷錯誤到最後，會因為錢幣不足而拋出`VendingMachineError.InsufficientFunds`這個錯誤，並在外面的`do-catch`中被捕獲到，最後會印出：**金額不足，還差 17 個錢幣**。當然因為已經拋出錯誤，其後的程式都不會繼續執行。
 
-
+<a name="optional_value"></a>
 ### 轉換錯誤為可選值
 
 前面提到可以使用一個**拋出函式**來拋出錯誤，並使用`do-catch`來捕獲並處理錯誤。而如果只是要簡單讓錯誤發生時，返回為一個`nil`，像是如下的表示：
@@ -187,7 +194,7 @@ let x = try? someThrowingFunction()
 
 - 不論原本拋出函式返回的是不是可選值，使用`try?`呼叫的拋出函式，都會返回可選值。
 
-
+<a name="disabling_error_propagation"></a>
 ### 禁用錯誤傳遞
 
 當你知道一個拋出函式確定不會在執行時拋出錯誤，這時可以使用`try!`來呼叫拋出函式，這樣會將錯誤傳遞禁用，但當錯誤真的被拋出時，會發生程式運行時錯誤。
@@ -199,7 +206,7 @@ let x = try! someThrowingFunction()
 
 ```
 
-
+<a name="defer"></a>
 ### 必定執行的程式區塊
 
 我們可以使用`defer`定義一個程式區塊，當在無論是拋出(`throw`)錯誤，或是使用`return`、`break`結束這個函式**後**，都必定會執行這個程式區塊。
