@@ -1,5 +1,12 @@
 # 擴展
 
+- [擴展語法](#extension)
+- [計算屬性](#property)
+- [方法](#method)
+- [建構器](#initializer)
+- [下標](#subscript)
+- [巢狀型別](#nested_type)
+
 擴展(`extension`)是 Swift 一個重要的特性，它可以為已存在的列舉、結構、類別和協定添加新功能，而且不需要修改該型別原本定義的程式碼。擴展也可以使用在內建的型別上，像是`Int`、`Double`或`String`等等。
 
 Swift 的擴展可以：
@@ -10,6 +17,9 @@ Swift 的擴展可以：
 - 定義下標。
 - 定義和使用新的巢狀型別。
 - 讓一個已存在的型別遵循某個協定。
+
+<a name="extension"></a>
+### 擴展語法
 
 使用`extension`關鍵字來定義一個擴展，格式如下：
 
@@ -33,7 +43,7 @@ extension 某個型別: 協定, 另一個協定, 又另一個協定 {
 
 後面章節會正式介紹協定(`protocol`)。
 
-
+<a name="property"></a>
 ### 計算屬性
 
 擴展可以對內建的型別增加**計算實體屬性**與**計算型別屬性**。下面例子為內建的`Double`型別增加了 3 個計算實體屬性，用來表示常見的距離單位：
@@ -62,7 +72,7 @@ print("馬拉松的距離全長為 \(aMarathon) 公尺")
 
 - 擴展不能新增儲存屬性，也不能為已有的屬性添加屬性觀察器(`property observer`)。
 
-
+<a name="method"></a>
 ### 方法
 
 擴展可以為已有的型別新增實體方法與型別方法。以下例子為內建的`Int`型別新增一個實體方法：
@@ -107,7 +117,7 @@ oneInt.square()
 
 ```
 
-
+<a name="initializer"></a>
 ### 建構器
 
 擴展能為**類別**新增**便利建構器**(`convenience initializer`)，但不能新增**指定建構器**(`designated initializer`)跟**解構器**(`deinitializer`)。
@@ -140,7 +150,7 @@ let twoChar = GameCharacter(hp: 200, mp: 50, name: "戰士")
 
 - 使用擴展新增一個新的建構器時，仍然需要確保建構過程中的每一個實體的完全初始化。
 
-
+<a name="subscript"></a>
 ### 下標
 
 擴展可以為已有的型別新增下標。下面例子為內建的`Int`型別增加下標：
@@ -167,7 +177,7 @@ extension Int {
 
 ```
 
-
+<a name="nested_type"></a>
 ### 巢狀型別
 
 擴展可以為已有的列舉、結構和類別新增巢狀型別。以下為內建的 Int 型別內新增一個列舉的擴展：
