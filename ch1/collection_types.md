@@ -1,12 +1,16 @@
 # 集合型別
 
+- [陣列](#array)
+- [Sets 集合](#set)
+- [字典](#dictionary)
+
 Swift 提供三種基本的集合型別：`Arrays`、`Sets`、`Dictionaries`來儲存集合資料。儲存的資料**型別必須明確**，且都**只能儲存同一種型別**的資料。
 
 - Array 陣列：按順序儲存資料。
 - Set 集合：沒有順序、不能重複儲存資料。
 - Dictionary 字典：沒有順序，鍵值對 `key : value` ，也就是可以經由唯一的識別鍵找到需要的值。
 
-
+<a name="array"></a>
 ### 陣列
 
 陣列(`array`)使用有序列表儲存同一型別的多個值。相同的值可以多次出現在一個陣列的不同位置中。
@@ -181,7 +185,7 @@ for (index, value) in arr.enumerate() {
 
 後面章節會正式介紹`for-in`的使用方法。
 
-
+<a name="set"></a>
 ### Sets 集合
 
 集合(`Set`)用來儲存相同型別且沒有順序、沒有重複的值，當順序不重要或是需要每個值只能出現一次時，可以選擇使用`Set`。
@@ -337,7 +341,7 @@ farmAnimals.isDisjointWith(cityAnimals)
 
 ```
 
-
+<a name="dictionary"></a>
 ### 字典
 
 字典(`dictionary`)用來儲存多個相同型別的值。每個值(`value`)都屬於一個唯一的鍵(`key`)，鍵作為字典中這個值的識別符號，所有鍵的型別也必須相同(鍵與值的型別不一定要相同)。

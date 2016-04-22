@@ -1,7 +1,18 @@
 # 控制流程
 
+- [For-in 循環](#for)
+- [While 循環](#while)
+- [條件語句](#condition)
+- [可選綁定](#optional_binding)
+- [Switch](#switch)
+- [控制轉移語句](#control_transfer_statement)
+- [提前退出](#guard)
+- [斷言](#assertion)
+- [檢測 API 可用性](#api)
+
 Swift 提供了可以循環執行任務的`for-in`和`while`迴圈，以及根據條件選擇執行不同程式碼分支的`if`和`switch`語句，還有控制流程跳轉到其他程式碼的`break`和`continue`語句。
 
+<a name="for"></a>
 ### For-in 循環
 
 使用`for-in`遍歷一個集合內的所有元素，像是一個數字區間、陣列、字典中的值或是字串內的字元。
@@ -56,7 +67,7 @@ for (key, values) in dict {
 
 ```
 
-
+<a name="while"></a>
 ### While 循環
 
 Swift 提供兩種`while`循環方式：`while`及`repeat-while`，兩者都是循環地執行程式直到條件表達式返回`false`，差別在於，後者一開始在檢查條件表達式之前，一定會先執行一次內部程式。
@@ -111,7 +122,7 @@ print(n)
 
 ```
 
-
+<a name="condition"></a>
 ### 條件語句
 
 條件語句為根據不同特定條件執行不同的程式。Swift 提供兩種條件語句：`if`與`switch`，如果需要判斷的條件較單純或可能的情況較少時，可以使用`if`，反之使用`switch`。
@@ -171,7 +182,7 @@ if number > 50 {
 
 ```
 
-
+<a name="optional_binding"></a>
 ### 可選綁定
 
 使用**可選綁定**(`optional binding`)來判斷可選型別是否有值，如果有值的話就指派給一個臨時常數或臨時變數，並執行其內部的程式，這個臨時常數或變數只能在其內部使用。`if`跟`while`語句都可以使用可選綁定。格式如下：
@@ -206,7 +217,7 @@ if let number = Int(str2) {
 
 ```
 
-
+<a name="switch"></a>
 ### Switch
 
 `switch`會將一個值與多個情況作比對，根據第一個比對成功的情況，會執行相對應的程式。所有`case`必須涵蓋全部可能的情況，如果有未涵蓋的部份，最後需要補上`default`。最簡單的格式如下：
@@ -324,6 +335,7 @@ default:
 
 ```
 
+<a name="control_transfer_statement"></a>
 ### 控制轉移語句
 
 控制轉移語句(`control transfer statement`)可以改變程式的執行順序，或是跳轉執行程式。
@@ -431,7 +443,8 @@ print(number)
 
 ```
 
-#### 提前退出
+<a name="guard"></a>
+### 提前退出
 
 有點類似`if`的用法，`guard`同樣會有一個條件表達式且會返回一個布林值，不同的地方在於，`guard`後面一定要接一個`else`，如果條件表達式返回`false`時，會執行`{}`內的程式。
 
@@ -490,7 +503,7 @@ post(["title": "Article_2", "content": "Article_2_full_content"])
 
 後面章節會正式介紹函式(`func`)。
 
-
+<a name="assertion"></a>
 ### 斷言
 
 斷言(`assertion`)會在執行時判斷一個邏輯條件是否為`true`，而如果為`false`的話，程式則會被中止，使用函式`assert()`，格式如下：
@@ -517,7 +530,7 @@ assert(age > 0, "年齡必須大於零")
 - 需要給函式傳入一個值，但是非法的值可能導致函式不能正常執行。
 - 一個可選值為`nil`，但後面需要這個值為一個非`nil`值。
 
-
+<a name="api"></a>
 ### 檢測 API 可用性
 
 Swift 可以讓你檢查 API 的預設支持，可以防止不小心使用到了對於當前部屬目標不可用的 API。以下是使用方式：
