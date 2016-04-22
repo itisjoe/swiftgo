@@ -1,10 +1,19 @@
 # 自動參考計數
 
+- [自動參考計數的運作方式](#arc)
+- [類別實體間的強參考循環](#strong_reference_cycles)
+- [解決實體間的強參考循環](#resolving_strong_reference_cycles)
+- [閉包的強參考循環](#strong_reference_cycles_for_closures)
+- [解決閉包的強參考循環](#resolving_strong_reference_cycles_for_closures)
+
 Swift 使用自動參考計數(`ARC`, `Automatic Reference Counting`)機制來追蹤與管理記憶體使用狀況，所以大部分情況下，你不需要自己管理，Swift 會自動釋放掉不需要的記憶體。
 
 ##### Hint
 
 - 參考計數只應用在類別(也就是參考型別)的實體。結構與列舉為值型別，也不是通過參考的方式儲存與傳遞。
+
+<a name="arc"></a>
+### 自動參考計數的運作方式
 
 當一個類別實體被指派值(給一個屬性、常數或變數)的時候，會建立一個該實體的**強參考**(`strong reference`)，同時會將**參考計數**(`reference counting`)加 1 ，強參考表示會將這個實體保留住，只要強參考還在(也就是參考計數不為 0 )，儲存這個實體的記憶體就不會被釋放掉。
 
@@ -53,7 +62,7 @@ reference3 = nil
 
 ```
 
-
+<a name="strong_reference_cycles"></a>
 ### 類別實體間的強參考循環
 
 ARC 在大部分時間都可以運作順利，但在有些情況下會造成強參考永遠不會歸零，進而發生記憶體洩漏(`memory leak`)的問題。
@@ -109,7 +118,7 @@ oneUnit = nil
 
 - 前面章節提過，上述程式中，在實體後的驚嘆號(`!`)指的是將一個可選型別強制解析。
 
-
+<a name="resolving_strong_reference_cycles"></a>
 ### 解決實體間的強參考循環
 
 Swift 提供了兩種辦法來解決強參考循環，分別是弱參考(`weak reference`)及無主參考(`unowned reference`)。
@@ -261,7 +270,7 @@ var country = Country(name: "Japan", capitalName: "Tokyo")
    
 以上的意義在於可以通過一條語句同時生成`Country`跟`City`的實體，而不會產生強參考循環，並且`capitalCity`屬性可以被直接存取，不需要被強制解析(即加上驚嘆號`!`)。
 
-
+<a name="strong_reference_cycles_for_closures"></a>
 ### 閉包的強參考循環
 
 除了前面提到的類別實體之間可能產生強參考循環，當將一個閉包(`closure`，也就是匿名函式)設置給一個類別實體的屬性時，這個閉包函式內存取了這個實體的某個屬性，或是呼叫了實體的一個方法，都會導致閉包捕獲(`capture`)了`self`，進而產生了強參考循環。
@@ -318,7 +327,7 @@ paragraph = nil
 
 - 閉包中雖然多次使用了`self`，但只捕獲了 1 個強參考(也就是參考計數只算 1 次)
 
-
+<a name="resolving_strong_reference_cycles_for_closures"></a>
 ### 解決閉包的強參考循環
 
 在定義閉包時，同時定義**捕獲列表**(`capture list`)作為閉包的一部分，通過這種方式可以解決閉包和類別實體之間的強參考循環。捕獲列表中必須定義每個閉包中捕獲的參考為弱參考或無主參考(依其相互關係來決定)。
