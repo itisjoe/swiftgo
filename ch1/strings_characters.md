@@ -2,6 +2,7 @@
 
 - [字串字面量](#string_literal)
 - [初始化空字串](#initializing_an_empty_string)
+- [字串可變性](#string_mutability)
 - [使用字元](#working_with_characters)
 - [連接字元及字串](#concatenating_strings_characters)
 - [字串插值](#string_interpolation)
@@ -30,6 +31,21 @@ let someString = "Some string literal value"
 // 這兩個是一樣的意思
 var emptyString = ""
 var anotherEmptyString = String()
+
+```
+
+<a name="string_mutability"></a>
+### 字串可變性
+
+將一個特定的字串指派給一個變數，之後還可以對其修改。而字串指派給一個常數，則無法再做修改，例子如下：
+
+```swift
+var variableString = "Cat"
+variableString = "Book"
+// variableString 現在為 Book
+
+let constantString = "Sun"
+constantString = "Moon" // 這行會報錯誤 因為常數不能被修改
 
 ```
 
