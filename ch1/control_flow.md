@@ -1,7 +1,7 @@
 # 控制流程
 
 - [For-in 循環](#for)
-- [While 循環](#while)
+- [While 循環](#while_loop)
 - [條件語句](#condition)
 - [可選綁定](#optional_binding)
 - [Switch](#switch)
@@ -67,7 +67,7 @@ for (key, values) in dict {
 
 ```
 
-<a name="while"></a>
+<a name="while_loop"></a>
 ### While 循環
 
 Swift 提供兩種`while`循環方式：`while`及`repeat-while`，兩者都是循環地執行程式直到條件表達式返回`false`，差別在於，後者一開始在檢查條件表達式之前，一定會先執行一次內部程式。
