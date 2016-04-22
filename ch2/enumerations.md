@@ -1,10 +1,16 @@
 # 列舉
 
+- [列舉語法](#enum)
+- [使用 Switch 語句匹配列舉值](#switch)
+- [相關值](#associated_value)
+- [原始值](#raw_value)
+- [遞迴列舉](#recursive_enumeration)
+
 列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
 
 列舉支援很多特性，例如計算型屬性(`computed property`)、實例方法(`instance method`)、定義建構器(`initializer`)、擴展(`extension`)及協定(`protocol`)，後面章節會正式介紹這些內容。
 
-
+<a name="enum"></a>
 ### 列舉語法
 
 列舉使用`enum`關鍵字建立，並將列舉定義放在一組大括號`{}`內，格式如下：
@@ -51,7 +57,7 @@ directionToHead = .North
 
 ```
 
-
+<a name="switch"></a>
 ### 使用 Switch 語句匹配列舉值
 
 這邊同樣使用上面定義過的指南針方位的列舉。使用`switch`語句匹配單個列舉值：
@@ -71,10 +77,10 @@ switch directionToHead {
 
 ```
 
-
+<a name="associated_value"></a>
 ### 相關值
 
-列舉中的每個成員值，視需求可以在需要的時候，一併儲存自定義的一個或以上**其他型別**的**相關值**(`associated values`)。使用方法為在成員值後面加上小括號`()`，並將**相關值型別**放在小括號內(就像使用元組`tuple`一樣)。往後在程式中將該列舉成員值指派給變數或常數時，這個(或這些)相關值才會被設置，且可以是不同的。
+列舉中的每個成員值，視需求可以在需要的時候，一併儲存自定義的一個或以上**其他型別**的**相關值**(`associated value`)。使用方法為在成員值後面加上小括號`()`，並將**相關值型別**放在小括號內(就像使用元組`tuple`一樣)。往後在程式中將該列舉成員值指派給變數或常數時，這個(或這些)相關值才會被設置，且可以是不同的。
 
 以下是一個例子，假設建立一個庫存追蹤系統，商品條碼可能會有`UPC-A`格式的一維碼，每一個`UPC-A`條碼是一組四個正整數的值，或是使用`QR Code`格式的二維碼，每一個`QR Code`條碼是一個最多為 2,953 字元的字串，依據這個條件建立的列舉如下：
 
@@ -129,7 +135,7 @@ case let .QRCode(productCode):
 
 ```
 
-
+<a name="raw_value"></a>
 ### 原始值
 
 除了使用相關值的列舉，其內的成員值可以儲存不同型別的相關值。Swift 也提供列舉先設置原始值(`raw value`)來代替相關值，這些原始值的**型別必須相同**。使用方法為在列舉名稱後加上冒號`:`並接著**原始值型別**，例子如下：
@@ -191,8 +197,7 @@ print(directionPoint.rawValue)
 
 ```
 
-
-### 使用原始值初始化列舉實體
+#### 使用原始值初始化列舉實體
 
 在定義列舉時，如果使用了原始值，則這個列舉會有一個初始化方法(`method`)，這個方法有一個名稱為`rawValue`的參數，其參數型別就是列舉原始值的型別，返回值為列舉成員或`nil`。例子如下：
 
@@ -226,4 +231,57 @@ if let targetPlanet = Planet(rawValue: positionToFind) {
 ```
 
 上述程式先使用了一個可選綁定(`optional binding`)，使用原始值`9`來尋找是否有星球，但可以看到列舉`Planet`中沒有原始值為`9`的成員，所以會返回一個`nil`，接著則執行`else`內部程式。
+
+<a name="recursive_enumeration"></a>
+### 遞迴列舉
+
+遞迴列舉(`recursive enumeration`)是一種列舉型別，它會有一個或多個列舉成員使用該列舉型別的實體作為相關值。如果要表示一個列舉成員可以遞迴，必須在成員前面加上`indirect`，例子如下：
+
+```swift
+// 定義一個列舉
+enum ArithmeticExpression {
+    // 一個純數字成員
+    case Number(Int)
+    
+    // 兩個成員 表示為加法及乘法運算 各自有兩個[列舉的實體]相關值
+    indirect case Addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case Multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+// 或是你也可以把 indirect 加在 enum 前面
+// 表示整個列舉都是可以遞迴的
+indirect enum ArithmeticExpression {
+    case Number(Int)
+    case Addition(ArithmeticExpression, ArithmeticExpression)
+    case Multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+```
+
+接者使用一個遞迴函式來示範這個遞迴列舉：
+
+```swift
+func evaluate(expression: ArithmeticExpression) -> Int {
+    switch expression {
+    case .Number(let value):
+        return value
+    case .Addition(let left, let right):
+        return evaluate(left) + evaluate(right)
+    case .Multiplication(let left, let right):
+        return evaluate(left) * evaluate(right)
+    }
+}
+
+// 計算 (5 + 4) * 2
+let five = ArithmeticExpression.Number(5)
+let four = ArithmeticExpression.Number(4)
+let sum = ArithmeticExpression.Addition(five, four)
+let product = ArithmeticExpression.Multiplication(sum, ArithmeticExpression.Number(2))
+
+// 印出：18
+print(evaluate(product))
+
+```
+
+上述程式可以看到，當函式的參數為純數字，則直接返回該數字的值。而如果是加法或乘法運算，則是分別計算兩個表達式的值後，再相加或相乘。
 
