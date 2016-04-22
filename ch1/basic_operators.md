@@ -1,8 +1,18 @@
 # 基本運算子
 
+- [指派運算子](#assignment)
+- [數值運算子](#arithmetic)
+- [複合指派運算子](#compound_assignment)
+- [比較運算子](#comparison)
+- [三元運算子](#ternary_conditional)
+- [空值聚合運算子](#nil_coalescing)
+- [區間運算子](#range)
+- [邏輯運算子](#logical)
+- [括號優先](#explicit_parentheses)
+
 運算子是檢查、改變、合併值的特殊符號或語句。像是加號`+`就是將兩個數相加 (`let number = 1 + 2`)。
 
-
+<a name="assignment"></a>
 ### 指派運算子
 
 前面章節已經有多次使用，`a = b`表示將右邊的`b`指派給左邊的`a`。
@@ -20,7 +30,7 @@ let (x, y) = (1, 2)
 
 ```
 
-
+<a name="arithmetic"></a>
 ### 數值運算子
 
 Swift 中所有數值型別都支援基本的四則運算，加 `+`、減 `-`、乘 `*`、除 `/` 。
@@ -90,7 +100,7 @@ var anotherNumber = +number // 為 -6
 
 ```
 
-
+<a name="compound_assignment"></a>
 ### 複合指派運算子
 
 Swift 提供一個簡潔的方式，將數值運算與指派運算合併，像是`+=`，很多時候可以簡化程式。
@@ -108,7 +118,7 @@ a %= 2 // a = a % 2 , 現在 a 等於 1
 
 ```
 
-
+<a name="comparison"></a>
 ### 比較運算子
 
 將兩個數值作比較，並返回這個比較是否成立的布林值，即返回`true`或是`false`，以下是常用的比較運算。
@@ -166,7 +176,7 @@ if i == 1 {
 
 - Swift 在比較元組的成員時，限制最多只能比較六個成員，如果有七個或七個以上成員則無法比較。(或是你必須自己實作這個功能。)
 
-
+<a name="ternary_conditional"></a>
 ### 三元運算子
 
 這是一個簡潔的條件式運算：`問題 ? 答案1 : 答案2`。`問題`需要返回一個是否成立的布林值，表示`true`或`false`，如果為`true`，則是返回`答案1`，反之如果為`false`，則是返回`答案2`。也就是下列寫法的簡寫：
@@ -202,7 +212,7 @@ score = score + (score < 60 ? 50 : 20)
 
 ```
 
-
+<a name="nil_coalescing"></a>
 ### 空值聚合運算子
 
 前面章節介紹過的可選型別， Swift 提供一個簡潔的使用方法：`a ?? b`。先判斷`a`是否為`nil`，如果`a`有值，不是`nil`，就會解析`a`並返回，但如果`a`為`nil`，則返回預設值`b`。也就是下面這個寫法的簡寫：
@@ -229,7 +239,7 @@ print(anotherColorToUse)
 
 ```
 
-
+<a name="range"></a>
 ### 區間運算子
 
 Swift 提供兩個方便表達一個區間的值的運算子。
@@ -271,7 +281,7 @@ for index in 1..<5 {
 
 ```
 
-
+<a name="logical"></a>
 ### 邏輯運算子
 
 Swift 支援三個標準邏輯運算。
@@ -329,7 +339,7 @@ if isSunday || isWeekend {
 
 ```
 
-
+<a name="explicit_parentheses"></a>
 ### 括號優先
 
 以上介紹很多運算子，當一個運算式太複雜時，可以使用括號`()`來標示清楚，同時也用來表明優先級(如同傳統學習數學計算一樣，括號括起來的部份要優先計算)。例子如下：
