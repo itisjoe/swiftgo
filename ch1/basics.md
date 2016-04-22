@@ -1,7 +1,7 @@
 # 基本知識
 
 - [印出文字](#print)
-- [變數及常數](#let-var)
+- [變數及常數](#let_var)
 - [註解](#comment)
 
 <a name="print"></a>
@@ -21,7 +21,7 @@ print("Hello, World !")
 
 -  將文字用一對雙引號`"`包起來，即代表一個字串(也就是一段文字)。
 
-<a name="let-var"></a>
+<a name="let_var"></a>
 ### 變數及常數
 
 使用`let`來宣告常數，使用`var`宣告變數。
