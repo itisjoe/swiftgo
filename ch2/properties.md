@@ -1,5 +1,10 @@
 # 屬性
 
+- [儲存屬性](#stored_property)
+- [計算屬性](#computed_property)
+- [屬性觀察器](#property_observer)
+- [型別屬性](#type_property)
+
 屬性(`property`)為特定型別(類別、結構或列舉)的值，有以下幾種使用方式：
 
 - 儲存屬性(`stored property`)：在實體內儲存常數或變數，可以用於類別及結構。
@@ -7,7 +12,7 @@
 - 型別屬性(`type property`)：與前兩個不同，這是屬於**型別本身**的屬性。
 - 屬性觀察器(`property observer`)：用來觀察屬性值的變化，並以此觸發一個自定義的操作。
 
-
+<a name="stored_property"></a>
 ### 儲存屬性
 
 **儲存屬性**(`stored property`)就是一個儲存在特定型別(類別或結構)的常數或變數。可以在定義儲存屬性時指定預設值，也可以在建構過程中設置或修改儲存屬性的值，以下是個例子：
@@ -92,7 +97,7 @@ print(manager.importer.fileName)
 
 ```
 
-
+<a name="computed_property"></a>
 ### 計算屬性
 
 除了儲存屬性外，類別、結構和列舉還可以定義**計算屬性**(`computed property`)，計算屬性不直接儲存值，而是提供一個`getter`(使用關鍵字`get`)來存取值，及一個可選的`setter`(使用關鍵字`set`)來間接設置其他屬性的值。以下是個例子：
@@ -175,7 +180,7 @@ class GameCharacter {
 
 上述程式中，因為計算屬性只有`getter`，所以`getter`可以省略掉關鍵字`get`及大括號`{}`。
 
-
+<a name="property_observer"></a>
 ### 屬性觀察器
 
 屬性觀察器(`property observer`)會監控和回應屬性值的變化，每次屬性被設置新的值都會呼叫屬性觀察器。以下為兩個可以使用的屬性觀察器：
@@ -223,7 +228,7 @@ oneChar.hpValue = 90
 
 - 如果屬性經由輸入輸出參數(`inout`)方式傳入函式，`willSet`和`didSet`也一樣會被觸發。
 
-
+<a name="type_property"></a>
 ### 型別屬性
 
 型別屬性(`type property`)是屬於這個**型別**(類別、結構或列舉)的屬性，無論生成了多少這個型別的實體，型別屬性都只有唯一一份。
