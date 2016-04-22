@@ -27,6 +27,6 @@
    * [協定](ch2/protocols.md)
    * [泛型](ch2/generics.md)
    * [存取控制](ch2/access-control.md)
-* [補充](chz.md)
-   * 系統關鍵字
+* [補充](more/more.md)
+   * [系統關鍵字](more/keywords.md)
 
