@@ -1,10 +1,15 @@
 # 繼承
 
+- [基礎類別](#base_class)
+- [生成子類別](#subclassing)
+- [覆寫](#overriding)
+- [防止覆寫](#preventing_overrides)
+
 繼承(`inherit`)這個概念主要是類別(`class`)在使用，是物件導向的一個重要特性。一個類別可以繼承另一個類別的屬性(`property`)、方法(`method`)及其他特性。
 
 一個類別繼承其他類別時，這個類別會被稱為**子類別**(`subclass`)。被繼承的類別則是稱為**父類別**(`superclass`，直翻會是超類別，但還是以父類別為主，以與子類別相對應)。
 
-
+<a name="base_class"></a>
 ### 基礎類別
 
 基礎類別(`base class`)就是不繼承於其它類別的類別。
@@ -40,7 +45,7 @@ print(oneChar.description)
 
 上述程式為一個基礎的遊戲角色職業類別，僅是定義了一些通用的內容，接著需要再定義子類別來完備。
 
-
+<a name="subclassing"></a>
 ### 生成子類別
 
 生成子類別(`subclassing`)指的是基於一個基礎類別來定義一個新的類別，子類別會繼承父類別所有的特性，且還可以增加新的特性。
@@ -87,13 +92,12 @@ oneHunter.fatalBlow()
 
 ```
 
-
+<a name="overriding"></a>
 ### 覆寫
 
 類別繼承的同時，子類別可以重新定義父類別中定義過的特性，如實體方法(`instance method`)、型別方法(`type method`)、實體屬性(`instance property`)、型別屬性(`type property`)或下標(`subscript`)，這種行為即是覆寫(`overriding`)。
 
 使用關鍵字`override`來表示你要覆寫這個特性(即方法、屬性或下標)。
-
 
 #### 覆寫方法
 
@@ -115,7 +119,6 @@ oneHunter.attack()
 // 即會印出覆寫後的內容：攻擊！這是獵人的攻擊！
 
 ```
-
 
 #### 覆寫屬性
 
@@ -144,7 +147,6 @@ class Hunter: Archer {
 }
 
 ```
-
 
 #### 覆寫屬性觀察器
 
@@ -199,8 +201,7 @@ oneHunter.attackSpeed = 1.8
 
 上述程式中可以知道，`willSet`觸發時，會先執行子類別的再來才是父類別的，而`didSet`則是相反，先執行父類別的再來才是子類別的。
 
-
-### 存取父類別的屬性、方法及下標
+#### 存取父類別的屬性、方法及下標
 
 在前面章節介紹類別的時候，提到類別有一個隱藏的內建屬性`self`，可以在方法中代表類別本身。而當繼承自另一個類別時，可以使用`super`屬性來存取父類別的屬性、方法或下標。
 
@@ -228,7 +229,7 @@ print(oneHunter.description)
 
 ```
 
-
+<a name="preventing_overrides"></a>
 ### 防止覆寫
 
 可以在類別的方法、屬性或下標前面加上`final`，來防止它們被覆寫，使用方式為`final var`、`final func`或是`final class func`這樣。
