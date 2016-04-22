@@ -1,12 +1,19 @@
 # 泛型
 
+- [泛型能解決的問題](#the_problem_that_generics_solve)
+- [泛型函式](#function)
+- [型別參數](#property)
+- [泛型型別](#type)
+- [型別約束](#constraint)
+- [關聯型別](#associatedtype)
+
 泛型(`generic`)是 Swift 一個重要的特性，可以讓你自定義出一個**適用任意型別**的函式及型別。可以避免重複的程式碼且清楚的表達程式碼的目的。
 
 許多 Swift 標準函式庫就是經由泛型程式碼建構出來的，像是陣列(`Array`)和字典(`Dictionary`)都是泛型的，你可以宣告一個`[Int]`陣列，也可以宣告一個`[String]`陣列。同樣地，你也可以宣告任意指定型別的字典。
 
 你可以將泛型使用在函式、列舉、結構及類別上。
 
-
+<a name="the_problem_that_generics_solve"></a>
 ### 泛型能解決的問題
 
 以下是一個可以利用泛型來簡化程式碼的例子：
@@ -38,7 +45,7 @@ func swapTwoStrings(inout a: String, inout _ b: String) {
 
 由上述程式可以看到，兩個函式的功能完全一樣，唯一不同的只有傳入參數的型別，這種情況便可以使用泛型來簡化。
 
-
+<a name="function"></a>
 ### 泛型函式
 
 根據前面提到的兩個功能完全一樣的函式，以下使用泛型來定義一個**適用任意型別**的函式：
@@ -73,7 +80,7 @@ swapTwoValues(&oneString, &anotherString)
 
 ```
 
-
+<a name="property"></a>
 ### 型別參數
 
 前面提到的`swapTwoValues(_:_:)`中，佔位型別名稱`T`是型別參數的一個例子。
@@ -90,7 +97,7 @@ swapTwoValues(&oneString, &anotherString)
 
 - 通常會使用大駝峰命名法(像是`T`或`MyTypeParameter`)來為型別參數命名，以表示他們是佔位型別，而不是一個值。
 
-
+<a name="type"></a>
 ### 泛型型別
 
 除了泛型函式，你也可以定義一個**泛型型別**。你可以定義在列舉、結構或類別上，類似陣列(`Array`)和字典(`Dictionary`)。
@@ -161,7 +168,7 @@ if let topItem = stackOfStrings.topItem {
 
 ```
 
-
+<a name="constraint"></a>
 ### 型別約束
 
 有時在定義一個泛型函式或泛型型別時，會需要為這個泛型型別參數增加一些限制，可能是指定型別參數必須繼承自指定的類別，或是符合一個特定的協定。
@@ -209,7 +216,7 @@ let stringIndex = findIndex(["Adam", "Kevin", "Jess"], "Kevin")
 
 ```
 
-
+<a name="associatedtype"></a>
 ### 關聯型別
 
 關聯型別(`associated type`)表示會為協定中的某個型別提供一個佔位名稱(`placeholder name`)，其代表的實際型別會在協定被遵循時才會被指定。使用`associatedtype`關鍵字來指定一個關聯型別。
