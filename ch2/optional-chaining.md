@@ -1,12 +1,15 @@
 # 可選鏈
 
+- [以可選鏈替代強制解析](#optional_chaining_as_an_alternative_to_forced_unwrapping)
+- [通過可選鏈存取屬性、下標及呼叫方法](#accessing_properties_subscripts_methods_through_optional_chaining)
+
 可選鏈(`optional chaining`)是一個可以存取或呼叫屬性(`property`)、方法(`method`)及下標(`subscript`)的過程。
 
 稱其為**可選**(`optional`)是因為當前存取或呼叫的目標可能為空(`nil`)，而多次存取或呼叫可以用**點語法**(`dot syntax` 即`.`)將其全部鏈結在一起，所以稱為鏈(`chaining`)。
 
 可選鏈中，只要其中一個節點為空(`nil`)，則會立即返回`nil`。相對地，如果存取或呼叫至最後一個節點都有值，則會返回一個**可選型別**的值。
 
-
+<a name="optional_chaining_as_an_alternative_to_forced_unwrapping"></a>
 ### 以可選鏈替代強制解析
 
 可選鏈中，如果其中一個節點為可選值時，必須在這個值後面加上問號(`?`)，來表示這是一個可選值，也就是當這個值為空(`nil`)時，會立即返回`nil`。
@@ -52,7 +55,7 @@ print(joe.residence?.numberOfRooms)
 
 ```
 
-
+<a name="accessing_properties_subscripts_methods_through_optional_chaining"></a>
 ### 通過可選鏈存取屬性、下標及呼叫方法
 
 這邊定義三個類別以供後續示範，沿用先前的類別`Person`，並新增一個類別`Room`，最後將`Residence`重新定義，如下：
