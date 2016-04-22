@@ -1,8 +1,18 @@
 # 字串及字元
 
+- [字串字面量](#string_literal)
+- [初始化空字串](#initializing_an_empty_string)
+- [使用字元](#working_with_characters)
+- [連接字元及字串](#concatenating_strings_characters)
+- [字串插值](#string_interpolation)
+- [特殊符號](#special_characters)
+- [計算字串中的字元數量](#counting_characters)
+- [比較字串](#comparing_strings)
+
 字元指的是依照編碼格式的一個單位元組，而字串是有序的字元集合(簡單說就是一段文字)，皆是以兩個雙引號`"`前後包起來。
 
-#### 字串字面量
+<a name="string_literal"></a>
+### 字串字面量
 
 在程式碼中包含一段預先定義的字串值作為字串字面量(`string literal`)。字串字面量是由一對雙引號`""`包著的具有固定順序的文字字元集合，可以為常數和變數提供初始值。
 
@@ -11,7 +21,8 @@ let someString = "Some string literal value"
 
 ```
 
-#### 初始化空字串
+<a name="initializing_an_empty_string"></a>
+### 初始化空字串
 
 將空的字串字面量指派給變數，或是也可以初始化一個新的`String`變數：
 
@@ -22,7 +33,8 @@ var anotherEmptyString = String()
 
 ```
 
-#### 使用字元
+<a name="working_with_characters"></a>
+### 使用字元
 
 字串是有序的字元集合，所以可以使用`for-in`迴圈來遍歷字串中的每一個字元：
 
@@ -40,17 +52,8 @@ for character in "Dog!".characters {
 
 後面章節會正式介紹`for-in`的使用方法。
 
-#### 計算字串中的字元數量
-
-```swift
-let str = "What a lovely day !"
-
-// 印出字元數量：19
-print(str.characters.count)
-
-```
-
-#### 連接字元及字串
+<a name="concatenating_strings_characters"></a>
+### 連接字元及字串
 
 可以簡單的使用加號`+`將兩個字串連結在一起，加號指派運算`+=`同樣也可以使用。字元也是一樣的使用方式。
 
@@ -67,7 +70,8 @@ print(anotherStr)
 
 ```
 
-#### 字串插值
+<a name="string_interpolation"></a>
+### 字串插值
 
 可以使用反斜線`\`接著小括號`()`：`\(變數、常數或表達式)`來將其內的值插入到一個字串中。
 
@@ -83,7 +87,8 @@ print("I have \(1 + 2 * 6) cars .")
 
 ```
 
-#### 特殊符號
+<a name="special_characters"></a>
+### 特殊符號
 
 字串中可以使用下面這些特殊符號：
 
@@ -97,11 +102,23 @@ let blackHeart = "\u{2665}"      // ♥,  Unicode 純量 U+2665
 
 ```
 
-#### 比較字串
+<a name="counting_characters"></a>
+### 計算字串中的字元數量
+
+```swift
+let str = "What a lovely day !"
+
+// 印出字元數量：19
+print(str.characters.count)
+
+```
+
+<a name="comparing_strings"></a>
+### 比較字串
 
 有三種方式來比較字串：
 
-- 字串相同 `==`
+- 字串相同或不同 `==`、`!=`
 - 前綴相同 `hasPrefix`
 - 後綴相同 `hasSuffix`
 
