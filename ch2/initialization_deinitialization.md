@@ -1,10 +1,20 @@
 # 建構過程及解構過程
 
+- [建構器](#initializer)
+- [設置儲存屬性的初始值](#setting_initial_values)
+- [為建構器提供參數](#initialization_parameters)
+- [結構的成員逐一建構器](#memberwise_initializers)
+- [值型別的建構器委任](#initializer_Delegation_for_value_types)
+- [類別的繼承與建構過程](#class_inheritance_and_initialization)
+- [可失敗的建構器](#failable_initializer)
+- [必要建構器](#required_initializer)
+- [解構器](#deinitializer)
+
 建構過程(`initialization`)就是要生成一個類別、結構或列舉的實體時進行初始化的過程，這個過程必須為實體中每個屬性設置初始值及其他視需求執行的程式。
 
 與此相對的，解構過程(`deinitialization`)則是在類別實體被釋放前，執行特定的清除工作。
 
-
+<a name="initializer"></a>
 ### 建構器
 
 建構過程則是透過建構器(`initializer`)實作，也就是`init()`方法，最簡單的一個形式如下：
@@ -32,7 +42,7 @@ class SomeClass {
 
 建構器不是一定要寫，如果屬性都已經有預設值，且沒有任何自定義的建構器，Swift 會自動提供一個預設建構器(`default initializer`)，在建構過程中，這個預設建構器會簡單地生成一個所有屬性都設置為預設值的實體。
 
-
+<a name="setting_initial_values"></a>
 ### 設置儲存屬性的初始值
 
 在建構過程結束前，這個類別的**儲存屬性**都必須被指派一個明確的值，可以是定義時直接指派，或是在建構器中為屬性指派。如下：
@@ -94,7 +104,7 @@ class SomeClass {
 
 上述程式可以看到閉包後緊接著一對小括號`()`，表示要立即執行這個閉包並返回閉包的值。
 
-
+<a name="initialization_parameters"></a>
 ### 為建構器提供參數
 
 建構器可以加入參數，使用方式與函式跟方法類似，例子如下：
@@ -171,7 +181,7 @@ var oneNumbers = SomeNumbers(9)
 
 ```
 
-
+<a name="memberwise_initializers"></a>
 ### 結構的成員逐一建構器
 
 前面章節有提到，當結構沒有自定義的建構器時，會自動生成一個成員逐一建構器，以下是一個例子：
@@ -186,7 +196,7 @@ let someoneStats = CharacterStats(hp: 120, mp: 100)
 
 ```
 
-
+<a name="initializer_Delegation_for_value_types"></a>
 ### 值型別的建構器委任
 
 建構器委任(`initializer delegation`)指的是建構器可以呼叫其他建構器來完成生成實體時的部份建構過程，可以整合及減少多個建構器間的程式碼重複。
@@ -259,7 +269,7 @@ let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
 
 ```
 
-
+<a name="class_inheritance_and_initialization"></a>
 ### 類別的繼承與建構過程
 
 類別可以繼承其他的類別(當然也包含屬性)，為了確保在類別的建構過程中，儲存屬性(包含本身的及繼承自父類別的)都設置了初始值，Swift 提供了兩種建構器，分別是指定建構器和便利建構器。
@@ -411,7 +421,7 @@ let anotherHunter = Hunter(name: "Dwight", attackRange: 3)
 
 ```
 
-
+<a name="failable_initializer"></a>
 ### 可失敗的建構器
 
 類別、結構或是列舉在建構過程中可能失敗，這個失敗可能是傳入無效的參數、缺少某種外部需要的資源或是沒有滿足某種必要條件。
@@ -608,7 +618,7 @@ class UntitledDocument: Document {
 
 就如同前面章節提過的，變數或常數的**可選型別(`optional type`)**及**隱式解析可選型別(`implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
 
-
+<a name="required_initializer"></a>
 ### 必要建構器
 
 在類別的建構器前加上`required`，表示所有繼承這個類別的子類別，都必須實作這個建構器：
@@ -633,7 +643,7 @@ class SomeSubclass: SomeClass {
 
 ```
 
-
+<a name="deinitializer"></a>
 ### 解構器
 
 與建構過程相對的，在一個類別的實體不再被需要使用時，Swift 會自動將其釋放掉，在釋放前會先進行解構過程，使用解構器(`deinitializer`)來實作，也就是`deinit`方法。
