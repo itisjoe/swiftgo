@@ -41,7 +41,7 @@ extension 某個型別: 協定, 另一個協定, 又另一個協定 {
 
 ```
 
-後面章節會正式介紹協定(`protocol`)。
+後面章節會正式介紹[協定](../ch2/protocols.md)。
 
 <a name="property"></a>
 ### 計算屬性

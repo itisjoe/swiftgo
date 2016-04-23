@@ -75,7 +75,7 @@ print("這隻隊伍有 \(archerCount) 個弓箭手跟 \(warriorCount) 個戰士�
 
 你也可以用`is`來檢查一個類別是否遵循了某個協定(`protocol`)。
 
-後面章節會正式介紹協定。
+後面章節會正式介紹[協定](../ch2/protocols.md)。
 
 <a name="change"></a>
 ### 向下型別轉換

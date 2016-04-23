@@ -118,7 +118,7 @@ joe.residence?.numberOfRooms = 12
 
 #### 呼叫方法
 
-前面定義的類別中可以看到`printNumberOfRooms()`方法沒有返回值，前面章節提過，其實是會返回一個`Void`(即返回一個`()`的值或稱為空的元組`tuple`)。
+前面定義的類別中可以看到`printNumberOfRooms()`方法沒有返回值，前面章節提過，其實是會[返回一個 Void ](../ch1/functions.md#type)(即返回一個`()`的值或稱為空的元組`tuple`)。
 
 這時在可選鏈中呼叫這個方法的話，則是會返回`Void?`，而不是`Void`(因為可選鏈一定會返回可選值)，所以仍然可以依照是否返回`nil`來判斷這個可選鏈是否成功，如下：
 

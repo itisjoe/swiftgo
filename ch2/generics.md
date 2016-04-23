@@ -95,7 +95,7 @@ swapTwoValues(&oneString, &anotherString)
 
 ##### Hint
 
-- 通常會使用大駝峰命名法(像是`T`或`MyTypeParameter`)來為型別參數命名，以表示他們是佔位型別，而不是一個值。
+- 通常會使用[大駝峰式命名法](../more/camel_case_naming.md#upper)(像是`T`或`MyTypeParameter`)來為型別參數命名，以表示他們是佔位型別，而不是一個值。
 
 <a name="type"></a>
 ### 泛型型別
@@ -268,7 +268,7 @@ struct Stack<Element>: Container {
 
 #### 經由擴展一個已存在的型別來設置關聯型別
 
-前面章節有提過，可以利用擴展來讓一個已存在的型別符合協定，使用了關聯型別的協定也一樣可以。
+前面章節有提過，可以[利用擴展來讓一個已存在的型別符合協定](../ch2/protocols.md#protocol_by_an_extension)，使用了關聯型別的協定也一樣可以。
 
 Swift 內建的陣列(`Array`)型別恰恰好已經有前面提過的協定`Container`需要實作的功能(分別是方法`append()`、屬性`count`及下標返回一個依索引值取得的元素)。所以現在可以很簡單的利用一個空的擴展來讓`Array`遵循這個協定，如下：
 

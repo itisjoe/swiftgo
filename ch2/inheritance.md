@@ -203,7 +203,7 @@ oneHunter.attackSpeed = 1.8
 
 #### 存取父類別的屬性、方法及下標
 
-在前面章節介紹類別的時候，提到類別有一個隱藏的內建屬性`self`，可以在方法中代表類別本身。而當繼承自另一個類別時，可以使用`super`屬性來存取父類別的屬性、方法或下標。
+在前面章節介紹類別的時候，提到類別有一個隱藏的[內建屬性 self](../ch2/methods.md#self_property)，可以在方法中代表類別本身。而當繼承自另一個類別時，可以使用`super`屬性來存取父類別的屬性、方法或下標。
 
 - 方法`someMethod()`的覆寫實作裡，使用`super.someMethod()`來呼叫父類別的`someMethod()`方法。
 - 屬性`someProperty`的`getter`及`setter`覆寫實作裡，使用`super.someProperty`來存取父類別的`someProperty`屬性。

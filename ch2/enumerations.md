@@ -8,7 +8,7 @@
 
 列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
 
-列舉支援很多特性，例如計算型屬性(`computed property`)、實例方法(`instance method`)、定義建構器(`initializer`)、擴展(`extension`)及協定(`protocol`)，後面章節會正式介紹這些內容。
+列舉支援很多特性，例如[計算型屬性](../ch2/properties.md#computed_property)(`computed property`)、[實體方法](../ch2/methods.md#instance_method)(`instance method`)、定義[建構器](../ch2/initialization_deinitialization.md#initializer)(`initializer`)、[擴展](../ch2/extensions.md)(`extension`)及[協定](../ch2/protocols.md)(`protocol`)，後面章節會正式介紹這些內容。
 
 <a name="enum"></a>
 ### 列舉語法

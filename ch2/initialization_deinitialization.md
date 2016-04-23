@@ -184,7 +184,7 @@ var oneNumbers = SomeNumbers(9)
 <a name="memberwise_initializers"></a>
 ### 結構的成員逐一建構器
 
-前面章節有提到，當結構沒有自定義的建構器時，會自動生成一個成員逐一建構器，以下是一個例子：
+前面章節有提到，當結構沒有自定義的建構器時，會自動生成一個[成員逐一建構器](../ch2/classes_structures.md#memberwise_initializer)，以下是一個例子：
 
 ```swift
 struct CharacterStats {
@@ -616,7 +616,7 @@ class UntitledDocument: Document {
 
 ```
 
-就如同前面章節提過的，變數或常數的**可選型別(`optional type`)**及**隱式解析可選型別(`implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
+就如同前面章節提過的，變數或常數的[可選型別](../ch1/types.md#optional_type)**(`optional type`)**及[隱式解析可選型別](../ch1/types.md#implicitly_unwrapped_optional)**(`implicitly unwrapped optional`)**的關係，可失敗建構器也可以將問號`?`改為驚嘆號`!`，定義成`init!`，可以生成一個隱式解析可選型別的實體。
 
 <a name="required_initializer"></a>
 ### 必要建構器
@@ -659,5 +659,5 @@ deinit {
 
 Swift 有一個自動參考計數(ARC)的機制，會處理實體的記憶體管理，所以大部分的情況下，不需要手動清除，交給 Swift 來自動處理就好。
 
-後面章節會正式介紹自動參考計數(ARC)
+後面章節會正式介紹[自動參考計數](../ch2/arc.md)(ARC)
 

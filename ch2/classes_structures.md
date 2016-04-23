@@ -8,26 +8,26 @@
 - [恆等運算子](#identity_operator)
 - [選擇使用類別或結構](#choosing)
 
-在前面章節介紹了函式，它是一段執行特定任務的獨立程式碼區塊，而更進階地，Swift 提供了兩個型別語法：類別(`class`)及結構(`structure`)，可以讓你將多個相關的函式及值儲存在內，以及更多的特性。
+在前面章節介紹了[函式](../ch1/functions.md)，它是一段執行特定任務的獨立程式碼區塊，而更進階地，Swift 提供了兩個型別語法：類別(`class`)及結構(`structure`)，可以讓你將多個相關的函式及值儲存在內，以及更多的特性。
 
 <a name="comparing"></a>
 ### 類別與結構的比較
 
 類別及結構有很多相同的地方，如下：
 
-- 屬性(`property`)：用於儲存值
-- 方法(`method`)：用於提供功能
-- 下標語法(`subscript`)：用於存取值
-- 建構器(`initializer`)：用於生成初始化值
-- 擴展(`extension`)：增加預設實作的功能
-- 協定(`protocol`)：對某類別提供標準功能
+- [屬性](../ch2/properties.md)(`property`)：用於儲存值
+- [方法](../ch2/methods.md)(`method`)：用於提供功能
+- [下標](../ch2/subscripts.md)(`subscript`)：用於存取值
+- [建構器](../ch2/initialization_deinitialization.md#initializer)(`initializer`)：用於生成初始化值
+- [擴展](../ch2/extensions.md)(`extension`)：增加預設實作的功能
+- [協定](../ch2/protocols.md)(`protocol`)：對某類別提供標準功能
 
-與結構相比，類別還有以下的其他功能：
+與結構相比，**類別**還有以下的其他功能：
 
-- 繼承(`inherit`)：類別可以繼承另一個類別的內容
-- 解構器(`deinitializer`)允許一個類別實體釋放任何其所被分配的資源
-- 型別轉換允許在執行時檢查和解釋一個類別實體的型別
-- 參考計數允許對一個類別實體的多次參考
+- [繼承](../ch2/inheritance.md)(`inherit`)：類別可以繼承另一個類別的內容
+- [解構器](../ch2/initialization_deinitialization.md#deinitializer)(`deinitializer`)允許一個類別實體釋放任何其所被分配的資源
+- [型別轉換](../ch2/type-casting.md)允許在執行時檢查和轉換一個類別實體的型別
+- [參考計數](../ch2/arc.md)允許對一個類別實體的多次參考
 
 以上這些特性，會在後面章節陸續介紹。
 
@@ -47,7 +47,7 @@ struct 結構名稱 {
 ##### Hint
 
 - 類別或結構內的變數或常數，會稱作屬性(`property`)。而類別或結構內的函式，會稱作方法(`method`)。
-- 每次定義一個新的類別或結構時，實際上你是定義了一個新的 Swift 型別，所以在習慣上會以大駝峰式(`UpperCamelCase` 首字母大寫)來為類別與結構命名，以符合標準 Swift 型別的大寫命名風格(像是`String`、`Int`)。相對地，使用小駝峰式(`lowerCamelCase` 首字母小寫)為屬性與方法命名(與常數、變數及函式相同)，以便與類別區分。
+- 每次定義一個新的類別或結構時，實際上你是定義了一個新的 Swift 型別，所以在習慣上會以[大駝峰式命名法](../more/camel_case_naming.md#upper)來為類別與結構命名，以符合標準 Swift 型別的大寫命名風格(像是`String`、`Int`)。相對地，使用[小駝峰式命名法](../more/camel_case_naming.md#lower)為屬性與方法命名(與常數、變數及函式相同)，以便與類別區分。
 
 以下是定義結構與類別的例子：
 
@@ -88,9 +88,9 @@ let someGameCharacter = GameCharacter()
 
 上述程式中，`someStats`就是一個`CharacterStats`結構的實體，`someGameCharacter`則為一個`GameCharacter`類別的實體。
 
-後面章節會正式介紹建構器。
+後面章節會正式介紹[建構器](../ch2/initialization_deinitialization.md#initializer)。
 
-可以看到生成實體的方式與函式相似，所以習慣上兩種命名方式會不一樣，一個使用駝峰式(`UpperCamelCase` 首字母大寫)，另一個使用小駝峰式(`lowerCamelCase` 首字母小寫)，來作區別。
+可以看到生成實體的方式與函式相似，所以習慣上兩種命名方式會不一樣，一個使用[大駝峰式命名法](../more/camel_case_naming.md#upper)，另一個使用[小駝峰式命名法](../more/camel_case_naming.md#lower)，來作區別。
 
 <a name="property"></a>
 ### 取得屬性

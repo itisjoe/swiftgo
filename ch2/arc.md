@@ -116,7 +116,7 @@ oneUnit = nil
 
 ##### Hint
 
-- 前面章節提過，上述程式中，在實體後的驚嘆號(`!`)指的是將一個可選型別強制解析。
+- 前面章節提過，上述程式中，在實體後的驚嘆號(`!`)指的是將一個可選型別強制解析，也就是[隱式解析可選型別](../ch1/types.md#implicitly_unwrapped_optional)。
 
 <a name="resolving_strong_reference_cycles"></a>
 ### 解決實體間的強參考循環
