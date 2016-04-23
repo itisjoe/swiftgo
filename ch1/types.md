@@ -135,7 +135,7 @@ print(string)
 
 ```
 
-後面章節會介紹更多字串的操作。
+後面章節會介紹更多[字串](../ch1/strings_characters.md)的操作。
 
 <a name="tuple"></a>
 ### 元組

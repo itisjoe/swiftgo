@@ -501,7 +501,7 @@ post(["title": "Article_2", "content": "Article_2_full_content"])
 
 雖然`guard`用法與`if`類似，但使用`guard`可以一次專注於一種條件的情況，提高程式的可靠性，也可以讓函式內容更清晰好讀。
 
-後面章節會正式介紹函式(`func`)。
+後面章節會正式介紹[函式](../ch1/functions.md)。
 
 <a name="assertion"></a>
 ### 斷言

@@ -66,7 +66,7 @@ for character in "Dog!".characters {
 
 ```
 
-後面章節會正式介紹`for-in`的使用方法。
+後面章節會正式介紹 [for-in 的使用方法](../ch1/control_flow.md#for)。
 
 <a name="concatenating_strings_characters"></a>
 ### 連接字元及字串

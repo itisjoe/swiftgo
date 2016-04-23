@@ -105,7 +105,7 @@ arr[2] = "Oranges"
 // 這時已將 Milk 改成 Oranges 所以會印出：Oranges
 print(arr[2])
 
-// 如果要修改一個區間內的值 可以用到前面章節講到的區間寫法修改
+// 如果要修改一個區間內的值 可以使用區間寫法修改
 arr[1...4] = ["Milk"]
 // 這樣會將原本索引值 1 到 4 的值修改成 Milk
 // 所以現在 arr 會變成 ["Apples", "Milk"]
@@ -183,7 +183,7 @@ for (index, value) in arr.enumerate() {
 
 ```
 
-後面章節會正式介紹`for-in`的使用方法。
+後面章節會正式介紹 [for-in 的使用方法](../ch1/control_flow.md#for)。
 
 <a name="set"></a>
 ### Sets 集合
