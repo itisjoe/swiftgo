@@ -48,7 +48,7 @@ print(name)
 
 Swift 支援 Unicode 編碼，所以除了[系統關鍵字](../more/keywords.md)、數學符號、箭頭以外，幾乎都可以用來命名。
 
-習慣上通常會以英文單字或是單字組合([小駝峰式命名法](../more/camel_case_naming.md))來命名。還有一點，不能以數字為開頭，但變數的其他部分則可以使用數字。
+習慣上通常會以英文單字或是單字組合([小駝峰式命名法](../more/camel_case_naming.md#lower))來命名。還有一點，不能以數字為開頭，但變數的其他部分則可以使用數字。
 
 ```swift
 let score = 100
