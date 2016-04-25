@@ -36,10 +36,10 @@ let (x, y) = (1, 2)
 Swift 中所有數值型別都支援基本的四則運算，加 `+`、減 `-`、乘 `*`、除 `/` 。
 
 ```swift
-var a = 1 + 2 // a 等於 3
-var b = 7 - 2 // b 等於 5
-var c = 3 * 2 // c 等於 6
-var d = 10.0 / 2.5 // d 等於 4.0
+var c = 1 + 2 // c 等於 3
+var d = 7 - 2 // d 等於 5
+var e = 3 * 2 // e 等於 6
+var f = 10.0 / 2.5 // f 等於 4.0
 
 ```
 
@@ -66,16 +66,16 @@ print(finalString)
 以下的例子為`9 = (4 * 2) + 1`，`9`等於`4`乘上倍數`2`再加上餘數`1`。返回的值就是餘數，也就是`1`。
 
 ```swift
-var number = 9 % 4
-print(number) // 餘數等於 1
+var oneNumber = 9 % 4
+print(oneNumber) // 餘數等於 1
 
 ```
 
 Swift 比較特別的一點是，浮點數也可以取餘數：
 
 ```swift
-var number = 8.0 % 2.5 // 8.0 = (2.5 * 3.0) + 0.5
-print(number) // 餘數等於 0.5
+var anotherNumber = 8.0 % 2.5 // 8.0 = (2.5 * 3.0) + 0.5
+print(anotherNumber) // 餘數等於 0.5
 
 ```
 
@@ -84,9 +84,9 @@ print(number) // 餘數等於 0.5
 數值的正負號可以使用前綴`-`（即一元負號）來切換：
 
 ```swift
-let number = 3
-var anotherNumber = -number // 為 -3
-var finalNumber = -anotherNumber // 為 3
+let number1 = 3
+var anotherNumber1 = -number1 // 為 -3
+var finalNumber1 = -anotherNumber1 // 為 3
 
 ```
 
@@ -95,26 +95,26 @@ var finalNumber = -anotherNumber // 為 3
 一元正號`+`則是不做任何改變地回傳數值。
 
 ```swift
-let number = -6
-var anotherNumber = +number // 為 -6
+let number2 = -6
+var anotherNumber2 = +number2 // 為 -6
 
 ```
 
 <a name="compound_assignment"></a>
 ### 複合指派運算子
 
-Swift 提供一個簡潔的方式，將數值運算與指派運算合併，像是`+=`，很多時候可以簡化程式。
+Swift 提供一個簡潔的方式，將數值運算與指派運算合併，像是`+=`，很多時候可以簡化程式，如下：
 
 ```swift
-var a = 3
-a += 2 // 這行等同於 a = a + 2 的簡寫
-print(a) // 現在 a 等於 5
+var n = 3
+n += 2 // 這行等同於 n = n + 2 的簡寫
+print(n) // 現在 n 等於 5
 
-// 其他運算子也是一樣
-a -= 4 // a = a - 4 , 現在 a 等於 1
-a *= 10 // a = a * 10 , 現在 a 等於 10
-a /= 2 // a = a / 2 , 現在 a 等於 5
-a %= 2 // a = a % 2 , 現在 a 等於 1
+// 其他數值運算子也是一樣
+n -= 4 // n = n - 4 , 現在 n 等於 1
+n *= 10 // n = n * 10 , 現在 n 等於 10
+n /= 2 // n = n / 2 , 現在 n 等於 5
+n %= 2 // n = n % 2 , 現在 n 等於 1
 
 ```
 
@@ -158,7 +158,7 @@ if i == 1 {
 
 當元組中的值可以比較時，你也可以用比較運算子來比較它們的大小。像是`Int`和`String`型別的值可以比較，所以元組`(Int, String)`也可以被比較。而`Bool`不能比較，所以內含布林值型別的元組不能被比較。
 
-元組比較大小會依序由左到右逐個比較，直到有兩個值不相等為止。而如果所有值都相等，則會將這一對元組稱為相等的。例子如下：
+元組比較大小會**依序由左到右逐個比較**，直到有兩個值不相等為止。而如果所有值都相等，則會將這一對元組稱為相等的。例子如下：
 
 ```swift
 // true 因為 1 小於 2
@@ -204,11 +204,13 @@ print(score) // 現在 score 等於 75
 
 ```
 
+後面章節會正式介紹 [if 的使用方法](../ch1/control_flow.md#condition)。
+
 使用三元運算子可以簡化成下面這樣：
 
 ```swift
-var score = 25
-score = score + (score < 60 ? 50 : 20)
+var newScore = 25
+newScore = newScore + (newScore < 60 ? 50 : 20)
 
 ```
 
@@ -225,13 +227,13 @@ a != nil ? a! : b
 
 ```swift
 let defaultColor = "red"
-var userDefinedColor: String? // 未賦值 所以預設為 nil
+var userDefinedColor: String? // 未指派值 所以預設為 nil
 var colorToUse = userDefinedColor ?? defaultColor
-// 未賦值給 userDefinedColor ,所以會返回 defaultColor
+// 未指派值給 userDefinedColor ,所以會返回 defaultColor
 // 這邊即印出：red
 print(colorToUse)
 
-// 反之如果有賦值
+// 反之如果有指派值
 var userAnotherDefinedColor: String? = "green"
 var anotherColorToUse = userAnotherDefinedColor ?? defaultColor
 // 這邊即印出：green
@@ -284,7 +286,7 @@ for index in 1..<5 {
 <a name="logical"></a>
 ### 邏輯運算子
 
-Swift 支援三個標準邏輯運算。
+Swift 支援三個標準邏輯運算，常與條件式合用。
 
 - 邏輯非（`!a`）
 - 邏輯且（`a && b`）
@@ -297,9 +299,9 @@ Swift 支援三個標準邏輯運算。
 `!a`對一個布林值取相反值，即將`true`變`false`，或是將`false`變`true`。這是一個前綴運算子，且不加空格，例子如下：
 
 ```swift
-let isOpen = false
-if !isOpen {
-    print("It is open .")
+let isOn = false
+if !isOn {
+    print("It is on .")
 }
 
 ```
@@ -310,8 +312,8 @@ if !isOpen {
 
 ```swift
 let isOpen = true
-let isWeekend = false
-if isOpen && isWeekend {
+let isMorning = false
+if isOpen && isMorning {
     print("Success !")
 } else {
     print("Failure !")
@@ -327,8 +329,8 @@ if isOpen && isWeekend {
 
 ```swift
 let isSunday = true
-let isWeekend = false
-if isSunday || isWeekend {
+let isWeekday = false
+if isSunday || isWeekday {
     print("Success !")
 } else {
     print("Failure !")
@@ -347,32 +349,37 @@ if isSunday || isWeekend {
 ```swift
 // 數值運算
 var number = 3 + 2 * 5 // 先乘除後加減 所以 number 等於 13
-var anotherNumber = (3 + 2) * 5 // 括號括起來的優先 所以 anotherNumber 等於 25
+var someNumber = (3 + 2) * 5 // 括號括起來的優先 所以 someNumber 等於 25
 
 // 邏輯運算
-let isOpen = false
+let itIsOpen = false
 let isWeekend = true
-let isSunday = true
+let isMonday = true
 
 // 由左至右依序判斷
-if isOpen && isWeekend || isSunday {
+if itIsOpen && isWeekend || isMonday {
     print("Success !")
 } else {
     print("Failure !")
 }
-// 先作"邏輯且"判斷 isOpen && isWeekend 會返回 false
-// 再與後面的 isSunday 作"邏輯或"的判斷 會返回 true
+// 先作"邏輯且"判斷 itIsOpen && isWeekend 會返回 false
+// 再與後面的 isMonday 作"邏輯或"的判斷 會返回 true
 // 所以這邊會印出：Success !
 
 // 括號有優先權
-if isOpen && (isWeekend || isSunday) {
+if itIsOpen && (isWeekend || isMonday) {
     print("Success !")
 } else {
     print("Failure !")
 }
-// 括號優先 所以先做"邏輯或"判斷 isWeekend || isSunday 會返回 true
-// 再與前面的 isOpen 作"邏輯且"的判斷 會返回 false
+// 括號優先 所以先做"邏輯或"判斷 isWeekend || isMonday 會返回 true
+// 再與前面的 itIsOpen 作"邏輯且"的判斷 會返回 false
 // 所以這邊會印出：Failure !
 
 ```
+
+
+### 範例
+
+本節內容範例檔案放在 [ch1/basic_operators.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/basic_operators.playground)
 

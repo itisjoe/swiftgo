@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [閱讀本書的推薦姿勢](intro.md)
 * [Swift 基礎](ch1/ch1.md)
    * [基本知識](ch1/basics.md)
    * [基本型別](ch1/types.md)
