@@ -95,5 +95,5 @@ Swift 的多行註解支援巢狀註解
 
 ### 範例
 
-本節內容範例檔案放在 [ch1/basics.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/basics.playground)
+本節範例程式碼放在 [ch1/basics.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/basics.playground)
 

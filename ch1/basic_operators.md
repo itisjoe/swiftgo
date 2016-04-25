@@ -381,5 +381,5 @@ if itIsOpen && (isWeekend || isMonday) {
 
 ### 範例
 
-本節內容範例檔案放在 [ch1/basic_operators.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/basic_operators.playground)
+本節範例程式碼放在 [ch1/basic_operators.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/basic_operators.playground)
 
