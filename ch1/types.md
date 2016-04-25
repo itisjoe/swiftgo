@@ -17,7 +17,7 @@
 <a name="type_annotation"></a>
 ### 型別標註
 
-宣告變數或常數時，可以加上**型別標註**(`type annotation`)，說明這個值的型別。使用方法是在值的後面加上冒號 `:` 接著加上型別名稱。
+宣告變數或常數時，可以加上**型別標註**(`type annotation`)，說明這個值的型別(像是整數、字串)。使用方法是在值的後面加上冒號 `:` 接著加上型別名稱，如下：
 
 ```swift
 // 宣告一個整數變數
@@ -42,7 +42,7 @@ Swift 提供 8 、 16 、 32 和 64 位元的有符號的整數型別，依序�
 所以通常我們使用整數型別時，使用`Int`即可。
 
 ```swift
-let number = 12
+let oneNumber = 12
 var anotherNumber = -240
 
 ```
@@ -52,16 +52,16 @@ var anotherNumber = -240
 - 還有一個特殊的**無符號**整數型別為`UInt`，這個型別的長度與目前平台的原生字長相同。但基於程式碼的可重複性，避免不同型別數字之間的轉換，以及數字的型別推斷，大部分情況都建議只使用`Int`即可。
 
 <a name="float_double"></a>
-### Float, Double 浮點數
+### 浮點數
 
-浮點數指的是有包含小數點的數字，`Float`跟`Double`的差別在於精確度，`Float`有 6 位數，而`Double`可以達到 15 位數，選擇使用哪一個則是看你程式需要處理值的範圍而定。
+浮點數(`Float`、`Double`)指的是有包含小數點的數字，`Float`跟`Double`的差別在於精確度，`Float`有 6 位數，而`Double`可以達到 15 位數，選擇使用哪一個則是看你程式需要處理值的範圍而定，如下：
 
 ```swift
-let pi = 3.1415926
+let piValue = 3.1415926
 var height = 178.25
 
 // 宣告浮點數時 如果沒有型別標註 通常會將他判斷為 Double 
-let height = 165.25 // 型別為 Double
+let oneHeight = 165.25 // 型別為 Double
 let anotherHeight: Float = 175.5 // 除非型別標註填寫為 Float
 
 ```
@@ -101,7 +101,7 @@ print(integerPi)
 <a name="bool"></a>
 ### 布林值
 
-布林值(`bool`)指的是邏輯上的值，只能為真或假。 Swift 有兩個布林常數：`true`跟`false`。
+布林值(`bool`)指的是邏輯上的值，只能為真或假。在後續的學習中會使用到這個特性，依據一個條件式(像是數字比大小或兩數是否相等)會返回真或假，進而使用不同的程式碼。 Swift 有兩個布林常數：`true`跟`false`，如下：
 
 ```swift
 let storeOpen = true
@@ -163,7 +163,7 @@ print("My height is \(myHeight)")
 
 ```swift
 // 將前面宣告的 myInfo 分解成三個常數
-let (myName, myAge, myHeight) = myInfo
+let (myName, myAge, myRealHeight) = myInfo
 
 // 印出：My name is Kevin Chang .
 print("My name is \(myName) .")
@@ -176,10 +176,10 @@ print("I am \(myAge) years old .")
 如果只需要其中某些值時，分解時可以把不需要的用底線 `_` 標記，如下：
 
 ```swift
-let (_, _, myHeight) = myInfo
+let (_, _, myTrueHeight) = myInfo
 
 // 印出：My height is 178.25 .
-print("My height is \(myHeight) .")
+print("My height is \(myTrueHeight) .")
 
 ```
 
@@ -204,7 +204,7 @@ print("Her name is \(herInfo.name) . ")
 typealias MyType = Int
 
 // 這時就可以宣告一個 MyType 變數 其實也就是 Int 變數
-var number: MyType = 123
+var someNumber: MyType = 123
 
 ```
 
@@ -215,19 +215,19 @@ var number: MyType = 123
 
 ```swift
 // 在宣告變數時 型別標註後面加上一個問號 ?
-var score: Int? // 因為目前尚未指派 所以目前 score 會被設置成 nil 也就是沒有值的狀態
+var someScore: Int? // 因為目前尚未指派 所以目前 score 會被設置成 nil 也就是沒有值的狀態
 // 設值為 100
-score = 100
+someScore = 100
 // 再將變數設為 nil 目前又是沒有值的狀態
-score = nil
+someScore = nil
 
 // 但如果沒有加上 ? 則是尚未指派的狀態 這時如果直接使用會報錯誤
 var totalScore: Int
 // 也不能設成 nil 這行同樣也會報錯誤
-totalScore = nil
+//totalScore = nil
 
 // 宣告常數也是一樣 在型別標註後面加上一個問號 ?
-let myName: String?
+let someName: String?
 
 ```
 
@@ -235,10 +235,10 @@ let myName: String?
 
 ```
 // 宣告一個字串常數
-let number = "5566"
+let numberValue = "5566"
 
 // 嘗試將這個字串轉換成整數
-let newNumber = Int(number)
+let newNumber = Int(numberValue)
 
 ```
 
@@ -251,16 +251,16 @@ let newNumber = Int(number)
 
 ```swift
 // 宣告一個整數常數 並賦值
-let number: Int? = 500
+let number3: Int? = 500
 // 以這個例子來說 常數確實有值
 // 所以加上驚嘆號 表示這個可選型別有值 可以直接使用
-print(number!)
+print(number3!)
 
 
 // 尚未賦值 所以目前是 nil
-var number2: Int?
+var number4: Int?
 // 仍然要使用的話 下面這行則會報錯誤
-print(number2!)
+//print(number4!)
 
 ```
 
@@ -271,14 +271,19 @@ print(number2!)
 
 ```swift
 // 可選型別
-let firstString: String? = "Good morning ."
+let oneString: String? = "Good morning ."
 // 需要驚嘆號來取值
-let anotherString: String = firstString!
+let anotherString: String = oneString!
 
 // 如果改成隱式解析可選型別
-let secondString: String! = "Good night ."
+let twoString: String! = "Good night ."
 // 則可以直接使用 不用加上驚嘆號
-let finalString: String = secondString
+let finalString: String = twoString
 
 ```
+
+
+### 範例
+
+本節內容範例檔案放在 [ch1/types.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/types.playground)
 
