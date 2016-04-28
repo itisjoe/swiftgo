@@ -6,7 +6,7 @@
 - [原始值](#raw_value)
 - [遞迴列舉](#recursive_enumeration)
 
-列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
+列舉(`enumeration`)是可以讓你自定義一個型別的一組相關的值(例如表示學校有哪些教學科目或是購買過程中會出現的錯誤狀況)，使你可以在程式碼中以型別安全(`type-safe`)的方式來使用這些值。
 
 列舉支援很多特性，例如[計算型屬性](../ch2/properties.md#computed_property)(`computed property`)、[實體方法](../ch2/methods.md#instance_method)(`instance method`)、定義[建構器](../ch2/initialization_deinitialization.md#initializer)(`initializer`)、[擴展](../ch2/extensions.md)(`extension`)及[協定](../ch2/protocols.md)(`protocol`)，後面章節會正式介紹這些內容。
 
@@ -172,11 +172,11 @@ print(today.rawValue)
 
 ```swift
 // 第一個成員有設置原始值 1, 接著下去成員的原始值就是 2, 3, 4 這樣遞增下去
-enum Planet: Int {
+enum SomePlanet: Int {
     case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
 }
 
-let ourPlanet = Planet.Earth
+let ourPlanet = SomePlanet.Earth
 
 // 印出：3
 print(ourPlanet.rawValue)
@@ -186,11 +186,11 @@ print(ourPlanet.rawValue)
 在使用原始值為**字串**型別的列舉時，可以不需要為每個成員設置原始值，將會直接將該成員值設置為原始值。例子如下：
 
 ```swift
-enum CompassPoint: String {
+enum AnotherCompassPoint: String {
     case North, South, East, West
 }
 
-let directionPoint = CompassPoint.East
+let directionPoint = AnotherCompassPoint.East
 
 // 印出：East
 print(directionPoint.rawValue)
@@ -203,20 +203,20 @@ print(directionPoint.rawValue)
 
 ```swift
 // 一個使用原始值的列舉 原始值依序是 1,2,3,4,5,6,7,8
-enum Planet: Int {
+enum OtherPlanet: Int {
     case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
 }
 
-let possiblePlanet = Planet(rawValue: 7)
-// possiblePlanet 型別為 Planet? 值為 Planet.Uranus
+let possiblePlanet = OtherPlanet(rawValue: 7)
+// possiblePlanet 型別為 OtherPlanet? 值為 OtherPlanet.Uranus
 
 ```
 
-不過不是所有傳入的`Int`參數都會有返回值，所以其實他是返回一個`Planet?`型別，也就是可選的`Planet`。以下是一個返回`nil`的例子：
+不過不是所有傳入的`Int`參數都會有返回值，所以其實他是返回一個`OtherPlanet?`型別，也就是可選的`OtherPlanet`。以下是一個返回`nil`的例子：
 
 ```swift
 let positionToFind = 9
-if let targetPlanet = Planet(rawValue: positionToFind) {
+if let targetPlanet = OtherPlanet(rawValue: positionToFind) {
     switch targetPlanet {
     case .Earth:
         print("We are here !")
@@ -226,11 +226,11 @@ if let targetPlanet = Planet(rawValue: positionToFind) {
 } else {
     print("No planet at position \(positionToFind)")
 }
-// 印出 No planet at position 9
+// 印出：No planet at position 9
 
 ```
 
-上述程式先使用了一個可選綁定(`optional binding`)，使用原始值`9`來尋找是否有星球，但可以看到列舉`Planet`中沒有原始值為`9`的成員，所以會返回一個`nil`，接著則執行`else`內部程式。
+上述程式先使用了一個可選綁定(`optional binding`)，使用原始值`9`來尋找是否有星球，但可以看到列舉`OtherPlanet`中沒有原始值為`9`的成員，所以會返回一個`nil`，接著則執行`else`內部程式。
 
 <a name="recursive_enumeration"></a>
 ### 遞迴列舉
@@ -284,4 +284,9 @@ print(evaluate(product))
 ```
 
 上述程式可以看到，當函式的參數為純數字，則直接返回該數字的值。而如果是加法或乘法運算，則是分別計算兩個表達式的值後，再相加或相乘。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/enumerations.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/enumerations.playground)
 
