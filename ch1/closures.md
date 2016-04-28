@@ -7,7 +7,7 @@
 - [非逃逸閉包](#noescape)
 - [自動閉包](#autoclosure)
 
-閉包(`closure`)簡單來講就是一個匿名函式，同樣是一個獨立的程式區塊。像是前面章節提到的[巢狀函式](../ch1/functions.md#nested_function)(`nested function`)就是一種閉包，可以在程式中被傳遞和使用。
+閉包(`closure`)簡單來講就是一個**匿名函式**，同樣是一個獨立的程式區塊。像是前面章節提到的[巢狀函式](../ch1/functions.md#nested_function)(`nested function`)就是一種閉包，可以**在程式中被傳遞和使用**。
 
 閉包有三種表現方式：
 
@@ -31,7 +31,7 @@
 
 閉包表達式可以使用常數、變數和`inout`型別作為參數，但不能有預設值。也可以在參數列表的最後使用可變數量參數(`variadic parameter`)。元組也可以作為參數和返回值。
 
-下面是一個例子，會將一個函式當做另一個函式的參數開始進行，原始程式碼如下：
+下面是一個例子，從**將一個函式當做另一個函式的參數**開始進行，原始程式碼如下：
 
 ```swift
 // 這是一個要當做參數的函式 功能為將兩個傳入的參數整數相加並返回
@@ -62,7 +62,7 @@ printMathResult({(number1: Int, number2: Int) -> Int in
 */
 ```
 
-上述程式中可以看到函式`printMathResult()`依舊為三個參數，第一個參數為一個閉包，其後為兩個`Int`的參數。
+上述程式中可以看到函式`printMathResult()`依舊為三個參數，第一個參數原本應該是一個函式，但可以簡化成一個閉包並直接傳入，其後為兩個`Int`的參數。
 
 接下來會使用上面這個例子，介紹幾種優化語法的方式，越後面介紹的程式語法會越簡潔，但使用上功能是一樣的。
 
@@ -164,7 +164,7 @@ someFunction {
 <a name="capturing_value"></a>
 ### 捕獲值
 
-閉包可以在其定義的上下文中捕獲(`capture`)常數或變數，即使定義這些常數或變數的原域已經不存在，閉包仍可以在閉包函式體內參考或修改這些值。
+閉包可以在其定義的上下文中捕獲(`capture`)常數或變數，即使定義這些常數或變數的原使用區域已經不存在，閉包仍可以在閉包函式體內參考或修改這些值。
 
 Swift 中，可以捕獲值的閉包的最簡單形式是巢狀函式，也就是定義在其他函式內的函式。巢狀函式可以捕獲並存取**外部函式**(把它定義在其中的函式)內所有的參數以及定義的常數與變數，即使這個巢狀函式已經回傳，導致常數或變數的作用範圍不存在，閉包仍能對這些已經捕獲的值做操作。
 
@@ -230,9 +230,7 @@ alsoIncrementByTen() // 50
 
 ```
 
-##### Hint
-
-- 後面章節會正式介紹[值型別與參考型別](../ch2/classes_structures.md#value_type_and_reference_type)的不同。
+後面章節會正式介紹[值型別與參考型別](../ch2/classes_structures.md#value_type_and_reference_type)的不同。
 
 <a name="noescape"></a>
 ### 非逃逸閉包
@@ -295,6 +293,9 @@ completionHandlers.first?()
 print(instance.x)
 
 ```
+
+後面章節會正式介紹[類別](../ch2/classes_structures.md)。
+
 
 <a name="autoclosure"></a>
 ### 自動閉包
@@ -395,4 +396,9 @@ for customerProvider in customerProviders {
 // 開始移除 Kevin ！
 
 ```
+
+
+### 範例
+
+本節範例程式碼放在 [ch1/closures.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/closures.playground)
 
