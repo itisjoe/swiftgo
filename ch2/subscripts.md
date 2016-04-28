@@ -3,7 +3,7 @@
 - [下標語法](#subscript)
 - [下標用法](#usage)
 
-下標(`subscript`)是一個可以快速存取及設置值的方式，單看中文字面上可能不太清楚什麼意思，其實在前面章節介紹[陣列](../ch1/collection_types.md#array)(`array`)及[字典](../ch1/collection_types.md#dictionary)(`dictionary`)時已經有接觸過，在陣列或字典名稱後面緊接著中括號`[]`，括號內填入陣列的索引值(`index`)或是字典的鍵(`key`)，即可存取或設置，以下是個例子：
+下標(`subscript`)是一個可以快速存取及設置值的方式，單看中文字面上可能不太清楚什麼意思，其實在前面章節介紹[陣列](../ch1/collection_types.md#array)(`array`)及[字典](../ch1/collection_types.md#dictionary)(`dictionary`)時已經有接觸過，在陣列或字典名稱後面緊接著中括號`[]`，括號內填入陣列的索引值(`index`)或是字典的鍵(`key`)，即可存取或設置值，以下是個例子：
 
 ```swift
 // 宣告一個 [Int] 型別的陣列
@@ -123,4 +123,9 @@ print(oneMath[100])
 下標可以定義多個索引值，可以是任意型別的參數或可變數量參數，返回值也可以是任意型別，但不能使用輸入輸出參數(`inout`)，也不能給參數設置預設值。
 
 如上述程式，類別或結構可以定義多個下標，使用下標時會依據索引值數量及型別，自動推斷使用合適的下標。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/subscripts.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/subscripts.playground)
 
