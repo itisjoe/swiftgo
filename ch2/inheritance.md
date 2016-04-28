@@ -105,7 +105,7 @@ oneHunter.fatalBlow()
 
 ```swift
 // 使用並改寫前面定義的類別 Hunter 
-class Hunter: Archer {
+class OtherHunter: Archer {
     // 覆寫父類別的實體方法
     override func attack() {
         print("攻擊！這是獵人的攻擊！")
@@ -114,8 +114,8 @@ class Hunter: Archer {
     // 省略其他內容
 }
 
-let oneHunter = Hunter()
-oneHunter.attack()
+let otherHunter = OtherHunter()
+otherHunter.attack()
 // 即會印出覆寫後的內容：攻擊！這是獵人的攻擊！
 
 ```
@@ -132,7 +132,7 @@ oneHunter.attack()
 
 ```swift
 // 使用並改寫前面定義的類別 Hunter
-class Hunter: Archer {
+class AnotherHunter: Archer {
     // 覆寫父類別的屬性 重新實作 getter 跟 setter
     override var attackSpeed: Double {
         get {
@@ -159,14 +159,14 @@ class Hunter: Archer {
 
 ```swift
 // 使用並改寫前面定義的類別 Archer
-class Archer: GameCharacter {
+class OtherArcher: GameCharacter {
     // 覆寫一個屬性 重新實作 getter 跟 setter
     override var attackSpeed: Double {
         willSet {
-            print("Archer willSet")
+            print("OtherArcher willSet")
         }
         didSet {
-            print("Archer didSet")
+            print("OtherArcher didSet")
         }
     }
 
@@ -174,28 +174,28 @@ class Archer: GameCharacter {
 }
 
 // 使用並改寫前面定義的類別 Hunter
-class Hunter: Archer {
+class SomeHunter: OtherArcher {
     // 覆寫一個屬性 重新實作 getter 跟 setter
     override var attackSpeed: Double {
         willSet {
-            print("Hunter willSet")
+            print("SomeHunter willSet")
         }
         didSet {
-            print("Hunter didSet")
+            print("SomeHunter didSet")
         }
     }
     
     // 省略其他內容
 }
 
-let oneHunter = Hunter()
+let someHunter = SomeHunter()
 // 設置新的值 會觸發 willSet 跟 didSet
-oneHunter.attackSpeed = 1.8
+someHunter.attackSpeed = 1.8
 // 依序會印出：
-// Hunter willSet
-// Archer willSet
-// Archer didSet
-// Hunter didSet
+// SomeHunter willSet
+// OtherArcher willSet
+// OtherArcher didSet
+// SomeHunter didSet
 
 ```
 
@@ -213,7 +213,7 @@ oneHunter.attackSpeed = 1.8
 
 ```swift
 // 使用並改寫前面定義的類別 Hunter
-class Hunter: Archer {
+class GoodHunter: Archer {
     // 覆寫一個屬性 並使用父類別原先的屬性值
     override var description: String {
         return super.description + " 精通箭術的獵人"
@@ -222,10 +222,10 @@ class Hunter: Archer {
     // 省略其他內容
 }
 
-let oneHunter = Hunter()
+let goodHunter = GoodHunter()
 
 // 印出：職業敘述 精通箭術的獵人
-print(oneHunter.description)
+print(goodHunter.description)
 
 ```
 
@@ -235,4 +235,9 @@ print(oneHunter.description)
 可以在類別的方法、屬性或下標前面加上`final`，來防止它們被覆寫，使用方式為`final var`、`final func`或是`final class func`這樣。
 
 甚至也可以在整個類別的關鍵字`class`前面加上`final`，這樣整個類別都不能再被繼承。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/inheritance.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/inheritance.playground)
 
