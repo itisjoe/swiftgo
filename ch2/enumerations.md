@@ -288,5 +288,5 @@ print(evaluate(product))
 
 ### 範例
 
-本節範例程式碼放在 [ch2/enumerations.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/enumerations.playground)
+本節範例程式碼放在 [ch2/enumerations.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/enumerations.playground)
 
