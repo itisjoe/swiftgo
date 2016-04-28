@@ -300,3 +300,8 @@ print(SomeClass.computedTypeProperty)
 
 上述程式可以看到，要使用一個型別屬性時，是不需要生成任何的實體就可以使用的。
 
+
+### 範例
+
+本節範例程式碼放在 [ch2/properties.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/properties.playground)
+
