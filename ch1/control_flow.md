@@ -10,12 +10,12 @@
 - [斷言](#assertion)
 - [檢測 API 可用性](#api)
 
-Swift 提供了可以循環執行任務的`for-in`和`while`迴圈，以及根據條件選擇執行不同程式碼分支的`if`和`switch`語句，還有控制流程跳轉到其他程式碼的`break`和`continue`語句。
+Swift 提供了可以**循環執行任務**的`for-in`和`while`迴圈，以及**根據條件選擇執行不同程式碼分支**的`if`和`switch`語句，還有控制流程**跳轉到其他程式碼**的`break`和`continue`語句。
 
 <a name="for"></a>
 ### For-in 循環
 
-使用`for-in`遍歷一個集合內的所有元素，像是一個數字區間、陣列、字典中的值或是字串內的字元。
+使用`for-in`遍歷一個集合內的所有元素，像是一個數字區間、陣列、字典中的值或是字串內的字元，例子如下：
 
 ```swift
 // 一個一到三的閉區間
@@ -26,6 +26,7 @@ for index in 1...3 {
 // 1
 // 2
 // 3
+
 ```
 
 上述程式內的`index`不用做宣告的動作，在每次遍歷開始時會被自動指派值，預設是一個常數。
@@ -83,7 +84,7 @@ while 條件表達式 {
 
 ```
 
-`while` 會循環地執行程式直到條件表達式返回`false`。
+`while` 會循環地執行程式直到條件表達式返回`false`，例子如下：
 
 ```swift
 var n = 2
@@ -110,14 +111,14 @@ repeat {
 `repeat-while` 會先執行一次程式，再檢查條件表達式，接著循環地執行程式直到條件表達式返回`false`。
 
 ```swift
-var n = 512
+var m = 512
 repeat {
-    n = n * 2
-} while n < 100
+    m = m * 2
+} while m < 100
 
 // 印出：1024
-print(n)
-// 因為不論如何 都會先執行一次程式 所以 n 會先乘一次 2 為 1024
+print(m)
+// 因為不論如何 都會先執行一次程式 所以 m 會先乘一次 2 為 1024
 // 接著檢查條件表達式 會返回 false 即結束這個循環
 
 ```
@@ -125,21 +126,21 @@ print(n)
 <a name="condition"></a>
 ### 條件語句
 
-條件語句為根據不同特定條件執行不同的程式。Swift 提供兩種條件語句：`if`與`switch`，如果需要判斷的條件較單純或可能的情況較少時，可以使用`if`，反之使用`switch`。
+條件語句為**根據不同特定條件執行不同的程式**。Swift 提供兩種條件語句：`if`與`switch`，如果需要判斷的條件較單純或可能的情況較少時，可以使用`if`，反之使用`switch`。
 
 #### If
 
-最簡單的形式為只有一個條件表達式，而只有當這個條件表達式返回`true`，才執行其內的程式。
+最簡單的形式為只有一個條件表達式，而只有當這個條件表達式返回`true`，才執行其內的程式，例子如下：
 
 ```swift
-let number = 2
-if number == 2 {
+let someNumber = 2
+if someNumber == 2 {
     print("It is 2 .")
 }
 
 ```
 
-或是當條件表達式返回`false`時，需要執行另一段程式，則使用`else`。
+或是當條件表達式返回`false`時，需要執行另一段程式，則使用`else`，如下：
 
 ```swift
 let number = 10
@@ -152,31 +153,31 @@ if number > 20 {
 
 ```
 
-又或是有多個條件需要判斷，可以將`else`跟`if`連在一起，最後一個`else`會在所有條件都不成立(返回`false`)時被執行。
+又或是有多個條件需要判斷，可以將`else`跟`if`連在一起，最後一個`else`會在所有條件都不成立(返回`false`)時被執行，如下：
 
 ```swift
-let number = 100
-if number < 20 {
-    print ("Number is smaller than 20 .")
-} else if number < 200 {
-    print ("Number is not smaller than 20 but smaller than 200 . ")
-} else if number < 1000 {
-    print ("Number is not smaller than 200 but smaller than 1000 . ")
+let number2 = 100
+if number2 < 20 {
+    print ("數字小於 20")
+} else if number2 < 200 {
+    print ("數字不小於 20，但小於 200")
+} else if number2 < 1000 {
+    print ("數字不小於 200，但小於 1000")
 } else {
-    print ("Number is not smaller than 1000 .")
+    print ("數字不小於 1000")
 }
-// 印出：Number is not smaller than 20 but smaller than 200 . 
+// 印出：數字不小於 20，但小於 200
 
 ```
 
 上述程式中最後一個`else`不是一定要有，也可以省略，但就可能會沒有返回`true`的條件表達式，例子如下：
 
 ```swift
-let number = 10
-if number > 50 {
-    print("number > 50")
-} else if number > 200 {
-    print("number > 200")
+let number3 = 10
+if number3 > 50 {
+    print("number3 > 50")
+} else if number3 > 200 {
+    print("number3 > 200")
 }
 // 這時候不會有東西被印出來
 
@@ -202,17 +203,17 @@ if let 臨時常數 = 可選型別 {
 // 字串內容是純整數 所以經過轉換後會是一個整數
 let str = "123"
 if let number = Int(str) {
-    print("字串\"\(str)\" 轉換成一個整數 \(number)")
+    print("字串 \"\(str)\" 轉換成一個整數 \(number)")
 } else {
-    print("字串\"\(str)\" 不是一個整數")
+    print("字串 \"\(str)\" 不是一個整數")
 }
 
 // 如果字串內容不是整數 轉換後會返回 nil 
 let str2 = "It is a string ."
 if let number = Int(str2) {
-    print("字串\"\(str2)\" 轉換成一個整數 \(number)")
+    print("字串 \"\(str2)\" 轉換成一個整數 \(number)")
 } else {
-    print("字串\"\(str2)\" 不是一個整數")
+    print("字串 \"\(str2)\" 不是一個整數")
 }
 
 ```
@@ -220,7 +221,7 @@ if let number = Int(str2) {
 <a name="switch"></a>
 ### Switch
 
-`switch`會將一個值與多個情況作比對，根據第一個比對成功的情況，會執行相對應的程式。所有`case`必須涵蓋全部可能的情況，如果有未涵蓋的部份，最後需要補上`default`。最簡單的格式如下：
+`switch`會**將一個值與多個情況作比對**，根據第一個比對成功的情況，會執行相對應的程式。所有`case`必須涵蓋全部可能的情況，如果有未涵蓋的部份，最後需要補上`default`。最簡單的格式如下：
 
 ```swift
 switch 值 {
@@ -234,11 +235,11 @@ default:
 
 ```
 
-每個`case`中，都一定要有相對應執行的程式，如果沒有的話會報錯誤。
+每個`case`中，都一定要有相對應執行的程式，如果沒有的話會報錯誤，例子如下：
 
 ```swift
-let number = 2
-switch number {
+let number4 = 2
+switch number4 {
 case 1:
 case 2:
     print("It is 2 .")
@@ -256,33 +257,33 @@ Swift 在遇到第一個情況`case`比對成功後，即會結束`switch`這部
 
 #### 區間匹配
 
-`case`中比對的情況也可以是一個區間。
+`case`中比對的情況也可以是一個區間：
 
 ```swift
-let number = 120
-var str: String
-switch number {
+let number5 = 120
+var str3: String
+switch number5 {
 case 0...10:
-    str = "幾"
+    str3 = "幾"
 case 11...100:
-    str = "很多"
+    str3 = "很多"
 case 101...1000:
-    str = "非常多"
+    str3 = "非常多"
 default:
-    str = "超級多"
+    str3 = "超級多"
 }
 
 // 因為 120 在 101...1000 這個區間內
 // 印出：我有非常多顆蘋果
-print("我有\(str)顆蘋果")
+print("我有\(str3)顆蘋果")
 
 ```
 
 #### 元組
 
-`switch`可以使用元組(`tuple`)來一次比對多個值，元組內可以是值也可以是區間，如果要忽略比對其中一項的話，可以填入下底線`_`。
+`switch`可以使用元組(`tuple`)來一次比對多個值，元組內可以是值也可以是區間，如果要忽略比對其中一項的話，可以填入下底線`_`：
 
-```switch
+```swift
 let somePoint = (1, 1)
 switch somePoint {
 case (0, 0):
@@ -303,7 +304,7 @@ default:
 
 #### 值綁定
 
-`case`可以將比對的值綁定(`value binding`)到一個臨時的常數或變數，以便在其內的程式中使用。
+`case`可以將比對的值綁定(`value binding`)到一個臨時的常數或變數，以便在其內的程式中使用：
 
 ```swift
 let onePoint = (2, 0)
@@ -320,14 +321,14 @@ case let (x, y):
 
 ```
 
-另外可以使用`where`來判斷額外的條件。
+另外可以使用`where`來判斷額外的條件：
 
 ```swift
-let number = 20
-switch number {
-case 1...100 where number == 50:
+let number6 = 20
+switch number6 {
+case 1...100 where number6 == 50:
     print("在 1...100 區間內 且值為 50")
-case 1...100 where number == 20:
+case 1...100 where number6 == 20:
     print("在 1...100 區間內 且值為 20")
 default:
     print("沒有比對到")
@@ -342,7 +343,7 @@ default:
 
 #### Continue
 
-`continue`表示在循環流程中，立即停止本次循環，重新開始此流程的下個循環。以下是個例子：
+`continue`表示在循環流程中，立即**停止本次循環，重新開始此流程的下個循環**。以下是個例子：
 
 ```swift
 for n in 1...10 {
@@ -360,7 +361,7 @@ for n in 1...10 {
 
 #### Break
 
-`break`會立即停止這個循環流程，接著繼續執行之後的程式。如果要提早結束`switch`時也可以使用。以下是個例子：
+`break`會立即**停止這個循環流程**，接著繼續執行之後的程式。如果要提早結束`switch`時也可以使用。以下是個例子：
 
 ```swift
 for n in 1...10 {
@@ -382,23 +383,23 @@ for n in 1...10 {
 Swift 的`switch`中，只要比對到一個`case`即會執行其內的程式，並結束這整個`switch`的動作，如果在特殊情況下需要執行緊接著的下一個`case`內的程式，就要用到`fallthrough`。
 
 ```swift
-let number = 5
-var str = ""
-switch number {
+let number7 = 5
+var str4 = ""
+switch number7 {
 case 2,3,5,7,11,13,17,19:
-    str += "It is a prime number. "
+    str4 += "It is a prime number. "
     fallthrough
 case 100,200:
-    str += "Fallthrough once. "
+    str4 += "Fallthrough once. "
     fallthrough
 default:
-    str += "Fallthrough twice."
+    str4 += "Fallthrough twice."
 }
 
 // 印出：It is a prime number. Fallthrough once. Fallthrough twice.
-print(str)
+print(str4)
 // 雖然只比對到第一個 case 但兩個 case 都有使用 fallthrough
-// 所以最後 str 是將所有字串相加
+// 所以最後 str4 是將所有字串相加
 
 ```
 
@@ -421,21 +422,22 @@ print(str)
 以下是個例子：
 
 ```swift
-var number = 1
-gameLoop: while number < 10 {
-    switch number {
+var number8 = 1
+gameLoop: while number8 < 10 {
+    switch number8 {
     case 1...4:
-        ++number
+        number8 += 1
     case 5:
-        number *= 10
+        number8 *= 10
         // break 標註為 gameLoop 的 while 迴圈
         break gameLoop
     default:
-        ++number
+        number8 += 1
     }
 }
-print(number)
-// 在 1...4 區間內時 會將 number 加 1
+// 印出：50
+print(number8)
+// 在 1...4 區間內時 會將 number8 加 1
 // 直到 n==5 時 會乘以 10 並結束 while 循環
 // 因為有將 while 加上名為 gameLoop 的標籤
 // 所以可以很明白的了解 case 5 中的 break 是要結束 while
@@ -486,18 +488,18 @@ func post(article: [String: String]) {
 }
 
 post(["title": "Article_1"])
-// 印出 "標題是 Article_1 ，"
-// 印出 "但是沒有內容。"
+// 印出：標題是 Article_1 ，
+// 印出：但是沒有內容。
 
 post(["title": "Article_2", "content": "Article_2_full_content"])
-// 印出 "標題是 Article_2 ，"
-// 印出 "內容為 Article_2_full_content。"
+// 印出：標題是 Article_2 ，
+// 印出：內容為 Article_2_full_content。
 
 ```
 
 ##### Hint
 
-- `guard`條件表達式中，使用可選綁定而被指派的常數或變數，可以在函式`{}`範圍裡接著的程式中使用。
+- `guard`條件表達式中，使用**可選綁定**而被指派的常數或變數，可以在函式`{}`範圍裡接下來的程式中使用。
 
 雖然`guard`用法與`if`類似，但使用`guard`可以一次專注於一種條件的情況，提高程式的可靠性，也可以讓函式內容更清晰好讀。
 
@@ -555,4 +557,9 @@ if #available(iOS 9, OSX 10.10.3, *) {
 }
 
 ```
+
+
+### 範例
+
+本節範例程式碼放在 [ch1/control_flow.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch1/control_flow.playground)
 
