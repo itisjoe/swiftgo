@@ -239,3 +239,8 @@ if archer === superArcher {
 
 所以實際上，大部分的自定義資料建構都應該使用類別。
 
+
+### 範例
+
+本節範例程式碼放在 [ch2/classes_structures.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/classes_structures.playground)
+
