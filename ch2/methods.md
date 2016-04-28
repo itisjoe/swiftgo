@@ -110,10 +110,10 @@ print("x: \(somePoint.x), y: \(somePoint.y)")
 
 ```swift
 // 將前面定義的結構 Point 改寫成這樣
-struct Point {
+struct AnotherPoint {
     var x = 0.0, y = 0.0
     mutating func moveByX(deltaX: Double, y deltaY: Double) {
-        self = Point(x: x + deltaX, y: y + deltaY)
+        self = AnotherPoint(x: x + deltaX, y: y + deltaY)
     }
 }
 
@@ -177,4 +177,9 @@ SomeClass.someTypeMethod()
 上述程式中可以看到，不用生成實體就可以直接呼叫型別方法，因為型別方法是屬於一個特定型別(類別、結構與列舉)而不是一個實體。
 
 後面章節會正式介紹[繼承](../ch2/inheritance.md)(子類別與父類別的關係)。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/methods.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/methods.playground)
 
