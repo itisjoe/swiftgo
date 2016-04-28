@@ -43,7 +43,7 @@ oneStats.mpValueMax = 200
 ```swift
 // 這邊使用前面定義的 CharacterStats 結構
 // 生成一個 CharacterStats 結構的實體 並指派給一個常數 someStats
-let someStats = CharacterStats(hpValue: 900, mpValue: 150)
+let someStats = CharacterStats(hpValueMax: 900, mpValueMax: 150)
 
 // 這個實體 someStats 為一個常數 所以即使 hpValue 為一個變數屬性 仍然不能修改這個值 這行會報錯誤
 someStats.hpValue = 1200
@@ -161,7 +161,7 @@ print("血量：\(oneChar.hpValue), 防禦力：\(oneChar.defenceValue)")
 
 ```swift
 // 定義一個遊戲角色的狀態
-class GameCharacter {
+class AnotherGameCharacter {
     // 血量初始值
     var hpValue: Double = 100
     
@@ -192,7 +192,7 @@ class GameCharacter {
 
 ```swift
 // 定義一個遊戲角色的狀態
-class GameCharacter {
+class SomeGameCharacter {
     // 血量初始值
     var hpValue: Double = 100 {
         willSet (hpChange) {
@@ -211,8 +211,8 @@ class GameCharacter {
     }
 }
 
-// 生成一個類別 GameCharacter 的實體常數 oneChar
-let oneChar = GameCharacter();
+// 生成一個類別 SomeGameCharacter 的實體常數 oneChar
+let anotherChar = SomeGameCharacter();
 
 // 角色受到攻擊 血量降低
 // 因為有 willSet 所以會印出：新的血量為90.0
