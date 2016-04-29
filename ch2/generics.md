@@ -69,9 +69,9 @@ func swapTwoValues<T>(inout a: T, inout _ b: T) {
 
 ```swift
 //  首先是兩個整數
-var oneInt = 12
-var anotherInt = 320
-swapTwoValues(&oneInt, &anotherInt)
+var oneInt2 = 12
+var anotherInt2 = 320
+swapTwoValues(&oneInt2, &anotherInt2)
 
 // 再來是兩個字串
 var oneString = "Hello"
@@ -238,7 +238,7 @@ protocol Container {
 接著我們將前面定義的堆疊(`Stack`)遵循這個協定`Container`，在實作協定`Container`的全部功能後，Swift 會自動推斷`ItemType`的型別就是`Element`，如下：
 
 ```swift
-struct Stack<Element>: Container {
+struct NewStack<Element>: Container {
     // Stack<Element> 原實作的內容
     var items = [Element]()
     mutating func push(item: Element) {
@@ -317,11 +317,11 @@ func allItemsMatch<
 接著可以實際使用這個函式，如下：
 
 ```swift
-// 宣告一個型別為 Stack 的變數 並依序放入三個字串
-var stackOfStrings = Stack<String>()
-stackOfStrings.push("one")
-stackOfStrings.push("two")
-stackOfStrings.push("three")
+// 宣告一個型別為 NewStack 的變數 並依序放入三個字串
+var newStackOfStrings = NewStack<String>()
+newStackOfStrings.push("one")
+newStackOfStrings.push("two")
+newStackOfStrings.push("three")
 
 // 宣告一個陣列 也放置了三個字串
 var arrayOfStrings = ["one", "two", "three"]
@@ -330,7 +330,7 @@ var arrayOfStrings = ["one", "two", "three"]
 // 但先前已將兩者都遵循了協定 Container
 // 且都包含相同型別的值
 // 所以可以把這兩個容器當做參數傳入函式
-if allItemsMatch(stackOfStrings, arrayOfStrings) {
+if allItemsMatch(newStackOfStrings, arrayOfStrings) {
     print("所有元素都符合")
 } else {
     print("不符合")
@@ -338,4 +338,9 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 // 印出：所有元素都符合
 
 ```
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/generics.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/generics.playground)
 
