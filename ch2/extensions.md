@@ -210,3 +210,8 @@ for number in [3, -12, 0] {
 
 ```
 
+
+### 範例
+
+本節範例程式碼放在 [ch2/extensions.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/extensions.playground)
+
