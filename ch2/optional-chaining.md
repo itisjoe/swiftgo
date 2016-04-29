@@ -36,7 +36,7 @@ let joe = Person()
 
 // 這時 joe 實體內的可選屬性 residence 沒有設置值 所以會初始化為 nil
 // 如果強制解析的話 會發生錯誤 如以下這行
-let roomCount = joe.residence!.numberOfRooms
+//let roomCount = joe.residence!.numberOfRooms
 
 // 所以這時可使用可選鏈來呼叫
 if let roomCount = joe.residence?.numberOfRooms {
@@ -61,8 +61,9 @@ print(joe.residence?.numberOfRooms)
 這邊定義三個類別以供後續示範，沿用先前的類別`Person`，並新增一個類別`Room`，最後將`Residence`重新定義，如下：
 
 ```swift
-class Person {
-    var residence: Residence?
+// 與先前的類別 Person 相同
+class NewPerson {
+    var residence: NewResidence?
 }
 
 // 定義一個類別 Room
@@ -75,7 +76,7 @@ class Room {
 }
 
 // 重新定義類別 Residence
-class Residence {
+class NewResidence {
     // rooms 屬性為一個陣列 型別為 [Room] 預設值是空陣列
     var rooms = [Room]()
 
@@ -123,8 +124,8 @@ joe.residence?.numberOfRooms = 12
 這時在可選鏈中呼叫這個方法的話，則是會返回`Void?`，而不是`Void`(因為可選鏈一定會返回可選值)，所以仍然可以依照是否返回`nil`來判斷這個可選鏈是否成功，如下：
 
 ```swift
-let kevin = Person()
-kevin.residence = Residence()
+let kevin = NewPerson()
+kevin.residence = NewResidence()
 
 // 可以依據是否返回 nil 來判斷可選鏈是否成功
 if kevin.residence?.printNumberOfRooms() != nil {
@@ -143,32 +144,32 @@ if kevin.residence?.printNumberOfRooms() != nil {
 
 ```swift
 // 先生成一個實體
-let kevin = Person()
+let jack = NewPerson()
 
 // 這邊嘗試存取放在陣列中第一個房間的名稱
-if let firstRoomName = kevin.residence?[0].name {
+if let firstRoomName = jack.residence?[0].name {
     print("第一個房間的名稱為 \(firstRoomName).")
 } else {
     print("無法取得第一個房間的名稱")
 }
 
 // 這邊嘗試用下標指派一個值
-kevin.residence?[0] = Room(name: "臥房")
+jack.residence?[0] = Room(name: "臥房")
 
-// 上面兩個返回的都是 nil 因為目前 kevin.residence 尚未有值
+// 上面兩個返回的都是 nil 因為目前 jack.residence 尚未有值
 
-// 先生成一個 Residence 實體
-let kevinHouse = Residence()
+// 先生成一個 NewResidence 實體
+let jackHouse = NewResidence()
 
 // 接著為其內型別為 [Room] 的陣列屬性加上值
-kevinHouse.rooms.append(Room(name: "廚房"))
-kevinHouse.rooms.append(Room(name: "浴室"))
+jackHouse.rooms.append(Room(name: "廚房"))
+jackHouse.rooms.append(Room(name: "浴室"))
 
-// 最後將其設置為 kevin.residence
-kevin.residence = kevinHouse
+// 最後將其設置為 jack.residence
+jack.residence = jackHouse
 
 // 這時再存取 即會有值 這邊會印出：第一個房間名稱為 廚房
-if let firstRoomName = kevin.residence?[0].name {
+if let firstRoomName = jack.residence?[0].name {
     print("第一個房間名稱為 \(firstRoomName)")
 } else {
     print("無法取得第一個房間的名稱")
@@ -213,4 +214,9 @@ john.someProperty?.someMethod()?.hasPrefix("The")
 ##### Hint
 
 - 可選鏈的問號`?`是放在方法的小括號`()`後面，因為可選值是`someMethod()`方法的返回值，而不是`someMethod()`方法本身。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/optional-chaining.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/optional-chaining.playground)
 
