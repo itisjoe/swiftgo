@@ -186,7 +186,7 @@ do {
 如上述程式的功能，我們可以簡單的將`try`改成使用`try?`，這樣當錯誤發生要被拋出時，會簡單的返回一個`nil`。如下：
 
 ```swift
-let x = try? someThrowingFunction()
+let y = try? someThrowingFunction()
 
 ```
 
@@ -202,7 +202,7 @@ let x = try? someThrowingFunction()
 也就是說，使用`try!`呼叫拋出函式來告訴 Swift 確定這個呼叫不會發生異常或錯誤。還有一點，使用`try!`呼叫拋出函式，可以不用放在`do`的大括號`{}`內。例子如下：
 
 ```swift
-let x = try! someThrowingFunction()
+let z = try! someThrowingFunction()
 
 ```
 
@@ -235,4 +235,9 @@ func someMethod() throws {
 
 - 如果定義多個`defer`，會先執行最後一個定義的`defer`，再依序往前執行到第一個。
 - `defer`不是一定要與錯誤處理一起使用，普通的函式內也可以使用。
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/error-handling.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/error-handling.playground)
 
