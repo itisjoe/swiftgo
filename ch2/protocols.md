@@ -14,7 +14,7 @@
 - [可選協定的規則](#optional_protocol)
 - [協定擴展](#extension)
 
-協定(`protocol`)是 Swift 一個重要的特性，它會定義出為了**完成某項任務或功能**所需的方法、屬性，協定本身不會實作這些任務跟功能，而僅僅只是表達出該任務或功能的名稱。這些功能則都交由**遵循**協定的型別來實作，列舉、結構及類別都可以遵循協定，遵循協定表示這個型別必須實作出協定定義的方法、屬性或其他功能。
+協定(`protocol`)是 Swift 一個重要的特性，它會**定義**出為了**完成某項任務或功能**所需的方法、屬性，協定本身不會實作這些任務跟功能，而僅僅只是表達出該任務或功能的名稱。這些功能則都交由**遵循**協定的型別來實作，列舉、結構及類別都可以遵循協定，遵循協定表示這個型別必須實作出協定定義的方法、屬性或其他功能。
 
 有點像是協定定義出一個`To Do List`，而所有遵循協定的型別都必須照表操課，將需要的功能都實作出來。
 
@@ -183,7 +183,7 @@ lightSwitch.toggle()
 協定可以定義一個建構器，與定義方法一樣不需要寫大括號`{}`及其內的內容，格式如下：
 
 ```swift
-protocol SomeProtocol {
+protocol OtherProtocol {
     init(someParameter: Int)
 }
 
@@ -194,7 +194,7 @@ protocol SomeProtocol {
 如果是一個類別遵循一個含有建構器的協定時，無論是指定建構器或便利建構器，都必須為類別的建構器加上`required`修飾符，以確保所有子類別也必須定義這個建構器，從而符合協定(如果類別已被加上`final`，則不需要為其內的建構器加上`required`，因為`final`類別不能再被子類別繼承)，如下：
 
 ```swift
-class SomeClass: SomeProtocol {
+class OtherClass: OtherProtocol {
     required init(someParameter: Int) {
         // 建構器的內容
     }
@@ -206,19 +206,19 @@ class SomeClass: SomeProtocol {
 
 ```swift
 // 定義一個協定
-protocol SomeProtocol {
+protocol AnontherProtocol {
     init()
 }
 
 // 定義一個類別
-class SomeSuperClass {
+class AnontherSuperClass {
     init() {
         // 建構器的內容
     }
 }
 
-// 定義一個繼承 SomeSuperClass 的類別 同時還遵循了協定 SomeProtocol
-class SomeSubClass: SomeSuperClass, SomeProtocol {
+// 定義一個繼承 AnontherSuperClass 的類別 同時還遵循了協定 AnontherProtocol
+class SomeSubClass: AnontherSuperClass, AnontherProtocol {
     // 必須同時加上 required 和 override
     required override init() {
         // 建構器的內容
@@ -249,24 +249,24 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
 
 ```swift
 // 定義一個協定
-protocol SomeProtocol {
+protocol SomeOtherProtocol {
     func method() -> Int
 }
 
-// 定義一個類別 遵循協定 SomeProtocol
-class OneClass: SomeProtocol {
+// 定義一個類別 遵循協定 SomeOtherProtocol
+class OneClass: SomeOtherProtocol {
     func method() -> Int {
         return 5566
     }
 }
 
-// 定義另一個類別 有一個型別為 SomeProtocol 的常數
+// 定義另一個類別 有一個型別為 SomeOtherProtocol 的常數
 class AnotherClass {
-    // 常數屬性 型別為[協定 SomeProtocol]
-    let oneMember: SomeProtocol
+    // 常數屬性 型別為[協定 SomeOtherProtocol]
+    let oneMember: SomeOtherProtocol
     
-    // 建構器有個參數 member 型別為 SomeProtocol
-    init(member: SomeProtocol) {
+    // 建構器有個參數 member 型別為 SomeOtherProtocol
+    init(member: SomeOtherProtocol) {
         self.oneMember = member
     }
     
@@ -275,7 +275,7 @@ class AnotherClass {
 // 先宣告一個類別 OneClass 的實體
 let oneInstance = OneClass();
 
-// 任何遵循[協定 SomeProtocol]的實體 都可以被當做[協定 SomeProtocol]型別
+// 任何遵循[協定 SomeOtherProtocol]的實體 都可以被當做[協定 SomeOtherProtocol]型別
 // 所以上面宣告的 oneInstance 可以被當做參數傳入
 let twoInstance = AnotherClass(member: oneInstance)
 
@@ -289,7 +289,7 @@ print(twoInstance.oneMember.method())
 <a name="delegation"></a>
 ### 委任模式
 
-委任(`delegation`)是一種設計模式，它允許類別或結構將一些需要它們負責的功能委任給其他型別的實體。
+委任(`delegation`)是一種**設計模式**，它允許類別或結構將一些需要它們負責的功能委任給其他型別的實體。
 
 委任模式的實作就是定義協定來封裝那些需要被委任的功能，而遵循這個協定的型別就能提供這些功能。委任模式可以用來回應特定的動作或是接收外部資料，而不需要知道外部資料的型別。
 
@@ -381,17 +381,17 @@ oneChar.defend()
 
 ```swift
 // 定義一個協定
-protocol SomeProtocol {
+protocol NewProtocol {
     var name: String { get set }
 }
 
-// 定義一個類別 滿足了[協定 SomeProtocol]的要求 但尚未遵循它
-class SomeClass {
+// 定義一個類別 滿足了[協定 NewProtocol]的要求 但尚未遵循它
+class NewClass {
     var name = "good day"
 }
 
 // 這時可以使用擴展來遵循
-extension SomeClass: SomeProtocol {}
+extension NewClass: NewProtocol {}
 
 ```
 
@@ -459,7 +459,7 @@ protocol Aged {
 }
 
 // 定義一個結構 遵循上面兩個定義的協定
-struct Person: Named, Aged {
+struct OnePerson: Named, Aged {
     var name: String
     var age: Int
 }
@@ -470,7 +470,7 @@ func wishHappyBirthday(celebrator: protocol<Named, Aged>) {
     print("生日快樂！ \(celebrator.name) ， \(celebrator.age) 歲囉！")
 }
 
-let birthdayPerson = Person(name: "Brian", age: 25)
+let birthdayPerson = OnePerson(name: "Brian", age: 25)
 wishHappyBirthday(birthdayPerson)
 // 印出：生日快樂！ Brian ， 25 歲囉！
 
@@ -625,6 +625,7 @@ extension GameCharacterProtocol {
 
 // 生成一個遊戲角色的實體
 let member = GameCharacter()
+member.delegate = GameCharacterDelegate()
 
 // 可以直接呼叫擴展協定後新增的方法
 member.superAttack()
@@ -670,4 +671,9 @@ let myTeam = [oneMember, twoMember, threeMember]
 print(myTeam.allDescription)
 
 ```
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/protocols.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/protocols.playground)
 
