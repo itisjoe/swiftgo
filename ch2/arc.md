@@ -20,22 +20,22 @@ Swift 使用自動參考計數(`ARC`, `Automatic Reference Counting`)機制來�
 以下簡單介紹一下 **ARC** 運作的方式：
 
 ```swift
-// 定義一個類別 Person
-class Person {
+// 定義一個類別 SomePerson
+class SomePerson {
     let name: String
     init (name: String) {
         self.name = name
     }
 }
 
-// 先宣告三個可選 Person 的變數 會被自動初始化為 nil
+// 先宣告三個可選 SomePerson 的變數 會被自動初始化為 nil
 // 這三個變數目前都尚未有實體的參考
-var reference1: Person?
-var reference2: Person?
-var reference3: Person?
+var reference1: SomePerson?
+var reference2: SomePerson?
+var reference3: SomePerson?
 
 // 先生成一個實體 並指派給其中一個變數 reference1
-reference1 = Person(name: "Jess")
+reference1 = SomePerson(name: "Jess")
 
 // 目前這個實體就有了一個強參考 參考計數為 1
 // 所以 ARC 會保留住這個實體使用的記憶體
@@ -136,37 +136,37 @@ Swift 提供了兩種辦法來解決強參考循環，分別是弱參考(`weak r
 弱參考使用`weak`關鍵字來定義，以下將前面強參考循環的例子改寫，將類別`Apartment`內的屬性`tenant`改為弱參考(因為公寓可能有時沒有住戶，即有時會沒有值，適合使用弱參考)：
 
 ```swift
-class Person {
+class AnotherPerson {
     let name: String
     init(name: String) { self.name = name }
-    var apartment: Apartment?
+    var apartment: AnotherApartment?
 }
 
-class Apartment {
+class AnotherApartment {
     let unit: String
     init(unit: String) { self.unit = unit }
     
     // 將這個屬性定義為弱參考 使用 weak 關鍵字
-    weak var tenant: Person?
+    weak var tenant: AnotherPerson?
 }
 
-var joe: Person? = Person(name: "Joe")
-var oneUnit: Apartment? = Apartment(unit: "5A")
-joe!.apartment = oneUnit
+var joe2: AnotherPerson? = AnotherPerson(name: "Joe")
+var oneUnit2: AnotherApartment? = AnotherApartment(unit: "5A")
+joe2!.apartment = oneUnit2
 
 // 因為是弱參考
-// 所以這個指派為實體的屬性 不會增加 joe 參考的實體的參考計數
-oneUnit!.tenant = joe
+// 所以這個指派為實體的屬性 不會增加 joe2 參考的實體的參考計數
+oneUnit2!.tenant = joe2
 
 // 當斷開這個變數的強參考時 目前該實體的參考計數會減為 0
 // 所以會將這個實體釋放
 // 而所有指向這個實體的弱參考 都會被設為 nil
-joe = nil
+joe2 = nil
 
-// 隨著上面的 joe 被釋放
-// 目前 oneUnit 參考的實體的參考計數減為 1
+// 隨著上面的 joe2 被釋放
+// 目前 oneUnit2 參考的實體的參考計數減為 1
 // 以下再將原本的強參考斷開 參考計數減為 0 則也會將此實體釋放
-oneUnit = nil
+oneUnit2 = nil
 
 ```
 
@@ -200,20 +200,20 @@ class CreditCard {
 }
 
 // 宣告一個可選 Customer 的變數
-var joe: Customer? = Customer(name: "Joe")
+var jess: Customer? = Customer(name: "Jess")
 
-// 接著生成一個 CreditCard 實體並指派給 joe 的 card 屬性
-joe!.card = CreditCard(number: 123456789, customer: joe!)
-// 這個 CreditCard 實體的 customer 屬性 則使用無主參考指向 joe
+// 接著生成一個 CreditCard 實體並指派給 jess 的 card 屬性
+jess!.card = CreditCard(number: 123456789, customer: jess!)
+// 這個 CreditCard 實體的 customer 屬性 則使用無主參考指向 jess
 
-// 現在 joe 指向的實體 參考計數為 1 (即 joe 這個變數強參考指向的)
-// joe 內的屬性 card 指向的實體 參考計數也為 1 (即這個 card 屬性強參考指向的)
+// 現在 jess 指向的實體 參考計數為 1 (即 jess 這個變數強參考指向的)
+// jess 內的屬性 card 指向的實體 參考計數也為 1 (即這個 card 屬性強參考指向的)
 
-// 而 CreditCard 實體的 customer 屬性 因為是無主參考指向 joe
+// 而 CreditCard 實體的 customer 屬性 因為是無主參考指向 jess
 // 所以不會增加參考計數
 
-// 這時將 joe 指向的實體強參考斷開
-joe = nil
+// 這時將 jess 指向的實體強參考斷開
+jess = nil
 // 這時這個實體的參考計數為 0 則實體會被釋放
 // 指向 CreditCard 實體的強參考也會隨之斷開
 // 因此也就被釋放了
@@ -357,7 +357,7 @@ lazy var someClosure: Void -> String = {
 以下則是將前面的例子`HTMLElement`中的閉包加上捕獲列表，便可以避免強參考循環：
 
 ```swift
-class HTMLElement {
+class NewHTMLElement {
     let name: String
     let text: String?
 
@@ -379,4 +379,9 @@ class HTMLElement {
 }
 
 ```
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/arc.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/arc.playground)
 
