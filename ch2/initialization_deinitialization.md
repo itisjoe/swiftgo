@@ -48,7 +48,7 @@ class SomeClass {
 在建構過程結束前，這個類別的**儲存屬性**都必須被指派一個明確的值，可以是定義時直接指派，或是在建構器中為屬性指派。如下：
 
 ```swift
-class SomeClass {
+class SomeClass2 {
     let number: Int = 20
     let anotherNumber: Int
 
@@ -500,15 +500,15 @@ if anotherUnit == nil {
 如果不為列舉定義一個可失敗建構器，其本身會自動建立一個帶有參數的可失敗建構器`init?(rawValue:)`，這個參數名稱`rawValue`是固定的，其型別與列舉成員原始值的型別相同。所以可以此來簡化上面定義的`TemperatureUnit`列舉，如下：
 
 ```swift
-enum TemperatureUnit: Character {
+enum AnotherTemperatureUnit: Character {
     case Kelvin = "K", Celsius = "C", Fahrenheit = "F"
 }
 
 // 可以匹配到成員的原始值 所以建構成功
-let oneUnit = TemperatureUnit(rawValue: "F")
+let oneUnit2 = AnotherTemperatureUnit(rawValue: "F")
 
 // 無法匹配到成員的原始值 所以建構失敗
-let anotherUnit = TemperatureUnit(rawValue: "X")
+let anotherUnit2 = AnotherTemperatureUnit(rawValue: "X")
 
 ```
 
@@ -524,8 +524,8 @@ let anotherUnit = TemperatureUnit(rawValue: "X")
 以下是一個例子：
 
 ```swift
-// 定義一個類別 GameCharacter 有一個可失敗建構器 當名稱參數為空字串時會建構失敗
-class GameCharacter {
+// 定義一個類別 AnotherGameCharacter 有一個可失敗建構器 當名稱參數為空字串時會建構失敗
+class AnotherGameCharacter {
     let name: String
     init?(name: String) {
         if name.isEmpty { return nil }
@@ -533,9 +533,9 @@ class GameCharacter {
     }
 }
 
-// 定義一個繼承自 GameCharacter 的類別 Archer
+// 定義一個繼承自 AnotherGameCharacter 的類別 AnotherArcher
 // 有一個可失敗建構器 當攻速參數小於 1 時會建構失敗
-class Archer: GameCharacter {
+class AnotherArcher: AnotherGameCharacter {
     let attackSpeed: Int
     init?(name: String, attackSpeed: Int) {
         if attackSpeed < 1 { return nil }
@@ -544,16 +544,16 @@ class Archer: GameCharacter {
     }
 }
 
-// 作為參數的名稱跟攻速都符合規則 建構成功 會生成一個 Archer 的實體
-let oneArcher = Archer(name: "Jim", attackSpeed: 2)
+// 作為參數的名稱跟攻速都符合規則 建構成功 會生成一個 AnotherArcher 的實體
+let oneArcher2 = AnotherArcher(name: "Jim", attackSpeed: 2)
 
 // 作為參數的攻速為 0 會建構失敗
-// 在 Archer 中即返回 nil 不會再向上傳遞至父類別 GameCharacter
-let anotherArcher = Archer(name: "Zack", attackSpeed: 0)
+// 在 AnotherArcher 中即返回 nil 不會再向上傳遞至父類別 AnotherGameCharacter
+let anotherArcher2 = AnotherArcher(name: "Zack", attackSpeed: 0)
 
 // 作為參數的名稱為空字串 會建構失敗
-// 建構過程一直到父類別 GameCharacter 的建構器 才會失敗
-let finalArcher = Archer(name: "", attackSpeed: 1)
+// 建構過程一直到父類別 AnotherGameCharacter 的建構器 才會失敗
+let finalArcher = AnotherArcher(name: "", attackSpeed: 1)
 
 ```
 
@@ -566,7 +566,7 @@ let finalArcher = Archer(name: "", attackSpeed: 1)
 - 不能將一個父類別的**非可失敗建構器**，覆寫成為**可失敗建構器**。
 
 ```swift
-定義一個類別 Document
+//定義一個類別 Document
 class Document {
     // 可選型別的屬性
     var name: String?
@@ -624,7 +624,7 @@ class UntitledDocument: Document {
 在類別的建構器前加上`required`，表示所有繼承這個類別的子類別，都必須實作這個建構器：
 
 ```swift
-class SomeClass {
+class SomeClass4 {
     required init() {
         // 建構器執行程式的實作
     }
@@ -635,7 +635,7 @@ class SomeClass {
 繼承這個類別的子類別，定義這個建構器時，前面同樣需要加上`required`(不需要`override`)：
 
 ```swift
-class SomeSubclass: SomeClass {
+class SomeSubclass: SomeClass4 {
     required init() {
         // 必要建構器執行程式的實作
     }
@@ -660,4 +660,9 @@ deinit {
 Swift 有一個自動參考計數(ARC)的機制，會處理實體的記憶體管理，所以大部分的情況下，不需要手動清除，交給 Swift 來自動處理就好。
 
 後面章節會正式介紹[自動參考計數](../ch2/arc.md)(ARC)
+
+
+### 範例
+
+本節範例程式碼放在 [ch2/initialization_deinitialization.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/initialization_deinitialization.playground)
 
