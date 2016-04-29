@@ -39,3 +39,8 @@ print(diamondsName.rawValue)
 
 ```
 
+
+### 範例
+
+本節範例程式碼放在 [ch2/nested-types.playground](https://github.com/itisjoe/swiftgo_files/tree/master/ch2/nested-types.playground)
+
