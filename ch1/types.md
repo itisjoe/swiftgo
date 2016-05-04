@@ -112,7 +112,7 @@ let forFree = false
 <a name="character_string"></a>
 ### 字元及字串
 
-字元(`character`)指的是依照編碼格式的一個單位元組，而字串(`string`)是有序的字元集合(簡單說就是一段文字)，皆是以一對雙引號`"`前後包起來，如下：
+字元(`character`)指的是依照編碼格式的一個位元組(簡單來說就是一個英文字母、數字或符號)，而字串(`string`)是有序的字元集合(簡單說就是一段文字)，皆是以一對雙引號`"`前後包起來，如下：
 
 ```swift
 let firstString = "Nice to meet you."
