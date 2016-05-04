@@ -30,6 +30,7 @@
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
+       * [開啟 playground](more/open_playground.md)
    * [系統關鍵字](more/keywords.md)
    * [駝峰式命名法](more/camel_case_naming.md)
 
