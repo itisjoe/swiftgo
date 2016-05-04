@@ -288,7 +288,7 @@ for item in mySet3.sort() {
 
 或參考下圖依據兩個 Set 之間關係表現的圖：
 
-![Sets1](../images/collection_types01.png)
+![Sets1](../images/collection_types/collection_types01.png)
 
 例子如下：
 
@@ -323,7 +323,7 @@ Swift 提供幾個方法來比對兩個 Set 的關係，皆是返回一個布林
 
 或參考下圖依據兩個 Set 之間的關係表示的圖：
 
-![Sets1](../images/collection_types02.png)
+![Sets1](../images/collection_types/collection_types02.png)
 
 例子如下：
 
