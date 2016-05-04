@@ -19,11 +19,11 @@ OS X 裡預設是沒有安裝 Xcode 的，所以首先必須從 App Store 裡下
 
 ![xcode_install03](../images/xcode_install/xcode_install03.png)
 
-▼ 安裝完畢後， Dock 應該就會出現 Xcode App ，請點擊它開啟，首次開啟時可能會詢問安裝一些額外的元件，就直接安裝就好：
+▼ 安裝完畢後， Dock 應該就會出現 Xcode App ，請點擊它開啟，首次開啟時可能會詢問安裝一些額外的元件，點擊`Install`直接安裝就好：
 
 ![xcode_install04](../images/xcode_install/xcode_install04.png)
 
-▼ 第一次開啟 Xcode 後，會出現下面這個畫面，依序為**開啟一個 playground**、**開啟一個新專案**以及**開啟一個已存在的專案**：
+▼ 第一次開啟 Xcode 後，會出現下面這個畫面，依序為**建立一個 playground**、**建立一個新專案**以及**開啟一個已存在的專案**：
 
 (編寫文章時的 Xcode 版本為 7.3 ，未來如有更新，請安裝最新版的。)
 
