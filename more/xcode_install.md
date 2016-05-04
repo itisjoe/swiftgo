@@ -10,10 +10,10 @@ OS X 裡預設是沒有安裝 Xcode 的，所以首先必須從 App Store 裡下
 
 ▼ 開啟後會看到下面這個畫面：
 
-![xcode_install02](../images/xcode/xcode_install02.png)
-
 1. 輸入 `xcode` ，會列出相關的 app ，通常 Xcode 都會出現在第一個。
 2. 點擊 Xcode 進入詳細頁面。
+
+![xcode_install02](../images/xcode/xcode_install02.png)
 
 ▼ 點擊 Icon 下方的`取得`按鈕，就會開始安裝(如果尚未登入 App Store，會先要求登入)，安裝過程可能會需要一段時間，軟體滿大的，約是 4 G 多：
 
