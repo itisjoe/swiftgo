@@ -4,6 +4,57 @@
 
 ![open_project04](../images/open_project/open_project04.png)
 
+
+### 專案設定
+
+首先看到這個專案的設定：
+
+- 先點選左側側邊欄的 1. MyFirstProject。
+- 再點選中間畫面 PROJECT 中的 2. MyFirstProject。
+
+如下圖：
+
+![interface_intro05](../images/interface_intro/interface_intro05.png)
+
+在 Info 這個頁籤中，顯示專案的一些設定：
+
+- Deployment Target：應用程式支援的 iOS 版本，會向上支援但不能向下支援，所以如果應用程式要給較舊版本的 iOS 使用，記得設定較低的 iOS 版本。(像是要給 iOS 8.2 以上的裝置使用，這邊就要)
+- Configurations：可以為不同模式下的編譯給予不同的設定，像是測試模式(`Debug`)與釋出模式(`Release`)。
+- Localizations：應用程式需要支援多語系時，可在這邊增加需要支援的語言。
+
+在 Build Settings 頁籤中則是用於編譯時的設定，初期可以先不用更動，使用預設設定就好。
+
+接著點擊 TARGETS 中的 MyFirstProject，如下圖：
+
+![interface_intro06](../images/interface_intro/interface_intro06.png)
+
+General 頁籤：
+
+- Identity：
+  - Bundle Identifier：建立專案時一同建立的專案的唯一識別碼。
+  - Version：專案(也就是應用程式)的版本，會顯示在 App Store 中，每次程式有更新要提交時都必須更新，數字只能更大(像是 1.1.2 版本之後，只能更新為 1.1.3 或 1.2.0 ，不能再降為 1.1.1)。
+  - Build：編譯版本，每次提交至 App Store 的應用程式，即使 Version 是一樣的，這個 Build 數字都必須更大，來表示是不同編譯版本。
+  - Team：與開發者帳號有關。
+- Deployment Info：
+  - Deployment Target：應用程式支援的 iOS 版本。
+  - Devices：適用的 iOS 裝置。
+  - Main Interface：主要使用的 Storyboard。
+  - Device Orientation：提供支援的裝置翻轉方向，依序為 Portrait (正向)、Upside Down (上下顛倒)、Landscape Left (向左翻轉)及 Landscape Right (向右翻轉)。
+  - Status Bar Style：狀態列的樣式。
+- App Icons and Launch Images：
+  - 設定應用程式的圖示與起始畫面。
+- Embedded Binaries 與 Linked Frameworks and Libraries：
+  - 使用額外功能框架或第三方套件時要匯入檔案的地方。
+
+Capabilities 頁籤：
+
+啟用 Apple 各個支援的功能，像是 iCloud、Push Notifications 或是 Game Center。開啟前都會需要開發者帳號認證。
+
+Info 頁籤：
+
+記錄一些專案的基本資料。
+
+
 ### 專案導覽區塊
 
 專案導覽區塊(`Project Navigator`)位於畫面的左邊側邊欄，這邊會顯示有關這個專案檔案的資訊，以下依序介紹常用的部份：
