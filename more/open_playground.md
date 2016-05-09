@@ -17,9 +17,20 @@
 ![open_playground02](../images/open_playground/open_playground02.png)
 
 
-▼ 除了起始畫面外，你也可以從工具列的`File > New > Playground...`建立一個新的 playground ，如下：
+▼ 除了起始畫面外，你也可以從 Xcode 工具列的`File > New > Playground...`建立一個新的 playground ，如下：
 
 ![open_playground03](../images/open_playground/open_playground03.png)
+
+
+### 開啟一個存在的 playground
+
+▼ 開啟一個 playground 就如同開啟一般檔案一樣，在 Finder 找到檔案後點擊，即可打開：
+
+![open_playground05](../images/open_playground/open_playground05.png)
+
+▼ 或是你也可以從 Xcode 工具列的`File > Open...`開啟一個 playground：
+
+![open_playground06](../images/open_playground/open_playground06.png)
 
 
 ### 使用 playground
