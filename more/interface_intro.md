@@ -97,3 +97,37 @@ Build Settings、Build Phases 與 Build Rules 頁籤：
 ![interface_intro04](../images/interface_intro/interface_intro04.png)
 
 
+### 專案編輯區塊
+
+專案編輯區塊(`Project Editor`)位於畫面大部分的中間區塊，編寫程式碼都是寫在這裡，點擊左側檔案後，編輯區塊就會顯示程式，如下：
+
+![interface_intro07](../images/interface_intro/interface_intro07.png)
+
+
+### 應用區塊
+
+應用區塊(`Utility`)位於畫面的右側側邊欄，主要用於提示當前畫面檔案的額外資訊，如下圖：
+
+![interface_intro08](../images/interface_intro/interface_intro08.png)
+
+上圖為應用區塊中左邊頁籤的內容，當左側側邊欄檔案列表點擊到 ViewController.swift 時，右側側邊欄會隨即顯示這個檔案的資訊，像是檔案名稱或檔案位置。
+
+應用區塊中右邊頁籤則是會提示目前游標指到的方法或類別等等的詳細資訊，如下：
+
+![interface_intro09](../images/interface_intro/interface_intro09.png)
+
+將游標點擊程式中的`viewDidLoad()`時，右側側邊欄則會顯示這個方法的詳細資訊，像是它的用途、從幾版的 iOS 開始支援或是繼承自哪個類別等等。
+
+
+### 除錯區塊
+
+畫面右上角可以看到下面這排按鈕，可以顯示及收起左側欄、底邊欄及右側欄：
+
+![interface_intro10](../images/interface_intro/interface_intro10.png)
+
+而尚未介紹到的底側欄就是除錯區塊(`Debug`)，點擊這個按鈕後，下方即會顯示除錯區塊，如下：
+
+![interface_intro11](../images/interface_intro/interface_intro11.png)
+
+當程式使用`print()`印出文字、程式運行中的動作或是發生錯誤，都會顯示詳細資訊在這裡。
+
