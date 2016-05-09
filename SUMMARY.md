@@ -32,6 +32,7 @@
        * [安裝 Xcode](more/xcode_install.md)
        * [開啟 playground](more/open_playground.md)
        * [開啟專案](more/open_project.md)
+       * [介面簡介](more/interface_intro.md)
    * [系統關鍵字](more/keywords.md)
    * [駝峰式命名法](more/camel_case_naming.md)
 

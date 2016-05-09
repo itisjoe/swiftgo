@@ -22,6 +22,8 @@
 6. 選擇適用的 iOS 裝置，有 iPhone、iPad 或 Universal 三個選項，看是要專屬 iPhone、iPad 或是兩者通用，本書以 iPhone 為主，所以這邊選擇 iPhone。
 7. 額外的選項， Core Data 是一種資料庫的應用，是一個可以讓你簡化新增儲存刪除資料的功能，本書除非特別提起，不然都不用勾選。另外兩個都是用作程式測試的功能，本書不會提到，所以都不勾選。
 
+都填好之後，點擊`Next`繼續：
+
 ![open_project02](../images/open_project/open_project02.png)
 
 ▼ 接著在儲存專案目錄的步驟下方，可以看到有個 Source Control 的選項，可以讓你的專案支援版本控制，本書不會提到，所以這邊不勾選。(預設可能是無法勾選，如果有需要請到 Xcode 設定中開啟。)
