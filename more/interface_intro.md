@@ -127,7 +127,7 @@ Build Settings、Build Phases 與 Build Rules 頁籤：
 
 ![interface_intro10](../images/interface_intro/interface_intro10.png)
 
-而尚未介紹到的底側欄就是除錯區塊(`Debug`)，點擊這個按鈕後，下方即會顯示除錯區塊，如下：
+而尚未介紹到的底邊欄就是除錯區塊(`Debug`)，點擊這個按鈕後，下方即會顯示除錯區塊，如下：
 
 ![interface_intro11](../images/interface_intro/interface_intro11.png)
 
