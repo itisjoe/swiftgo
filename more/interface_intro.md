@@ -104,15 +104,15 @@ Build Settings、Build Phases 與 Build Rules 頁籤：
 ![interface_intro07](../images/interface_intro/interface_intro07.png)
 
 
-### 應用區塊
+### 工具區塊
 
-應用區塊(`Utility`)位於畫面的右側側邊欄，主要用於提示當前畫面檔案的額外資訊，如下圖：
+工具區塊(`Utility`)位於畫面的右側側邊欄，主要用於提示當前畫面檔案的額外資訊，如下圖：
 
 ![interface_intro08](../images/interface_intro/interface_intro08.png)
 
-上圖為應用區塊中左邊頁籤的內容，當左側側邊欄檔案列表點擊到 ViewController.swift 時，右側側邊欄會隨即顯示這個檔案的資訊，像是檔案名稱或檔案位置。
+上圖為工具區塊中左邊頁籤的內容，當左側側邊欄檔案列表點擊到 ViewController.swift 時，右側側邊欄會隨即顯示這個檔案的資訊，像是檔案名稱或檔案位置。
 
-應用區塊中右邊頁籤則是會提示目前游標指到的方法或類別等等的詳細資訊，如下：
+工具區塊中右邊頁籤則是會提示目前游標指到的方法或類別等等的詳細資訊，如下：
 
 ![interface_intro09](../images/interface_intro/interface_intro09.png)
 
