@@ -48,12 +48,19 @@ General 頁籤：
 
 Capabilities 頁籤：
 
-啟用 Apple 各個支援的功能，像是 iCloud、Push Notifications 或是 Game Center。開啟前都會需要開發者帳號認證。
+- 啟用 Apple 各個支援的功能，像是 iCloud、Push Notifications 或是 Game Center。開啟前都會需要開發者帳號認證。
+
+Resource Tags 頁籤：
+
+- 你可以為專案內使用的資源檔案設置不同的標籤(`tag`)，用來設定獲取這個資源的時間點。
 
 Info 頁籤：
 
-記錄一些專案的基本資料。
+- 記錄一些專案的基本資料。
 
+Build Settings、Build Phases 與 Build Rules 頁籤：
+
+- 編譯時的設定，初期可以先不用更動，使用預設設定就好。
 
 ### 專案導覽區塊
 
