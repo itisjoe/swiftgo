@@ -37,6 +37,8 @@
        * [加入檔案](more/copyfile.md)
        * [刪除檔案](more/deletefile.md)
        * [新增 Framework](more/addframework.md)
+       * [使用模擬器及實機測試應用程式](more/simulator.md)
+       * [熱鍵](more/hotkey.md)
    * [系統關鍵字](more/keywords.md)
    * [駝峰式命名法](more/camel_case_naming.md)
 
