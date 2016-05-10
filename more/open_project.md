@@ -12,25 +12,25 @@
 
 ![open_project01](../images/open_project/open_project01.png)
 
-▼ 這個步驟必須填寫專案的基本資料：
+▼ 接著是下圖這個步驟，填寫專案的基本資料：
+
+![open_project02](../images/open_project/open_project02.png)
 
 1. 專案名稱，這邊範例是填入`MyFirstProject`。
 2. 公司或個人名稱。
-3. 公司或個人的唯一識別碼，這在提交應用程式給 App Store 時會用來辨識，通常會以點`.`來連接，有點像是反過來的網域名稱，這邊範例使用`tw.hsin`，你也可以寫像是`com.yourname`或是`tw.com.someone`之類的，只要不要與別人的一樣即可(如果撞名，提交時會跟你講)。
+3. 公司或個人的唯一識別碼，這在提交應用程式給 App Store 時會用來辨識，通常會以點`.`來連接，像是反過來的網域名稱，這邊範例使用`tw.hsin`，你也可以寫像是`com.yourname`或是`tw.com.someone`之類的，只要不要與別人的一樣即可(如果撞名，提交時會跟你講)。
 4. 這個專案的唯一識別碼，是以**公司或個人的唯一識別碼**與**專案名稱**組成(所以這個欄位會依據前兩個名稱動態更新，無法獨自修改)，這在整個 App Store 裡面會是唯一的。
 5. 選擇要使用的程式語言，目前仍然可以在 Swift 和 Objective-C 擇一使用，不過本書在講 Swift，所以當然是選擇 Swift。
 6. 選擇適用的 iOS 裝置，有 iPhone、iPad 或 Universal 三個選項，看是要專屬 iPhone、iPad 或是兩者通用，本書以 iPhone 為主，所以這邊選擇 iPhone。
 7. 額外的選項， Core Data 是一種資料庫的應用，是一個可以讓你簡化新增儲存刪除資料的功能，本書除非特別提起，不然都不用勾選。另外兩個都是用作程式測試的功能，本書不會提到，所以都不勾選。
 
-都填好之後，點擊`Next`繼續：
-
-![open_project02](../images/open_project/open_project02.png)
+都填好之後，點擊`Next`繼續。
 
 ▼ 接著在儲存專案目錄的步驟下方，可以看到有個 Source Control 的選項，可以讓你的專案支援版本控制，本書不會提到，所以這邊不勾選。(預設可能是無法勾選，如果有需要請到 Xcode 設定中開啟。)
 
 ![open_project03](../images/open_project/open_project03.png)
 
-▼ 看到下面這個畫面時，即是完成了新專案的建立(請接著繼續閱讀下節，會詳細介紹這些介面。)：
+▼ 最後看到下面這個畫面時，即是完成了新專案的建立(請接著繼續閱讀下節，會詳細介紹這些介面。)：
 
 ![open_project04](../images/open_project/open_project04.png)
 
