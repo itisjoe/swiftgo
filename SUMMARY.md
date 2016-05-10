@@ -35,6 +35,7 @@
        * [介面簡介](more/interface_intro.md)
        * [新增檔案](more/addfile.md)
        * [加入檔案](more/copyfile.md)
+       * [刪除檔案](more/deletefile.md)
    * [系統關鍵字](more/keywords.md)
    * [駝峰式命名法](more/camel_case_naming.md)
 
