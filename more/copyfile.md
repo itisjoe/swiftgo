@@ -10,6 +10,8 @@
 2. Added folders：以`group`還是`folder`的方式加入檔案的目錄。
 3. Add to targets：檔案要作用於哪一個`Target`，必須勾選才會作用。
 
+最後按下`Finish`，就完成了加入檔案的動作。
+
 ![copyfile02](../images/copyfile/copyfile02.png)
 
 ##### Hint
