@@ -19,14 +19,14 @@
 
 ▼ 接著需要填寫這個檔案的資訊：
 
+![addfile04](../images/addfile/addfile04.png)
+
 1. Class：是這個檔案的名稱，同時也是檔案內部的類別(`Class`)名稱，這裡你可以先填寫`MyCustom`(或是你要取的名字，記得這邊建議使用[大駝峰式命名法](../more/camel_case_naming.md#upper))。
 2. Subclass of：這個類別要繼承自哪一個父類別，因為是要建立一個自定義的`UIViewController`，所以這邊填寫`UIViewController`，你應該可以注意到他會提示有哪些可以用的 UIKit 元件並會自動補齊名稱，同時也會將前一個欄位補齊為`MyCustomViewController`。
 3. Also create XIB file：XIB 檔案是一個介面設計檔案，這邊不勾選。
 4. Language：選擇 Swift。
 
-都填寫完畢後，點擊`Next`按鈕繼續：
-
-![addfile04](../images/addfile/addfile04.png)
+都填寫完畢後，點擊`Next`按鈕繼續。
 
 ##### Hint
 
