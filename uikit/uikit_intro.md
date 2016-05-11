@@ -87,6 +87,7 @@ self.view.addSubview(firstView)
 接著介紹另一個工具：`UIScreen`，這主要是用來代表螢幕的資訊，通常是用來取得整個螢幕的尺寸，如下：
 
 ```swift
+// 取得螢幕的尺寸
 let fullScreenSize = UIScreen.mainScreen().bounds.size
 
 ```
@@ -105,6 +106,7 @@ let fullScreenSize = UIScreen.mainScreen().bounds.size
 在獲得了螢幕的尺寸以後，我們來將前面定義的 UIView 設置一個新的位置：
 
 ```swift
+// 設置 UIView 的位置到畫面的中心
 firstView.center = CGPoint(x: fullScreenSize.width * 0.5 , y: fullScreenSize.height * 0.5)
 
 ```
@@ -114,6 +116,7 @@ firstView.center = CGPoint(x: fullScreenSize.width * 0.5 , y: fullScreenSize.hei
 最後為了讓這個 UIView 可以明顯表示出來(不然原本都是白色，看不出來在哪)，為它加上一個底色：
 
 ```swift
+// 將 UIView 的底色設置為藍色
 firstView.backgroundColor = UIColor.blueColor()
 
 ```
