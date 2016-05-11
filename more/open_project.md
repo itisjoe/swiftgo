@@ -1,7 +1,7 @@
 # 開啟專案
 
 如果你要寫一個完整的 iPhone App，則是必須要建立一個專案，以下會介紹如何建立及開啟專案。
-
+<a name="create_a_new_project"></a>
 ### 建立一個新的專案
 
 ▼ 在首次打開 Xcode 時會顯示下面這個畫面，請先點擊`Create a new Xcode project`按鈕：
