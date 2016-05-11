@@ -44,7 +44,7 @@
 
 #### 原點
 
-iPhone 的原點是以左上角為`(0,0)`開始向右( x 軸)跟向下( y 軸)，如下圖以 iPhone 6S 為例：
+iPhone 的原點是以左上角為`(0,0)`開始向右( x 軸)跟向下( y 軸)，如下圖以 iPhone 6s 為例：
 
 ![uikit_intro02](../images/uikit_intro/uikit_intro02.png)
 
@@ -128,5 +128,10 @@ firstView.backgroundColor = UIColor.blueColor()
 
 ##### Hint
 
-- 如果將 iPhone 6S 模擬器整個螢幕的 width 及 height 用`print()`印出來，你會發現寬與長分別為 375 與 667 ，但它實際的尺寸其實是 750 x 1334 ，這是因為單位不同。在程式中使用的單位是**點**( Point )，而實際尺寸是 **像素**( Pixel )，剛好是兩倍，也就是以 iPhone 6S 來說，一個點會包含 2x2 個像素。
+- 如果將 iPhone 6s 模擬器整個螢幕的 width 及 height 用`print()`印出來，你會發現寬與長分別為 375 與 667 ，但它實際的尺寸其實是 750 x 1334 ，這是因為單位不同。在程式中使用的單位是**點**( Point )，而實際尺寸是 **像素**( Pixel )，剛好是兩倍，也就是以 iPhone 6s 來說，一個點會包含 2x2 個像素。
+
+
+### 範例
+
+本節範例程式碼放在 [uikit/uikit_intro](https://github.com/itisjoe/swiftgo_files/tree/master/uikit/uikit_intro)
 
