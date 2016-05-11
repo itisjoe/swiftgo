@@ -49,7 +49,7 @@ let fullScreenSize = UIScreen.mainScreen().bounds.size
 ##### Hint
 
 - 因為本書所有畫面都是用純程式碼構成，為了可以較為彈性的適用各尺寸 iPhone ，所以大多會以相對於整個螢幕畫面尺寸來設置 UIKit 元件的大小及位置。
-- `UIScreen.mainScreen()`還有另一個屬性`applicationFrame`，代表的是除去狀態列( iPhone 最上端顯示時間、訊號那一列)高度的尺寸，所以高度會比`bounds`的少 20。這邊只是提示一下，本書仍會以`bounds`的尺寸為準。
+
 
 
 
