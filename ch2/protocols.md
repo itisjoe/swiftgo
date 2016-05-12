@@ -217,7 +217,8 @@ class AnontherSuperClass {
     }
 }
 
-// 定義一個繼承 AnontherSuperClass 的類別 同時還遵循了協定 AnontherProtocol
+// 定義一個繼承 AnontherSuperClass 的類別
+// 同時還遵循了協定 AnontherProtocol
 class SomeSubClass: AnontherSuperClass, AnontherProtocol {
     // 必須同時加上 required 和 override
     required override init() {
@@ -275,7 +276,8 @@ class AnotherClass {
 // 先宣告一個類別 OneClass 的實體
 let oneInstance = OneClass();
 
-// 任何遵循[協定 SomeOtherProtocol]的實體 都可以被當做[協定 SomeOtherProtocol]型別
+// 任何遵循[協定 SomeOtherProtocol]的實體
+// 都可以被當做[協定 SomeOtherProtocol]型別
 // 所以上面宣告的 oneInstance 可以被當做參數傳入
 let twoInstance = AnotherClass(member: oneInstance)
 
@@ -309,8 +311,10 @@ protocol GameCharacterProtocolDelegate {
 
 // 定義一個類別 表示一個遊戲角色 
 class GameCharacter: GameCharacterProtocol {
-    // 首先定義一個變數屬性 delegate 型別為 GameCharacterProtocolDelegate
-    // 定義為可選型別 會先初始化為 nil 之後再將其設置為負責其他動作的另一個型別的實體
+    // 首先定義一個變數屬性 delegate
+    // 型別為 GameCharacterProtocolDelegate
+    // 定義為可選型別 會先初始化為 nil 之後
+    // 再將其設置為負責其他動作的另一個型別的實體
     var delegate: GameCharacterProtocolDelegate?
 
     // 因為遵循[協定 GameCharacterProtocol]
@@ -410,7 +414,7 @@ let twoChar = GameCharacter()
 let threeChar = GameCharacter()
 
 // 宣告一個型別為 [GameCharacterProtocol] 的陣列
-let team: [GameCharacterProtocol] = [oneChar, twoChar, threeChar]
+let team:[GameCharacterProtocol]=[oneChar,twoChar,threeChar]
 
 // 因為都遵循這個協定 所以這個 attack() 方法一定存在可以呼叫
 for member in team {
@@ -467,12 +471,14 @@ struct OnePerson: Named, Aged {
 // 定義一個函式 有一個參數 定義為遵循這兩個協定的型別
 // 所以寫成 protocol<Named, Aged> 格式
 func wishHappyBirthday(celebrator: protocol<Named, Aged>) {
-    print("生日快樂！ \(celebrator.name) ， \(celebrator.age) 歲囉！")
+    print("生日快樂！ \(celebrator.name)")
+    print("\(celebrator.age) 歲囉！")
 }
 
 let birthdayPerson = OnePerson(name: "Brian", age: 25)
 wishHappyBirthday(birthdayPerson)
-// 印出：生日快樂！ Brian ， 25 歲囉！
+// 印出：生日快樂！ Brian
+// 25 歲囉！
 
 ```
 
@@ -588,7 +594,8 @@ var dataSource: CounterDataSource = CounterSource()
 // 迴圈跑 4 次
 for _ in 1...4 {
     // 使用可選綁定
-    // 首先呼叫 incrementForCount() 方法 但因為這是個可選方法 所以需要加上 ?
+    // 首先呼叫 incrementForCount() 方法
+    // 但因為這是個可選方法 所以需要加上 ?
     // 而目前這個 incrementForCount 沒有實作這個方法
     // 所以會返回 nil 也就不會執行 if 內的程式
     if let amount = dataSource.incrementForCount?(count){
@@ -650,8 +657,10 @@ extension GameCharacterProtocol {
     }
 }
 
-// 接著擴展[集合型別的協定 CollectionType] 且其內成員必須遵循[協定 GameCharacterProtocol]
-extension CollectionType where Generator.Element: GameCharacterProtocol {
+// 接著擴展[集合型別的協定 CollectionType]
+// 且其內成員必須遵循[協定 GameCharacterProtocol]
+extension CollectionType where 
+  Generator.Element: GameCharacterProtocol {
     var allDescription: String {
         let itemsAsText = self.map { $0.description }
         return "[" + itemsAsText.joinWithSeparator(", ") + "]"

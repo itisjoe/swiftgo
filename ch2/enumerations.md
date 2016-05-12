@@ -36,7 +36,7 @@ enum CompassPoint {
 // 多個成員值可以寫在同一行 以逗號 , 隔開
 // 這是一個定義太陽系八大行星的列舉
 enum Planet {
-    case Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+    case Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune
 }
 
 ```
@@ -115,8 +115,10 @@ productBarcode = .QRCode("ABCDEFG")
 
 ```swift
 switch productBarcode {
-case .UPCA(let numberSystem, let manufacturer, let product, let check):
-    print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .UPCA(
+  let numberSystem, let manufacturer, let product, let check):
+    print("UPC-A: \(numberSystem), \(manufacturer),
+          \(product), \(check).")
 case .QRCode(let productCode):
     print("QR Code: \(productCode).") // 會印出這行
 }
@@ -173,7 +175,7 @@ print(today.rawValue)
 ```swift
 // 第一個成員有設置原始值 1, 接著下去成員的原始值就是 2, 3, 4 這樣遞增下去
 enum SomePlanet: Int {
-    case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+  case Mercury=1,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune
 }
 
 let ourPlanet = SomePlanet.Earth
@@ -204,7 +206,7 @@ print(directionPoint.rawValue)
 ```swift
 // 一個使用原始值的列舉 原始值依序是 1,2,3,4,5,6,7,8
 enum OtherPlanet: Int {
-    case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+  case Mercury=1,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune
 }
 
 let possiblePlanet = OtherPlanet(rawValue: 7)
@@ -244,8 +246,10 @@ enum ArithmeticExpression {
     case Number(Int)
     
     // 兩個成員 表示為加法及乘法運算 各自有兩個[列舉的實體]相關值
-    indirect case Addition(ArithmeticExpression, ArithmeticExpression)
-    indirect case Multiplication(ArithmeticExpression, ArithmeticExpression)
+    indirect case Addition(ArithmeticExpression,
+                    ArithmeticExpression)
+    indirect case Multiplication(ArithmeticExpression,
+                    ArithmeticExpression)
 }
 
 // 或是你也可以把 indirect 加在 enum 前面
@@ -253,7 +257,8 @@ enum ArithmeticExpression {
 indirect enum ArithmeticExpression {
     case Number(Int)
     case Addition(ArithmeticExpression, ArithmeticExpression)
-    case Multiplication(ArithmeticExpression, ArithmeticExpression)
+    case Multiplication(ArithmeticExpression,
+                          ArithmeticExpression)
 }
 
 ```
@@ -276,7 +281,8 @@ func evaluate(expression: ArithmeticExpression) -> Int {
 let five = ArithmeticExpression.Number(5)
 let four = ArithmeticExpression.Number(4)
 let sum = ArithmeticExpression.Addition(five, four)
-let product = ArithmeticExpression.Multiplication(sum, ArithmeticExpression.Number(2))
+let product = ArithmeticExpression.Multiplication(
+  sum, ArithmeticExpression.Number(2))
 
 // 印出：18
 print(evaluate(product))

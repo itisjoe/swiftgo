@@ -172,7 +172,8 @@ public class A {
 // 繼承自 A 的類別 B 其存取層級為 internal
 // 符合 子類別的存取層級限制不能比父類別更為寬鬆
 internal class B: A {
-    // 可以覆寫父類別的方法 更新為較寬鬆的存取層級 (當然必須符合自身的存取層級)
+    // 可以覆寫父類別的方法 更新為較寬鬆的存取層級
+    // (當然必須符合自身的存取層級)
     override internal func someMethod() {
         // 可以呼叫 存取層級限制更嚴格的父類別成員
         super.someMethod()

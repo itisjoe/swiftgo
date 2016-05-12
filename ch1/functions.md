@@ -104,7 +104,8 @@ hello("Jack", age: 25)
 以下為一個有外部參數名稱及內部參數名稱的函式格式：
 
 ```swift
-func 函式名稱(外部參數名稱1 內部參數名稱1: 型別1, 外部參數名稱2 內部參數名稱2: 型別2) {
+func 函式名稱(外部參數名稱1 內部參數名稱1: 型別1,
+  外部參數名稱2 內部參數名稱2: 型別2) {
     // 內部執行的程式
 }
 
@@ -367,7 +368,8 @@ func addTwoInts(number1: Int, number2: Int) -> Int {
 
 // 定義另一個函式，有三個參數依序為
 // 型別為 (Int, Int) -> Int 的函式, Int, Int
-func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+func printMathResult(
+  mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print("Result: \(mathFunction(a, b))")
 }
 
@@ -403,7 +405,8 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
 let number = 3
 // 宣告一個函式常數
 let someFunction2 = chooseStepFunction(number > 0)
-// 根據 chooseStepFunction 函式的內容 傳入 true 時 會返回 stepBackward 函式
+// 根據 chooseStepFunction 函式的內容
+// 傳入 true 時 會返回 stepBackward 函式
 // 所以 someFunction2 會被指派為 stepBackward
 
 someFunction2(10) // 返回 9
@@ -424,7 +427,7 @@ someFunction2(10) // 返回 9
 ```swift
 // 改寫前面的內容 將兩個函式建立在這個函式內
 // 同樣是依據傳入的布林值 返回不同的函式
-func anotherChooseStepFunction(backwards: Bool) -> (Int) -> Int {
+func anotherChooseStepFunction(backwards: Bool)->(Int)->Int{
     func stepForward(input: Int) -> Int {
         return input + 1
     }

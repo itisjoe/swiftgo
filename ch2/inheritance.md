@@ -86,7 +86,8 @@ class Hunter: Archer {
 
 let oneHunter = Hunter()
 // 這個類別一樣可以使用 Archer 及 GameCharacter 定義過的屬性及方法
-print("攻擊速度為 \(oneHunter.attackSpeed), 攻擊範圍為 \(oneHunter.attackRange)")
+print("攻擊速度為 \(oneHunter.attackSpeed)")
+print("攻擊範圍為 \(oneHunter.attackRange)")
 // 當然自己新增的方法也可以使用
 oneHunter.fatalBlow()
 

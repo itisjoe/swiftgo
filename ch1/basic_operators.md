@@ -348,8 +348,10 @@ if isSunday || isWeekday {
 
 ```swift
 // 數值運算
-var number = 3 + 2 * 5 // 先乘除後加減 所以 number 等於 13
-var someNumber = (3 + 2) * 5 // 括號括起來的優先 所以 someNumber 等於 25
+// 先乘除後加減 所以 number 等於 13
+var number = 3 + 2 * 5
+// 括號括起來的優先 所以 someNumber 等於 25
+var someNumber = (3 + 2) * 5
 
 // 邏輯運算
 let itIsOpen = false

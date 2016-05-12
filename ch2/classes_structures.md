@@ -107,9 +107,10 @@ print("someStats 血量最大值為\(someStats.hp)")
 也可以直接取得子屬性，像是`someGameCharacter`中`stats`屬性的`hp`屬性，如下：
 
 ```swift
-// 這邊使用前面定義的 GameCharacter 類別 及其生成的實體 someGameCharacter
-// 印出：someGameCharacter 血量最大值為0.0
-print("someGameCharacter 血量最大值為\(someGameCharacter.stats.hp)")
+// 這邊使用前面定義的 GameCharacter 類別
+// 及其生成的實體 someGameCharacter
+// 印出：血量最大值為0.0
+print("血量最大值為\(someGameCharacter.stats.hp)")
 
 ```
 

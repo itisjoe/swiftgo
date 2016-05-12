@@ -41,7 +41,8 @@ func addTwoInts(number1: Int, number2: Int) -> Int {
 
 // 建立另一個函式，有三個參數依序為
 // 型別為 (Int, Int) -> Int 的函式, Int, Int
-func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+func printMathResult(
+  mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print("Result: \(mathFunction(a, b))")
 }
 
@@ -71,7 +72,8 @@ printMathResult({(number1: Int, number2: Int) -> Int in
 因為**兩數相加閉包**是作為函式`printMathResult()`的參數傳入的，Swift 可以自動推斷其參數及返回值的型別(根據建立函式`printMathResult()`時的參數型別`(Int, Int) -> Int`)，因此這個閉包的參數及返回值的型別都可以省略，同時包著參數的小括號`()`及返回箭頭`->`也可以省略，修改如下：
 
 ```swift
-printMathResult({number1, number2 in return number1 + number2}, 12, 85)
+printMathResult(
+  {number1, number2 in return number1 + number2}, 12, 85)
 // 印出：97
 
 /* 第一個參數修改成如下
@@ -202,7 +204,8 @@ incrementByTen() // 10
 incrementByTen() // 20
 incrementByTen() // 30
 
-// 如果另外再宣告一個常數 會有屬於它自己的一個全新獨立的 runningTotal 變數參考
+// 如果另外再宣告一個常數
+// 會有屬於它自己的一個全新獨立的 runningTotal 變數參考
 // 與上面的常數無關
 let incrementBySix = makeIncrementer(forIncrement: 6)
 incrementBySix() // 6
@@ -239,7 +242,8 @@ alsoIncrementByTen() // 50
 
 ```swift
 // 參數為一個閉包的函式 參數前面標註 @noescape
-func someFunctionWithNoescapeClosure(@noescape closure: () -> Void) {
+func someFunctionWithNoescapeClosure(
+  @noescape closure: () -> Void) {
     // 而這個閉包的生命週期只在這個函式內
     closure()
 }
@@ -253,7 +257,8 @@ func someFunctionWithNoescapeClosure(@noescape closure: () -> Void) {
 var completionHandlers: [() -> Void] = []
 
 // 接著定義一個函式 參數為一個閉包 型別與上面陣列成員的型別一樣
-func someFunctionWithEscapingClosure(completionHandler: () -> Void) {
+func someFunctionWithEscapingClosure(
+  completionHandler: () -> Void) {
     // 這個函式將閉包加入一個函式之外的陣列變數中
     completionHandlers.append(completionHandler)
 }
@@ -272,7 +277,8 @@ class SomeClass {
         // 使用到前面定義的兩個函式 都使用了尾隨閉包來讓語法更為簡潔
         // 傳入當參數的閉包 內部都是將實體的屬性指派為新的值
         someFunctionWithEscapingClosure { self.x = 100 }
-        // 可以看到這個標註 @noescape 的參數的閉包 其內可以隱式的參考 self
+        // 可以看到這個標註 @noescape 的參數的閉包
+        // 其內可以隱式的參考 self
         someFunctionWithNoescapeClosure { x = 200 }
     }
 }
@@ -308,7 +314,7 @@ print(instance.x)
 
 ```swift
 // 首先宣告一個有五個成員的陣列
-var customersInLine = ["Albee", "Alex", "Eddie", "Zack", "Kevin"]
+var customersInLine = ["Albee","Alex","Eddie","Zack","Kevin"]
 
 // 印出：5
 print(customersInLine.count)
@@ -353,13 +359,15 @@ serveCustomer( { customersInLine.removeAtIndex(0) } )
 ```swift
 // 這時 customersInLine 為 ["Eddie", "Zack", "Kevin"]
 
-// 這個函式的參數前面標註了 @autoclosure 表示這參數可以是一個自動閉包的簡化寫法
+// 這個函式的參數前面標註了 @autoclosure 
+// 表示這參數可以是一個自動閉包的簡化寫法
 func serveCustomer(@autoclosure customerProvider: () -> String) {
     print("開始移除 \(customerProvider()) ！")
 }
 
 // 因為函式的參數有標註 @autoclosure 這個參數可以不用大括號 {}
-// 而僅僅只需要[移除第一個成員]這個表達式 而這個表達式會返回[被移除的成員的值]
+// 而僅僅只需要[移除第一個成員]這個表達式
+// 而這個表達式會返回[被移除的成員的值]
 serveCustomer(customersInLine.removeAtIndex(0))
 
 ```
@@ -373,9 +381,12 @@ serveCustomer(customersInLine.removeAtIndex(0))
 // 宣告另一個變數 為一個陣列 其內成員的型別為 () -> String
 var customerProviders: [() -> String] = []
 
-// 定義一個函式 參數標註 @autoclosure(escaping) 表示參數是一個可逃逸自動閉包
-func collectCustomerProviders(@autoclosure(escaping) customerProvider: () -> String) {
-    // 函式內部的動作是將當做參數的這個閉包 再加入新的陣列中 因為可逃逸 所以不會出錯
+// 定義一個函式 參數標註 @autoclosure(escaping)
+// 表示參數是一個可逃逸自動閉包
+func collectCustomerProviders(
+  @autoclosure(escaping) customerProvider: () -> String) {
+    // 函式內部的動作是將當做參數的這個閉包 再加入新的陣列中
+    // 因為可逃逸 所以不會出錯
     customerProviders.append(customerProvider)
 }
 

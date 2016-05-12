@@ -31,7 +31,8 @@ var oneStats = CharacterStats(hpValueMax: 500, mpValueMax: 120)
 // 生成實體後也可以再修改屬性的值
 oneStats.hpValueMax = 200
 
-// 但因為 mpValueMax 為一個結構裡的常數屬性 所以不能修改常數 下面這行會報錯誤
+// 但因為 mpValueMax 為一個結構裡的常數屬性 所以不能修改常數
+// 下面這行會報錯誤
 oneStats.mpValueMax = 200
 
 ```
@@ -45,7 +46,8 @@ oneStats.mpValueMax = 200
 // 生成一個 CharacterStats 結構的實體 並指派給一個常數 someStats
 let someStats = CharacterStats(hpValueMax: 900, mpValueMax: 150)
 
-// 這個實體 someStats 為一個常數 所以即使 hpValue 為一個變數屬性 仍然不能修改這個值 這行會報錯誤
+// 這個實體 someStats 為一個常數 所以即使 hpValue 為一個變數屬性
+// 仍然不能修改這個值 這行會報錯誤
 someStats.hpValue = 1200
 
 ```
@@ -280,7 +282,8 @@ class SomeClass {
 與實體的屬性一樣，型別屬性的存取也是使用點語法(`dot syntax`)，但是型別屬性是向**型別本身**存取和設置，而不是向**實體**，例子如下：
 
 ```swift
-// 這邊使用前面定義的結構 SomeStructure, 列舉 SomeEnumeration, 類別 SomeClass
+// 這邊使用前面定義的
+// 結構 SomeStructure, 列舉 SomeEnumeration, 類別 SomeClass
 
 // 印出：Some value in structure.
 print(SomeStructure.storedTypeProperty)

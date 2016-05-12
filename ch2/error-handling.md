@@ -93,7 +93,8 @@ class VendingMachine {
         // 檢查目前投入的錢幣夠不夠 不夠的話會拋出錯誤
         guard item.price <= coinsDeposited else {
             // 參數為還需要補足多少錢幣 所以是商品價錢減掉已投入錢幣
-            throw VendingMachineError.InsufficientFunds(coinsNeeded: item.price - coinsDeposited)
+            throw VendingMachineError.InsufficientFunds(
+              coinsNeeded: item.price - coinsDeposited)
         }
 
         // 所有判斷都通過後 才確定會售出

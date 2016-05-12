@@ -68,8 +68,8 @@ for character in gameTeam {
     }
 }
 
-// 最後印出：這隻隊伍有 2 個弓箭手跟 1 個戰士。
-print("這隻隊伍有 \(archerCount) 個弓箭手跟 \(warriorCount) 個戰士。 ")
+// 最後印出：有 2 個弓箭手跟 1 個戰士。
+print("有 \(archerCount) 個弓箭手跟 \(warriorCount) 個戰士。 ")
 
 ```
 
@@ -91,16 +91,21 @@ print("這隻隊伍有 \(archerCount) 個弓箭手跟 \(warriorCount) 個戰士�
 ```swift
 for character in gameTeam {
     if let oneChar = character as? Archer {
-        print("弓箭手的名字：\(oneChar.name)，介紹：\(oneChar.intro)")
+        print("弓箭手的名字：\(oneChar.name)")
+        print("介紹：\(oneChar.intro)")
     } else if let anotherChar = character as? Warrior {
-        print("戰士的名字：\(anotherChar.name)，描述：\(anotherChar.description)")
+        print("戰士的名字：\(anotherChar.name)")
+        print("描述：\(anotherChar.description)")
     }
 }
 
 // 使用可選綁定來檢查是否轉換成功 會依序印出：
-// 弓箭手的名字：one，介紹：super power
-// 戰士的名字：two，描述：good fighter
-// 弓箭手的名字：three，介紹：not bad
+// 弓箭手的名字：one
+// 介紹：super power
+// 戰士的名字：two
+// 描述：good fighter
+// 弓箭手的名字：three
+// 介紹：not bad
 
 ```
 
@@ -172,7 +177,8 @@ for thing in things {
     case let (x, y) as (Double, Double):
         print("元組為 \(x), \(y)")
     case let oneChar as Archer:
-        print("弓箭手的名字：\(oneChar.name)，介紹：\(oneChar.intro)")
+        print("弓箭手的名字：\(oneChar.name)")
+        print("介紹：\(oneChar.intro)")
     case let stringConverter as String -> String:
         print(stringConverter("Jess"))
     default:
@@ -184,7 +190,8 @@ for thing in things {
 // 浮點數為 3.1415926
 // 字串為 "Hello, world"
 // 元組為 3.0, 5.0
-// 弓箭手的名字：one，介紹：super power
+// 弓箭手的名字：one
+// 介紹：super power
 // Hello, Jess
 
 ```

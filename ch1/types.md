@@ -215,7 +215,10 @@ var someNumber: MyType = 123
 
 ```swift
 // 在宣告變數時 型別標註後面加上一個問號 ?
-var someScore: Int? // 因為目前尚未指派 所以目前 score 會被設置成 nil 也就是沒有值的狀態
+var someScore: Int?
+// 因為目前尚未指派 所以目前 score 會被設置成 nil 
+// 也就是沒有值的狀態
+
 // 設值為 100
 someScore = 100
 // 再將變數設為 nil 目前又是沒有值的狀態

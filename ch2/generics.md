@@ -197,7 +197,8 @@ func 泛型函式名稱<T: 某個類別, U: 某個協定>(參數: T, 另一個�
 這個函式的型別約束會使用到另一個 Swift 標準函式庫中的`Equatable`協定，這個協定要求任何遵循該協定的型別必須實作`==`及`!=`，進而可以對該型別的任意兩個值進行比較。(所有的 Swift 標準型別預設都符合`Equatable`協定。)
 
 ```swift
-func findIndex<T: Equatable>(array: [T], _ valueToFind: T) -> Int? {
+func findIndex<T: Equatable>(
+  array: [T], _ valueToFind: T) -> Int? {
     for (index, value) in array.enumerate() {
         if value == valueToFind {
             return index
@@ -211,7 +212,7 @@ let doubleIndex = findIndex([689, 5566, 10.05], 9.2)
 // 因為 9.2 不在陣列中 所以返回 nil
 
 // 接著找 [String] 陣列的值
-let stringIndex = findIndex(["Adam", "Kevin", "Jess"], "Kevin")
+let stringIndex = findIndex(["Adam","Kevin","Jess"],"Kevin")
 // Kevin 為陣列中第 2 個值 所以會返回 1
 
 ```

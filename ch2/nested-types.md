@@ -6,18 +6,21 @@
 struct Poker {
 
     enum Suit: String {
-        case Spades = "黑桃", Hearts = "紅心", Diamonds = "方塊", Clubs = "梅花"
+        case Spades = "黑桃", Hearts = "紅心"
+        case Diamonds = "方塊", Clubs = "梅花"
     }
 
     enum Rank: Int {
-        case Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+        case Two = 2, Three, Four, Five
+        case Six, Seven, Eight, Nine, Ten
         case Jack, Queen, King, Ace
     }
 
     let rank: Rank, suit: Suit
     
     func description () {
-        print("這張牌的花色是：\(suit.rawValue)，點數為：\(rank.rawValue)")
+        print("這張牌的花色是：\(suit.rawValue)")
+        print("點數為：\(rank.rawValue)")
     }
 
 }

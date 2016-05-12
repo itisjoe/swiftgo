@@ -81,9 +81,11 @@ var SixInts = secondThreeInts + anotherThreeInts
 var shoppingList: [String] = ["Eggs", "Milk"]
 // 即創建了一個型別為 [String] 且包含兩個值的陣列
 
-// 因為 Swift 會自動的型別推斷 所以陣列中如果明確的表示了是什麼型別的值 便不用再標註型別
+// 因為 Swift 會自動的型別推斷
+// 所以陣列中如果明確的表示了是什麼型別的值 便不用再標註型別
 var anotherList = ["Rice", "Apples"]
-// 因為陣列包含著型別為 String 的值, Swift 可以推斷這個陣列的型別為 [String]
+// 因為陣列包含著型別為 String 的值
+// Swift 可以推斷這個陣列的型別為 [String]
 
 ```
 

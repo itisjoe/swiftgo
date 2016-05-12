@@ -396,7 +396,8 @@ default:
     str4 += "Fallthrough twice."
 }
 
-// 印出：It is a prime number. Fallthrough once. Fallthrough twice.
+// 印出：
+// It is a prime number. Fallthrough once. Fallthrough twice.
 print(str4)
 // 雖然只比對到第一個 case 但兩個 case 都有使用 fallthrough
 // 所以最後 str4 是將所有字串相加
@@ -491,7 +492,7 @@ post(["title": "Article_1"])
 // 印出：標題是 Article_1 ，
 // 印出：但是沒有內容。
 
-post(["title": "Article_2", "content": "Article_2_full_content"])
+post(["title":"Article_2","content":"Article_2_full_content"])
 // 印出：標題是 Article_2 ，
 // 印出：內容為 Article_2_full_content。
 

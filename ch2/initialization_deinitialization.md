@@ -229,7 +229,8 @@ struct Rect {
     init(center: Point, size: Size) {
         let originX = center.x - (size.width / 2)
         let originY = center.y - (size.height / 2)
-        self.init(origin: Point(x: originX, y: originY), size: size)
+        self.init(
+          origin: Point(x: originX, y: originY), size: size)
     }
 }
 
@@ -524,7 +525,8 @@ let anotherUnit2 = AnotherTemperatureUnit(rawValue: "X")
 以下是一個例子：
 
 ```swift
-// 定義一個類別 AnotherGameCharacter 有一個可失敗建構器 當名稱參數為空字串時會建構失敗
+// 定義一個類別 AnotherGameCharacter 有一個可失敗建構器
+// 當名稱參數為空字串時會建構失敗
 class AnotherGameCharacter {
     let name: String
     init?(name: String) {
@@ -544,11 +546,13 @@ class AnotherArcher: AnotherGameCharacter {
     }
 }
 
-// 作為參數的名稱跟攻速都符合規則 建構成功 會生成一個 AnotherArcher 的實體
+// 作為參數的名稱跟攻速都符合規則 建構成功
+// 會生成一個 AnotherArcher 的實體
 let oneArcher2 = AnotherArcher(name: "Jim", attackSpeed: 2)
 
 // 作為參數的攻速為 0 會建構失敗
-// 在 AnotherArcher 中即返回 nil 不會再向上傳遞至父類別 AnotherGameCharacter
+// 在 AnotherArcher 中即返回 nil
+// 不會再向上傳遞至父類別 AnotherGameCharacter
 let anotherArcher2 = AnotherArcher(name: "Zack", attackSpeed: 0)
 
 // 作為參數的名稱為空字串 會建構失敗

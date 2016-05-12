@@ -207,7 +207,8 @@ jess!.card = CreditCard(number: 123456789, customer: jess!)
 // 這個 CreditCard 實體的 customer 屬性 則使用無主參考指向 jess
 
 // 現在 jess 指向的實體 參考計數為 1 (即 jess 這個變數強參考指向的)
-// jess 內的屬性 card 指向的實體 參考計數也為 1 (即這個 card 屬性強參考指向的)
+// jess 內的屬性 card 指向的實體 參考計數也為 1
+// (即這個 card 屬性強參考指向的)
 
 // 而 CreditCard 實體的 customer 屬性 因為是無主參考指向 jess
 // 所以不會增加參考計數
@@ -237,7 +238,7 @@ class Country {
 
     init(name: String, capitalName: String) {
         self.name = name
-        self.capitalCity = City(name: capitalName, country: self)
+        self.capitalCity=City(name:capitalName,country:self)
     }
 }
 
@@ -307,7 +308,8 @@ class HTMLElement {
 }
 
 // 宣告為可選 HTMLElement 型別 以便後面設為 nil
-var paragraph: HTMLElement? = HTMLElement(name: "p", text: "Hello, world")
+var paragraph: HTMLElement?
+      = HTMLElement(name: "p", text: "Hello, world")
 
 // 初始化完成後 就可以存取這個屬性
 print(paragraph!.asHTML())
@@ -341,7 +343,8 @@ paragraph = nil
 ```swift
 // 如果閉包有參數及返回型別 則將捕獲列表寫在他們前面
 lazy var someClosure: (Int, String) -> String = {
-    [unowned self, weak delegate = self.delegate!] (index: Int, stringToProcess: String) -> String in
+    [unowned self, weak delegate = self.delegate!] 
+      (index: Int, stringToProcess: String) -> String in
     // 閉包內執行的程式
 }
 

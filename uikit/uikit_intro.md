@@ -68,7 +68,8 @@ iPhone 的原點是以左上角為`(0,0)`開始向右( x 軸)跟向下( y 軸)�
 
 ```swift
 // 定義一個 UIView 的常數 名稱為 firstView
-let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+let firstView = UIView(frame:
+  CGRect(x: 0, y: 0, width: 100, height: 100))
 
 // 將 firstView 加入到 self.view
 self.view.addSubview(firstView)
@@ -107,7 +108,9 @@ let fullScreenSize = UIScreen.mainScreen().bounds.size
 
 ```swift
 // 設置 UIView 的位置到畫面的中心
-firstView.center = CGPoint(x: fullScreenSize.width * 0.5 , y: fullScreenSize.height * 0.5)
+firstView.center = CGPoint(
+  x: fullScreenSize.width * 0.5,
+  y: fullScreenSize.height * 0.5)
 
 ```
 
