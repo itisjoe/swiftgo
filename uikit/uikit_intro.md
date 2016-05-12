@@ -12,7 +12,7 @@
 
 應用程式開啟時，會自`AppDelegate.swift`開始，這隻檔案負責應用程式的生命週期，像是啟動、閒置、進入後台、返回前台或是退出時要執行的動作。
 
-接著看到 ViewController.swift ，是應用程式預設的主要視圖(`View`)控制器(`Controller`)，所有需要的 UI 功能(像是按鈕、文字或圖案等等)，都必須在這個 ViewController 裡面建立。
+接著看到 ViewController.swift ，是應用程式預設的主要視圖(`View`)控制器(`Controller`)，所有需要的 UI 功能(像是按鈕、文字或圖案等等)，都必須在這個 ViewController 裡面建立，通常會寫在`viewDidLoad()`這個方法裡面。
 
 要如何建立 UI (`User Interface`使用者介面)呢？就是要用到內建的許多 UIKit 元件。
 
@@ -23,7 +23,7 @@
 
 ### 隨處可見的 UIKit
 
-在使用 iPhone 的經驗裡，你可能會發現大多數應用程式的樣貌及使用方式都差不多，除了 Apple 官方提供了一些 UI 規則給開發者遵循之外，其實是因為大多數功能都是使用內建的 UIKit 元件就可以完成的。
+在使用 iPhone 的經驗裡，你可能會發現很多應用程式的樣貌及使用方式都差不多，除了 Apple 官方提供了一些 UI 規則給開發者遵循之外，其實是因為大多數功能都是使用內建的 UIKit 元件就可以完成的。
 
 ▼ iPhone 的**設定 App **就是由許多的 UIKit 元件所組成，像是`UINavigationController`、`UITableView`及`UIImageView`等等，如下圖：
 
