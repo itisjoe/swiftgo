@@ -2,8 +2,8 @@
 
 - UIKit 初探
 - 文字標籤 UILabel
-- 多行文字 UITextView
 - 文字輸入 UITextField
+- 輸入多行文字 UITextView
 - 按鈕 UIButton
 - 提示框 UIAlertController
 - 底部提示框 UIActionSheet

@@ -30,6 +30,7 @@
 * [UIKit](uikit/uikit.md)
    * [UIKit 初探](uikit/uikit_intro.md)
    * [文字標籤 UILabel](uikit/uilabel.md)
+   * [文字輸入 UITextField](uikit/uitextfield.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
