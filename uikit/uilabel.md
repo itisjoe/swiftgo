@@ -1,6 +1,6 @@
 # 文字標籤 UILabel
 
-UILabel 是用來顯示一段文字的元件，如果你需要顯示的文字不多，像是標題、人名或是一個數字，就很適合使用 UILabel 。下圖為本節內容的目標：
+UILabel 是用來顯示文字的元件，如果你需要單純顯示像是標題、人名、數字或是一段文字，就很適合使用 UILabel 。下圖為本節內容的目標：
 
 ![uilabel01](../images/uikit/uilabel/uilabel01.png)
 
