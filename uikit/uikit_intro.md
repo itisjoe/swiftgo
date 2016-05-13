@@ -130,7 +130,34 @@ firstView.backgroundColor = UIColor.blueColor()
 
 以上便完成了這節所要說明的內容，最後使用模擬器來看看成果，如下：
 
-![uikit_intro4](../images/uikit_intro/uikit_intro04.png)
+![uikit_intro04](../images/uikit_intro/uikit_intro04.png)
+
+
+### 自動完成功能
+
+在這節的學習中，你可能會發現當打字打到一半時，會出現下面這樣的提示：
+
+![uikit_intro05](../images/uikit_intro/uikit_intro05.png)
+
+這是 Xcode 內建的一個方便功能，你可以在尚未打完一個單字時，它會自動顯示這個列表，讓你使用上下鍵來選擇並完成這個單字(像是元件、屬性或方法)。
+
+有時候它不一定會自動出現，這時你可以按下`esc`鍵來顯示這個自動完成功能：
+
+![uikit_intro06](../images/uikit_intro/uikit_intro06.png)
+
+如上圖在單字打到一半時，不會自動出現，便可以自己按`esc`鍵來顯示(你甚至可以都打小寫英文，也是可以找到)。
+
+
+### 查找文件
+
+如果對於一個元件、屬性或方法不熟悉，可以按著`option`鍵(游標會變成一個問號)再用滑鼠點選你有疑問的方法或屬性(像是按住`option`鍵再點`UIView`或`bounds`等等)，會列出更詳細的說明，如下：
+
+![uikit_intro07](../images/uikit_intro/uikit_intro07.png)
+
+或是你也可以開啟右側側邊欄，點選右邊的頁籤，當你游標指到一個元件、屬性或方法時，這邊便會顯示詳細說明，如下：
+
+![uikit_intro08](../images/uikit_intro/uikit_intro08.png)
+
 
 ##### Hint
 
