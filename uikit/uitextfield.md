@@ -4,6 +4,9 @@
 
 ![uitextfield01](../images/uikit/uitextfield/uitextfield01.png)
 
+
+### 建立一個 UITextField
+
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUITextField 。
 
 以下使用 UITextField(frame:) 建立一個 UITextField，並介紹其常用的屬性：
@@ -46,9 +49,7 @@ UITextField 也可以使用多種通用屬性，上述程式只設置了`textCol
 
 委任模式的意思是，在設計元件或功能時，會定義數個不等的方法( method )，但只會定義出這些方法的名稱，而這些方法要做什麼事，則是要交由**委任( delegate )的對象**來實作。
 
-這邊使用 UITextField 來示範你的第一個使用委任模式的應用程式。例如在設計一個 UITextField (輸入框)時，通常用來輸入內容的鍵盤上會有一個**完成**的按鈕(通常位於鍵盤的右下角`Return`鍵)。
-
-原始設計上都不會實際把按下**完成**按鈕會做什麼事寫死在元件裡，而是設計成委任模式，表示我這邊有一個事件(即按下完成後要幹嘛)待完成，我會交給委任的對象來實作。
+這邊使用 UITextField 來示範你的第一個使用委任模式的應用程式。例如在設計一個 UITextField (輸入框)時，通常用來輸入內容的鍵盤上會有一個**完成**的按鈕(通常位於鍵盤的右下角`Return`鍵)。原始設計上都不會實際把按下**完成**按鈕會做什麼事寫死在元件裡，而是設計成委任模式，表示我這邊有一個事件(即按下完成後要幹嘛)待完成，我會交給委任的對象來實作。
 
 而交付委任對象的方式，就是要設置`delegate`屬性，如下：
 
@@ -99,6 +100,23 @@ func textFieldShouldReturn(textField: UITextField) -> Bool {
 ##### Hint
 
 - 委任模式會將需要實作的方法設置為`必須`或`可選`，如果設置為**必須的方法**，則委任對象一定要將這個方法實作出來，不然會直接吐錯誤給你，叫你一定要實作，而如果設置為**可選的方法**，則是依照你的需求，看要實作哪些方法，才實際實作出來，像是上面示範的 UITextField 委任的方法就都是**可選的方法**，不用每一個都實作出來。
+
+
+### 將 UITextField 放入畫面
+
+最後就是將 UITextField 放入畫面中，結束這節的內容：
+
+```swift
+// 取得螢幕的尺寸
+let fullScreenSize = UIScreen.mainScreen().bounds.size
+
+// 設置於畫面的中間偏上位置
+myTextField.center = CGPoint(x: fullScreenSize.width * 0.5, y: fullScreenSize.height * 0.3)
+
+// 加入畫面
+self.view.addSubview(myTextField)
+
+```
 
 
 ### 範例
