@@ -6,6 +6,8 @@ UILabel 是用來顯示一段文字的元件，如果你需要顯示的文字不
 
 #### 建立一個 UILabel
 
+首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUILabel 。
+
 使用`UILabel(frame:)`來建立一個 UILabel ：
 
 ```swift
