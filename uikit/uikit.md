@@ -1,7 +1,7 @@
 # UIKit
 
 - UIKit 初探
-- 文字 UILabel
+- 文字標籤 UILabel
 - 多行文字 UITextView
 - 文字輸入 UITextField
 - 按鈕 UIButton
