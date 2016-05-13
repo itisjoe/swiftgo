@@ -141,6 +141,10 @@ firstView.backgroundColor = UIColor.blueColor()
 
 這是 Xcode 內建的一個方便功能，你可以在尚未打完一個單字時，它會自動顯示這個列表，讓你使用上下鍵來選擇並完成這個單字(像是元件、屬性或方法)。
 
+如果選擇的是方法或函式時，它完成後同時會提示你每個參數的型別為何，相當方便，如下圖：
+
+![uikit_intro09](../images/uikit_intro/uikit_intro09.png)
+
 有時候它不一定會自動出現，這時你可以按下`esc`鍵來顯示這個自動完成功能：
 
 ![uikit_intro06](../images/uikit_intro/uikit_intro06.png)
