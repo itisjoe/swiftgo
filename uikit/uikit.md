@@ -6,7 +6,6 @@
 - 輸入多行文字 UITextView
 - 按鈕 UIButton
 - 提示框 UIAlertController
-- 底部提示框 UIActionSheet
 - 圖片 UIImageView
 - 選取時間 UIDatePicker
 - 選擇器 UIPickerView
