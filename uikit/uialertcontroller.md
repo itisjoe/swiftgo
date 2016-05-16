@@ -85,7 +85,7 @@ func simpleHint() {
 - style：按鈕的樣式，可選擇`.Cancel`、`.Default`、`.Destructive`等等。
 - handler：按下按鈕後要執行的動作，是一個型別為`(action: UIAlertAction!) -> Void`的**閉包**，如果不要有動作則是填入`nil`。
 
-按鈕設置好之後，再使用`alertController.addAction(okAction)`方法，將按鈕加入到提示框控制器中。
+按鈕設置好之後，再使用`alertController.addAction()`方法，將按鈕加入到提示框控制器中。
 
 最後則是對`self`使用`presentViewController()`方法來顯示提示框。
 
