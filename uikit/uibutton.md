@@ -37,7 +37,7 @@ self.view.addSubview(myButton)
 
 ```
 
-上述程式分別建立了加號`+`及驚嘆號`!`的按鈕(請參考上圖)，這邊可以注意到，這兩個按鈕用的是同一個變數`myButton`，因為各別都使用了`UIButton(type: .InfoLight)`來初始化一個按鈕，所以可以這樣使用。當然你也可以分別建立兩個常數(像是`let myButton1, myButton2`這樣)。
+上述程式分別建立了加號`+`及驚嘆號`!`的按鈕(請參考上圖)，這邊可以注意到，這兩個按鈕用的是同一個變數`myButton`，因為各別都使用了`UIButton(type:)`來初始化一個按鈕，所以可以這樣使用。當然你也可以分別建立兩個常數(像是`let myButton1, myButton2`這樣)。
 
 
 ### 建立自定義的按鈕
