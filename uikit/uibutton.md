@@ -77,7 +77,7 @@ self.view.addSubview(myButton)
 
 ```
 
-上述程式要注意到的是`addTarget(target:, action:, forControlEvents:)`這個方法，這是由 UIControl 所提供的方法，再繼承給 UIButton。這個方法的參數說明如下：
+上述程式要注意到的是`addTarget(target:, action:, forControlEvents:)`這個方法，用來負責按下按鈕後的動作，這是由 UIControl 所提供的方法，再繼承給 UIButton。這個方法的參數說明如下：
 
 - target：當事件發生時，要呼叫哪一個物件
 - action：呼叫的物件要執行的方法
