@@ -158,6 +158,10 @@ func hideKeyboard(tapG:UITapGestureRecognizer){
 
 First Responder 代表的是目前畫面中，處於焦點狀態的元件，而當輸入文字時，這個輸入框就是 First Responder ，所以如果要隱藏鍵盤，當然就是將 First Responder 取消，也就是使用`resignFirstResponder()`方法。
 
+##### Hint
+
+- 實際上，觸控事件是由 UIControl 所負責的動作。 UIControl 是繼承自 UIView 的子類別，而這些需要觸控事件的元件則是再繼承自 UIControl ，像是往後會學習到的 UIButton、UISwitch、UISlider 都是。
+
 
 ### 範例
 
