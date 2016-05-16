@@ -9,7 +9,7 @@ UITextView 與 UITextField 有點類似，時常用在輸入或顯示多行文�
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUITextView 。
 
-這節建立 UITextView 時，我們會為 ViewController 建立一個 UITextView 屬性，以因應後續的使用，如下：
+這節建立 UITextView 時，我們會為`ViewController`建立一個`UITextView`屬性，以因應後續的使用，如下：
 
 ```swift
 class ViewController: UIViewController {
