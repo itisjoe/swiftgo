@@ -53,7 +53,9 @@ myButton = UIButton(
 myButton.setTitle("按我", forState: .Normal)
 
 // 按鈕文字顏色
-myButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+myButton.setTitleColor(
+  UIColor.whiteColor(),
+  forState: .Normal)
 
 // 按鈕是否可以使用
 myButton.enabled = true
@@ -75,11 +77,32 @@ self.view.addSubview(myButton)
 
 ```
 
-UIControl
+上述程式要注意到的是`addTarget(target:, action:, forControlEvents:)`這個方法，這是由 UIControl 所提供的方法，再繼承給 UIButton。這個方法的參數說明如下：
 
-addTarget(target:, action:, forControlEvents:)
+- target：當事件發生時，要呼叫哪一個物件
+- action：呼叫的物件要執行的方法
+- forControlEvents：觸發的事件(這裡則是**按下**事件)
 
-    target參數為指定當事件發生時呼叫那一個物件
-    action參數為該物件的方法
-    controlEvent:觸發的事件
+##### Hint
+
+- 觸控事件是由 UIControl 所負責的動作。 UIControl 是繼承自 UIView 的子類別，而這些需要觸控事件的元件則是再繼承自 UIControl ，除了 UIButton 之外，還有像是往後會學習到的 UISwitch、UISlider 都是。
+
+接著則是為`ViewController`新增按下按鈕需要的方法`clickButton()`，如下：
+
+```swift
+func clickButton() {
+    // 為基底的 self.view 的底色在黑色與白色兩者間切換
+    if self.view.backgroundColor!.isEqual(
+      UIColor.whiteColor()) {
+        self.view.backgroundColor = 
+          UIColor.blackColor()
+    } else {
+        self.view.backgroundColor = 
+          UIColor.whiteColor()
+    }
+}
+
+```
+
+
 
