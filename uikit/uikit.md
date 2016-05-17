@@ -7,7 +7,7 @@
 - 按鈕 UIButton
 - 提示框 UIAlertController
 - 圖片 UIImageView
-- 選取時間 UIDatePicker
+- 選取日期時間 UIDatePicker
 - 選擇器 UIPickerView
 - 開關 UISwitch
 - 多選項 UISegmentedControl

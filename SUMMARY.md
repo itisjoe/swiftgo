@@ -35,7 +35,7 @@
    * [按鈕 UIButton](uikit/uibutton.md)
    * [提示框 UIAlertController](uikit/uialertcontroller.md)
    * [圖片 UIImageView](uikit/uiimageview.md)
-   * [選取時間 UIDatePicker](uikit/uidatepicker.md)
+   * [選取日期時間 UIDatePicker](uikit/uidatepicker.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)

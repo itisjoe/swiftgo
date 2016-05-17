@@ -1,4 +1,4 @@
-# 選取時間 UIDatePicker
+# 選取日期時間 UIDatePicker
 
 UIDatePicker 可以用來選取日期或時間，以下為本節的目標，設置一個 UIDatePicker ，並在改變日期時間時同步更新 UILabel 的內容：
 
@@ -125,7 +125,7 @@ func datePickerChanged(datePicker:UIDatePicker) {
 
 ### NSDate 與 NSDateFormatter
 
-在 Swift 中要處理有關於日期或時間的功能時，都是使用 NSDate 類別，而要怎麼呈現日期時間的顯示格式，則是需要搭配 NSDateFormatter 類別來使用。
+在 Swift 中要處理有關於日期或時間的功能時，都是使用 NSDate 類別，而要怎麼呈現日期時間的顯示格式，則是需要搭配 NSDateFormatter 類別來使用：
 
 ```swift
 // 簡單的建立了一個目前時間的常數
