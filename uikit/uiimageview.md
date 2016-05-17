@@ -176,7 +176,7 @@ self.view.addSubview(myImageView)
 
 建立圖片輪播一樣是使用 UIImageView ，以下是需要的屬性說明：
 
-- animationImages：為一個型別為`[UIImage]`的陣列，其內使用`UIImage(named:)`生成的圖片因為是 optional ，所以必須將其解析( unwrap ，即加上驚嘆號`!`)，當然你必須確定這些圖片檔案都存在，不然可能會導致程式錯誤並中止。
+- animationImages：為一個型別為`[UIImage]`的陣列，其內使用`UIImage(named:)`生成的圖片因為是可選的( optional )，所以必須將其解析( unwrap ，即加上驚嘆號`!`)，當然你必須確定這些圖片檔案都存在，不然可能會導致程式錯誤並中止。
 - animationDuration：輪播一次的總秒數，如果一張圖片要顯示 2 秒，則乘上圖片張數 3 張，所以這裡設置為 6 秒。
 - animationRepeatCount：要輪播的次數，如果設置 0 則是無限次。
 
@@ -233,7 +233,7 @@ self.view.addSubview(stopButton)
 
 按鈕除了可以使用文字之外，也可以設置成圖片，利用 UIButton 的方法`setImage()`，設置一個 UIImage 給它即可。 UIButton 的詳細說明請參考[前節說明](../uikit/uibutton.md)。
 
-接著 ViewController 新增兩個按下按鈕後執行動作的方法：
+接著`ViewController`新增兩個按下按鈕後執行動作的方法：
 
 ```swift
 func play() {
