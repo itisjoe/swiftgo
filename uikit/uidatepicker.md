@@ -6,7 +6,7 @@ UIDatePicker 可以用來選取日期或時間，以下為本節的目標，設�
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUIDatePicker 。
 
-首先為`ViewController`建立兩個屬性，如下：
+先為`ViewController`建立兩個屬性，如下：
 
 ```swift
 class ViewController: UIViewController {
@@ -67,10 +67,14 @@ myDatePicker.locale = NSLocale(
 
 // 設置改變日期時間時會執行動作的方法
 myDatePicker.addTarget(self,
-	action: #selector(ViewController.datePickerChanged), forControlEvents: .ValueChanged)
+	action: 
+      #selector(ViewController.datePickerChanged),
+    forControlEvents: .ValueChanged)
 
 // 設置位置並加入到畫面中
-myDatePicker.center = CGPoint(x: fullScreenSize.width * 0.5, y: fullScreenSize.height * 0.4)
+myDatePicker.center = CGPoint(
+  x: fullScreenSize.width * 0.5,
+  y: fullScreenSize.height * 0.4)
 self.view.addSubview(myDatePicker)
 
 ```
@@ -121,7 +125,7 @@ func datePickerChanged(datePicker:UIDatePicker) {
 
 ### NSDate 與 NSDateFormatter
 
-在 Swift 中要處理有關於日期或時間的功能時，都是使用 NSDate ，而要怎麼呈現日期時間的顯示格式，則是需要搭配 NSDateFormatter 來使用。
+在 Swift 中要處理有關於日期或時間的功能時，都是使用 NSDate 類別，而要怎麼呈現日期時間的顯示格式，則是需要搭配 NSDateFormatter 類別來使用。
 
 ```swift
 // 簡單的建立了一個目前時間的常數
@@ -142,7 +146,8 @@ let formatter = NSDateFormatter()
 // 先設置日期時間顯示的格式
 formatter.dateFormat = "yyyy-MM-dd HH:mm"
 
-// 再將 oneDayAfter 轉換成字串
+// 再利用 NSDateFormatter 的 stringFromDate 方法
+// 將 oneDayAfter 轉換成字串
 let oneDayAfterToString =
   formatter.stringFromDate(oneDayAfter)
 
@@ -156,7 +161,7 @@ let xmasDate = formatter.dateFromString(
 
 ```
 
-UIDatePicker 的`date`、`minimumDate`及`maximumDate`屬性，型別都是`NSDate`，所以如果你要設置或修改這些屬性時，都必須使用 NSDate 及 NSDateFormatter 來做處理。
+UIDatePicker 的`date`、`minimumDate`及`maximumDate`屬性，型別都是`NSDate`，所以如果你要設置或修改這些屬性時，都必須使用 NSDate 及 NSDateFormatter 類別來做處理。
 
 以下列出常使用到的日期時間顯示的格式，你可以用在 NSDateFormatter 的屬性`dateFormat`，依照需求來組合你要的格式：
 
