@@ -11,7 +11,7 @@
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUIImageView 。
 
-一開始先在`viewDidLoad()`中取得螢幕尺寸，以供後續使用，如下：
+一開始先以[加入檔案](../more/copyfile.md)的方式加入四張圖片，並在`viewDidLoad()`中取得螢幕尺寸，以供後續使用，如下：
 
 ```swift
 // 取得螢幕的尺寸
@@ -114,13 +114,154 @@ self.view.addSubview(myImageView)
 - `contentMode`屬性其他可以設定的模式，還有**以長或寬為準的縮放**、**重新裁切**或是**以八個方向或是中心為準**等等，你可以自己測試看看。
 
 
+### 自動輪播圖片
+
+這個範例的目標如下圖，圖片會自動輪播，且有兩個按鈕可以播放及停止輪播：
+
+![uiimageview02](../images/uikit/uiimageview/uiimageview02.png)
+
+首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExAutoPlayImage 。
+
+一開始先以[加入檔案](../more/copyfile.md)的方式加入三張輪播的圖片及兩張按鈕的圖片。
+
+首先為`ViewController`建立一個`myImageView`屬性：
+
+```swift
+class ViewController: UIViewController {
+    var myImageView: UIImageView!
+ 
+    // 省略
+}
+```
+
+以及在`viewDidLoad()`中取得螢幕尺寸，以供後續使用，如下：
+
+```swift
+// 取得螢幕的尺寸
+let fullScreenSize = UIScreen.mainScreen().bounds.size
+
+```
+
+#### 設置輪播圖片的資訊
+
+```swift
+myImageView = UIImageView(
+  frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+
+// 建立一個陣列 用來放置要輪播的圖片
+let imgArr = [
+  UIImage(named:"01.jpg")!,
+  UIImage(named:"02.jpg")!,
+  UIImage(named:"03.jpg")!]
+
+// 設置要輪播的圖片陣列
+myImageView.animationImages = imgArr
+
+// 輪播一次的總秒數
+myImageView.animationDuration = 6
+
+// 要輪播幾次 (設置 0 則為無限次)
+myImageView.animationRepeatCount = 0
+
+// 開始輪播
+myImageView.startAnimating()
+
+// 設置位置及放入畫面中
+myImageView.center = CGPoint(
+  x: fullScreenSize.width * 0.5,
+  y: fullScreenSize.height * 0.4)
+self.view.addSubview(myImageView)
+
+```
+
+建立圖片輪播一樣是使用 UIImageView ，以下是需要的屬性說明：
+
+- animationImages：為一個型別為`[UIImage]`的陣列，其內使用`UIImage(named:)`生成的圖片因為是 optional ，所以必須將其解析( unwrap ，即加上驚嘆號`!`)，當然你必須確定這些圖片檔案都存在，不然可能會導致程式錯誤並中止。
+- animationDuration：輪播一次的總秒數，如果一張圖片要顯示 2 秒，則乘上圖片張數 3 張，所以這裡設置為 6 秒。
+- animationRepeatCount：要輪播的次數，如果設置 0 則是無限次。
+
+另外還有兩個關於輪播的方法：
+
+- startAnimating()：開始圖片輪播。
+- stopAnimating()：停止圖片輪播。
+
+<a name="image_in_button"></a>
+#### 設置使用圖片的按鈕
+
+```swift
+// 建立一個播放按鈕
+let playButton = UIButton(
+  frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+
+// 設置播放按鈕的圖片
+playButton.setImage(
+  UIImage(named: "play"), forState: .Normal)
+
+// 設置按下播放按鈕的動作的方法
+playButton.addTarget(
+  self,
+  action: #selector(ViewController.play),
+  forControlEvents: .TouchUpInside)
+
+// 設置位置及放入畫面中
+playButton.center = CGPoint(
+  x: fullScreenSize.width * 0.35,
+  y: fullScreenSize.height * 0.65)
+self.view.addSubview(playButton)
+
+// 建立一個停止按鈕
+let stopButton = UIButton(
+  frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+
+// 設置停止按鈕的圖片
+stopButton.setImage(
+  UIImage(named: "stop"), forState: .Normal)
+
+// 設置按下停止按鈕的動作的方法
+stopButton.addTarget(
+  self,
+  action: #selector(ViewController.stop), 
+  forControlEvents: .TouchUpInside)
+
+// 設置位置及放入畫面中
+stopButton.center = CGPoint(
+  x: fullScreenSize.width * 0.65,
+  y: fullScreenSize.height * 0.65)
+self.view.addSubview(stopButton)
+
+```
+
+按鈕除了可以使用文字之外，也可以設置成圖片，利用 UIButton 的方法`setImage()`，設置一個 UIImage 給它即可。 UIButton 的詳細說明請參考[前節說明](../uikit/uibutton.md)。
+
+接著 ViewController 新增兩個按下按鈕後執行動作的方法：
+
+```swift
+func play() {
+    print("play images auto play")
+    myImageView.startAnimating()
+}
+
+func stop() {
+    print("stop images auto play")
+    myImageView.stopAnimating()
+}
+
+```
+
+##### Hint
+
+- 圖片如果為 png 檔案類型，使用`UImage(named:)`生成元件時，可以不用寫副檔名 png ，如上面程式中的`UImage(named:"play")`，程式會自己找到`play.png`的圖片檔案。
+- 另外你可能會發現範例檔案內，播放按鈕的圖片除了`play.png`外，還有`play@2x.png`跟`play@3x.png`檔案，這是為了因應不同解析度的 iPhone ，可以設置不同解析度的圖片，像是 iPhone 5、iPhone 6 及 iPhone 6s 使用 @2x 的圖片，而 iPhone 6 Plus 及 iPhone 6s Plus 則是使用 @3x 的圖片。只要將檔案名稱設定好，程式就會自己找到檔案，當然如果沒有 @2x 及 @3x 的圖片檔案，就會一律使用同樣尺寸的圖片檔案。
+
+
 ### 圖片來源
 
 - https://www.flickr.com/photos/134525588@N04/20344150965
 - https://www.flickr.com/photos/voilaquoi/18911800758
 - https://www.flickr.com/photos/nasacommons/5136519916/
 - https://www.flickr.com/photos/136245400@N03/24183123165/
-
+- https://www.iconfinder.com/icons/106223/play_icon
+- https://www.iconfinder.com/icons/106221/stop_icon
 
 ### 範例
 

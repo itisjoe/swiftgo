@@ -104,6 +104,10 @@ func clickButton() {
 
 ```
 
+##### Hint
+
+- 如果要為按鈕設置圖片，請參考[設置使用圖片的按鈕](../uikit/uiimageview.md#image_in_button)。
+
 
 ### 範例
 
