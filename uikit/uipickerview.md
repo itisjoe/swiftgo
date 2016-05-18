@@ -26,11 +26,11 @@ let myPickerView = UIPickerView(frame: CGRect(
   x: 0, y: fullScreenSize.height * 0.3,
   width: fullScreenSize.width, height: 150))
 
-// 新增另一個 ViewController 
+// 新增另一個 UIViewController 
 // 用來實作委任模式的方法
 let myViewController = MyViewController()
 
-// 必須將這個 ViewController 加入
+// 必須將這個 UIViewController 加入
 self.addChildViewController(myViewController)
 
 // 設定 UIPickerView 的 delegate 及 dataSource
@@ -96,7 +96,7 @@ func numberOfComponentsInPickerView(
 }
 
 // UIPickerViewDataSource 必須實作的方法：
-// UIPickerView 有多少行資料
+// UIPickerView 各列有多少行資料
 func pickerView(pickerView: UIPickerView,
   numberOfRowsInComponent component: Int) -> Int {
     // 設置第一列時
@@ -138,6 +138,7 @@ func pickerView(pickerView: UIPickerView,
         whatMeal = meals[row]
     }
     
+    // 將改變的結果印出來
     print("選擇的是 \(whatDay) ， \(whatMeal)")
 }
 
