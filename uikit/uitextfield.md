@@ -42,7 +42,7 @@ myTextField.backgroundColor = UIColor.lightGrayColor()
 
 UITextField 也可以使用多種通用屬性，上述程式只設置了`textColor`及`backgroundColor`，但其實像是`font`或`textAlignment`，它也可以設置。
 
-
+<a name="delegation"></a>
 ### 委任模式
 
 基於[ Swift 協定](../ch2/protocols.md)的特性，這邊會開始介紹一個極為重要且在後續學習中會大量見到的設計模式：[委任模式](../ch2/protocols.md#delegation)( Delegation )。如果覺得不太熟悉的話，可以先回到前面的章節看看。
