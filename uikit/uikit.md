@@ -10,7 +10,7 @@
 - 選取日期時間 UIDatePicker
 - 選擇器 UIPickerView
 - 開關 UISwitch
-- 多選項 UISegmentedControl
+- 分段控制 UISegmentedControl
 - 進度條 UIProgressView
 - 環狀進度條 UIActivityIndicatorView
 - 滑桿 UISlider
@@ -18,8 +18,8 @@
 - 網頁 UIWebView
 - 表格 UITableView
 - 網格 UICollectionView
-- 滾動視圖 UIScrollView
 - 搜尋框 UISearchBar
+- 滾動視圖 UIScrollView
 - Master-Detail 模版
 - TabBar 模版
 - 儲存資訊 NSUserDefaults
