@@ -38,7 +38,7 @@
    * [選取日期時間 UIDatePicker](uikit/uidatepicker.md)
    * [選擇器 UIPickerView](uikit/uipickerview.md)
    * [開關 UISwitch](uikit/uiswitch.md)
-   * [多選項 UISegmentedControl](uikit/uisegmentedcontrol.md)
+   * [分段控制 UISegmentedControl](uikit/uisegmentedcontrol.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
