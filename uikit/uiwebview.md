@@ -6,7 +6,7 @@
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUIWebView 。再以[加入檔案](../more/copyfile.md)的方式加入四張按鈕的圖片。
 
-先為`ViewController`建立四個屬性：
+先為`ViewController`建立三個屬性：
 
 ```swift
 class ViewController: UIViewController {
@@ -259,7 +259,7 @@ myWebView.loadHTMLString(content, baseURL: nil)
 
 ![uiwebview03](../images/uikit/uiwebview/uiwebview03.png)
 
-先填入`NSAppTransportSecurity`，再對剛新增的這列按右鍵點選`Add Row`，填入`NSAllowsArbitraryLoads`並設為`YES`，最後會變成如下圖所示：
+先填入`NSAppTransportSecurity`，再對剛新增的這列按右鍵點選`Add Row`，填入`NSAllowsArbitraryLoads`並設為`YES`，最後會變成如下圖所示(填入的值會與最後顯示的字不同，請和下圖裡文字比對是否設定正確)：
 
 ![uiwebview04](../images/uikit/uiwebview/uiwebview04.png)
 
