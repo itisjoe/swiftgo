@@ -180,6 +180,10 @@ UIDatePicker 的`date`、`minimumDate`及`maximumDate`屬性，型別都是`NSDa
 
 前面範例設置的格式為`formatter.dateFormat = "yyyy-MM-dd HH:mm"`，你也可以設置為年月日，像是`formatter.dateFormat = "yyyy 年 MM 月 dd 日"`。
 
+##### Hint
+
+- NSDate 與 NSDateFormatter 都是屬於 Foundation 框架的類別，未來也會使用到一些以 NS 開頭的類別，都是用來執行一些基礎功能的工具。
+
 
 ### 範例
 
