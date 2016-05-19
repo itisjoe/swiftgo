@@ -19,6 +19,7 @@
 - 網格 UICollectionView
 - 搜尋框 UISearchBar
 - 滾動視圖 UIScrollView
+- 多頁面
 - Master-Detail 模版
 - TabBar 模版
 - 儲存資訊 NSUserDefaults
