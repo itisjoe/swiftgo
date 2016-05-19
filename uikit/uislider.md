@@ -25,7 +25,7 @@ let fullScreenSize = UIScreen.mainScreen().bounds.size
 
 ```
 
-先建立一張圖片，以供後續示範使用：
+先在`viewDidLoad()`中建立一張圖片，以供後續示範使用：
 
 ```swift
 // 建立一個 UIImageView
@@ -44,7 +44,7 @@ self.view.addSubview(imageView)
 
 ### 建立 UISlider
 
-接著建立一個 UISlider ：
+接著在`viewDidLoad()`中建立一個 UISlider ：
 
 ```swift
 // 建立一個 UISlider
