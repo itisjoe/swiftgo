@@ -40,6 +40,7 @@
    * [開關 UISwitch](uikit/uiswitch.md)
    * [分段控制 UISegmentedControl](uikit/uisegmentedcontrol.md)
    * [進度條 UIProgressView](uikit/uiprogressview.md)
+   * [滑桿 UISlider](uikit/uislider.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)

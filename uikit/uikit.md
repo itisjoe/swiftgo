@@ -12,7 +12,6 @@
 - 開關 UISwitch
 - 分段控制 UISegmentedControl
 - 進度條 UIProgressView
-- 環狀進度條 UIActivityIndicatorView
 - 滑桿 UISlider
 - 步進器 UIStepper
 - 網頁 UIWebView
