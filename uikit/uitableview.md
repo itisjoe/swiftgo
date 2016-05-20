@@ -71,7 +71,7 @@ UITableView 可以設置為兩種樣式，如下圖，左邊為`.Plain`及右邊
 ![uitableview02](../images/uikit/uitableview/uitableview02.png)
 
 可依照需求設置不同的樣式，本節範例會以`.Grouped`作為示範。
-
+<a name="registerclass"></a>
 接著看到`registerClass()`這個註冊 cell 的方法。要先了解到當 cell 數量超過一個畫面可顯示時，目前存在的 cell 只有畫面上的這些(否則資料有成千上萬時，誰受得了)，當上下滑動時，會隨顯示畫面的不同同時移出並加入 cell，這個動作不是一直建立新的 cell 而是會重複使用( reuse )，所以必須先註冊這個 reuse 的 cell ，辨識名稱設為`"Cell"`，來讓後續顯示時可以使用。
 
 
