@@ -116,7 +116,7 @@ section 的 header 與 footer 都是屬於 UICollectionReusableView 類別，所
 
 前面註冊 cell 時用到的就是自定義的 UICollectionViewCell 類別 **MyCollectionViewCell**，這邊會介紹如何建立。
 
-先以[新增檔案](../more/addfile.md)的方式增加一個新的`.swift`檔案，其中要注意的是，因為是要建立繼承自 UICollectionViewCell 的類別，所以進行到下圖這個步驟時，`Subclass of:`要填寫`UICollectionViewCell`，並將檔案名稱設為`MyCollectionViewCell`：
+先以[新增檔案](../more/addfile.md)的方式增加一個新的檔案，其中要注意的是，因為是要建立繼承自 UICollectionViewCell 的類別，所以進行到下圖這個步驟時，`Subclass of:`要填寫`UICollectionViewCell`，並將檔案名稱設為`MyCollectionViewCell`：
 
 ![uicollectionview02](../images/uikit/uicollectionview/uicollectionview02.png)
 
