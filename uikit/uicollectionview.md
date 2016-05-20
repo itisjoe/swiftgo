@@ -8,7 +8,7 @@ UICollectionView 可以用來表現網格這樣多行多列元件的樣式， iP
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUICollectionView 。
 
-一開始先以[加入檔案](../more/copyfile.md)的方式加入七張的圖片。
+一開始先以[加入檔案](../more/copyfile.md)的方式加入七張示範用的圖片。
 
 首先為`ViewController`建立一個屬性，以及在`viewDidLoad()`中取得螢幕尺寸跟設置底色，以供後續使用，如下：
 
@@ -73,7 +73,7 @@ layout.footerReferenceSize = CGSize(
 
 ### 建立 UICollectionView
 
-緊接著在`viewDidLoad()`裡建立 UICollectionView ，這邊會使用到前面建立的 UICollectionViewFlowLayout：
+緊接著在`viewDidLoad()`裡建立 UICollectionView ，這邊會使用到前面建立的 UICollectionViewFlowLayout (常數`layout`)：
 
 ```swift
 // 建立 UICollectionView
@@ -108,6 +108,8 @@ myCollectionView.dataSource = self
 self.view.addSubview(myCollectionView)
 
 ```
+
+section 的 header 與 footer 都是屬於 UICollectionReusableView 類別，所以註冊時就是使用這個類別註冊。
 
 
 ### 自定義的 UICollectionViewCell 類別
