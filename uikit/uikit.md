@@ -17,7 +17,7 @@
 - 網頁 UIWebView
 - 表格 UITableView
 - 網格 UICollectionView
-- 搜尋框 UISearchBar
+- 搜尋 UISearchController
 - 滾動視圖 UIScrollView
 - 多頁面
 - Master-Detail 模版
