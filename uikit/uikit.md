@@ -18,7 +18,7 @@
 - 表格 UITableView
 - 網格 UICollectionView
 - 搜尋 UISearchController
-- 滾動視圖 UIScrollView
+- 滑動視圖 UIScrollView
 - 多頁面
 - Master-Detail 模版
 - TabBar 模版
