@@ -189,6 +189,164 @@ func scrollViewDidEndZooming(scrollView: UIScrollView,
 
 ### 與 UIPageControl 的綜合應用
 
+UIPageControl 其實就是很常見放在畫面下方的一排圓點點，用來表示目前所在頁數，這個範例會示範一個常用於首次打開應用程式時，新手導覽的功能，分為若干頁，你可以左右滑動來觀看導覽步驟。
+
+以下為這個範例的目標，分為五頁，各放置一個 UILabel 來表示每頁的內容，並使用 UIPageControl 表示目前所在頁數：
+
+![uiscrollview03](../images/uikit/uiscrollview/uiscrollview03.png)
+
+先看一下這個範例的示意圖，整個頁面為 5 個螢幕尺寸大小，可以左右滑動換頁：
+
+![uiscrollview02](../images/uikit/uiscrollview/uiscrollview02.png)
+
+首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExIntroStepByStep 。
+
+一開始先為`ViewController`建立三個屬性：
+
+```swift
+class ViewController: UIViewController {
+    var myScrollview: UIScrollView!
+    var pageControl: UIPageControl!
+    var fullSize :CGSize!
+ 
+    // 省略
+}
+
+```
+
+以及在`viewDidLoad()`中取得螢幕尺寸，以供後續使用，如下：
+
+```swift
+// 取得螢幕的尺寸
+fullSize = UIScreen.mainScreen().bounds.size
+
+```
+
+首先在`viewDidLoad()`中建立一個 UIScrollView ：
+
+```swift
+// 建立 UIScrollView
+myScrollview = UIScrollView()
+
+// 設置尺寸 也就是可見視圖範圍
+myScrollview.frame = CGRect(
+  x: 0, y: 20,
+  width: fullSize.width, height: fullSize.height - 20)
+
+// 實際視圖範圍
+myScrollview.contentSize = CGSize(
+  width: fullSize.width * 5, height: fullSize.height - 20)
+
+// 是否顯示滑動條
+myScrollview.showsHorizontalScrollIndicator = false
+myScrollview.showsVerticalScrollIndicator = false
+
+// 滑動超過範圍時是否使用彈回效果
+myScrollview.bounces = true
+
+// 設置委任對象
+myScrollview.delegate = self
+
+// 以一頁為單位滑動
+myScrollview.pagingEnabled = true
+
+// 加入到畫面中
+self.view.addSubview(myScrollview)
+
+```
+
+接著在`viewDidLoad()`中建立用來顯示頁數的 UIPageControl ：
+
+```swift
+// 建立 UIPageControl 設置位置及尺寸
+pageControl = UIPageControl(frame: CGRect(
+  x: 0, y: 0, width: fullSize.width * 0.85, height: 50))
+pageControl.center = CGPoint(
+  x: fullSize.width * 0.5, y: fullSize.height * 0.85)
+
+// 有幾頁 就是有幾個點點
+pageControl.numberOfPages = 5
+
+// 起始預設的頁數
+pageControl.currentPage = 0
+
+// 目前所在頁數的點點顏色
+pageControl.currentPageIndicatorTintColor =
+  UIColor.blackColor()
+
+// 其餘頁數的點點顏色
+pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+
+// 增加一個值改變時的事件
+pageControl.addTarget(
+  self, 
+  action: #selector(ViewController.pageChanged),
+  forControlEvents: .ValueChanged)
+
+// 加入到基底的視圖中 (不是加到 UIScrollView 裡)
+// 因為比較後面加入 所以會蓋在 UIScrollView 上面
+self.view.addSubview(pageControl)
+
+```
+
+最後在`viewDidLoad()`中加入五個 UILabel 用來代表每個頁面的內容：
+
+```swift
+// 建立 5 個 UILabel 來顯示每個頁面內容
+var myLabel = UILabel()
+for i in 0...4 {
+    myLabel = UILabel(frame: CGRect(
+      x: 0, y: 0, width: fullSize.width, height: 40))
+    myLabel.center = CGPoint(
+      x: fullSize.width * (0.5 + CGFloat(i)),
+      y: fullSize.height * 0.2)
+    myLabel.font = UIFont(name: "Helvetica-Light", size: 48.0)
+    myLabel.textAlignment = .Center
+    myLabel.text = "\(i + 1)"
+    myScrollview.addSubview(myLabel)
+}
+
+```
+
+因為會用到 UIScrollView 委任模式的方法，所以先為`ViewController`加上委任需要的協定：
+
+```swift
+class ViewController: UIViewController, UIScrollViewDelegate {
+  // 省略
+}
+
+```
+
+再在`ViewController`中實作需要的委任方法：
+
+```swift
+// 滑動結束時
+func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    // 左右滑動到新頁時 更新 UIPageControl 顯示的頁數
+    let page = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+    pageControl.currentPage = page
+}
+
+```
+
+最後在`ViewController`中加上點擊 UIPageControl 的點點時執行動作的方法：
+
+```swift
+// 點擊點點換頁
+func pageChanged(sender: UIPageControl) {
+    // 依照目前圓點在的頁數算出位置
+    var frame = myScrollview.frame
+    frame.origin.x = 
+      frame.size.width * CGFloat(sender.currentPage)
+    frame.origin.y = 0
+    
+    // 再將 UIScrollView 滑動到該點
+    myScrollview.scrollRectToVisible(frame, animated:true)
+}
+
+```
+
+以上即為這個範例的內容。
 
 
 ### 範例
