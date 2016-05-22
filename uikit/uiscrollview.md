@@ -13,7 +13,7 @@
 
 ```swift
 class ViewController: UIViewController {
-    var scrollview: UIScrollView!
+    var myScrollview: UIScrollView!
     var fullSize :CGSize!
  
     // 省略
@@ -37,63 +37,64 @@ fullSize = UIScreen.mainScreen().bounds.size
 
 ```swift
 // 建立 UIScrollView
-scrollview = UIScrollView()
+myScrollview = UIScrollView()
 
 // 設置尺寸 也就是可見視圖範圍
-scrollview.frame = CGRect(
+myScrollview.frame = CGRect(
   x: 0, y: 20, width: fullSize.width,
   height: fullSize.height - 20)
 
 // 實際視圖範圍 為 3*2 個螢幕大小
-scrollview.contentSize = CGSize(
+myScrollview.contentSize = CGSize(
   width: fullSize.width * 3,
   height: fullSize.height * 2)
 
 // 是否顯示水平的滑動條
-scrollview.showsHorizontalScrollIndicator = true
+myScrollview.showsHorizontalScrollIndicator = true
 
 // 是否顯示垂直的滑動條
-scrollview.showsVerticalScrollIndicator = true
+myScrollview.showsVerticalScrollIndicator = true
 
 // 滑動條的樣式
-scrollview.indicatorStyle = .Black
+myScrollview.indicatorStyle = .Black
 
 // 是否可以滑動
-scrollview.scrollEnabled = true
+myScrollview.scrollEnabled = true
 
 // 是否可以按狀態列回到最上方
-scrollview.scrollsToTop = false
+myScrollview.scrollsToTop = false
 
 // 是否限制滑動時只能單個方向 垂直或水平滑動
-scrollview.directionalLockEnabled = false
+myScrollview.directionalLockEnabled = false
 
 // 滑動超過範圍時是否使用彈回效果
-scrollview.bounces = true
+myScrollview.bounces = true
 
 // 縮放元件的預設縮放大小
-scrollview.zoomScale = 1.0
+myScrollview.zoomScale = 1.0
 
 // 縮放元件可縮小到的最小倍數
-scrollview.minimumZoomScale = 0.5
+myScrollview.minimumZoomScale = 0.5
 
 // 縮放元件可放大到的最大倍數
-scrollview.maximumZoomScale = 2.0
+myScrollview.maximumZoomScale = 2.0
 
 // 縮放元件縮放時是否在超過縮放倍數後使用彈回效果
-scrollview.bouncesZoom = true
+myScrollview.bouncesZoom = true
 
 // 設置委任對象
-scrollview.delegate = self
+myScrollview.delegate = self
 
 // 起始的可見視圖偏移量 預設為 (0, 0)
 // 設定這個值後 就會將原點滑動至這個點起始
-scrollview.contentOffset = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.5)
+myScrollview.contentOffset = CGPoint(
+  x: fullSize.width * 0.5, y: fullSize.height * 0.5)
 
 // 以一頁為單位滑動
-scrollview.pagingEnabled = false
+myScrollview.pagingEnabled = false
 
 // 加入到畫面中
-self.view.addSubview(scrollview)
+self.view.addSubview(myScrollview)
 
 ```
 
@@ -114,7 +115,7 @@ for i in 0...2 {
           ((CGFloat(i) + 1) * (CGFloat(j) + 1)) / 12.0
         myUIView.backgroundColor = UIColor.init(
           red: color, green: color, blue: color, alpha: 1)
-        scrollview.addSubview(myUIView)
+        myScrollview.addSubview(myUIView)
     }
 }
 
@@ -175,7 +176,7 @@ func scrollViewDidEndZooming(scrollView: UIScrollView,
     // 縮放元件時 會將 contentSize 設為這個元件的尺寸
     // 會導致 contentSize 過小而無法滑動
     // 所以縮放完後再將 contentSize 設回原本大小
-    scrollview.contentSize = CGSize(
+    myScrollview.contentSize = CGSize(
       width: fullSize.width * 3, height: fullSize.height * 2)
 }
 
