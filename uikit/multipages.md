@@ -147,7 +147,7 @@ override func viewDidDisappear(animated: Bool) {
 
 ### 範例
 
-本節範例程式碼放在 [uikit/uitextview](https://github.com/itisjoe/swiftgo_files/tree/master/uikit/uitextview)
+本節範例程式碼放在 [uikit/multipages](https://github.com/itisjoe/swiftgo_files/tree/master/uikit/multipages)
 
 
 
