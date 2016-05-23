@@ -6,7 +6,7 @@
 
 ![multipages01](../images/uikit/multipages/multipages01.png)
 
-首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md)，取名為 ExMultiPages 。
+首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExMultiPages 。
 
 一開始先以[新增檔案](../more/addfile.md)的方式加入三個繼承自 UIViewController 的`.swift`檔案，分別命名為`IntroViewController`、`ArticleViewController`及`ArticleDetailViewController`。
 
@@ -24,7 +24,7 @@ self.view.backgroundColor = UIColor.whiteColor()
 
 ### 切換頁面
 
-首先在`viewDidLoad()`裡建立一個作為標題的 UILabel 與兩個切換頁面用的 UIButton ：
+首先在`ViewController`的`viewDidLoad()`裡建立一個作為標題的 UILabel 與兩個切換頁面用的 UIButton ：
 
 ```swift
 // 頁面標題
