@@ -20,8 +20,8 @@
 - 搜尋 UISearchController
 - 滑動視圖 UIScrollView
 - 多頁面
-- Master-Detail 模版
-- TabBar 模版
+- Master-Detail App
+- Tabbed App
 - 儲存資訊 NSUserDefaults
 - 手勢
 - 簡單動畫
