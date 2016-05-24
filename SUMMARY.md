@@ -48,6 +48,7 @@
    * [搜尋 UISearchController](uikit/uisearchcontroller.md)
    * [滑動視圖 UIScrollView](uikit/uiscrollview.md)
    * [多頁面](uikit/multipages.md)
+   * [導覽控制器 UINavigationController](uikit/uinavigationcontroller.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)

@@ -20,7 +20,7 @@
 - 搜尋 UISearchController
 - 滑動視圖 UIScrollView
 - 多頁面
-- Master-Detail App
+- 導覽控制器 UINavigationController
 - Tabbed App
 - 儲存資訊 NSUserDefaults
 - 手勢
