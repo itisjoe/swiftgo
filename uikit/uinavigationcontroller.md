@@ -2,7 +2,7 @@
 
 前一個章節介紹了如何[在多個頁面間切換](../uikit/multipages.md)，這節接著要介紹一個相當常見的元件：導覽控制器 UINavigationController，可以更為方便的掌控頁面切換。
 
-導覽控制器就像是一個容器，裡面可以用來放置及疊放各個頁面，畫面上方預設會有一個導覽列( Navigation Bar ) ，其中可以放置標題及按鈕，來切換或退出頁面，像是內建的 **設定 App** 就是一個例子就像是一個容器，裡面可以用來放置及疊放各個頁面，畫面上方預設會有一個導覽列( Navigation Bar ) ，其中可以放置標題及按鈕，來切換或退出頁面，像是內建的 **設定 App** 就是一個例子，如下：
+導覽控制器就像是一個容器，裡面可以用來放置及疊放各個頁面，畫面上方預設會有一個導覽列( Navigation Bar ) ，其中可以放置標題及按鈕，來切換或退出頁面，像是內建的 **設定 App** 就是一個例子，如下：
 
 ![uinavigationcontroller01](../images/uikit/uinavigationcontroller/uinavigationcontroller01.png)
 
@@ -63,6 +63,8 @@ func application(application: UIApplication,
 ![uinavigationcontroller05](../images/uikit/uinavigationcontroller/uinavigationcontroller05.png)
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUINavigationController 。
+
+接著以[加入檔案](../more/copyfile.md)的方式加入一張按鈕的圖片。
 
 #### AppDelegate.swift
 
@@ -247,15 +249,15 @@ self.navigationController?.navigationBar.barTintColor =
 self.navigationController?.navigationBar.translucent = false
 
 // 導覽列右邊 UIView
-et myUIView = UIView(frame: CGRect(
+let myUIView = UIView(frame: CGRect(
   x: 0, y: 0, width: 30, height: 30))
 myUIView.backgroundColor = UIColor.purpleColor()
-et rightButton = UIBarButtonItem(customView: myUIView)
+let rightButton = UIBarButtonItem(customView: myUIView)
 // 加到導覽列中
 self.navigationItem.rightBarButtonItem = rightButton
 
 // 建立一個按鈕
-et myButton = UIButton(frame: CGRect(
+let myButton = UIButton(frame: CGRect(
   x: 100, y: 250, width: 120, height: 40))
 myButton.setTitle("回前頁", forState: .Normal)
 myButton.backgroundColor = UIColor.blueColor()
