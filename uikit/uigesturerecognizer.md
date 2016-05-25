@@ -301,6 +301,7 @@ func pan(recognizer:UIPanGestureRecognizer) {
 
 當一個元件接收到手勢動作時，如果這個元件本身沒有可以執行的動作，那它會將手勢傳遞到它的父視圖，如果還是沒有，就會一直往上傳遞，以這邊來說，就是藍色方塊`myUIView`將手勢動作傳遞給父視圖`self.view`，所以仍然會觸發到輕點手勢。
 
+以上就是這個範例的內容。
 
 ### 搭配圖片示範
 
@@ -422,6 +423,8 @@ func rotation(recognizer:UIRotationGestureRecognizer) {
 }
 
 ```
+
+以上就是這個範例的內容。
 
 
 ### 圖片來源
