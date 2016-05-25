@@ -304,7 +304,133 @@ func pan(recognizer:UIPanGestureRecognizer) {
 
 ### 搭配圖片示範
 
+首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExImageUIGestureRecognizer 。
+
+一開始先以[加入檔案](../more/copyfile.md)的方式加入兩張用來縮放與旋轉的圖片。接著為`ViewController`建立三個屬性：
+
+```swift
+class ViewController: UIViewController {
+    var fullSize :CGSize!
+    var myImageView :UIImageView!
+    var anotherImageView :UIImageView!
+ 
+    // 省略
+}
+
+```
+
+以及在`viewDidLoad()`中取得螢幕尺寸，以供後續使用，如下：
+
+```swift
+// 取得螢幕的尺寸
+fullSize = UIScreen.mainScreen().bounds.size
+
+```
+
+這個範例用到的縮放及旋轉手勢，都需要兩指操作，所以只能在實機上測試。
+
+#### Pinch 縮放
+
+以下先在`viewDidLoad()`加入程式：
+
+```swift
+// 建立一個用來縮放的圖片
+myImageView = UIImageView(image: UIImage(named: "01.jpg"))
+myImageView.frame = CGRect(
+  x: 50, y: 50, width: 200, height: 200)
+self.view.addSubview(myImageView)
+
+let pinch = UIPinchGestureRecognizer(
+  target:self,
+  action:#selector(ViewController.pinch(_:)))
+
+self.view.addGestureRecognizer(pinch)
+
+```
+
+接著則是在`ViewController`加上觸發手勢後執行動作的方法：
+
+```swift
+// 觸發縮放手勢後 執行的動作
+func pinch(recognizer:UIPinchGestureRecognizer) {
+    if recognizer.state == .Began {
+        print("開始縮放")
+    } else if recognizer.state == .Changed {
+        // 圖片原尺寸
+        let frm = myImageView.frame
+        
+        // 縮放比例
+        let scale = recognizer.scale
+        
+        // 目前圖片寬度
+        let w = frm.width
+        
+        // 目前圖片高度
+        let h = frm.height
+        
+        // 縮放比例的限制為 0.5 ~ 2 倍
+        if w * scale > 100 && w * scale < 400 {
+            myImageView.frame = CGRect(
+              x: frm.origin.x, y: frm.origin.y,
+              width: w * scale, height: h * scale)
+        }
+    } else if recognizer.state == .Ended {
+        print("結束縮放")
+    }
+    
+}
+
+```
+
+#### Rotation 旋轉
+
+以下先在`viewDidLoad()`加入程式：
+
+```swift
+// 建立一個用來旋轉的圖片
+anotherImageView = UIImageView(
+  image: UIImage(named: "02.jpg"))
+anotherImageView.frame = CGRect(
+  x: 0, y: 0, width: 200, height: 200)
+anotherImageView.center = CGPoint(
+  x: fullSize.width * 0.5, y: fullSize.height * 0.75)
+self.view.addSubview(anotherImageView)
+
+let rotation = UIRotationGestureRecognizer(
+  target: self, 
+  action: #selector(ViewController.rotation(_:)))
+
+self.view.addGestureRecognizer(rotation)
+
+```
+
+接著則是在`ViewController`加上觸發手勢後執行動作的方法：
+
+```swift
+// 觸發旋轉手勢後 執行的動作
+func rotation(recognizer:UIRotationGestureRecognizer) {
+    // 弧度
+    let radian = recognizer.rotation
+    
+    // 旋轉的弧度轉換為角度
+    let angle = radian * (180 / CGFloat(M_PI))
+    
+    anotherImageView.transform =
+      CGAffineTransformMakeRotation(radian)
+    
+    print("旋轉角度： \(angle)")
+}
+
+```
 
 
+### 圖片來源
 
+- https://www.flickr.com/photos/boklm/11908643634/
+- https://www.flickr.com/photos/53812099@N04/11844277903/
+
+
+### 範例
+
+本節範例程式碼放在 [uikit/uigesturerecognizer](https://github.com/itisjoe/swiftgo_files/tree/master/uikit/uigesturerecognizer)
 
