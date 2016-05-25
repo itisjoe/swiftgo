@@ -2,7 +2,7 @@
 
 UIKit 提供了六種不同的手勢可供監聽，分別為** Tap 輕點**、** Long Press 長按**、** Swipe 滑動**、** Pan 拖曳**、** Pinch 縮放**及**Rotation 旋轉**，你可以為元件加上這些手勢的監聽，並執行觸發時的動作。
 
-其實在前面介紹過的[輸入多行文字 UITextView](../uikit/uitextview.md)就已經有使用過了，當時是加上輕點手勢來關閉鍵盤，這節會完整的介紹支援的手勢。
+其實在前面介紹的[輸入多行文字 UITextView](../uikit/uitextview.md)就已經有使用過了，當時是加上輕點手勢來關閉鍵盤，這節會完整的介紹支援的手勢。
 
 這節會分開為兩個應用程式作為示範，第一個會以單純的 UIView 示範** Tap 輕點**、** Long Press 長按**、** Swipe 滑動**及** Pan 拖曳**，第二個則是搭配圖片示範** Pinch 縮放**及** Rotation 旋轉**
 
@@ -116,7 +116,9 @@ func findFingersPositon(recognizer:UITapGestureRecognizer) {
 
 ```swift
 // 長按
-let longPress = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(_:)))
+let longPress = UILongPressGestureRecognizer(
+  target: self, 
+  action: #selector(ViewController.longPress(_:)))
 
 // 為視圖加入監聽手勢
 self.view.addGestureRecognizer(longPress)
@@ -298,6 +300,10 @@ func pan(recognizer:UIPanGestureRecognizer) {
 上面四個手勢都加上去後，你可能會不經意發現，在藍色方塊上雙指輕點或是單指輕點兩下，仍然會觸發到輕點的手勢，這是因為監聽手勢會傳遞。
 
 當一個元件接收到手勢動作時，如果這個元件本身沒有可以執行的動作，那它會將手勢傳遞到它的父視圖，如果還是沒有，就會一直往上傳遞，以這邊來說，就是藍色方塊`myUIView`將手勢動作傳遞給父視圖`self.view`，所以仍然會觸發到輕點手勢。
+
+
+### 搭配圖片示範
+
 
 
 
