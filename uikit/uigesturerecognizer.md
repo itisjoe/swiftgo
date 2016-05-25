@@ -38,7 +38,7 @@ fullSize = UIScreen.mainScreen().bounds.size
 
 #### Tap 輕點
 
-Tap 輕點手勢可以支援單指與多指，但如果要測試兩指以上的動作，只能使用實機測試。以下先在`viewDidLoad()`加入程式，示範單指與兩指的手勢：
+Tap 輕點手勢可以支援單指與多指，請在實機上測試或是模擬機上按住`option`鍵，會出現兩個灰色圈圈，即可模擬兩指操作。以下先在`viewDidLoad()`加入程式，示範單指與兩指的手勢：
 
 ```swift
 // 雙指輕點 (雙指以上手勢只能用實機測試)
@@ -305,6 +305,10 @@ func pan(recognizer:UIPanGestureRecognizer) {
 
 ### 搭配圖片示範
 
+這個範例的目標如下，一張圖片可以縮放，另一張圖片可以旋轉：
+
+![uigesturerecognizer02](../images/uikit/uigesturerecognizer/uigesturerecognizer02.png)
+
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExImageUIGestureRecognizer 。
 
 一開始先以[加入檔案](../more/copyfile.md)的方式加入兩張用來縮放與旋轉的圖片。接著為`ViewController`建立三個屬性：
@@ -328,7 +332,7 @@ fullSize = UIScreen.mainScreen().bounds.size
 
 ```
 
-這個範例用到的縮放及旋轉手勢，都需要兩指操作，所以只能在實機上測試。
+這個範例用到的縮放及旋轉手勢，都需要兩指操作，請在實機上測試或是模擬機上按住`option`鍵，會出現兩個灰色圈圈，即可模擬兩指操作。
 
 #### Pinch 縮放
 
