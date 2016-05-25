@@ -6,7 +6,7 @@
 
 ![uinavigationcontroller01](../images/uikit/uinavigationcontroller/uinavigationcontroller01.png)
 
-
+<a name="handmade"></a>
 ### 手動建立頁面
 
 在講導覽控制器之前，要先介紹如何手動建立頁面。最一開始有提過這本書的內容都是以純程式碼為主，但實際上每次[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)時，這個專案已經都內建了一個 Storyboard 以及相關的設定，這小節會介紹如何移除掉內建的 Storyboard 並手動建立頁面。
@@ -64,7 +64,7 @@ func application(application: UIApplication,
 
 首先在 Xcode 裡，[新建一個 **Single View Application** 類型的專案](../more/open_project.md#create_a_new_project)，取名為 ExUINavigationController 。
 
-接著以[加入檔案](../more/copyfile.md)的方式加入一張按鈕的圖片。
+接著先以[新增檔案](../more/addfile.md)的方式加入兩個繼承自 UIViewController 的`.swift`檔案，分別命名為`ArticleViewController`及`SettingViewController`。以及以[加入檔案](../more/copyfile.md)的方式加入一張按鈕的圖片。
 
 #### AppDelegate.swift
 

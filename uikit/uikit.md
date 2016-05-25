@@ -21,8 +21,8 @@
 - 滑動視圖 UIScrollView
 - 多頁面
 - 導覽控制器 UINavigationController
-- Tabbed App
-- 儲存資訊 NSUserDefaults
+- 標籤列控制器 UITabBarController
 - 手勢
 - 簡單動畫
+- 儲存資訊 NSUserDefaults
 
