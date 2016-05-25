@@ -50,6 +50,7 @@
    * [多頁面](uikit/multipages.md)
    * [導覽控制器 UINavigationController](uikit/uinavigationcontroller.md)
    * [標籤列控制器 UITabBarController](uikit/uitabbarcontroller.md)
+   * [手勢 UIGestureRecognizer](uikit/uigesturerecognizer.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
