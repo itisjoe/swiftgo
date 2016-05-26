@@ -23,6 +23,6 @@
 - 導覽控制器 UINavigationController
 - 標籤列控制器 UITabBarController
 - 手勢 UIGestureRecognizer
-- 簡單動畫
+- 簡單動畫 Animations
 - 儲存資訊 NSUserDefaults
 
