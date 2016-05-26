@@ -14,7 +14,7 @@ iOS 系統提供儲存資訊的方式有很多種，最為簡單的就是 NSUser
 
 請依照之前學習過的內容，在`ViewController`的`viewDidLoad()`方法中，設置導覽列、輸入框以及按鈕，這邊便省略這個部分，如有需要詳細內容請參考節末的完整範例程式碼。
 
-除此之外，為了這節範例所需，首先為 ViewController 建立一個屬性`myUserDefaults`：
+除此之外，為了這節範例所需，會為 ViewController 建立一個屬性`myUserDefaults`：
 
 ```swift
 class ViewController: UIViewController {
@@ -99,6 +99,4 @@ if let info = myUserDefaults.objectForKey("info") as? String {
 ### 範例
 
 本節範例程式碼放在 [uikit/nsuserdefaults](https://github.com/itisjoe/swiftgo_files/tree/master/uikit/nsuserdefaults)
-
-
 
