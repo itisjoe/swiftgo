@@ -115,7 +115,7 @@ func AnimateBounds() {
 有兩個參數：
 
 - 第一個參數為整個動畫執行的時間，單位為秒。
-- 第二個參數則是一個閉包( closure )，放置要達成的動畫結果，這邊將尺寸`self.myLabel.bounds`設置為前面取得的`newSize`。因為改變尺寸是以原點為準，所以 center 會變，這邊再把 center 設置為原本的值`originCenter`。
+- 第二個參數則是一個閉包( closure )，放置要達成的動畫結果，這邊將尺寸`self.myLabel.bounds`設置為前面取得的`newSize`，動畫的過程便會將視圖在執行時間內，漸進地變大(或變小)尺寸。因為改變尺寸是以原點為準，所以 center 會變，這邊再把 center 設置為原本的值`originCenter`。
 
 最後使用`self.updateIndex()`方法來讓示範的值可以循環使用，內容請參考節末的完整範例程式碼，稍後的範例就不再複述。
 
