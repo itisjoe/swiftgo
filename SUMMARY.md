@@ -52,6 +52,7 @@
    * [標籤列控制器 UITabBarController](uikit/uitabbarcontroller.md)
    * [手勢 UIGestureRecognizer](uikit/uigesturerecognizer.md)
    * [簡單動畫 Animations](uikit/animations.md)
+   * [儲存資訊 NSUserDefaults](uikit/nsuserdefaults.md)
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
