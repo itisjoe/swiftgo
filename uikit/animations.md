@@ -207,7 +207,7 @@ func AnimateCenter() {
 transform 可以平移、縮放或旋轉視圖，這邊示範旋轉視圖，按下 transform 按鈕後執行動作的方法如下：
 
 ```swift
-func AnimateTransForm() {
+func AnimateTransform() {
     UIView.animateWithDuration(0.5, animations: {
         self.myLabel.transform =
           self.arrTransform[self.indexTransform]
