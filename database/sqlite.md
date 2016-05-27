@@ -86,7 +86,7 @@ let sqlitePath = NSHomeDirectory() + "/Documents/sqlite3.db"
 
 `NSHomeDirectory()`會取得 iPhone 為這個應用程式設置可供儲存資訊的路徑，而其內的 Documents 目錄則是開放給開發者儲存檔案的路徑，有任何需要儲存的檔案都是放在這裡，而`sqlite3.db`則是這個資料庫檔案名稱，你也可以命名為`db.sqlite`之類，其他可供辨識的檔案名稱。
 
-如果沒有這個檔案，系統會嘗試自動建立起來。
+如果沒有這個檔案，系統會自動嘗試建立起來。
 
 #### 開啟資料庫連線
 
