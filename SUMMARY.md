@@ -53,6 +53,9 @@
    * [手勢 UIGestureRecognizer](uikit/uigesturerecognizer.md)
    * [簡單動畫 Animations](uikit/animations.md)
    * [儲存資訊 NSUserDefaults](uikit/nsuserdefaults.md)
+* [資料庫](database.md)
+   * [SQLite](sqlite.md)
+   * Core Data
 * [補充](more/more.md)
    * [Xcode 介紹](more/xcode_intro.md)
        * [安裝 Xcode](more/xcode_install.md)
