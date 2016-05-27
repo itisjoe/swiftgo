@@ -101,7 +101,7 @@ if sqlite3_open(sqlitePath, &db) == SQLITE_OK {
 
 ```
 
-使用`sqlite3_open()`函式來連線，請注意第二個參數前面必須加上`&`，這是一個指標的概念(與前面提過的[輸入輸出參數 In-Out Parameters ](../ch1/functions.md#inout)類似)，函式內使用的就是傳入參數`db`本身，所以稍後操作資料庫時可以直接使用這個`db`變數。
+使用`sqlite3_open()`函式來連線，請注意第二個參數前面必須加上`&`，這是一個指標的概念(與前面章節提過的[輸入輸出參數 In-Out Parameters ](../ch1/functions.md#inout)類似)，函式內使用的就是傳入參數`db`本身，所以稍後操作資料庫時可以直接使用這個`db`變數。
 
 #### 建立資料表
 
@@ -125,7 +125,7 @@ if sqlite3_exec(db, sql.UTF8String, nil, nil, nil)
 
 ##### Hint
 
-- 如果要查看模擬器的 SQLite 檔案，可以使用 Mac 的 Firefox 瀏覽器的一個套件[ SQLite Manager ](https://addons.mozilla.org/zh-tw/firefox/addon/sqlite-manager/)，它可以讓你檢視與編輯本機上的 SQLite 檔案。實際檔案路徑可將前面提過的`sqlitePath`印出來即可。
+- 如果要查看模擬器的 SQLite 檔案，可以使用桌機的 Firefox 瀏覽器的一個套件[ SQLite Manager ](https://addons.mozilla.org/zh-tw/firefox/addon/sqlite-manager/)，它可以讓你檢視與編輯本機上的 SQLite 檔案。實際檔案路徑可藉由將前面提過的`sqlitePath`印出來取得。
 
 #### 新增資料
 
@@ -151,7 +151,7 @@ if sqlite3_prepare_v2(
 
 `statement`要再當做`sqlite3_step()`函式的參數傳入，如果返回`SQLITE_DONE`，則是表示新增成功。
 
-最後要使用`sqlite3_finalize()`函式，來釋放掉`statement`，以免發生記憶體洩漏的問題。
+最後要使用`sqlite3_finalize()`函式來釋放掉`statement`，以免發生記憶體洩漏的問題。
 
 #### 讀取資料
 
