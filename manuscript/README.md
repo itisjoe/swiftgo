@@ -1,5 +1,6 @@
 Swift 起步走
 =======
+
 v1.0.0
 
 本書內容包含：
@@ -97,5 +98,5 @@ v1.0.0
 
 下載方式請點擊該頁面右上方` Clone or download `，接著點擊`Download ZIP`，如下圖：
 
-![introduction01](./images/introduction/introduction01.png)
+![introduction01](images/introduction/introduction01.png)
 
