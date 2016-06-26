@@ -1,5 +1,5 @@
 README.md
 ch1/ch1.md
-	ch1/basics.md
-	ch1/types.md
+- ch1/basics.md
+- ch1/types.md
 
