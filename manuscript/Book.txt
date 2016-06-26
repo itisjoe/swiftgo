@@ -1,5 +1,10 @@
 README.md
 ch1/ch1.md
-- ch1/basics.md
-- ch1/types.md
+ch1/basics.md
+ch1/basic_operators.md
+ch1/strings_characters.md
+ch1/collection_types.md
+ch1/control_flow.md
+ch1/functions.md
+ch1/closures.md
 
