@@ -1,0 +1,1552 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>錯誤處理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="type-casting.html" />
+    
+    
+    <link rel="prev" href="optional-chaining.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch1/ch1.html">
+            
+                <a href="../ch1/ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../ch1/basics.html">
+            
+                <a href="../ch1/basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../ch1/types.html">
+            
+                <a href="../ch1/types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../ch1/basic_operators.html">
+            
+                <a href="../ch1/basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../ch1/strings_characters.html">
+            
+                <a href="../ch1/strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../ch1/collection_types.html">
+            
+                <a href="../ch1/collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../ch1/control_flow.html">
+            
+                <a href="../ch1/control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../ch1/functions.html">
+            
+                <a href="../ch1/functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../ch1/closures.html">
+            
+                <a href="../ch1/closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch2.html">
+            
+                <a href="ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="enumerations.html">
+            
+                <a href="enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="classes_structures.html">
+            
+                <a href="classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="properties.html">
+            
+                <a href="properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="subscripts.html">
+            
+                <a href="subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="inheritance.html">
+            
+                <a href="inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="initialization_deinitialization.html">
+            
+                <a href="initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="arc.html">
+            
+                <a href="arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="optional-chaining.html">
+            
+                <a href="optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.10" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="type-casting.html">
+            
+                <a href="type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="nested-types.html">
+            
+                <a href="nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="extensions.html">
+            
+                <a href="extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="protocols.html">
+            
+                <a href="protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="generics.html">
+            
+                <a href="generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="access-control.html">
+            
+                <a href="access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../uikit/uikit.html">
+            
+                <a href="../uikit/uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../uikit/uikit_intro.html">
+            
+                <a href="../uikit/uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../uikit/uilabel.html">
+            
+                <a href="../uikit/uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../uikit/uitextfield.html">
+            
+                <a href="../uikit/uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../uikit/uitextview.html">
+            
+                <a href="../uikit/uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../uikit/uibutton.html">
+            
+                <a href="../uikit/uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../uikit/uialertcontroller.html">
+            
+                <a href="../uikit/uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../uikit/uiimageview.html">
+            
+                <a href="../uikit/uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../uikit/uidatepicker.html">
+            
+                <a href="../uikit/uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../uikit/uipickerview.html">
+            
+                <a href="../uikit/uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../uikit/uiswitch.html">
+            
+                <a href="../uikit/uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../uikit/uisegmentedcontrol.html">
+            
+                <a href="../uikit/uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../uikit/uiprogressview.html">
+            
+                <a href="../uikit/uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../uikit/uislider.html">
+            
+                <a href="../uikit/uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../uikit/uistepper.html">
+            
+                <a href="../uikit/uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../uikit/uiwebview.html">
+            
+                <a href="../uikit/uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../uikit/uitableview.html">
+            
+                <a href="../uikit/uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../uikit/uicollectionview.html">
+            
+                <a href="../uikit/uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../uikit/uisearchcontroller.html">
+            
+                <a href="../uikit/uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../uikit/uiscrollview.html">
+            
+                <a href="../uikit/uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../uikit/multipages.html">
+            
+                <a href="../uikit/multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../uikit/uinavigationcontroller.html">
+            
+                <a href="../uikit/uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../uikit/uitabbarcontroller.html">
+            
+                <a href="../uikit/uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../uikit/uigesturerecognizer.html">
+            
+                <a href="../uikit/uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../uikit/animations.html">
+            
+                <a href="../uikit/animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../uikit/userdefaults.html">
+            
+                <a href="../uikit/userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../database/sqlite.html">
+            
+                <a href="../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../database/coredata.html">
+            
+                <a href="../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps/apps.html">
+            
+                <a href="../apps/apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../apps/todo/todo.html">
+            
+                <a href="../apps/todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../apps/todo/intro.html">
+            
+                <a href="../apps/todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../apps/todo/settings.html">
+            
+                <a href="../apps/todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../apps/todo/sound.html">
+            
+                <a href="../apps/todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../apps/todo/edituitableview.html">
+            
+                <a href="../apps/todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apps/taipeitravel/taipeitravel.html">
+            
+                <a href="../apps/taipeitravel/taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../apps/taipeitravel/intro.html">
+            
+                <a href="../apps/taipeitravel/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                <a href="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../apps/taipeitravel/map.html">
+            
+                <a href="../apps/taipeitravel/map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../apps/money/money.html">
+            
+                <a href="../apps/money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../apps/money/intro.html">
+            
+                <a href="../apps/money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../more/more.html">
+            
+                <a href="../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../more/xcode_intro.html">
+            
+                <a href="../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../more/xcode_install.html">
+            
+                <a href="../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../more/open_playground.html">
+            
+                <a href="../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../more/open_project.html">
+            
+                <a href="../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../more/interface_intro.html">
+            
+                <a href="../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../more/addfile.html">
+            
+                <a href="../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../more/copyfile.html">
+            
+                <a href="../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../more/deletefile.html">
+            
+                <a href="../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../more/addframework.html">
+            
+                <a href="../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../more/simulator.html">
+            
+                <a href="../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../more/hotkey.html">
+            
+                <a href="../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../more/keywords.html">
+            
+                <a href="../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../more/camel_case_naming.html">
+            
+                <a href="../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >錯誤處理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x932F;&#x8AA4;&#x8655;&#x7406;">&#x932F;&#x8AA4;&#x8655;&#x7406;</h1>
+<ul>
+<li><a href="#representing_and_Throwing_errors">&#x932F;&#x8AA4;&#x7684;&#x63CF;&#x8FF0;&#x8207;&#x62CB;&#x51FA;</a></li>
+<li><a href="#throwing_function">&#x4F7F;&#x7528;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x50B3;&#x905E;&#x932F;&#x8AA4;</a></li>
+<li><a href="#error_hadle">&#x932F;&#x8AA4;&#x7684;&#x6355;&#x7372;&#x53CA;&#x8655;&#x7406;</a></li>
+<li><a href="#optional_value">&#x8F49;&#x63DB;&#x932F;&#x8AA4;&#x70BA;&#x53EF;&#x9078;&#x503C;</a></li>
+<li><a href="#disabling_error_propagation">&#x7981;&#x7528;&#x932F;&#x8AA4;&#x50B3;&#x905E;</a></li>
+<li><a href="#defer">&#x5FC5;&#x5B9A;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;&#x5340;&#x584A;</a></li>
+</ul>
+<p>&#x7A0B;&#x5F0F;&#x904B;&#x884C;&#x4E2D;&#xFF0C;&#x6709;&#x6642;&#x6703;&#x9047;&#x5230;&#x932F;&#x8AA4;&#x9700;&#x8981;&#x8655;&#x7406;&#xFF0C;&#x50CF;&#x662F;&#x9700;&#x8981;&#x8B80;&#x53D6;&#x4E00;&#x500B;&#x6A94;&#x6848;&#xFF0C;&#x4F46;&#x6A94;&#x6848;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x662F;&#x6C92;&#x6709;&#x8B80;&#x53D6;&#x6B0A;&#x9650;&#xFF0C;&#x9084;&#x6709;&#x50CF;&#x662F;&#x4E00;&#x500B;&#x8CFC;&#x7269;&#x8ECA;&#x9700;&#x8981;&#x9032;&#x884C;&#x696D;&#x52D9;&#x908F;&#x8F2F;&#x4E0A;&#x7684;&#x5224;&#x65B7;&#xFF0C;&#x7D50;&#x5E33;&#x524D;&#x8981;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x5546;&#x54C1;&#x6216;&#x662F;&#x8D85;&#x904E;&#x6578;&#x91CF;&#x9650;&#x5236;&#x7B49;&#x7B49;&#x3002;&#x5C0D;&#x6B64; Swift &#x63D0;&#x4F9B;&#x4E86;&#x5B8C;&#x6574;&#x7684;&#x5C0D;&#x65BC;&#x932F;&#x8AA4;&#x7684;&#x62CB;&#x51FA;&#x3001;&#x6355;&#x7372;&#x3001;&#x50B3;&#x905E;&#x53CA;&#x8655;&#x7406;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<p><a id="representing_and_Throwing_errors"></a></p>
+<h3 id="&#x932F;&#x8AA4;&#x7684;&#x63CF;&#x8FF0;&#x8207;&#x62CB;&#x51FA;">&#x932F;&#x8AA4;&#x7684;&#x63CF;&#x8FF0;&#x8207;&#x62CB;&#x51FA;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x5011;&#x5FC5;&#x9808;&#x5B9A;&#x7FA9;&#x4E00;&#x7D44;<strong>&#x932F;&#x8AA4;&#x63CF;&#x8FF0;</strong>&#xFF0C;&#x4F86;&#x8B93;&#x7A0B;&#x5F0F;&#x4E2D;&#x9047;&#x5230;&#x932F;&#x8AA4;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x77E5;&#x9053;&#x7576;&#x524D;&#x662F;&#x9047;&#x5230;&#x4E86;&#x4EC0;&#x9EBC;&#x932F;&#x8AA4;&#xFF0C;&#x4EE5;&#x53CA;&#x5404;&#x81EA;&#x5339;&#x914D;&#x5F8C;&#x7E8C;&#x7684;&#x8655;&#x7406;&#x3002;Swift &#x4E2D;&#x901A;&#x5E38;&#x662F;&#x4F7F;&#x7528;&#x4E00;&#x500B;&#x9075;&#x5FAA;<code>Error</code>&#x5354;&#x5B9A;(<code>protocol</code>)&#x7684;&#x5217;&#x8209;&#x4F86;&#x8868;&#x793A;&#x4E00;&#x7D44;&#x932F;&#x8AA4;&#x63CF;&#x8FF0;(<code>Error</code>&#x662F;&#x4E00;&#x500B;&#x7A7A;&#x7684;&#x5354;&#x5B9A;&#xFF0C;&#x53EA;&#x662F;&#x70BA;&#x4E86;&#x544A;&#x8A34; Swift &#x9019;&#x500B;&#x5217;&#x8209;&#x662F;&#x7528;&#x4F86;&#x8868;&#x793A;&#x932F;&#x8AA4;&#x63CF;&#x8FF0;)&#x3002;</p>
+<p>&#x5F8C;&#x9762;&#x7AE0;&#x7BC0;&#x6703;&#x6B63;&#x5F0F;&#x4ECB;&#x7D39;<a href="protocols.html">&#x5354;&#x5B9A;</a>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#x70BA;&#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x5B9A;&#x7FA9;&#x4E86;&#x4E00;&#x7D44;<strong>&#x932F;&#x8AA4;&#x63CF;&#x8FF0;</strong>&#x7684;&#x5217;&#x8209;&#xFF0C;&#x6210;&#x54E1;&#x4F9D;&#x5E8F;&#x70BA;&#xFF1A;</p>
+<ul>
+<li><strong>&#x7121;&#x6B64;&#x5546;&#x54C1;</strong></li>
+<li><strong>&#x91D1;&#x984D;&#x4E0D;&#x8DB3;</strong>(&#x6709;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x70BA;&#x9084;&#x9700;&#x8981;&#x88DC;&#x8DB3;&#x591A;&#x5C11;&#x9322;&#x5E63;)</li>
+<li><strong>&#x5546;&#x54C1;&#x5DF2;&#x8CE3;&#x5149;</strong></li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">VendingMachineError</span>: <span class="hljs-title">Error</span> </span>{
+    <span class="hljs-keyword">case</span> invalidSelection
+    <span class="hljs-keyword">case</span> insufficientFunds(coinsNeeded: <span class="hljs-type">Int</span>)
+    <span class="hljs-keyword">case</span> outOfStock
+}
+</code></pre>
+<p>&#x7576;&#x9047;&#x5230;&#x4E00;&#x500B;&#x932F;&#x8AA4;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x6211;&#x5011;&#x6703;&#x8868;&#x793A;&#x9019;&#x908A;&#x6709;&#x4E00;&#x500B;&#x932F;&#x8AA4;&#x767C;&#x751F;&#xFF0C;&#x7136;&#x5F8C;&#x6703;&#x5C07;&#x9019;&#x500B;&#x932F;&#x8AA4;<strong>&#x62CB;&#x51FA;</strong>&#xFF0C;&#x5F8C;&#x7E8C;&#x518D;&#x7531;&#x81EA;&#x5DF1;&#x5B9A;&#x7FA9;&#x8655;&#x7406;&#x65B9;&#x5F0F;&#x6216;&#x4EA4;&#x7531; Swift &#x81EA;&#x52D5;&#x8655;&#x7406;&#x3002;Swift &#x4E2D;&#x4F7F;&#x7528;<code>throw</code>&#x8A9E;&#x53E5;&#x4F86;&#x62CB;&#x51FA;&#x4E00;&#x500B;&#x932F;&#x8AA4;&#x3002;&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#x8868;&#x793A;&#x62CB;&#x51FA;&#x4E00;&#x500B;<strong>&#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x9084;&#x9700;&#x8981;&#x88DC;&#x8DB3; 3 &#x500B;&#x9322;&#x5E63;</strong>&#x7684;&#x932F;&#x8AA4;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">throw</span> <span class="hljs-type">VendingMachineError</span>.insufficientFunds(coinsNeeded: <span class="hljs-number">3</span>)
+</code></pre>
+<p><a id="throwing_function"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x50B3;&#x905E;&#x932F;&#x8AA4;">&#x4F7F;&#x7528;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x50B3;&#x905E;&#x932F;&#x8AA4;</h3>
+<p>&#x524D;&#x9762;&#x8AAA;&#x660E;&#x4E86;&#x5982;&#x4F55;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#xFF0C;&#x63A5;&#x8457;&#x6211;&#x5011;&#x5FC5;&#x9808;&#x8A2D;&#x8A08;&#x4E00;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x5176;&#x5167;&#x90E8;&#x6703;&#x7D93;&#x904E;&#x908F;&#x8F2F;&#x5224;&#x65B7;&#x662F;&#x5426;&#x767C;&#x751F;&#x7570;&#x5E38;&#x6216;&#x932F;&#x8AA4;&#xFF0C;&#x7576;&#x767C;&#x751F;&#x6642;&#x4FBF;&#x6703;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#x3002;Swift &#x4F7F;&#x7528;<code>throws</code>&#x95DC;&#x9375;&#x5B57;&#x4F86;&#x6A19;&#x8A18;&#x51FD;&#x5F0F;&#xFF0C;&#x7A31;&#x5176;&#x70BA;<strong>&#x62CB;&#x51FA;&#x51FD;&#x5F0F;</strong>(<code>throwing function</code>)&#xFF0C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> &#x51FD;&#x5F0F;&#x540D;&#x7A31;<span class="hljs-params">()</span></span> <span class="hljs-keyword">throws</span> -&gt; &#x8FD4;&#x56DE;&#x503C;&#x578B;&#x5225; {
+    &#x5167;&#x90E8;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+}
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x4E2D;&#x7684;&#x62CB;&#x51FA;(<code>throw</code>)&#x6709;&#x9EDE;&#x985E;&#x4F3C;<code>return</code>&#xFF0C;&#x56E0;&#x70BA;&#x62CB;&#x51FA;&#x4E00;&#x500B;&#x932F;&#x8AA4;&#x8868;&#x793A;&#x4E00;&#x500B;&#x7570;&#x5E38;&#x6216;&#x932F;&#x8AA4;&#x767C;&#x751F;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6B63;&#x5E38;&#x7684;&#x57F7;&#x884C;&#x6D41;&#x7A0B;&#x6703;&#x7ACB;&#x5373;&#x4E2D;&#x6B62;&#xFF0C;&#x5176;&#x5F8C;&#x7684;&#x7A0B;&#x5F0F;&#x90FD;&#x4E0D;&#x6703;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#xFF0C;&#x6703;&#x76F4;&#x63A5;&#x50B3;&#x905E;&#x81F3;&#x8655;&#x7406;&#x932F;&#x8AA4;&#x7684;&#x5730;&#x65B9;&#x7E7C;&#x7E8C;&#x3002;</li>
+<li>&#x53EA;&#x6709;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x53EF;&#x4EE5;&#x50B3;&#x905E;&#x932F;&#x8AA4;&#x3002;&#x4EFB;&#x4F55;&#x5728;&#x4E00;&#x500B;&#x975E;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x4E2D;&#x62CB;&#x51FA;&#x7684;&#x932F;&#x8AA4;&#x90FD;&#x5FC5;&#x9808;&#x5728;&#x8A72;&#x51FD;&#x5F0F;&#x5167;&#x90E8;&#x8655;&#x7406;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x7684;&#x985E;&#x5225;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5148;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x7D50;&#x69CB;&#x4F86;&#x8868;&#x793A;&#x4E00;&#x500B;&#x5546;&#x54C1;&#x7684;&#x5167;&#x5BB9; &#x5206;&#x5225;&#x70BA;&#x5546;&#x54C1;&#x7684;&#x50F9;&#x9322;&#x53CA;&#x6578;&#x91CF;</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">var</span> price: <span class="hljs-type">Int</span>
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">count</span>: <span class="hljs-type">Int</span>
+}
+
+<span class="hljs-comment">// &#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x7684;&#x985E;&#x5225;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VendingMachine</span> </span>{
+    <span class="hljs-comment">// &#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x5167;&#x7684;&#x5546;&#x54C1;</span>
+    <span class="hljs-keyword">var</span> inventory = [
+        <span class="hljs-string">&quot;&#x53EF;&#x6A02;&quot;</span>: <span class="hljs-type">Item</span>(price: <span class="hljs-number">25</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">4</span>),
+        <span class="hljs-string">&quot;&#x6D0B;&#x828B;&#x7247;&quot;</span>: <span class="hljs-type">Item</span>(price: <span class="hljs-number">20</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">7</span>),
+        <span class="hljs-string">&quot;&#x5DE7;&#x514B;&#x529B;&quot;</span>: <span class="hljs-type">Item</span>(price: <span class="hljs-number">35</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">11</span>)
+    ]
+
+    <span class="hljs-comment">// &#x76EE;&#x524D;&#x5DF2;&#x6295;&#x5165;&#x4E86;&#x591A;&#x5C11;&#x9322;&#x5E63; &#x9810;&#x8A2D;&#x503C;&#x70BA; 0</span>
+    <span class="hljs-keyword">var</span> coinsDeposited = <span class="hljs-number">0</span>
+
+    <span class="hljs-comment">// &#x6240;&#x6709;&#x5224;&#x65B7;&#x932F;&#x8AA4;&#x7684;&#x908F;&#x8F2F;&#x90FD;&#x901A;&#x904E;&#x5F8C; &#x78BA;&#x5B9A;&#x8CFC;&#x8CB7;&#x5546;&#x54C1;&#x7684;&#x52D5;&#x4F5C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">dispenseSnack</span><span class="hljs-params">(snack: String)</span></span> {
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Dispensing <span class="hljs-subst">\(snack)</span>&quot;</span>)
+    }
+
+    <span class="hljs-comment">// &#x8CA9;&#x552E;&#x7684;&#x52D5;&#x4F5C; &#x78BA;&#x5B9A;&#x552E;&#x51FA;&#x524D;&#x6703;&#x505A;&#x4E9B;&#x5224;&#x65B7;</span>
+    <span class="hljs-comment">// &#x9019;&#x662F;&#x4E00;&#x500B;&#x62CB;&#x51FA;&#x51FD;&#x5F0F; &#x6240;&#x4EE5;&#x51FD;&#x5F0F;&#x540D;&#x7A31;&#x9700;&#x8981;&#x52A0;&#x4E0A; throws</span>
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">vend</span><span class="hljs-params">(itemNamed name: String)</span></span> <span class="hljs-keyword">throws</span> {
+        <span class="hljs-comment">// &#x6AA2;&#x67E5;&#x662F;&#x5426;&#x6709;&#x9019;&#x500B;&#x5546;&#x54C1; &#x6C92;&#x6709;&#x7684;&#x8A71;&#x6703;&#x62CB;&#x51FA;&#x932F;&#x8AA4;</span>
+        <span class="hljs-keyword">guard</span> <span class="hljs-keyword">var</span> item = inventory[name] <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-type">VendingMachineError</span>.invalidSelection
+        }
+
+        <span class="hljs-comment">// &#x6AA2;&#x67E5;&#x9019;&#x500B;&#x5546;&#x54C1;&#x662F;&#x5426;&#x9084;&#x6709;&#x5269; &#x5DF2;&#x8CE3;&#x5149;&#x7684;&#x8A71;&#x6703;&#x62CB;&#x51FA;&#x932F;&#x8AA4;</span>
+        <span class="hljs-keyword">guard</span> item.<span class="hljs-built_in">count</span> &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-type">VendingMachineError</span>.outOfStock
+        }
+
+        <span class="hljs-comment">// &#x6AA2;&#x67E5;&#x76EE;&#x524D;&#x6295;&#x5165;&#x7684;&#x9322;&#x5E63;&#x5920;&#x4E0D;&#x5920; &#x4E0D;&#x5920;&#x7684;&#x8A71;&#x6703;&#x62CB;&#x51FA;&#x932F;&#x8AA4;</span>
+        <span class="hljs-keyword">guard</span> item.price &lt;= coinsDeposited <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// &#x53C3;&#x6578;&#x70BA;&#x9084;&#x9700;&#x8981;&#x88DC;&#x8DB3;&#x591A;&#x5C11;&#x9322;&#x5E63; &#x6240;&#x4EE5;&#x662F;&#x5546;&#x54C1;&#x50F9;&#x9322;&#x6E1B;&#x6389;&#x5DF2;&#x6295;&#x5165;&#x9322;&#x5E63;</span>
+            <span class="hljs-keyword">throw</span> <span class="hljs-type">VendingMachineError</span>.insufficientFunds(
+              coinsNeeded: item.price - coinsDeposited)
+        }
+
+        <span class="hljs-comment">// &#x6240;&#x6709;&#x5224;&#x65B7;&#x90FD;&#x901A;&#x904E;&#x5F8C; &#x624D;&#x78BA;&#x5B9A;&#x6703;&#x552E;&#x51FA;</span>
+        coinsDeposited -= item.price
+        item.<span class="hljs-built_in">count</span> -= <span class="hljs-number">1</span>
+        inventory[name] = item
+        dispenseSnack(snack: name)
+    }
+}
+</code></pre>
+<p><a id="error_hadle"></a></p>
+<h3 id="&#x932F;&#x8AA4;&#x7684;&#x6355;&#x7372;&#x53CA;&#x8655;&#x7406;">&#x932F;&#x8AA4;&#x7684;&#x6355;&#x7372;&#x53CA;&#x8655;&#x7406;</h3>
+<p>&#x524D;&#x9762;&#x5B9A;&#x7FA9;&#x7684;&#x985E;&#x5225;&#x4E2D;&#x6709;&#x4E00;&#x500B;<strong>&#x62CB;&#x51FA;&#x51FD;&#x5F0F;</strong>&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x932F;&#x8AA4;&#x6642;&#x6703;&#x5C07;&#x932F;&#x8AA4;&#x62CB;&#x51FA;&#x4E26;&#x50B3;&#x905E;&#x81F3;&#x932F;&#x8AA4;&#x8655;&#x7406;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x76EE;&#x524D;&#x5C1A;&#x672A;&#x5B9A;&#x7FA9;&#x600E;&#x9EBC;&#x8655;&#x7406;&#x932F;&#x8AA4;&#xFF0C;&#x6240;&#x4EE5;&#x9019;&#x6642; Swift &#x6703;&#x81EA;&#x52D5;&#x8655;&#x7406;&#xFF0C;&#x4E0D;&#x904E;&#x9019;&#x53EF;&#x80FD;&#x6703;&#x5C0E;&#x81F4;&#x7A0B;&#x5F0F;&#x4E2D;&#x6B62;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5011;&#x9084;&#x662F;&#x81EA;&#x884C;&#x5B9A;&#x7FA9;&#x932F;&#x8AA4;&#x8655;&#x7406;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>Swift &#x4F7F;&#x7528;<code>do-catch</code>&#x8A9E;&#x53E5;&#x4F86;&#x5B9A;&#x7FA9;&#x932F;&#x8AA4;&#x7684;&#x6355;&#x7372;(<code>catch</code>)&#x53CA;&#x8655;&#x7406;&#xFF0C;&#x6BCF;&#x4E00;&#x500B;<code>catch</code>&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x6355;&#x7372;&#x5230;&#x4E00;&#x500B;&#x932F;&#x8AA4;&#x62CB;&#x51FA;&#x7684;&#x8655;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">do</span> {
+    <span class="hljs-keyword">try</span> &#x62CB;&#x51FA;&#x51FD;&#x5F0F;
+    &#x5176;&#x4ED6;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+} <span class="hljs-keyword">catch</span> &#x932F;&#x8AA4;<span class="hljs-number">1</span> {
+    &#x8655;&#x7406;&#x932F;&#x8AA4;<span class="hljs-number">1</span>
+} <span class="hljs-keyword">catch</span> &#x932F;&#x8AA4;<span class="hljs-number">2</span> {
+    &#x8655;&#x7406;&#x932F;&#x8AA4;<span class="hljs-number">2</span>
+}
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x8981;&#x547C;&#x53EB;<strong>&#x62CB;&#x51FA;&#x51FD;&#x5F0F;</strong>&#xFF0C;&#x5FC5;&#x9808;&#x5728;&#x51FD;&#x5F0F;&#x524D;&#x52A0;&#x4E0A;<code>try</code>&#x95DC;&#x9375;&#x5B57;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x8981;&#x6355;&#x7372;&#x62CB;&#x51FA;&#x7684;&#x932F;&#x8AA4;&#xFF0C;&#x5FC5;&#x9808;&#x5C07;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;(&#x6216;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#x7684;&#x7A0B;&#x5F0F;)&#x5BEB;&#x5728;&#x95DC;&#x9375;&#x5B57;<code>do</code>&#x5305;&#x542B;&#x7684;&#x5927;&#x62EC;&#x865F;<code>{}</code>&#x5167;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x95DC;&#x9375;&#x5B57;<code>catch</code>&#x4F86;&#x5339;&#x914D;&#x8981;&#x6355;&#x7372;&#x7684;&#x6BCF;&#x500B;&#x932F;&#x8AA4;&#x3002;</li>
+</ul>
+<p>&#x5E95;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x751F;&#x6210;&#x4E00;&#x500B;&#x81EA;&#x52D5;&#x8CA9;&#x8CE3;&#x6A5F;&#x985E;&#x5225;&#x7684;&#x5BE6;&#x9AD4; &#x4E26;&#x8A2D;&#x7F6E;&#x5DF2;&#x6295;&#x5165; 8 &#x500B;&#x9322;&#x5E63;</span>
+<span class="hljs-keyword">var</span> vendingMachine = <span class="hljs-type">VendingMachine</span>()
+vendingMachine.coinsDeposited = <span class="hljs-number">8</span>
+
+<span class="hljs-comment">// &#x9032;&#x884C;&#x932F;&#x8AA4;&#x7684;&#x62CB;&#x51FA;&#x3001;&#x6355;&#x7372;&#x53CA;&#x8655;&#x7406;</span>
+<span class="hljs-keyword">do</span> {
+    <span class="hljs-comment">// &#x547C;&#x53EB;&#x62CB;&#x51FA;&#x51FD;&#x5F0F; &#x6211;&#x8981;&#x8CFC;&#x8CB7;&#x53EF;&#x6A02;&#x9019;&#x500B;&#x5546;&#x54C1;</span>
+    <span class="hljs-keyword">try</span> vendingMachine.vend(itemNamed: <span class="hljs-string">&quot;&#x53EF;&#x6A02;&quot;</span>)
+
+    <span class="hljs-comment">// &#x5176;&#x4ED6;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F; &#x9019;&#x908A;&#x5148;&#x7701;&#x7565;</span>
+
+<span class="hljs-comment">// &#x4EE5;&#x4E0B;&#x6BCF;&#x500B; catch &#x70BA;&#x5404;&#x81EA;&#x5339;&#x914D;&#x932F;&#x8AA4;&#x7684;&#x8655;&#x7406;</span>
+} <span class="hljs-keyword">catch</span> <span class="hljs-type">VendingMachineError</span>.invalidSelection {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x7121;&#x6B64;&#x5546;&#x54C1;&quot;</span>)
+} <span class="hljs-keyword">catch</span> <span class="hljs-type">VendingMachineError</span>.outOfStock {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5546;&#x54C1;&#x5DF2;&#x8CE3;&#x5149;&quot;</span>)
+} <span class="hljs-keyword">catch</span> <span class="hljs-type">VendingMachineError</span>.insufficientFunds(<span class="hljs-keyword">let</span> coinsNeeded) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x91D1;&#x984D;&#x4E0D;&#x8DB3;&#xFF0C;&#x9084;&#x5DEE; <span class="hljs-subst">\(coinsNeeded)</span> &#x500B;&#x9322;&#x5E63;&quot;</span>)
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>vendingMachine.vend(itemNamed:)</code>&#x51FD;&#x5F0F;&#x5167;&#xFF0C;&#x6BCF;&#x500B;&#x6703;&#x62CB;&#x51FA;&#x7684;&#x932F;&#x8AA4;&#x90FD;&#x53EF;&#x4EE5;&#x5728;<code>do-catch</code>&#x4E2D;&#x5217;&#x51FA;&#x7684;<code>catch</code>&#x8A9E;&#x53E5;&#x4E2D;&#x5339;&#x914D;&#x5230;&#x3002;</p>
+<p>&#x800C;&#x4E0A;&#x8FF0;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4F9D;&#x5E8F;&#x5224;&#x65B7;&#x932F;&#x8AA4;&#x5230;&#x6700;&#x5F8C;&#xFF0C;&#x6703;&#x56E0;&#x70BA;&#x9322;&#x5E63;&#x4E0D;&#x8DB3;&#x800C;&#x62CB;&#x51FA;<code>VendingMachineError.insufficientFunds</code>&#x9019;&#x500B;&#x932F;&#x8AA4;&#xFF0C;&#x4E26;&#x5728;&#x5916;&#x9762;&#x7684;<code>do-catch</code>&#x4E2D;&#x88AB;&#x6355;&#x7372;&#x5230;&#xFF0C;&#x6700;&#x5F8C;&#x6703;&#x5370;&#x51FA;&#xFF1A;<strong>&#x91D1;&#x984D;&#x4E0D;&#x8DB3;&#xFF0C;&#x9084;&#x5DEE; 17 &#x500B;&#x9322;&#x5E63;</strong>&#x3002;&#x7576;&#x7136;&#x56E0;&#x70BA;&#x5DF2;&#x7D93;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#xFF0C;&#x5176;&#x5F8C;&#x7684;&#x7A0B;&#x5F0F;&#x90FD;&#x4E0D;&#x6703;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x3002;</p>
+<p><a id="optional_value"></a></p>
+<h3 id="&#x8F49;&#x63DB;&#x932F;&#x8AA4;&#x70BA;&#x53EF;&#x9078;&#x503C;">&#x8F49;&#x63DB;&#x932F;&#x8AA4;&#x70BA;&#x53EF;&#x9078;&#x503C;</h3>
+<p>&#x524D;&#x9762;&#x63D0;&#x5230;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x500B;<strong>&#x62CB;&#x51FA;&#x51FD;&#x5F0F;</strong>&#x4F86;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#xFF0C;&#x4E26;&#x4F7F;&#x7528;<code>do-catch</code>&#x4F86;&#x6355;&#x7372;&#x4E26;&#x8655;&#x7406;&#x932F;&#x8AA4;&#x3002;&#x800C;&#x5982;&#x679C;&#x53EA;&#x662F;&#x8981;&#x7C21;&#x55AE;&#x8B93;&#x932F;&#x8AA4;&#x767C;&#x751F;&#x6642;&#xFF0C;&#x8FD4;&#x56DE;&#x70BA;&#x4E00;&#x500B;<code>nil</code>&#xFF0C;&#x50CF;&#x662F;&#x5982;&#x4E0B;&#x7684;&#x8868;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x62CB;&#x51FA;&#x51FD;&#x5F0F; &#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B; Int</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">someThrowingFunction</span><span class="hljs-params">()</span></span> <span class="hljs-keyword">throws</span> -&gt; <span class="hljs-type">Int</span> {
+    <span class="hljs-comment">// &#x5167;&#x90E8;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F; </span>
+    <span class="hljs-comment">// &#x5047;&#x8A2D;&#x8FD4;&#x56DE; 10</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">10</span>
+}
+
+<span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x53EF;&#x9078;&#x578B;&#x5225; Int? &#x7684;&#x5E38;&#x6578; x </span>
+<span class="hljs-keyword">let</span> x: <span class="hljs-type">Int</span>?
+<span class="hljs-keyword">do</span> {
+    <span class="hljs-comment">// &#x547C;&#x53EB;&#x62CB;&#x51FA;&#x51FD;&#x5F0F; &#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B; Int</span>
+    x = <span class="hljs-keyword">try</span> someThrowingFunction()
+} <span class="hljs-keyword">catch</span> {
+    <span class="hljs-comment">// &#x932F;&#x8AA4;&#x767C;&#x751F;&#x800C;&#x88AB;&#x62CB;&#x51FA; &#x9032;&#x800C;&#x6355;&#x7372;&#x6642; &#x5C07;&#x5176;&#x8A2D;&#x70BA; nil</span>
+    x = <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x7C21;&#x55AE;&#x7684;&#x5C07;<code>try</code>&#x6539;&#x6210;&#x4F7F;&#x7528;<code>try?</code>&#xFF0C;&#x9019;&#x6A23;&#x7576;&#x932F;&#x8AA4;&#x767C;&#x751F;&#x8981;&#x88AB;&#x62CB;&#x51FA;&#x6642;&#xFF0C;&#x6703;&#x7C21;&#x55AE;&#x7684;&#x8FD4;&#x56DE;&#x4E00;&#x500B;<code>nil</code>&#x3002;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> y = <span class="hljs-keyword">try</span>? someThrowingFunction()
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x4E0D;&#x8AD6;&#x539F;&#x672C;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x9078;&#x503C;&#xFF0C;&#x4F7F;&#x7528;<code>try?</code>&#x547C;&#x53EB;&#x7684;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#xFF0C;&#x90FD;&#x6703;&#x8FD4;&#x56DE;&#x53EF;&#x9078;&#x503C;&#x3002;</li>
+</ul>
+<p><a id="disabling_error_propagation"></a></p>
+<h3 id="&#x7981;&#x7528;&#x932F;&#x8AA4;&#x50B3;&#x905E;">&#x7981;&#x7528;&#x932F;&#x8AA4;&#x50B3;&#x905E;</h3>
+<p>&#x7576;&#x4F60;&#x77E5;&#x9053;&#x4E00;&#x500B;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x78BA;&#x5B9A;&#x4E0D;&#x6703;&#x5728;&#x57F7;&#x884C;&#x6642;&#x62CB;&#x51FA;&#x932F;&#x8AA4;&#xFF0C;&#x9019;&#x6642;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>try!</code>&#x4F86;&#x547C;&#x53EB;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#xFF0C;&#x9019;&#x6A23;&#x6703;&#x5C07;&#x932F;&#x8AA4;&#x50B3;&#x905E;&#x7981;&#x7528;&#xFF0C;&#x4F46;&#x7576;&#x932F;&#x8AA4;&#x771F;&#x7684;&#x88AB;&#x62CB;&#x51FA;&#x6642;&#xFF0C;&#x6703;&#x767C;&#x751F;&#x7A0B;&#x5F0F;&#x904B;&#x884C;&#x6642;&#x932F;&#x8AA4;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8AAA;&#xFF0C;&#x4F7F;&#x7528;<code>try!</code>&#x547C;&#x53EB;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#x4F86;&#x544A;&#x8A34; Swift &#x78BA;&#x5B9A;&#x9019;&#x500B;&#x547C;&#x53EB;&#x4E0D;&#x6703;&#x767C;&#x751F;&#x7570;&#x5E38;&#x6216;&#x932F;&#x8AA4;&#x3002;&#x9084;&#x6709;&#x4E00;&#x9EDE;&#xFF0C;&#x4F7F;&#x7528;<code>try!</code>&#x547C;&#x53EB;&#x62CB;&#x51FA;&#x51FD;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x653E;&#x5728;<code>do</code>&#x7684;&#x5927;&#x62EC;&#x865F;<code>{}</code>&#x5167;&#x3002;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> z = <span class="hljs-keyword">try</span>! someThrowingFunction()
+</code></pre>
+<p><a id="defer"></a></p>
+<h3 id="&#x5FC5;&#x5B9A;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;&#x5340;&#x584A;">&#x5FC5;&#x5B9A;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;&#x5340;&#x584A;</h3>
+<p>&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>defer</code>&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&#x5340;&#x584A;&#xFF0C;&#x7576;&#x5728;&#x7121;&#x8AD6;&#x662F;&#x62CB;&#x51FA;(<code>throw</code>)&#x932F;&#x8AA4;&#xFF0C;&#x6216;&#x662F;&#x4F7F;&#x7528;<code>return</code>&#x3001;<code>break</code>&#x7D50;&#x675F;&#x9019;&#x500B;&#x51FD;&#x5F0F;<strong>&#x5F8C;</strong>&#xFF0C;&#x90FD;&#x5FC5;&#x5B9A;&#x6703;&#x57F7;&#x884C;&#x9019;&#x500B;&#x7A0B;&#x5F0F;&#x5340;&#x584A;&#x3002;</p>
+<p>&#x7576;&#x5728;&#x9700;&#x8981;&#x505A;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x6216;&#x662F;&#x91CB;&#x653E;&#x8A18;&#x61B6;&#x9AD4;&#x4E4B;&#x985E;&#x7684;&#x7A0B;&#x5F0F;&#x6642;&#x5F88;&#x597D;&#x7528;&#xFF0C;&#x50CF;&#x662F;&#x4E00;&#x500B;&#x958B;&#x555F;&#x6A94;&#x6848;&#x7684;&#x51FD;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">someMethod</span><span class="hljs-params">()</span></span> <span class="hljs-keyword">throws</span> {
+    <span class="hljs-comment">// &#x6253;&#x958B;&#x4E00;&#x500B;&#x8CC7;&#x6E90; &#x50CF;&#x662F;&#x958B;&#x555F;&#x4E00;&#x500B;&#x6A94;&#x6848;</span>
+
+    <span class="hljs-keyword">defer</span> {
+        <span class="hljs-comment">// &#x91CB;&#x653E;&#x8CC7;&#x6E90;&#x8A18;&#x61B6;&#x9AD4;&#x6216;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;</span>
+        <span class="hljs-comment">// &#x50CF;&#x662F;&#x95DC;&#x9589;&#x4E00;&#x500B;&#x958B;&#x555F;&#x7684;&#x6A94;&#x6848;</span>
+    }
+
+    <span class="hljs-comment">// &#x932F;&#x8AA4;&#x8655;&#x7406; &#x50CF;&#x662F;&#x6A94;&#x6848;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x6C92;&#x6709;&#x8B80;&#x53D6;&#x6B0A;&#x9650;</span>
+
+    <span class="hljs-comment">// &#x53CA;&#x5176;&#x4ED6;&#x8981;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;</span>
+}
+</code></pre>
+<p>&#x4F9D;&#x7167;&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#xFF0C;&#x9019;&#x6A23;&#x4E0D;&#x8AD6;&#x5728;&#x6B63;&#x5E38;&#x57F7;&#x884C;&#x7A0B;&#x5F0F;&#x5230;&#x6700;&#x5F8C;&#x6216;&#x662F;&#x56E0;&#x70BA;&#x767C;&#x751F;&#x932F;&#x8AA4;&#x62CB;&#x51FA;&#x800C;&#x4E2D;&#x6B62;&#xFF0C;&#x6700;&#x5F8C;&#x90FD;&#x6703;&#x57F7;&#x884C;<code>defer</code>&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x4FDD;&#x8B49;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x4E00;&#x5B9A;&#x6703;&#x57F7;&#x884C;&#x3002;</p>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x5B9A;&#x7FA9;&#x591A;&#x500B;<code>defer</code>&#xFF0C;&#x6703;&#x5148;&#x57F7;&#x884C;&#x6700;&#x5F8C;&#x4E00;&#x500B;&#x5B9A;&#x7FA9;&#x7684;<code>defer</code>&#xFF0C;&#x518D;&#x4F9D;&#x5E8F;&#x5F80;&#x524D;&#x57F7;&#x884C;&#x5230;&#x7B2C;&#x4E00;&#x500B;&#x3002;</li>
+<li><code>defer</code>&#x4E0D;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x8207;&#x932F;&#x8AA4;&#x8655;&#x7406;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x666E;&#x901A;&#x7684;&#x51FD;&#x5F0F;&#x5167;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/ch2/error-handling.playground" target="_blank">ch2/error-handling.playground</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="optional-chaining.html" class="navigation navigation-prev " aria-label="Previous page: 可選鏈">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="type-casting.html" class="navigation navigation-next " aria-label="Next page: 型別轉換">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"錯誤處理","level":"1.3.10","depth":2,"next":{"title":"型別轉換","level":"1.3.11","depth":2,"path":"ch2/type-casting.md","ref":"ch2/type-casting.md","articles":[]},"previous":{"title":"可選鏈","level":"1.3.9","depth":2,"path":"ch2/optional-chaining.md","ref":"ch2/optional-chaining.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2/error-handling.md","mtime":"2017-12-07T04:25:38.612Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

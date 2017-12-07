@@ -1,0 +1,1441 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文字輸入 UITextField · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="uitextview.html" />
+    
+    
+    <link rel="prev" href="uilabel.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch1/ch1.html">
+            
+                <a href="../ch1/ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../ch1/basics.html">
+            
+                <a href="../ch1/basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../ch1/types.html">
+            
+                <a href="../ch1/types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../ch1/basic_operators.html">
+            
+                <a href="../ch1/basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../ch1/strings_characters.html">
+            
+                <a href="../ch1/strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../ch1/collection_types.html">
+            
+                <a href="../ch1/collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../ch1/control_flow.html">
+            
+                <a href="../ch1/control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../ch1/functions.html">
+            
+                <a href="../ch1/functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../ch1/closures.html">
+            
+                <a href="../ch1/closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2/ch2.html">
+            
+                <a href="../ch2/ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch2/enumerations.html">
+            
+                <a href="../ch2/enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch2/classes_structures.html">
+            
+                <a href="../ch2/classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ch2/properties.html">
+            
+                <a href="../ch2/properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ch2/methods.html">
+            
+                <a href="../ch2/methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ch2/subscripts.html">
+            
+                <a href="../ch2/subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ch2/inheritance.html">
+            
+                <a href="../ch2/inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ch2/initialization_deinitialization.html">
+            
+                <a href="../ch2/initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ch2/arc.html">
+            
+                <a href="../ch2/arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ch2/optional-chaining.html">
+            
+                <a href="../ch2/optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../ch2/error-handling.html">
+            
+                <a href="../ch2/error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../ch2/type-casting.html">
+            
+                <a href="../ch2/type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../ch2/nested-types.html">
+            
+                <a href="../ch2/nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../ch2/extensions.html">
+            
+                <a href="../ch2/extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../ch2/protocols.html">
+            
+                <a href="../ch2/protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../ch2/generics.html">
+            
+                <a href="../ch2/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../ch2/access-control.html">
+            
+                <a href="../ch2/access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="uikit.html">
+            
+                <a href="uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="uikit_intro.html">
+            
+                <a href="uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="uilabel.html">
+            
+                <a href="uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="uitextfield.html">
+            
+                <a href="uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="uitextview.html">
+            
+                <a href="uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uibutton.html">
+            
+                <a href="uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="uialertcontroller.html">
+            
+                <a href="uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="uiimageview.html">
+            
+                <a href="uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="uidatepicker.html">
+            
+                <a href="uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="uipickerview.html">
+            
+                <a href="uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="uiswitch.html">
+            
+                <a href="uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="uisegmentedcontrol.html">
+            
+                <a href="uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="uiprogressview.html">
+            
+                <a href="uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="uislider.html">
+            
+                <a href="uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="uistepper.html">
+            
+                <a href="uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="uiwebview.html">
+            
+                <a href="uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="uitableview.html">
+            
+                <a href="uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="uicollectionview.html">
+            
+                <a href="uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="uisearchcontroller.html">
+            
+                <a href="uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="uiscrollview.html">
+            
+                <a href="uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="multipages.html">
+            
+                <a href="multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="uinavigationcontroller.html">
+            
+                <a href="uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="uitabbarcontroller.html">
+            
+                <a href="uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="uigesturerecognizer.html">
+            
+                <a href="uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="animations.html">
+            
+                <a href="animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="userdefaults.html">
+            
+                <a href="userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../database/sqlite.html">
+            
+                <a href="../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../database/coredata.html">
+            
+                <a href="../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps/apps.html">
+            
+                <a href="../apps/apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../apps/todo/todo.html">
+            
+                <a href="../apps/todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../apps/todo/intro.html">
+            
+                <a href="../apps/todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../apps/todo/settings.html">
+            
+                <a href="../apps/todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../apps/todo/sound.html">
+            
+                <a href="../apps/todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../apps/todo/edituitableview.html">
+            
+                <a href="../apps/todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apps/taipeitravel/taipeitravel.html">
+            
+                <a href="../apps/taipeitravel/taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../apps/taipeitravel/intro.html">
+            
+                <a href="../apps/taipeitravel/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                <a href="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../apps/taipeitravel/map.html">
+            
+                <a href="../apps/taipeitravel/map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../apps/money/money.html">
+            
+                <a href="../apps/money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../apps/money/intro.html">
+            
+                <a href="../apps/money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../more/more.html">
+            
+                <a href="../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../more/xcode_intro.html">
+            
+                <a href="../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../more/xcode_install.html">
+            
+                <a href="../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../more/open_playground.html">
+            
+                <a href="../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../more/open_project.html">
+            
+                <a href="../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../more/interface_intro.html">
+            
+                <a href="../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../more/addfile.html">
+            
+                <a href="../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../more/copyfile.html">
+            
+                <a href="../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../more/deletefile.html">
+            
+                <a href="../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../more/addframework.html">
+            
+                <a href="../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../more/simulator.html">
+            
+                <a href="../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../more/hotkey.html">
+            
+                <a href="../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../more/keywords.html">
+            
+                <a href="../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../more/camel_case_naming.html">
+            
+                <a href="../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >文字輸入 UITextField</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6587;&#x5B57;&#x8F38;&#x5165;-uitextfield">&#x6587;&#x5B57;&#x8F38;&#x5165; UITextField</h1>
+<p>&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x5F88;&#x5E38;&#x9047;&#x5230;&#x9700;&#x8981;&#x8F38;&#x5165;&#x6587;&#x5B57;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x50CF;&#x662F;&#x767B;&#x5165;&#x6642;&#x7684;&#x5E33;&#x865F;&#x6216;&#x5BC6;&#x78BC;&#xFF0C;&#x9019;&#x6642;&#x6703;&#x9700;&#x8981;&#x7528;&#x5230; UITextField&#xFF0C;&#x672C;&#x7BC0;&#x7684;&#x76EE;&#x6A19;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/uikit/uitextfield/uitextfield01.png" alt="uitextfield01"></p>
+<h3 id="&#x5EFA;&#x7ACB;&#x4E00;&#x500B;-uitextfield">&#x5EFA;&#x7ACB;&#x4E00;&#x500B; UITextField</h3>
+<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUITextField &#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F7F;&#x7528; UITextField(frame:) &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UITextField&#xFF0C;&#x4E26;&#x4ECB;&#x7D39;&#x5176;&#x5E38;&#x7528;&#x7684;&#x5C6C;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x4F7F;&#x7528; UITextField(frame:) &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UITextField</span>
+<span class="hljs-keyword">let</span> myTextField = <span class="hljs-type">UITextField</span>(frame: <span class="hljs-type">CGRect</span>(x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, width: <span class="hljs-number">200</span>, height: <span class="hljs-number">50</span>))
+
+<span class="hljs-comment">// &#x5C1A;&#x672A;&#x8F38;&#x5165;&#x6642;&#x7684;&#x9810;&#x8A2D;&#x986F;&#x793A;&#x63D0;&#x793A;&#x6587;&#x5B57;</span>
+myTextField.placeholder = <span class="hljs-string">&quot;&#x8ACB;&#x8F38;&#x5165;&#x6587;&#x5B57;&quot;</span>
+
+<span class="hljs-comment">// &#x8F38;&#x5165;&#x6846;&#x7684;&#x6A23;&#x5F0F; &#x9019;&#x908A;&#x9078;&#x64C7;&#x5713;&#x89D2;&#x6A23;&#x5F0F;</span>
+myTextField.borderStyle = .roundedRect
+
+<span class="hljs-comment">// &#x8F38;&#x5165;&#x6846;&#x53F3;&#x908A;&#x986F;&#x793A;&#x6E05;&#x9664;&#x6309;&#x9215;&#x6642;&#x6A5F; &#x9019;&#x908A;&#x9078;&#x64C7;&#x7576;&#x7DE8;&#x8F2F;&#x6642;&#x986F;&#x793A;</span>
+myTextField.clearButtonMode = .whileEditing
+
+<span class="hljs-comment">// &#x8F38;&#x5165;&#x6846;&#x9069;&#x7528;&#x7684;&#x9375;&#x76E4; &#x9019;&#x908A;&#x9078;&#x64C7; &#x9069;&#x7528;&#x8F38;&#x5165; Email &#x7684;&#x9375;&#x76E4;(&#x6703;&#x6709; @ &#x8DDF; . &#x53EF;&#x4F9B;&#x8F38;&#x5165;)</span>
+myTextField.keyboardType = .emailAddress
+
+<span class="hljs-comment">// &#x9375;&#x76E4;&#x4E0A;&#x7684; return &#x9375;&#x6A23;&#x5F0F; &#x9019;&#x908A;&#x9078;&#x64C7; done</span>
+myTextField.returnKeyType = .done
+
+<span class="hljs-comment">// &#x8F38;&#x5165;&#x6587;&#x5B57;&#x7684;&#x984F;&#x8272;</span>
+myTextField.textColor = <span class="hljs-type">UIColor</span>.white
+
+<span class="hljs-comment">// UITextField &#x7684;&#x80CC;&#x666F;&#x984F;&#x8272;</span>
+myTextField.backgroundColor = <span class="hljs-type">UIColor</span>.lightGray
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x7684;<code>borderStyle</code>&#x3001;<code>clearButtonMode</code>&#x3001;<code>keyboardType</code>&#x548C;<code>returnKeyType</code>&#x5C6C;&#x6027;&#xFF0C;&#x90FD;&#x5404;&#x81EA;&#x6709;&#x591A;&#x7A2E;&#x9078;&#x64C7;&#x53EF;&#x4F9B;&#x4F7F;&#x7528;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8F38;&#x5165;<code>.</code>&#x4E4B;&#x5F8C;&#x6309;&#x4E0B;<code>esc</code>&#x9375;&#xFF0C;&#x6703;&#x5217;&#x51FA;&#x4F86;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x9078;&#x64C7;&#x7684;&#x9805;&#x76EE;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x9805;&#x76EE;&#x5C31;&#x4EA4;&#x7531;&#x4F60;&#x81EA;&#x5DF1;&#x73A9;&#x73A9;&#x770B;&#x3002;</p>
+<p>UITextField &#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x7A2E;&#x901A;&#x7528;&#x5C6C;&#x6027;&#xFF0C;&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x53EA;&#x8A2D;&#x7F6E;&#x4E86;<code>textColor</code>&#x53CA;<code>backgroundColor</code>&#xFF0C;&#x4F46;&#x5176;&#x5BE6;&#x50CF;&#x662F;<code>font</code>&#x6216;<code>textAlignment</code>&#xFF0C;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x8A2D;&#x7F6E;&#x3002;</p>
+<p><a id="delegation"></a></p>
+<h3 id="&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;">&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;</h3>
+<p>&#x57FA;&#x65BC;<a href="../ch2/protocols.html"> Swift &#x5354;&#x5B9A;</a>&#x7684;&#x7279;&#x6027;&#xFF0C;&#x9019;&#x908A;&#x6703;&#x958B;&#x59CB;&#x4ECB;&#x7D39;&#x4E00;&#x500B;&#x6975;&#x70BA;&#x91CD;&#x8981;&#x4E14;&#x5728;&#x5F8C;&#x7E8C;&#x5B78;&#x7FD2;&#x4E2D;&#x6703;&#x5927;&#x91CF;&#x898B;&#x5230;&#x7684;&#x8A2D;&#x8A08;&#x6A21;&#x5F0F;&#xFF1A;<a href="../ch2/protocols.html#delegation">&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;</a>( Delegation )&#x3002;&#x5982;&#x679C;&#x89BA;&#x5F97;&#x4E0D;&#x592A;&#x719F;&#x6089;&#x7684;&#x8A71;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x56DE;&#x5230;&#x524D;&#x9762;&#x7684;&#x7AE0;&#x7BC0;&#x770B;&#x770B;&#x3002;</p>
+<p>&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x5728;&#x8A2D;&#x8A08;&#x5143;&#x4EF6;&#x6216;&#x529F;&#x80FD;&#x6642;&#xFF0C;&#x6703;&#x5B9A;&#x7FA9;&#x6578;&#x500B;&#x4E0D;&#x7B49;&#x7684;&#x65B9;&#x6CD5;( method )&#xFF0C;&#x4F46;&#x53EA;&#x6703;&#x5B9A;&#x7FA9;&#x51FA;&#x9019;&#x4E9B;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x7A31;&#xFF0C;&#x800C;&#x9019;&#x4E9B;&#x65B9;&#x6CD5;&#x8981;&#x505A;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF0C;&#x5247;&#x662F;&#x8981;&#x4EA4;&#x7531;<strong>&#x59D4;&#x4EFB;( delegate )&#x7684;&#x5C0D;&#x8C61;</strong>&#x4F86;&#x5BE6;&#x4F5C;&#x3002;</p>
+<p>&#x9019;&#x908A;&#x4F7F;&#x7528; UITextField &#x4F86;&#x793A;&#x7BC4;&#x4F60;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x4F7F;&#x7528;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x7684;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x8A2D;&#x8A08;&#x4E00;&#x500B; UITextField (&#x8F38;&#x5165;&#x6846;)&#x6642;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4F86;&#x8F38;&#x5165;&#x5167;&#x5BB9;&#x7684;&#x9375;&#x76E4;&#x4E0A;&#x6703;&#x6709;&#x4E00;&#x500B;<strong>&#x5B8C;&#x6210;</strong>&#x7684;&#x6309;&#x9215;(&#x901A;&#x5E38;&#x4F4D;&#x65BC;&#x9375;&#x76E4;&#x7684;&#x53F3;&#x4E0B;&#x89D2;<code>Return</code>&#x9375;)&#x3002;&#x539F;&#x59CB;&#x8A2D;&#x8A08;&#x4E0A;&#x90FD;&#x4E0D;&#x6703;&#x5BE6;&#x969B;&#x628A;&#x6309;&#x4E0B;<strong>&#x5B8C;&#x6210;</strong>&#x6309;&#x9215;&#x6703;&#x505A;&#x4EC0;&#x9EBC;&#x4E8B;&#x5BEB;&#x6B7B;&#x5728;&#x5143;&#x4EF6;&#x88E1;&#xFF0C;&#x800C;&#x662F;&#x8A2D;&#x8A08;&#x6210;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x6211;&#x9019;&#x908A;&#x6709;&#x4E00;&#x500B;&#x4E8B;&#x4EF6;(&#x5373;&#x6309;&#x4E0B;&#x5B8C;&#x6210;&#x5F8C;&#x8981;&#x5E79;&#x561B;)&#x5F85;&#x5B8C;&#x6210;&#xFF0C;&#x6211;&#x6703;&#x4EA4;&#x7D66;&#x59D4;&#x4EFB;&#x7684;&#x5C0D;&#x8C61;&#x4F86;&#x5BE6;&#x4F5C;&#x3002;</p>
+<p>&#x800C;&#x4EA4;&#x4ED8;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x8981;&#x8A2D;&#x7F6E;<code>delegate</code>&#x5C6C;&#x6027;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x59D4;&#x4EFB;&#x6A21;&#x5F0F;( Delegation )&#x6240;&#x8981;&#x5BE6;&#x4F5C;&#x65B9;&#x6CD5;&#x7684;&#x5C0D;&#x8C61;</span>
+<span class="hljs-comment">// &#x9019;&#x908A;&#x5C31;&#x662F;&#x4EA4;&#x7531; self &#x4E5F;&#x5C31;&#x662F; ViewController &#x672C;&#x8EAB;</span>
+myTextField.delegate = <span class="hljs-keyword">self</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x8A2D;&#x7F6E;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x4F60;&#x6703;&#x5F97;&#x5230;&#x4E00;&#x500B;&#x7D05;&#x8272;&#x7684;&#x932F;&#x8AA4;&#xFF0C;&#x5148;&#x5225;&#x7DCA;&#x5F35;&#xFF0C;&#x56E0;&#x70BA;&#x9019;&#x662F;&#x63D0;&#x793A;&#x4F60;&#x70BA; UITextField &#x8A2D;&#x7F6E;&#x4E86;&#x4E00;&#x500B;&#x59D4;&#x4EFB;&#x7684;&#x5C0D;&#x8C61;&#xFF0C;&#x4F46;&#x9019;&#x500B;&#x5C0D;&#x8C61;&#x5C1A;&#x672A;&#x9075;&#x5FAA;&#x9019;&#x500B;&#x59D4;&#x4EFB;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x70BA; ViewController &#x52A0;&#x4E0A;&#x5354;&#x5B9A;<code>UITextFieldDelegate</code>&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
+<p><img src="../images/uikit/uitextfield/uitextfield02.png" alt="uitextfield02"></p>
+<p>&#x8A2D;&#x7F6E;&#x5B8C;&#x6210;&#x7684; ViewController &#x6703;&#x9577;&#x5F97;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span>, <span class="hljs-title">UITextFieldDelegate</span> </span>{
+    <span class="hljs-comment">// &#x7701;&#x7565;&#x5167;&#x5BB9;</span>
+}
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x770B;&#x4E0D;&#x592A;&#x61C2;&#xFF0C;&#x8ACB;&#x5F80;&#x524D;&#x53C3;&#x8003;<a href="../ch2/protocols.html"> Swift &#x5354;&#x5B9A;</a>&#x7AE0;&#x7BC0;&#x3002;</li>
+</ul>
+<p>&#x9019;&#x6642;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x4F9D;&#x64DA;&#x59D4;&#x4EFB;&#x7684;&#x5354;&#x5B9A;&#x4F86;&#x5EFA;&#x7ACB;&#x61C9;&#x8A72;&#x8981;&#x5BE6;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
+<p><img src="../images/uikit/uitextfield/uitextfield03.png" alt="uitextfield03"></p>
+<p>&#x4E0A;&#x5716;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x70BA; ViewController &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x7684;&#x65B0;&#x65B9;&#x6CD5;&#xFF0C;&#x8F38;&#x5165;<code>func textfi</code>&#x9019;&#x6A23;&#x5230;&#x4E00;&#x534A;&#x6642;&#xFF0C;&#x6703;&#x81EA;&#x52D5;&#x986F;&#x793A;&#x591A;&#x500B;&#x65B9;&#x6CD5;&#x53EF;&#x4F9B;&#x5BE6;&#x4F5C;&#xFF0C;&#x4EE5; UITextField &#x9019;&#x908A;&#x4F86;&#x8AAA;&#x5C31;&#x662F;&#x8F38;&#x5165;&#x6846;&#x5404;&#x500B;&#x52D5;&#x4F5C;&#x968E;&#x6BB5;&#xFF0C;&#x50CF;&#x662F;&#x5716;&#x4E2D;&#x524D;&#x4E09;&#x500B;&#x65B9;&#x6CD5;&#x5C31;&#x662F;<strong>&#x7D50;&#x675F;&#x8F38;&#x5165;&#x6642;</strong>&#x3001;<strong>&#x958B;&#x59CB;&#x8F38;&#x5165;&#x6642;</strong>&#x53CA;<strong>&#x6309;&#x4E0B;&#x6E05;&#x9664;&#x6309;&#x9215;&#x6642;</strong>&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x70BA;&#x5BE6;&#x4F5C;<strong>&#x6309;&#x4E0B;<code>return</code>&#x6309;&#x9215;&#x6642;</strong>&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">textFieldShouldReturn</span><span class="hljs-params">(<span class="hljs-number">_</span> textField: UITextField)</span></span> -&gt; <span class="hljs-type">Bool</span> {
+    <span class="hljs-comment">// &#x7D50;&#x675F;&#x7DE8;&#x8F2F; &#x628A;&#x9375;&#x76E4;&#x96B1;&#x85CF;&#x8D77;&#x4F86;</span>
+    <span class="hljs-keyword">self</span>.view.endEditing(<span class="hljs-literal">true</span>)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x5C31;&#x662F;&#x7576;&#x6309;&#x4E0B;<code>return</code>&#x6309;&#x9215;&#x6642;&#xFF0C;&#x6703;&#x5C07;&#x9375;&#x76E4;&#x96B1;&#x85CF;&#x8D77;&#x4F86;&#x3002;</p>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x6703;&#x5C07;&#x9700;&#x8981;&#x5BE6;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#x8A2D;&#x7F6E;&#x70BA;<code>&#x5FC5;&#x9808;</code>&#x6216;<code>&#x53EF;&#x9078;</code>&#xFF0C;&#x5982;&#x679C;&#x8A2D;&#x7F6E;&#x70BA;<strong>&#x5FC5;&#x9808;&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x5247;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x4E00;&#x5B9A;&#x8981;&#x5C07;&#x9019;&#x500B;&#x65B9;&#x6CD5;&#x5BE6;&#x4F5C;&#x51FA;&#x4F86;&#xFF0C;&#x4E0D;&#x7136;&#x6703;&#x76F4;&#x63A5;&#x5410;&#x932F;&#x8AA4;&#x7D66;&#x4F60;&#xFF0C;&#x53EB;&#x4F60;&#x4E00;&#x5B9A;&#x8981;&#x5BE6;&#x4F5C;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x8A2D;&#x7F6E;&#x70BA;<strong>&#x53EF;&#x9078;&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x5247;&#x662F;&#x4F9D;&#x7167;&#x4F60;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x770B;&#x8981;&#x5BE6;&#x4F5C;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x624D;&#x5BE6;&#x969B;&#x5BE6;&#x4F5C;&#x51FA;&#x4F86;&#xFF0C;&#x50CF;&#x662F;&#x4E0A;&#x9762;&#x793A;&#x7BC4;&#x7684; UITextField &#x59D4;&#x4EFB;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x90FD;&#x662F;<strong>&#x53EF;&#x9078;&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x4E0D;&#x7528;&#x6BCF;&#x4E00;&#x500B;&#x90FD;&#x5BE6;&#x4F5C;&#x51FA;&#x4F86;&#x3002;</li>
+</ul>
+<h3 id="&#x5C07;-uitextfield-&#x653E;&#x5165;&#x756B;&#x9762;">&#x5C07; UITextField &#x653E;&#x5165;&#x756B;&#x9762;</h3>
+<p>&#x6700;&#x5F8C;&#x5C31;&#x662F;&#x5C07; UITextField &#x653E;&#x5165;&#x756B;&#x9762;&#x4E2D;&#xFF0C;&#x7D50;&#x675F;&#x9019;&#x7BC0;&#x7684;&#x5167;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
+<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
+
+<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x65BC;&#x756B;&#x9762;&#x7684;&#x4E2D;&#x9593;&#x504F;&#x4E0A;&#x4F4D;&#x7F6E;</span>
+myTextField.center = <span class="hljs-type">CGPoint</span>(x: fullScreenSize.width * <span class="hljs-number">0.5</span>, y: fullScreenSize.height * <span class="hljs-number">0.3</span>)
+
+<span class="hljs-comment">// &#x52A0;&#x5165;&#x756B;&#x9762;</span>
+<span class="hljs-keyword">self</span>.view.addSubview(myTextField)
+</code></pre>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/uikit/uitextfield" target="_blank">uikit/uitextfield</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uilabel.html" class="navigation navigation-prev " aria-label="Previous page: 文字標籤 UILabel">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="uitextview.html" class="navigation navigation-next " aria-label="Next page: 輸入多行文字 UITextView">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文字輸入 UITextField","level":"1.4.3","depth":2,"next":{"title":"輸入多行文字 UITextView","level":"1.4.4","depth":2,"path":"uikit/uitextview.md","ref":"uikit/uitextview.md","articles":[]},"previous":{"title":"文字標籤 UILabel","level":"1.4.2","depth":2,"path":"uikit/uilabel.md","ref":"uikit/uilabel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uitextfield.md","mtime":"2017-12-07T04:25:38.679Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

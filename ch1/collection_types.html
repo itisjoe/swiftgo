@@ -1,0 +1,1739 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>集合型別 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="control_flow.html" />
+    
+    
+    <link rel="prev" href="strings_characters.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="types.html">
+            
+                <a href="types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="basic_operators.html">
+            
+                <a href="basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="strings_characters.html">
+            
+                <a href="strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="collection_types.html">
+            
+                <a href="collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="closures.html">
+            
+                <a href="closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2/ch2.html">
+            
+                <a href="../ch2/ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch2/enumerations.html">
+            
+                <a href="../ch2/enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch2/classes_structures.html">
+            
+                <a href="../ch2/classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ch2/properties.html">
+            
+                <a href="../ch2/properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ch2/methods.html">
+            
+                <a href="../ch2/methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ch2/subscripts.html">
+            
+                <a href="../ch2/subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ch2/inheritance.html">
+            
+                <a href="../ch2/inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ch2/initialization_deinitialization.html">
+            
+                <a href="../ch2/initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ch2/arc.html">
+            
+                <a href="../ch2/arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ch2/optional-chaining.html">
+            
+                <a href="../ch2/optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../ch2/error-handling.html">
+            
+                <a href="../ch2/error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../ch2/type-casting.html">
+            
+                <a href="../ch2/type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../ch2/nested-types.html">
+            
+                <a href="../ch2/nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../ch2/extensions.html">
+            
+                <a href="../ch2/extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../ch2/protocols.html">
+            
+                <a href="../ch2/protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../ch2/generics.html">
+            
+                <a href="../ch2/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../ch2/access-control.html">
+            
+                <a href="../ch2/access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../uikit/uikit.html">
+            
+                <a href="../uikit/uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../uikit/uikit_intro.html">
+            
+                <a href="../uikit/uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../uikit/uilabel.html">
+            
+                <a href="../uikit/uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../uikit/uitextfield.html">
+            
+                <a href="../uikit/uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../uikit/uitextview.html">
+            
+                <a href="../uikit/uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../uikit/uibutton.html">
+            
+                <a href="../uikit/uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../uikit/uialertcontroller.html">
+            
+                <a href="../uikit/uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../uikit/uiimageview.html">
+            
+                <a href="../uikit/uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../uikit/uidatepicker.html">
+            
+                <a href="../uikit/uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../uikit/uipickerview.html">
+            
+                <a href="../uikit/uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../uikit/uiswitch.html">
+            
+                <a href="../uikit/uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../uikit/uisegmentedcontrol.html">
+            
+                <a href="../uikit/uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../uikit/uiprogressview.html">
+            
+                <a href="../uikit/uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../uikit/uislider.html">
+            
+                <a href="../uikit/uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../uikit/uistepper.html">
+            
+                <a href="../uikit/uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../uikit/uiwebview.html">
+            
+                <a href="../uikit/uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../uikit/uitableview.html">
+            
+                <a href="../uikit/uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../uikit/uicollectionview.html">
+            
+                <a href="../uikit/uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../uikit/uisearchcontroller.html">
+            
+                <a href="../uikit/uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../uikit/uiscrollview.html">
+            
+                <a href="../uikit/uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../uikit/multipages.html">
+            
+                <a href="../uikit/multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../uikit/uinavigationcontroller.html">
+            
+                <a href="../uikit/uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../uikit/uitabbarcontroller.html">
+            
+                <a href="../uikit/uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../uikit/uigesturerecognizer.html">
+            
+                <a href="../uikit/uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../uikit/animations.html">
+            
+                <a href="../uikit/animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../uikit/userdefaults.html">
+            
+                <a href="../uikit/userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../database/sqlite.html">
+            
+                <a href="../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../database/coredata.html">
+            
+                <a href="../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps/apps.html">
+            
+                <a href="../apps/apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../apps/todo/todo.html">
+            
+                <a href="../apps/todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../apps/todo/intro.html">
+            
+                <a href="../apps/todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../apps/todo/settings.html">
+            
+                <a href="../apps/todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../apps/todo/sound.html">
+            
+                <a href="../apps/todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../apps/todo/edituitableview.html">
+            
+                <a href="../apps/todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apps/taipeitravel/taipeitravel.html">
+            
+                <a href="../apps/taipeitravel/taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../apps/taipeitravel/intro.html">
+            
+                <a href="../apps/taipeitravel/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                <a href="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../apps/taipeitravel/map.html">
+            
+                <a href="../apps/taipeitravel/map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../apps/money/money.html">
+            
+                <a href="../apps/money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../apps/money/intro.html">
+            
+                <a href="../apps/money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../more/more.html">
+            
+                <a href="../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../more/xcode_intro.html">
+            
+                <a href="../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../more/xcode_install.html">
+            
+                <a href="../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../more/open_playground.html">
+            
+                <a href="../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../more/open_project.html">
+            
+                <a href="../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../more/interface_intro.html">
+            
+                <a href="../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../more/addfile.html">
+            
+                <a href="../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../more/copyfile.html">
+            
+                <a href="../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../more/deletefile.html">
+            
+                <a href="../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../more/addframework.html">
+            
+                <a href="../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../more/simulator.html">
+            
+                <a href="../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../more/hotkey.html">
+            
+                <a href="../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../more/keywords.html">
+            
+                <a href="../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../more/camel_case_naming.html">
+            
+                <a href="../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >集合型別</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x96C6;&#x5408;&#x578B;&#x5225;">&#x96C6;&#x5408;&#x578B;&#x5225;</h1>
+<ul>
+<li><a href="#array">&#x9663;&#x5217;</a></li>
+<li><a href="#set">Sets &#x96C6;&#x5408;</a></li>
+<li><a href="#dictionary">&#x5B57;&#x5178;</a></li>
+</ul>
+<p>&#x7A0B;&#x5F0F;&#x4E2D;&#x8655;&#x7406;&#x8CC7;&#x6599;&#x6642;&#xFF0C;&#x6709;&#x6642;&#x6703;&#x9700;&#x8981;&#x5C07;&#x985E;&#x4F3C;&#x6216;&#x540C;&#x8CEA;&#x6027;&#x9AD8;&#x7684;&#x8CC7;&#x6599;&#x96C6;&#x4E2D;&#x4E00;&#x8D77;&#x8655;&#x7406;(&#x50CF;&#x662F;&#x8CFC;&#x7269;&#x6E05;&#x55AE;&#x7684;&#x6BCF;&#x9805;&#x5546;&#x54C1;&#x6216;&#x662F;&#x73ED;&#x7D1A;&#x88E1;&#x6BCF;&#x500B;&#x4EBA;&#x7684;&#x59D3;&#x540D;)&#xFF0C;&#x9019;&#x6642;&#x6703;&#x9700;&#x8981;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x4F86;&#x56E0;&#x61C9;&#x4E0D;&#x540C;&#x7684;&#x8655;&#x7406;&#x60C5;&#x6CC1;&#x3002;</p>
+<p>Swift &#x63D0;&#x4F9B;&#x4E09;&#x7A2E;&#x57FA;&#x672C;&#x7684;&#x96C6;&#x5408;&#x578B;&#x5225;&#xFF1A;<code>Array</code>&#x3001;<code>Set</code>&#x3001;<code>Dictionary</code>&#x4F86;&#x5132;&#x5B58;&#x96C6;&#x5408;&#x8CC7;&#x6599;&#x3002;&#x5132;&#x5B58;&#x7684;&#x8CC7;&#x6599;<strong>&#x578B;&#x5225;&#x5FC5;&#x9808;&#x660E;&#x78BA;</strong>&#xFF0C;&#x4E14;&#x90FD;<strong>&#x53EA;&#x80FD;&#x5132;&#x5B58;&#x540C;&#x4E00;&#x7A2E;&#x578B;&#x5225;</strong>&#x7684;&#x8CC7;&#x6599;&#x3002;</p>
+<ul>
+<li>Array &#x9663;&#x5217;&#xFF1A;&#x6309;&#x9806;&#x5E8F;&#x5132;&#x5B58;&#x8CC7;&#x6599;&#x3002;</li>
+<li>Set &#x96C6;&#x5408;&#xFF1A;&#x6C92;&#x6709;&#x9806;&#x5E8F;&#x3001;&#x4E0D;&#x80FD;&#x91CD;&#x8907;&#x5132;&#x5B58;&#x8CC7;&#x6599;&#x3002;</li>
+<li>Dictionary &#x5B57;&#x5178;&#xFF1A;&#x6C92;&#x6709;&#x9806;&#x5E8F;&#xFF0C;&#x9375;&#x503C;&#x5C0D; <code>key : value</code> &#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7D93;&#x7531;&#x552F;&#x4E00;&#x7684;&#x8B58;&#x5225;&#x9375;&#x627E;&#x5230;&#x9700;&#x8981;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+<p><a id="array"></a></p>
+<h3 id="&#x9663;&#x5217;">&#x9663;&#x5217;</h3>
+<p>&#x9663;&#x5217;(<code>array</code>)&#x4F7F;&#x7528;<strong>&#x6709;&#x5E8F;&#x5217;&#x8868;</strong>&#x5132;&#x5B58;&#x540C;&#x4E00;&#x578B;&#x5225;&#x7684;&#x591A;&#x500B;&#x503C;&#x3002;&#x76F8;&#x540C;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x51FA;&#x73FE;&#x5728;&#x4E00;&#x500B;&#x9663;&#x5217;&#x7684;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x4E2D;&#x3002;</p>
+<p>&#x5BA3;&#x544A;&#x9663;&#x5217;&#x8B8A;&#x6578;&#x6216;&#x5E38;&#x6578;&#x6642;&#x7684;&#x578B;&#x5225;&#xFF0C;&#x6709;<code>Array&lt;Element&gt;</code>&#x53CA;<code>[Element]</code>&#x5169;&#x7A2E;&#x65B9;&#x5F0F;(<code>Element</code>&#x662F;&#x9700;&#x8981;&#x660E;&#x78BA;&#x8868;&#x793A;&#x7684;&#x578B;&#x5225;&#xFF0C;&#x5982;<code>Int</code>&#x3001;<code>String</code>&#x3001;<code>Double</code>&#x7B49;&#x7B49;)&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x5132;&#x5B58; Int &#x578B;&#x5225;&#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> arr: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">Int</span>&gt;
+<span class="hljs-keyword">var</span> arr2: [<span class="hljs-type">Int</span>]
+<span class="hljs-comment">// &#x5169;&#x7A2E;&#x9663;&#x5217;&#x578B;&#x5225;&#x8868;&#x793A;&#x65B9;&#x5F0F; &#x5728;&#x529F;&#x80FD;&#x4E0A;&#x662F;&#x4E00;&#x6A23;&#x7684; &#x6240;&#x4EE5;&#x7528;&#x7B2C;&#x4E8C;&#x7A2E;&#x5C31;&#x597D;</span>
+</code></pre>
+<h4 id="&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7A7A;&#x9663;&#x5217;">&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7A7A;&#x9663;&#x5217;</h4>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; Int &#x7684;&#x7A7A;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> arr3 = [<span class="hljs-type">Int</span>]()
+
+<span class="hljs-comment">// &#x70BA;&#x9019;&#x500B;&#x9663;&#x5217;&#x52A0;&#x4E0A;&#x4E00;&#x500B;&#x503C;</span>
+arr3.append(<span class="hljs-number">12</span>)
+
+<span class="hljs-comment">// &#x9019;&#x6642;&#x5982;&#x679C;&#x53C8;&#x8981;&#x518D;&#x5C07;&#x9019;&#x500B;&#x9663;&#x5217;&#x6307;&#x6D3E;&#x6210;&#x7A7A;&#x9663;&#x5217;</span>
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x524D;&#x9762;&#x5BA3;&#x544A;&#x6642;&#x5DF2;&#x7D93;&#x5B9A;&#x7FA9;&#x597D;&#x578B;&#x5225;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x4F7F;&#x7528; [] &#x4F86;&#x6307;&#x6D3E;&#x6210;&#x7A7A;&#x9663;&#x5217;</span>
+arr3 = []
+
+<span class="hljs-comment">// &#x6216;&#x662F;&#x9996;&#x6B21;&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x6642; &#x6709;&#x660E;&#x78BA;&#x5B9A;&#x7FA9;&#x597D;&#x578B;&#x5225; &#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; []</span>
+<span class="hljs-keyword">var</span> anotherArr: [<span class="hljs-type">Int</span>] = []
+</code></pre>
+<h4 id="&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x5E36;&#x6709;&#x9810;&#x8A2D;&#x503C;&#x7684;&#x9663;&#x5217;">&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x5E36;&#x6709;&#x9810;&#x8A2D;&#x503C;&#x7684;&#x9663;&#x5217;</h4>
+<p>&#x9663;&#x5217;&#x578B;&#x5225;&#x9084;&#x63D0;&#x4F9B;&#x4E00;&#x500B;&#x53EF;&#x4EE5;&#x5275;&#x5EFA;&#x7279;&#x5B9A;&#x5927;&#x5C0F;&#x4E26;&#x4E14;&#x6240;&#x6709;&#x8CC7;&#x6599;&#x90FD;&#x88AB;&#x9810;&#x8A2D;&#x7684;&#x5EFA;&#x69CB;&#x65B9;&#x6CD5;&#x3002;&#x5C07;&#x6E96;&#x5099;&#x52A0;&#x5165;&#x65B0;&#x9663;&#x5217;&#x7684;&#x9069;&#x7576;&#x578B;&#x5225;&#x7684;&#x521D;&#x59CB;&#x503C;<code>repeating</code>&#x8207;&#x8CC7;&#x6599;&#x6578;&#x91CF;<code>count</code>&#x50B3;&#x5165;&#x9663;&#x5217;&#x5EFA;&#x69CB;&#x51FD;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> threeInts = <span class="hljs-type">Array</span>(repeating: <span class="hljs-number">0</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">3</span>)
+<span class="hljs-comment">// threeInts &#x662F;&#x4E00;&#x7A2E; [Int] &#x9663;&#x5217;, &#x7B49;&#x65BC; [0, 0, 0]</span>
+</code></pre>
+<h4 id="&#x5408;&#x4F75;&#x5169;&#x500B;&#x9663;&#x5217;">&#x5408;&#x4F75;&#x5169;&#x500B;&#x9663;&#x5217;</h4>
+<p>&#x9663;&#x5217;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x52A0;&#x6CD5;&#x904B;&#x7B97;&#x5B50;<code>+</code>&#x4F86;&#x5408;&#x4F75;&#x5169;&#x500B;&#x9663;&#x5217;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x9996;&#x5148;&#x5275;&#x5EFA;&#x4E00;&#x500B; [0,0,0] &#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> secondThreeInts = <span class="hljs-type">Array</span>(repeating: <span class="hljs-number">0</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">3</span>)
+
+<span class="hljs-comment">// &#x63A5;&#x8457;&#x518D;&#x5275;&#x5EFA;&#x4E00;&#x500B; [2,2,2] &#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> anotherThreeInts = <span class="hljs-type">Array</span>(repeating: <span class="hljs-number">2</span>, <span class="hljs-built_in">count</span>: <span class="hljs-number">3</span>)
+
+<span class="hljs-comment">// &#x6700;&#x5F8C;&#x5C07;&#x5169;&#x500B;&#x9663;&#x5217;&#x5408;&#x4F75;</span>
+<span class="hljs-keyword">var</span> <span class="hljs-type">SixInts</span> = secondThreeInts + anotherThreeInts
+<span class="hljs-comment">// &#x6703;&#x8B8A;&#x6210; [0,0,0,2,2,2]</span>
+</code></pre>
+<h4 id="&#x76F4;&#x63A5;&#x586B;&#x5165;&#x503C;&#x4F86;&#x5275;&#x5EFA;&#x9663;&#x5217;">&#x76F4;&#x63A5;&#x586B;&#x5165;&#x503C;&#x4F86;&#x5275;&#x5EFA;&#x9663;&#x5217;</h4>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x586B;&#x5165;&#x503C;&#x4F86;&#x5275;&#x5EFA;&#x9663;&#x5217;&#xFF0C;&#x6BCF;&#x500B;&#x503C;&#x4EE5;&#x9017;&#x865F;<code>,</code>&#x5206;&#x9694;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> shoppingList: [<span class="hljs-type">String</span>] = [<span class="hljs-string">&quot;Eggs&quot;</span>, <span class="hljs-string">&quot;Milk&quot;</span>]
+<span class="hljs-comment">// &#x5373;&#x5275;&#x5EFA;&#x4E86;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; [String] &#x4E14;&#x5305;&#x542B;&#x5169;&#x500B;&#x503C;&#x7684;&#x9663;&#x5217;</span>
+
+<span class="hljs-comment">// &#x56E0;&#x70BA; Swift &#x6703;&#x81EA;&#x52D5;&#x7684;&#x578B;&#x5225;&#x63A8;&#x65B7;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x9663;&#x5217;&#x4E2D;&#x5982;&#x679C;&#x660E;&#x78BA;&#x7684;&#x8868;&#x793A;&#x4E86;&#x662F;&#x4EC0;&#x9EBC;&#x578B;&#x5225;&#x7684;&#x503C; &#x4FBF;&#x4E0D;&#x7528;&#x518D;&#x6A19;&#x8A3B;&#x578B;&#x5225;</span>
+<span class="hljs-keyword">var</span> anotherList = [<span class="hljs-string">&quot;Rice&quot;</span>, <span class="hljs-string">&quot;Apples&quot;</span>]
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x9663;&#x5217;&#x5305;&#x542B;&#x8457;&#x578B;&#x5225;&#x70BA; String &#x7684;&#x503C;</span>
+<span class="hljs-comment">// Swift &#x53EF;&#x4EE5;&#x63A8;&#x65B7;&#x9019;&#x500B;&#x9663;&#x5217;&#x7684;&#x578B;&#x5225;&#x70BA; [String]</span>
+</code></pre>
+<h4 id="&#x5B58;&#x53D6;&#x8207;&#x4FEE;&#x6539;&#x9663;&#x5217;">&#x5B58;&#x53D6;&#x8207;&#x4FEE;&#x6539;&#x9663;&#x5217;</h4>
+<p>&#x4E00;&#x958B;&#x59CB;&#x8AAA;&#x904E;&#x9663;&#x5217;&#x662F;<strong>&#x6709;&#x5E8F;</strong>&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F9D;&#x7167;&#x7D22;&#x5F15;&#x503C;(&#x4F9D;&#x7167;&#x9806;&#x5E8F;&#x7684;&#x6392;&#x5217;&#x5E8F;&#x865F;)&#x4F86;&#x53D6;&#x5F97;&#x9663;&#x5217;&#x5167;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x9663;&#x5217;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x662F;&#x5F9E; 0 &#x958B;&#x59CB;&#x7B97;&#x8D77;&#x3002;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> arr4 = [<span class="hljs-string">&quot;Apples&quot;</span>, <span class="hljs-string">&quot;Eggs&quot;</span>, <span class="hljs-string">&quot;Milk&quot;</span>, <span class="hljs-string">&quot;Rice&quot;</span>, <span class="hljs-string">&quot;Water&quot;</span>]
+
+<span class="hljs-comment">// &#x9663;&#x5217;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x662F;&#x7531; 0 &#x958B;&#x59CB;&#x8A08;&#x7B97; &#x6240;&#x4EE5; arr4[2] &#x6307;&#x7684;&#x662F;&#x7B2C;&#x4E09;&#x500B;</span>
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Milk</span>
+<span class="hljs-built_in">print</span>(arr4[<span class="hljs-number">2</span>])
+
+<span class="hljs-comment">// &#x8981;&#x4FEE;&#x6539;&#x4E00;&#x500B;&#x7D22;&#x5F15;&#x503C;&#x5C0D;&#x61C9;&#x7684;&#x503C; &#x76F4;&#x63A5;&#x5C07;&#x5176;&#x6307;&#x6D3E;&#x65B0;&#x7684;&#x503C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</span>
+arr4[<span class="hljs-number">2</span>] = <span class="hljs-string">&quot;Oranges&quot;</span>
+<span class="hljs-comment">// &#x9019;&#x6642;&#x5DF2;&#x5C07; Milk &#x6539;&#x6210; Oranges &#x6240;&#x4EE5;&#x6703;&#x5370;&#x51FA;&#xFF1A;Oranges</span>
+<span class="hljs-built_in">print</span>(arr4[<span class="hljs-number">2</span>])
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x500B;&#x5340;&#x9593;&#x5167;&#x7684;&#x503C; &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5340;&#x9593;&#x5BEB;&#x6CD5;&#x4FEE;&#x6539;</span>
+arr4[<span class="hljs-number">1</span>...<span class="hljs-number">4</span>] = [<span class="hljs-string">&quot;Milk&quot;</span>]
+<span class="hljs-comment">// &#x9019;&#x6A23;&#x6703;&#x5C07;&#x539F;&#x672C;&#x7D22;&#x5F15;&#x503C; 1 &#x5230; 4 &#x7684;&#x503C;&#x4FEE;&#x6539;&#x6210; Milk</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x73FE;&#x5728; arr4 &#x6703;&#x8B8A;&#x6210; [&quot;Apples&quot;, &quot;Milk&quot;]</span>
+<span class="hljs-built_in">print</span>(arr4)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5C6C;&#x6027;<code>count</code>&#x4F86;&#x8868;&#x793A;&#x9663;&#x5217;&#x5167;&#x503C;&#x7684;&#x6578;&#x91CF;&#xFF0C;&#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x975E;&#x8CA0;&#x7684;&#x6574;&#x6578;&#x3002;&#x53E6;&#x5916;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5C6C;&#x6027;<code>isEmpty</code>&#x4F86;&#x6AA2;&#x67E5;&#x9663;&#x5217;&#x5167;&#x662F;&#x5426;&#x6709;&#x503C;&#xFF0C;&#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5E03;&#x6797;&#x503C;&#x3002;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> arr5 = [<span class="hljs-string">&quot;Apples&quot;</span>, <span class="hljs-string">&quot;Eggs&quot;</span>, <span class="hljs-string">&quot;Milk&quot;</span>]
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#x9663;&#x5217;&#x4E2D;&#x7684;&#x500B;&#x6578;&#xFF1A;3</span>
+<span class="hljs-built_in">print</span>(arr5.<span class="hljs-built_in">count</span>)
+
+<span class="hljs-comment">// &#x5C07;&#x9663;&#x5217;&#x6307;&#x6D3E;&#x70BA;&#x7A7A;&#x9663;&#x5217;</span>
+arr5 = []
+
+<span class="hljs-keyword">if</span> arr5.isEmpty {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Empty !&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Not Empty !&quot;</span>)
+}
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x70BA;&#x7A7A;&#x9663;&#x5217; &#x5167;&#x90E8;&#x6C92;&#x6709;&#x503C; &#x6240;&#x4EE5;&#x6703;&#x5370;&#x51FA;&#xFF1A;Empty !</span>
+</code></pre>
+<p>&#x52A0;&#x5165;&#x6216;&#x79FB;&#x9664;&#x9663;&#x5217;&#x5167;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x4F7F;&#x7528; append(_:) &#x65B9;&#x6CD5;&#x4F86;&#x52A0;&#x5165;&#x65B0;&#x7684;&#x503C;</span>
+<span class="hljs-keyword">var</span> arr6 = [<span class="hljs-string">&quot;Apples&quot;</span>, <span class="hljs-string">&quot;Eggs&quot;</span>]
+arr6.append(<span class="hljs-string">&quot;Milk&quot;</span>) <span class="hljs-comment">// &#x52A0;&#x5165;&#x65B0;&#x7684;&#x503C; &#x9806;&#x5E8F;&#x6703;&#x5728;&#x6700;&#x5F8C;&#x4E00;&#x500B;</span>
+<span class="hljs-comment">// &#x73FE;&#x5728; arr6 &#x6703;&#x8B8A;&#x6210; [&quot;Apples&quot;, &quot;Eggs&quot;, &quot;Milk&quot;]</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x8981;&#x9078;&#x64C7;&#x52A0;&#x5165;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x7684;&#x4F4D;&#x7F6E; &#x4F7F;&#x7528; insert(_:at:) &#x65B9;&#x6CD5;</span>
+<span class="hljs-comment">// arr6.insert(&#x8981;&#x52A0;&#x5165;&#x7684;&#x503C;, at:&#x8981;&#x52A0;&#x5165;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x4F4D;&#x7F6E;)</span>
+arr6.insert(<span class="hljs-string">&quot;Rice&quot;</span> ,at: <span class="hljs-number">0</span>)
+<span class="hljs-comment">// &#x73FE;&#x5728; arr6 &#x6703;&#x8B8A;&#x6210; [&quot;Rice&quot; ,&quot;Apples&quot;, &quot;Eggs&quot;, &quot;Milk&quot;]</span>
+<span class="hljs-comment">// &#x6240;&#x6709;&#x7D22;&#x5F15;&#x503C;&#x5728;&#x5F8C;&#x9762;&#x7684;&#x90FD;&#x6703;&#x9806;&#x5EF6;&#x5F80;&#x5F8C;&#x4E00;&#x500B;&#x4F4D;&#x7F6E;</span>
+
+<span class="hljs-comment">// &#x79FB;&#x9664;&#x4E00;&#x500B;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7684;&#x503C; &#x4F7F;&#x7528; remove(at:) &#x65B9;&#x6CD5;</span>
+arr6.remove(at:<span class="hljs-number">1</span>) <span class="hljs-comment">// &#x5C07;&#x6392;&#x5728;&#x7B2C;&#x4E8C;&#x500B;&#x7684; Apples &#x79FB;&#x9664;</span>
+<span class="hljs-comment">// &#x6240;&#x6709;&#x5F8C;&#x9762;&#x7684;&#x503C;&#x90FD;&#x6703;&#x905E;&#x88DC;&#x5411;&#x524D;&#x4E00;&#x500B;&#x4F4D;&#x7F6E;</span>
+<span class="hljs-comment">// &#x73FE;&#x5728; arr6 &#x6703;&#x8B8A;&#x6210; [&quot;Rice&quot;, &quot;Eggs&quot;, &quot;Milk&quot;]</span>
+
+<span class="hljs-comment">// &#x6216;&#x8005;&#x662F;&#x79FB;&#x9664;&#x6700;&#x5F8C;&#x4E00;&#x500B;&#x503C; &#x4F7F;&#x7528; removeLast() &#x65B9;&#x6CD5;</span>
+arr6.removeLast()
+<span class="hljs-comment">// &#x73FE;&#x5728; arr6 &#x6703;&#x8B8A;&#x6210; [&quot;Rice&quot;, &quot;Eggs&quot;]</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>for-in</code>&#x904D;&#x6B77;&#x9663;&#x5217;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> arr7 = [<span class="hljs-string">&quot;Rice&quot;</span> ,<span class="hljs-string">&quot;Apples&quot;</span>, <span class="hljs-string">&quot;Eggs&quot;</span>, <span class="hljs-string">&quot;Milk&quot;</span>]
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> arr7 {
+    <span class="hljs-built_in">print</span>(item)
+}
+<span class="hljs-comment">// &#x6703;&#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// Rice</span>
+<span class="hljs-comment">// Apples</span>
+<span class="hljs-comment">// Eggs</span>
+<span class="hljs-comment">// Milk</span>
+
+<span class="hljs-comment">// &#x7576;&#x4F60;&#x540C;&#x6642;&#x4E5F;&#x9700;&#x8981;&#x7372;&#x5F97;&#x9663;&#x5217;&#x503C;&#x6642; &#x53EF;&#x4EE5;&#x4F7F;&#x7528; enumerated() &#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">for</span> (index, value) <span class="hljs-keyword">in</span> arr7.enumerated() {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Item <span class="hljs-subst">\(index + <span class="hljs-number">1</span>)</span>: <span class="hljs-subst">\(value)</span>&quot;</span>)
+}
+<span class="hljs-comment">// &#x6703;&#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// Item 1: Rice</span>
+<span class="hljs-comment">// Item 2: Apples</span>
+<span class="hljs-comment">// Item 3: Eggs</span>
+<span class="hljs-comment">// Item 4: Milk</span>
+</code></pre>
+<p>&#x5F8C;&#x9762;&#x7AE0;&#x7BC0;&#x6703;&#x6B63;&#x5F0F;&#x4ECB;&#x7D39; <a href="control_flow.html#for">for-in &#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a>&#x3002;</p>
+<p><a id="set"></a></p>
+<h3 id="sets-&#x96C6;&#x5408;">Sets &#x96C6;&#x5408;</h3>
+<p>&#x96C6;&#x5408;(<code>Set</code>)&#x7528;&#x4F86;&#x5132;&#x5B58;<strong>&#x76F8;&#x540C;&#x578B;&#x5225;&#x4E14;&#x6C92;&#x6709;&#x9806;&#x5E8F;&#x3001;&#x6C92;&#x6709;&#x91CD;&#x8907;&#x7684;&#x503C;</strong>&#xFF0C;&#x7576;&#x9806;&#x5E8F;&#x4E0D;&#x91CD;&#x8981;&#x6216;&#x662F;&#x9700;&#x8981;&#x6BCF;&#x500B;&#x503C;&#x53EA;&#x80FD;&#x51FA;&#x73FE;&#x4E00;&#x6B21;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x9078;&#x64C7;&#x4F7F;&#x7528;<code>Set</code>&#x3002;</p>
+<p>&#x5BA3;&#x544A;<code>Set</code>&#x578B;&#x5225;&#x6642;&#xFF0C;&#x4F7F;&#x7528;<code>Set&lt;Element&gt;</code>&#x9019;&#x500B;&#x65B9;&#x5F0F;&#xFF0C;&#x9019;&#x88E1;&#x7684;<code>Element</code>&#x8868;&#x793A;<code>Set</code>&#x4E2D;&#x5132;&#x5B58;&#x7684;&#x578B;&#x5225;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B; Set &#x578B;&#x5225;</span>
+<span class="hljs-keyword">var</span> someSet: <span class="hljs-type">Set</span>&lt;<span class="hljs-type">String</span>&gt;
+</code></pre>
+<p>&#x8207;&#x9663;&#x5217;&#x4F7F;&#x7528;&#x4E0A;&#x6709;&#x9EDE;&#x985E;&#x4F3C;&#xFF0C;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">//&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7A7A;&#x7684; Set</span>
+<span class="hljs-keyword">var</span> mySet = <span class="hljs-type">Set</span>&lt;<span class="hljs-type">Int</span>&gt;()
+
+<span class="hljs-comment">// &#x53EF;&#x4EE5;&#x5728;&#x5BA3;&#x544A;&#x6642;&#x76F4;&#x63A5;&#x586B;&#x5165;&#x503C;</span>
+<span class="hljs-keyword">var</span> anotherSet: <span class="hljs-type">Set</span>&lt;<span class="hljs-type">String</span>&gt; = [<span class="hljs-string">&quot;Rock&quot;</span>, <span class="hljs-string">&quot;Classical&quot;</span>, <span class="hljs-string">&quot;Hip hop&quot;</span>]
+
+<span class="hljs-comment">// &#x6307;&#x6D3E;&#x70BA;&#x4E00;&#x500B;&#x7A7A; Set, &#x96D6;&#x7136;&#x9577;&#x5F97;&#x8DDF;&#x9663;&#x5217;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E00;&#x6A23; </span>
+<span class="hljs-comment">// &#x4F46;&#x56E0;&#x70BA;&#x524D;&#x9762;&#x5DF2;&#x7D93;&#x6709;&#x660E;&#x78BA;&#x5BA3;&#x544A;&#x662F; Set, &#x6240;&#x4EE5;&#x9019;&#x4ECD;&#x7136;&#x662F; Set&lt;String&gt; &#x578B;&#x5225;</span>
+anotherSet = []
+
+<span class="hljs-comment">// Set &#x6240;&#x542B;&#x7684;&#x503C;&#x7684;&#x6578;&#x91CF;</span>
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x76EE;&#x524D;&#x662F;&#x7A7A; Set,&#x5370;&#x51FA;&#xFF1A;0</span>
+<span class="hljs-built_in">print</span>(anotherSet.<span class="hljs-built_in">count</span>)
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; isEmpty &#x6AA2;&#x67E5; Set &#x5167;&#x662F;&#x5426;&#x6709;&#x503C;</span>
+<span class="hljs-keyword">if</span> anotherSet.isEmpty {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Empty !&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Not empty !&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Empty !</span>
+</code></pre>
+<p>&#x52A0;&#x5165;&#x6216;&#x79FB;&#x9664; Set &#x5167;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> mySet2: <span class="hljs-type">Set</span>&lt;<span class="hljs-type">String</span>&gt; = [<span class="hljs-string">&quot;Rock&quot;</span>, <span class="hljs-string">&quot;Classical&quot;</span>]
+<span class="hljs-comment">// &#x4F7F;&#x7528; insert(_:) &#x4F86;&#x52A0;&#x5165;&#x65B0;&#x7684;&#x503C;</span>
+mySet2.insert(<span class="hljs-string">&quot;Hip hop&quot;</span>)
+<span class="hljs-comment">// &#x76EE;&#x524D;&#x70BA; [&quot;Rock&quot;, &quot;Classical&quot;, &quot;Hip hop&quot;] (&#x7121;&#x9806;&#x5E8F;)</span>
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; remove(_:) &#x4F86;&#x79FB;&#x9664;&#x4E00;&#x500B;&#x503C;</span>
+<span class="hljs-comment">// &#x5982;&#x679C;&#x9019;&#x500B;&#x503C;&#x662F; mySet2 &#x88E1;&#x7684;&#x4E00;&#x500B;&#x503C;, &#x6703;&#x79FB;&#x9664;&#x6389;&#x9019;&#x500B;&#x503C;&#x4E26;&#x8FD4;&#x56DE;&#x6B64;&#x503C;</span>
+<span class="hljs-comment">// &#x53CD;&#x4E4B; &#x4E0D;&#x5B58;&#x5728;&#x88E1;&#x9762;&#x7684;&#x8A71; &#x5247;&#x662F;&#x8FD4;&#x56DE; nil</span>
+mySet2.remove(<span class="hljs-string">&quot;Rock&quot;</span>)
+<span class="hljs-comment">// &#x76EE;&#x524D;&#x70BA; [&quot;Classical&quot;, &quot;Hip hop&quot;] (&#x7121;&#x9806;&#x5E8F;)</span>
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; contains(_:) &#x4F86;&#x6AA2;&#x67E5; Set &#x88E1;&#x662F;&#x5426;&#x5305;&#x542B;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x503C;</span>
+<span class="hljs-keyword">if</span> mySet2.<span class="hljs-built_in">contains</span>(<span class="hljs-string">&quot;Classical&quot;</span>) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Classical is here !&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Not Here !&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Classical is here !</span>
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; removeAll() &#x4F86;&#x79FB;&#x9664;&#x5176;&#x5167;&#x6240;&#x6709;&#x7684;&#x503C;</span>
+mySet2.removeAll()
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>for-in</code>&#x904D;&#x6B77;<code>Set</code>&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> mySet3: <span class="hljs-type">Set</span>&lt;<span class="hljs-type">String</span>&gt; = [<span class="hljs-string">&quot;Rice&quot;</span> ,<span class="hljs-string">&quot;Apples&quot;</span>, <span class="hljs-string">&quot;Eggs&quot;</span>]
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> mySet3 {
+    <span class="hljs-built_in">print</span>(item)
+}
+<span class="hljs-comment">// &#x6703;&#x5370;&#x51FA;&#xFF1A;(&#x9806;&#x5E8F;&#x4E0D;&#x4E00;&#x5B9A;) </span>
+<span class="hljs-comment">// Rice</span>
+<span class="hljs-comment">// Apples</span>
+<span class="hljs-comment">// Eggs</span>
+
+<span class="hljs-comment">// &#x56E0;&#x70BA; Set &#x6C92;&#x6709;&#x9806;&#x5E8F;, &#x53EF;&#x4EE5;&#x4F7F;&#x7528; sorted() &#x65B9;&#x6CD5;&#x4F86;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x6709;&#x5E8F;&#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> mySet3.sorted() {
+    <span class="hljs-built_in">print</span>(item)
+}
+<span class="hljs-comment">// &#x6703;&#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// Apples</span>
+<span class="hljs-comment">// Eggs</span>
+<span class="hljs-comment">// Rice</span>
+</code></pre>
+<h4 id="&#x96C6;&#x5408;sets&#x64CD;&#x4F5C;">&#x96C6;&#x5408;(Sets)&#x64CD;&#x4F5C;</h4>
+<p>&#x56E0;&#x70BA;<code>Set</code>&#x7684;&#x7279;&#x6027;(&#x7528;&#x4F86;&#x5132;&#x5B58;<strong>&#x76F8;&#x540C;&#x578B;&#x5225;&#x4E14;&#x6C92;&#x6709;&#x9806;&#x5E8F;&#x3001;&#x6C92;&#x6709;&#x91CD;&#x8907;&#x7684;&#x503C;</strong>)&#xFF0C;Swift &#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x5E7E;&#x500B;&#x65B9;&#x6CD5;&#xFF0C;&#x4F9D;&#x64DA;&#x5169;&#x500B; Set &#x4E4B;&#x9593;&#x4EA4;&#x96C6;(&#x6709;&#x76F8;&#x540C;&#x7684;&#x503C;)&#x8207;&#x5426;&#x7684;&#x95DC;&#x4FC2;&#x4F86;&#x5275;&#x5EFA;&#x65B0;&#x7684; Set&#xFF1A;</p>
+<ul>
+<li><code>intersection(_:)</code> &#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684; Set&#xFF0C;&#x5176;&#x5167;&#x7684;&#x503C;&#x70BA;<strong>&#x5169;&#x500B; Set &#x4E2D;&#x500B;&#x5225;&#x90FD;&#x5305;&#x542B;&#x7684;&#x503C;</strong>&#x3002;</li>
+<li><code>symmetricDifference(_:)</code> &#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684; Set&#xFF0C;&#x5176;&#x5167;&#x7684;&#x503C;&#x70BA;<strong>&#x5169;&#x500B; Set &#x4E2D;&#x53EA;&#x55AE;&#x7368;&#x5B58;&#x5728;&#x5176;&#x4E2D;&#x4E00;&#x500B; Set &#x7684;&#x503C;</strong>&#x3002;</li>
+<li><code>union(_:)</code> &#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684; Set&#xFF0C;&#x5176;&#x5167;&#x7684;&#x503C;<strong>&#x5305;&#x542B;&#x5169;&#x500B; Set &#x4E2D;&#x6240;&#x6709;&#x7684;&#x503C;</strong>&#x3002;</li>
+<li><code>subtracting(_:)</code> &#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684; Set&#xFF0C;&#x5176;&#x5167;&#x7684;&#x503C;<strong>&#x5728;&#x4E00;&#x500B; Set &#x5167;,&#x4F46;&#x4E0D;&#x5728;&#x53E6;&#x4E00;&#x500B; Set &#x5167;</strong>&#x3002;</li>
+</ul>
+<p>&#x6216;&#x53C3;&#x8003;&#x4E0B;&#x5716;&#x4F9D;&#x64DA;&#x5169;&#x500B; Set &#x4E4B;&#x9593;&#x95DC;&#x4FC2;&#x8868;&#x73FE;&#x7684;&#x5716;&#xFF1A;</p>
+<p><img src="../images/collection_types/collection_types01.png" alt="Sets1"></p>
+<p>&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> oddDigits: <span class="hljs-type">Set</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+<span class="hljs-keyword">let</span> evenDigits: <span class="hljs-type">Set</span> = [<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>]
+<span class="hljs-keyword">let</span> singleDigitPrimeNumbers: <span class="hljs-type">Set</span> = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]
+
+oddDigits.intersection(evenDigits).sorted()
+<span class="hljs-comment">// [] &#x7A7A; Set &#x56E0;&#x70BA;&#x5169;&#x500B; Set &#x6C92;&#x6709;&#x4EA4;&#x96C6;</span>
+
+oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+<span class="hljs-comment">// [1, 2, 9] &#x56E0;&#x70BA;&#x5169;&#x500B; Set &#x90FD;&#x6709; 3,5,7</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x5169;&#x500B; Set &#x4E2D; &#x9664;&#x4E86;&#x9019;&#x4E09;&#x500B;&#x503C;&#x4EE5;&#x5916;&#x7684;&#x503C;</span>
+
+oddDigits.union(evenDigits).sorted()
+<span class="hljs-comment">// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] &#x5305;&#x542B;&#x5169;&#x500B; Set &#x4E2D;&#x6240;&#x6709;&#x7684;&#x503C;</span>
+
+oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+<span class="hljs-comment">// [1, 9] &#x56E0;&#x70BA; 3,5,7 &#x5728; singleDigitPrimeNumbers &#x5167;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x8FD4;&#x56DE; oddDigits &#x4E2D; &#x9664;&#x4E86;&#x9019;&#x4E09;&#x500B;&#x503C;&#x4E4B;&#x5916;&#x7684;&#x503C;</span>
+</code></pre>
+<p>Swift &#x63D0;&#x4F9B;&#x5E7E;&#x500B;&#x65B9;&#x6CD5;&#x4F86;&#x6BD4;&#x5C0D;&#x5169;&#x500B; Set &#x7684;&#x95DC;&#x4FC2;&#xFF0C;&#x7686;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5E03;&#x6797;&#x503C;&#xFF1A;</p>
+<ul>
+<li><code>isSubset(of:)</code> &#x5224;&#x65B7;&#x4E00;&#x500B; Set &#x662F;&#x5426;&#x88AB;&#x5305;&#x542B;&#x5728;&#x53E6;&#x4E00;&#x500B; Set &#x4E2D;&#x3002;</li>
+<li><code>isSuperset(of:)</code> &#x5224;&#x65B7;&#x4E00;&#x500B; Set &#x662F;&#x5426;&#x5305;&#x542B;&#x53E6;&#x4E00;&#x500B; Set &#x6240;&#x6709;&#x7684;&#x503C;&#x3002;</li>
+<li><code>isStrictSubset(of:)</code> &#x5224;&#x65B7;&#x4E00;&#x500B; Set &#x662F;&#x5426;&#x88AB;&#x5305;&#x542B;&#x5728;&#x53E6;&#x4E00;&#x500B; Set &#x4E2D;&#xFF0C;&#x4E14;&#x5169;&#x500B; Set &#x4E0D;&#x76F8;&#x7B49;&#x3002;</li>
+<li><code>isStrictSuperset(of:)</code> &#x5224;&#x65B7;&#x4E00;&#x500B; Set &#x662F;&#x5426;&#x5305;&#x542B;&#x53E6;&#x4E00;&#x500B; Set &#x6240;&#x6709;&#x7684;&#x503C;&#xFF0C;&#x4E14;&#x5169;&#x500B; Set &#x4E0D;&#x76F8;&#x7B49;&#x3002;</li>
+<li><code>isDisjoint(with:)</code> &#x5224;&#x65B7;&#x5169;&#x500B;&#x96C6;&#x5408;&#x662F;&#x5426;&#x4E0D;&#x542B;&#x6709;&#x76F8;&#x540C;&#x7684;&#x503C;(&#x662F;&#x5426;&#x6C92;&#x6709;&#x4EA4;&#x96C6;)&#x3002;</li>
+</ul>
+<p>&#x6216;&#x53C3;&#x8003;&#x4E0B;&#x5716;&#x4F9D;&#x64DA;&#x5169;&#x500B; Set &#x4E4B;&#x9593;&#x7684;&#x95DC;&#x4FC2;&#x8868;&#x793A;&#x7684;&#x5716;&#xFF1A;</p>
+<p><img src="../images/collection_types/collection_types02.png" alt="Sets1"></p>
+<p>&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> houseAnimals: <span class="hljs-type">Set</span> = [<span class="hljs-string">&quot;&#x72D7;&quot;</span>, <span class="hljs-string">&quot;&#x8C93;&quot;</span>]
+<span class="hljs-keyword">let</span> farmAnimals: <span class="hljs-type">Set</span> = [<span class="hljs-string">&quot;&#x725B;&quot;</span>, <span class="hljs-string">&quot;&#x96DE;&quot;</span>, <span class="hljs-string">&quot;&#x7F8A;&quot;</span>, <span class="hljs-string">&quot;&#x72D7;&quot;</span>, <span class="hljs-string">&quot;&#x8C93;&quot;</span>]
+<span class="hljs-keyword">let</span> cityAnimals: <span class="hljs-type">Set</span> = [<span class="hljs-string">&quot;&#x9CE5;&quot;</span>, <span class="hljs-string">&quot;&#x9F20;&quot;</span>]
+
+houseAnimals.isSubset(of:farmAnimals)
+<span class="hljs-comment">// &#x8FD4;&#x56DE; true &#x56E0;&#x70BA; farmAnimals &#x5305;&#x542B; houseAnimals &#x5167;&#x6240;&#x6709;&#x7684;&#x503C;</span>
+
+farmAnimals.isSuperset(of:houseAnimals)
+<span class="hljs-comment">// &#x8207;&#x4E0A;&#x4E00;&#x884C;&#x610F;&#x601D;&#x4E00;&#x6A23; &#x53EA;&#x662F;&#x6548;&#x679C;&#x76F8;&#x53CD; &#x6240;&#x4EE5;&#x4E5F;&#x662F;&#x8FD4;&#x56DE; true</span>
+
+farmAnimals.isDisjoint(with:cityAnimals)
+<span class="hljs-comment">// &#x8FD4;&#x56DE; true &#x56E0;&#x70BA; farmAnimals &#x8DDF; cityAnimals &#x6C92;&#x6709;&#x4EA4;&#x96C6;</span>
+</code></pre>
+<p><a id="dictionary"></a></p>
+<h3 id="&#x5B57;&#x5178;">&#x5B57;&#x5178;</h3>
+<p>&#x5B57;&#x5178;(<code>dictionary</code>)&#x7528;&#x4F86;&#x5132;&#x5B58;&#x591A;&#x500B;&#x76F8;&#x540C;&#x578B;&#x5225;&#x7684;&#x503C;&#x3002;&#x6BCF;&#x500B;&#x503C;(<code>value</code>)&#x90FD;&#x5C6C;&#x65BC;&#x4E00;&#x500B;<strong>&#x552F;&#x4E00;&#x7684;&#x9375;</strong>(<code>key</code>)&#xFF0C;&#x9375;&#x4F5C;&#x70BA;&#x5B57;&#x5178;&#x4E2D;&#x9019;&#x500B;&#x503C;&#x7684;&#x8B58;&#x5225;&#x7B26;&#x865F;&#xFF0C;&#x6240;&#x6709;&#x9375;&#x7684;&#x578B;&#x5225;&#x4E5F;&#x5FC5;&#x9808;&#x76F8;&#x540C;(&#x9375;&#x8207;&#x503C;&#x7684;&#x578B;&#x5225;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x76F8;&#x540C;)&#x3002;</p>
+<p>&#x56E0;&#x70BA;&#x5B57;&#x5178;&#x5167;&#x7684;&#x503C;&#x6C92;&#x6709;&#x9806;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6839;&#x64DA;&#x9019;&#x500B;&#x9375;(<code>key</code>)&#x4F86;&#x627E;&#x5230;&#x9700;&#x8981;&#x7684;&#x503C;(<code>value</code>)&#x3002;&#x5BA3;&#x544A;&#x5B57;&#x5178;&#x578B;&#x5225;&#x6642;&#xFF0C;&#x4F7F;&#x7528;<code>Dictionary&lt;Key, Value&gt;</code>&#x9019;&#x500B;&#x65B9;&#x5F0F;&#xFF0C;&#x9019;&#x88E1;&#x7684;<code>Key</code>&#x8868;&#x793A;&#x5B57;&#x5178;&#x88E1;&#x9375;&#x7684;&#x578B;&#x5225;&#xFF0C;<code>Value</code>&#x8868;&#x793A;&#x5B57;&#x5178;&#x88E1;&#x5132;&#x5B58;&#x7684;&#x578B;&#x5225;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x5B57;&#x5178;&#x578B;&#x5225;</span>
+<span class="hljs-keyword">var</span> someDict: <span class="hljs-type">Dictionary</span>&lt;<span class="hljs-type">String</span>, <span class="hljs-type">String</span>&gt;
+
+<span class="hljs-comment">// &#x6216;&#x662F;&#x9019;&#x6A23;&#x4E5F;&#x53EF;&#x4EE5;</span>
+<span class="hljs-keyword">var</span> someAnotherDict: [<span class="hljs-type">String</span>: <span class="hljs-type">String</span>]
+</code></pre>
+<p>&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7A7A;&#x5B57;&#x5178;&#x3002;&#x5982;&#x679C;&#x5DF2;&#x7D93;&#x6709;&#x578B;&#x5225;&#x6A19;&#x8A3B;&#x4E86;&#xFF0C;&#x5247;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>[:]</code>&#x8A2D;&#x70BA;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x7A7A;&#x5B57;&#x5178; &#x9375;&#x7684;&#x578B;&#x5225;&#x662F; String , &#x503C;&#x7684;&#x578B;&#x5225;&#x662F; Int</span>
+<span class="hljs-keyword">var</span> myDict = [<span class="hljs-type">String</span>: <span class="hljs-type">Int</span>]()
+
+<span class="hljs-comment">// &#x5728;&#x5B57;&#x5178;&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x500B;&#x503C;</span>
+myDict[<span class="hljs-string">&quot;one&quot;</span>] = <span class="hljs-number">1</span>
+
+<span class="hljs-comment">// &#x518D;&#x5C07;&#x5B57;&#x5178;&#x8A2D;&#x70BA;&#x7A7A;&#x5B57;&#x5178; &#x56E0;&#x70BA;&#x524D;&#x9762;&#x5DF2;&#x7D93;&#x6709;&#x578B;&#x5225;&#x6A19;&#x8A3B;&#x904E;&#x4E86; &#x6240;&#x4EE5;&#x4F7F;&#x7528; [:] </span>
+myDict = [:]
+</code></pre>
+<p>&#x4E00;&#x500B;<code>key</code>&#x8DDF;&#x4E00;&#x500B;<code>value</code>&#x7D44;&#x6210;&#x4E00;&#x7D44;&#x9375;&#x503C;&#x5C0D;&#xFF0C;&#x4E00;&#x500B;&#x5B57;&#x5178;&#x4EE5;&#x4E2D;&#x62EC;&#x865F;<code>[]</code>&#x524D;&#x5F8C;&#x5305;&#x8D77;&#x4F86;&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x7D44;&#x9375;&#x503C;&#x5C0D;&#xFF0C;&#x6BCF;&#x7D44;&#x4EE5;&#x9017;&#x865F;<code>,</code>&#x5206;&#x9694;&#xFF0C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift">[key1:value1, key2:value2, key3:value3]
+</code></pre>
+<h4 id="&#x5B58;&#x53D6;&#x8207;&#x4FEE;&#x6539;&#x5B57;&#x5178;">&#x5B58;&#x53D6;&#x8207;&#x4FEE;&#x6539;&#x5B57;&#x5178;</h4>
+<p>&#x4F7F;&#x7528;&#x4E0B;&#x6A19;(<code>subscript</code>)&#x4F86;&#x5B58;&#x53D6;&#x6216;&#x662F;&#x4FEE;&#x6539;&#x5B57;&#x5178;&#x7684;&#x503C;&#x3002;&#x5176;&#x9918;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8207;&#x9663;&#x5217;&#x985E;&#x4F3C;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x4E0B;&#x6A19;(<code>subscript</code>)&#x7684;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x70BA;&#x5B57;&#x5178;&#x8B8A;&#x6578;&#x5F8C;&#x52A0;&#x4E00;&#x500B;&#x4E2D;&#x62EC;&#x865F;<code>[]</code>&#xFF0C;&#x4E2D;&#x62EC;&#x865F;&#x88E1;&#x9762;&#x586B;&#x5165;&#x9375;(<code>key</code>)&#xFF0C;&#x4EE5;&#x53D6;&#x5F97;&#x5C0D;&#x61C9;&#x7684;&#x503C;(<code>value</code>)&#x3002;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; [String: String] &#x7684;&#x5B57;&#x5178;</span>
+<span class="hljs-keyword">var</span> myDict2 = [<span class="hljs-string">&quot;TYO&quot;</span>: <span class="hljs-string">&quot;Tokyo&quot;</span>, <span class="hljs-string">&quot;DUB&quot;</span>: <span class="hljs-string">&quot;Dublin&quot;</span>]
+
+<span class="hljs-comment">// &#x5B57;&#x5178;&#x88E1;&#x503C;&#x7684;&#x6578;&#x91CF;</span>
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;2</span>
+<span class="hljs-built_in">print</span>(myDict2.<span class="hljs-built_in">count</span>)
+
+<span class="hljs-comment">// &#x6AA2;&#x67E5;&#x5B57;&#x5178;&#x88E1;&#x662F;&#x5426;&#x6709;&#x503C;</span>
+<span class="hljs-keyword">if</span> myDict2.isEmpty {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Empty !&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Not empty !&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Not empty !</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x9019;&#x500B; key &#x6C92;&#x6709;&#x5C0D;&#x61C9;&#x5230;&#x5B57;&#x5178;&#x88E1;&#x7684;&#x503C;, &#x5C31;&#x65B0;&#x589E;&#x4E00;&#x500B;&#x503C;</span>
+myDict2[<span class="hljs-string">&quot;LHR&quot;</span>] = <span class="hljs-string">&quot;London&quot;</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C; key &#x6709;&#x5C0D;&#x61C9;&#x5230;&#x5B57;&#x5178;&#x88E1;&#x7684;&#x503C;, &#x5247;&#x662F;&#x4FEE;&#x6539;&#x9019;&#x500B;&#x503C;</span>
+myDict2[<span class="hljs-string">&quot;LHR&quot;</span>] = <span class="hljs-string">&quot;London Heathrow&quot;</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x8981;&#x79FB;&#x9664;&#x9019;&#x500B;&#x503C; &#x5247;&#x662F;&#x5C07;&#x5176;&#x8A2D;&#x70BA; nil</span>
+myDict2[<span class="hljs-string">&quot;LHR&quot;</span>] = <span class="hljs-literal">nil</span>
+</code></pre>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x4E0B;&#x6A19;&#x8A9E;&#x6CD5;&#xFF0C;&#x5B57;&#x5178;&#x4E5F;&#x63D0;&#x4F9B;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6216;&#x522A;&#x9664;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> myDict3 = [<span class="hljs-string">&quot;LHR&quot;</span>: <span class="hljs-string">&quot;London&quot;</span>, <span class="hljs-string">&quot;DUB&quot;</span>: <span class="hljs-string">&quot;Dublin&quot;</span>]
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; updateValue(_:forKey:) &#x66F4;&#x65B0;&#x4E00;&#x500B;&#x503C;</span>
+<span class="hljs-comment">// &#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5C0D;&#x61C9;&#x503C;&#x7684;&#x578B;&#x5225;&#x7684;&#x53EF;&#x9078;&#x503C; (&#x9019;&#x908A;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x500B; String? )</span>
+myDict3.updateValue(<span class="hljs-string">&quot;London Heathrow&quot;</span>, forKey: <span class="hljs-string">&quot;LHR&quot;</span>)
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;London Heathrow</span>
+<span class="hljs-built_in">print</span>(myDict3[<span class="hljs-string">&quot;LHR&quot;</span>])
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; removeValue(forKey:) &#x79FB;&#x9664;&#x4E00;&#x500B;&#x503C;</span>
+<span class="hljs-comment">// &#x8FD4;&#x56DE;&#x88AB;&#x522A;&#x9664;&#x7684;&#x503C;, &#x5982;&#x679C;&#x6C92;&#x6709;&#x5C0D;&#x61C9;&#x7684;&#x503C;&#x7684;&#x8A71;&#x5247;&#x6703;&#x8FD4;&#x56DE; nil</span>
+myDict3.removeValue(forKey: <span class="hljs-string">&quot;DUB&quot;</span>)
+</code></pre>
+<p>&#x53EA;&#x9700;&#x8981;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x9375;&#x6216;&#x503C;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>keys</code>&#x6216;<code>values</code>&#x5C6C;&#x6027;&#x3002;&#x9019;&#x6642;&#x6703;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x9375;&#x6216;&#x503C;&#x7684;&#x65B0;&#x9663;&#x5217;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> myDict4 = [<span class="hljs-string">&quot;LHR&quot;</span>: <span class="hljs-string">&quot;London&quot;</span>, <span class="hljs-string">&quot;DUB&quot;</span>: <span class="hljs-string">&quot;Dublin&quot;</span>]
+
+<span class="hljs-comment">// &#x53EA;&#x9700;&#x8981;&#x9375;&#x6642;, &#x4F7F;&#x7528; keys &#x5C6C;&#x6027;, &#x53D6;&#x5F97;&#x4E00;&#x500B;&#x53EA;&#x6709;&#x9375;&#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> someArr1 = [<span class="hljs-type">String</span>](myDict4.keys)
+<span class="hljs-comment">// someArr1 &#x70BA; [&quot;LHR&quot;, &quot;DUB&quot;]</span>
+
+<span class="hljs-comment">// &#x53EA;&#x9700;&#x8981;&#x503C;&#x6642;, &#x4F7F;&#x7528; values &#x5C6C;&#x6027;, &#x53D6;&#x5F97;&#x4E00;&#x500B;&#x53EA;&#x6709;&#x503C;&#x7684;&#x9663;&#x5217;</span>
+<span class="hljs-keyword">var</span> someArr2 = [<span class="hljs-type">String</span>](myDict4.values)
+<span class="hljs-comment">// someArr2 &#x70BA; [&quot;London&quot;, &quot;Dublin&quot;]</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x9700;&#x8981;&#x56FA;&#x5B9A;&#x9806;&#x5E8F;&#x7684;&#x8A71; &#x53EF;&#x4EE5;&#x52A0;&#x4E0A; sorted() &#x65B9;&#x6CD5;</span>
+someArr1.sorted()
+someArr2.sorted()
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>for-in</code>&#x904D;&#x6B77;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> myDict5 = [<span class="hljs-string">&quot;LHR&quot;</span>: <span class="hljs-string">&quot;London&quot;</span>, <span class="hljs-string">&quot;DUB&quot;</span>: <span class="hljs-string">&quot;Dublin&quot;</span>]
+
+<span class="hljs-keyword">for</span> (code, n) <span class="hljs-keyword">in</span> myDict5 {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(code)</span>: <span class="hljs-subst">\(n)</span>&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// LHR: London</span>
+<span class="hljs-comment">// DUB: Dublin</span>
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x53EA;&#x9700;&#x8981;&#x9375;&#x6216;&#x503C;&#x6642;, &#x4F7F;&#x7528; keys &#x6216; values &#x5C6C;&#x6027;</span>
+<span class="hljs-keyword">for</span> code <span class="hljs-keyword">in</span> myDict5.keys {
+    <span class="hljs-built_in">print</span>(code)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// LHR</span>
+<span class="hljs-comment">// DUB</span>
+
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> myDict5.values {
+    <span class="hljs-built_in">print</span>(n)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// London</span>
+<span class="hljs-comment">// Dublin</span>
+</code></pre>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/ch1/collection_types.playground" target="_blank">ch1/collection_types.playground</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="strings_characters.html" class="navigation navigation-prev " aria-label="Previous page: 字串及字元">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="control_flow.html" class="navigation navigation-next " aria-label="Next page: 控制流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"集合型別","level":"1.2.5","depth":2,"next":{"title":"控制流程","level":"1.2.6","depth":2,"path":"ch1/control_flow.md","ref":"ch1/control_flow.md","articles":[]},"previous":{"title":"字串及字元","level":"1.2.4","depth":2,"path":"ch1/strings_characters.md","ref":"ch1/strings_characters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/collection_types.md","mtime":"2017-12-07T04:25:38.603Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

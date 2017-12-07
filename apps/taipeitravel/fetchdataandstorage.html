@@ -1,0 +1,1554 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>取得遠端 API 資料並儲存 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="map.html" />
+    
+    
+    <link rel="prev" href="intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ch1/ch1.html">
+            
+                <a href="../../ch1/ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../ch1/basics.html">
+            
+                <a href="../../ch1/basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../ch1/types.html">
+            
+                <a href="../../ch1/types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../ch1/basic_operators.html">
+            
+                <a href="../../ch1/basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../ch1/strings_characters.html">
+            
+                <a href="../../ch1/strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../ch1/collection_types.html">
+            
+                <a href="../../ch1/collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../ch1/control_flow.html">
+            
+                <a href="../../ch1/control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../ch1/functions.html">
+            
+                <a href="../../ch1/functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../ch1/closures.html">
+            
+                <a href="../../ch1/closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../ch2/ch2.html">
+            
+                <a href="../../ch2/ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../ch2/enumerations.html">
+            
+                <a href="../../ch2/enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../ch2/classes_structures.html">
+            
+                <a href="../../ch2/classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../ch2/properties.html">
+            
+                <a href="../../ch2/properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../ch2/methods.html">
+            
+                <a href="../../ch2/methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../ch2/subscripts.html">
+            
+                <a href="../../ch2/subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../ch2/inheritance.html">
+            
+                <a href="../../ch2/inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../ch2/initialization_deinitialization.html">
+            
+                <a href="../../ch2/initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../ch2/arc.html">
+            
+                <a href="../../ch2/arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../ch2/optional-chaining.html">
+            
+                <a href="../../ch2/optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../ch2/error-handling.html">
+            
+                <a href="../../ch2/error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../ch2/type-casting.html">
+            
+                <a href="../../ch2/type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../ch2/nested-types.html">
+            
+                <a href="../../ch2/nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../ch2/extensions.html">
+            
+                <a href="../../ch2/extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../ch2/protocols.html">
+            
+                <a href="../../ch2/protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../ch2/generics.html">
+            
+                <a href="../../ch2/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../ch2/access-control.html">
+            
+                <a href="../../ch2/access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../uikit/uikit.html">
+            
+                <a href="../../uikit/uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../uikit/uikit_intro.html">
+            
+                <a href="../../uikit/uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../uikit/uilabel.html">
+            
+                <a href="../../uikit/uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../uikit/uitextfield.html">
+            
+                <a href="../../uikit/uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../uikit/uitextview.html">
+            
+                <a href="../../uikit/uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../uikit/uibutton.html">
+            
+                <a href="../../uikit/uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../uikit/uialertcontroller.html">
+            
+                <a href="../../uikit/uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../uikit/uiimageview.html">
+            
+                <a href="../../uikit/uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../uikit/uidatepicker.html">
+            
+                <a href="../../uikit/uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../uikit/uipickerview.html">
+            
+                <a href="../../uikit/uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../uikit/uiswitch.html">
+            
+                <a href="../../uikit/uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../../uikit/uisegmentedcontrol.html">
+            
+                <a href="../../uikit/uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../../uikit/uiprogressview.html">
+            
+                <a href="../../uikit/uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../../uikit/uislider.html">
+            
+                <a href="../../uikit/uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../../uikit/uistepper.html">
+            
+                <a href="../../uikit/uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../../uikit/uiwebview.html">
+            
+                <a href="../../uikit/uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../../uikit/uitableview.html">
+            
+                <a href="../../uikit/uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../../uikit/uicollectionview.html">
+            
+                <a href="../../uikit/uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../../uikit/uisearchcontroller.html">
+            
+                <a href="../../uikit/uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../../uikit/uiscrollview.html">
+            
+                <a href="../../uikit/uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../../uikit/multipages.html">
+            
+                <a href="../../uikit/multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../../uikit/uinavigationcontroller.html">
+            
+                <a href="../../uikit/uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../../uikit/uitabbarcontroller.html">
+            
+                <a href="../../uikit/uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../../uikit/uigesturerecognizer.html">
+            
+                <a href="../../uikit/uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../../uikit/animations.html">
+            
+                <a href="../../uikit/animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../../uikit/userdefaults.html">
+            
+                <a href="../../uikit/userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../database/database.html">
+            
+                <a href="../../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../database/sqlite.html">
+            
+                <a href="../../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../database/coredata.html">
+            
+                <a href="../../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps.html">
+            
+                <a href="../apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../todo/todo.html">
+            
+                <a href="../todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../todo/intro.html">
+            
+                <a href="../todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../todo/settings.html">
+            
+                <a href="../todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../todo/sound.html">
+            
+                <a href="../todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../todo/edituitableview.html">
+            
+                <a href="../todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="taipeitravel.html">
+            
+                <a href="taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2.2" data-path="fetchdataandstorage.html">
+            
+                <a href="fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../money/money.html">
+            
+                <a href="../money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../money/intro.html">
+            
+                <a href="../money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../more/more.html">
+            
+                <a href="../../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../more/xcode_intro.html">
+            
+                <a href="../../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../more/xcode_install.html">
+            
+                <a href="../../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../more/open_playground.html">
+            
+                <a href="../../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../more/open_project.html">
+            
+                <a href="../../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../more/interface_intro.html">
+            
+                <a href="../../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../more/addfile.html">
+            
+                <a href="../../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../more/copyfile.html">
+            
+                <a href="../../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../more/deletefile.html">
+            
+                <a href="../../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../more/addframework.html">
+            
+                <a href="../../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../more/simulator.html">
+            
+                <a href="../../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../more/hotkey.html">
+            
+                <a href="../../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../more/keywords.html">
+            
+                <a href="../../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../more/camel_case_naming.html">
+            
+                <a href="../../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../about.html">
+            
+                <a href="../../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >取得遠端 API 資料並儲存</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x53D6;&#x5F97;&#x9060;&#x7AEF;-api-&#x8CC7;&#x6599;&#x4E26;&#x5132;&#x5B58;">&#x53D6;&#x5F97;&#x9060;&#x7AEF; API &#x8CC7;&#x6599;&#x4E26;&#x5132;&#x5B58;</h1>
+<p>&#x9019;&#x4E00;&#x5C0F;&#x7BC0;&#x6703;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x53D6;&#x5F97;&#x9060;&#x7AEF; API &#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x4E26;&#x5C07;&#x8CC7;&#x6599;&#x5132;&#x5B58;&#x6210;&#x672C;&#x5730;&#x6A94;&#x6848;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x6211;&#x5011;&#x4F7F;&#x7528;<a href="http://data.taipei/" target="_blank"> Data.Taipei &#x81FA;&#x5317;&#x5E02;&#x653F;&#x5E9C;&#x8CC7;&#x6599;&#x958B;&#x653E;&#x5E73;&#x53F0;</a> &#x7684; API &#x8CC7;&#x6599;&#x4F5C;&#x70BA;&#x793A;&#x7BC4;&#xFF0C;&#x9019;&#x500B;&#x5E73;&#x53F0;&#x958B;&#x653E;&#x7684;&#x8CC7;&#x6599;&#x6709;&#x5F88;&#x591A;&#x9805;&#xFF0C;&#x9019;&#x908A;&#x4EE5;&#x53D6;&#x5F97;<strong><a href="http://data.taipei/opendata/datalist/datasetMeta?oid=58093ba6-4c98-4148-b27a-50ad97d7afca" target="_blank">&#x81FA;&#x5317;&#x5E02;&#x81FA;&#x5317;&#x65C5;&#x904A;&#x7DB2;-&#x4F4F;&#x5BBF;&#x8CC7;&#x6599;(&#x4E2D;&#x6587;)</a></strong>&#x53CA;<strong><a href="http://data.taipei/opendata/datalist/datasetMeta?oid=bd31c976-d3a5-4eed-b8c3-7454bc266afa" target="_blank">&#x81FA;&#x5317;&#x5E02;&#x81FA;&#x5317;&#x65C5;&#x904A;&#x7DB2;-&#x666F;&#x9EDE;&#x8CC7;&#x6599;(&#x4E2D;&#x6587;)</a></strong>&#x4F5C;&#x70BA;&#x793A;&#x7BC4;&#x3002;</p>
+<p>&#x9032;&#x5165;&#x8CC7;&#x6599;&#x9801;&#x5F8C;&#xFF0C;&#x9EDE;&#x64CA; <strong>&#x4F7F;&#x7528;&#x8CC7;&#x6599; &gt; API</strong>&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
+<p><img src="../../images/apps/taipeitravel/taipeitravel03.png" alt="taipeitravel03"></p>
+<p>&#x63A5;&#x8457;&#x6703;&#x9032;&#x5165;&#x5230; API &#x8AAA;&#x660E;&#x9801;&#xFF0C;&#x770B;&#x5230;&#x4E0B;&#x5716;&#x6A19;&#x793A;&#x8D77;&#x4F86;&#x7684;&#x7DB2;&#x5740;&#xFF0C;&#x4FBF;&#x662F;&#x9019;&#x500B; API &#x7684;&#x8CC7;&#x6599;&#xFF1A;</p>
+<p><img src="../../images/apps/taipeitravel/taipeitravel04.png" alt="taipeitravel04"></p>
+<p>&#x5C07;&#x4E0A;&#x5716;&#x4E2D;&#x6A19;&#x793A;&#x7684;&#x7DB2;&#x5740;&#x4EE5;&#x700F;&#x89BD;&#x5668;&#x958B;&#x555F;&#x5F8C;&#xFF0C;&#x6703;&#x767C;&#x73FE;&#x53D6;&#x5F97;&#x7684;&#x8CC7;&#x6599;&#x662F; JSON &#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x684C;&#x6A5F;&#x7684; Chrome &#x700F;&#x89BD;&#x5668;&#x7684;&#x64F4;&#x5145;&#x5957;&#x4EF6; <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=zh-TW" target="_blank">JSONView</a> &#x4F86;&#x5C07;&#x9019;&#x500B; JSON &#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x5316;&#x5448;&#x73FE;&#x5728;&#x756B;&#x9762;&#x4E2D;&#xFF0C;&#x6BD4;&#x8F03;&#x65B9;&#x4FBF;&#x6AA2;&#x8996;&#x5167;&#x5BB9;&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
+<p><img src="../../images/apps/taipeitravel/taipeitravel05.png" alt="taipeitravel05"></p>
+<p>&#x4EE5;&#x4E0A;&#x70BA;&#x524D;&#x7F6E;&#x4F5C;&#x696D;&#x7684;&#x4ECB;&#x7D39;&#xFF0C;&#x63A5;&#x8457;&#x6703;&#x958B;&#x59CB;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x5728;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#x7372;&#x53D6;&#x9060;&#x7AEF; API &#x8CC7;&#x6599;&#xFF0C;&#x4E26;&#x5C07;&#x9019;&#x8CC7;&#x6599;&#x5132;&#x5B58;&#x70BA;&#x672C;&#x5730;&#x7684;&#x4E00;&#x500B; JSON &#x6A94;&#x6848;&#xFF0C;&#x6700;&#x5F8C;&#x6703;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x89E3;&#x6790;&#x9019;&#x500B; JSON &#x6A94;&#x6848;&#x4E26;&#x8B80;&#x53D6;&#x5176;&#x5167;&#x8CC7;&#x8A0A;&#x3002;</p>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>JSON &#x662F;&#x4E00;&#x7A2E;&#x8F15;&#x91CF;&#x7D1A;&#x7684;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x7D14;&#x6587;&#x5B57;&#x70BA;&#x57FA;&#x790E;&#x4F86;&#x5132;&#x5B58;&#x8207;&#x50B3;&#x9001;&#x7D50;&#x69CB;&#x8CC7;&#x6599;&#xFF0C;&#x53EF;&#x4EE5;&#x7D93;&#x7531;&#x7279;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x5132;&#x5B58;&#x4EFB;&#x4F55;&#x6587;&#x5B57;&#x8CC7;&#x6599;(&#x50CF;&#x662F;&#x5B57;&#x4E32;&#x3001;&#x6578;&#x5B57;&#x3001;&#x9663;&#x5217;&#x6216;&#x7269;&#x4EF6;)&#xFF0C; JSON &#x53EF;&#x4EE5;&#x8B93;&#x4F60;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x8207;&#x5176;&#x4ED6;&#x7A0B;&#x5F0F;&#x4EA4;&#x63DB;&#x8CC7;&#x6599;&#x3002;</li>
+<li>&#x6709;&#x4E9B; API &#x8CC7;&#x6599;&#x6703;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x5411;&#x64C1;&#x6709;&#x8005;&#x7533;&#x8ACB; ID &#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x63A5;&#x6536;&#x8CC7;&#x6599;&#x524D;&#x8FA8;&#x5225;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x8005;&#x7684;&#x8EAB;&#x5206;&#x3002;</li>
+</ul>
+<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExFetchDataAndStorage &#x3002;</p>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x4E09;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>{
+    <span class="hljs-keyword">var</span> taipeiDataUrl :<span class="hljs-type">String</span>!
+    <span class="hljs-keyword">var</span> documentsPath :<span class="hljs-type">String</span>!
+    <span class="hljs-keyword">var</span> touringSiteTargetUrl :<span class="hljs-type">String</span>!
+
+    <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x8A2D;&#x7F6E;&#x5132;&#x5B58;&#x6A94;&#x6848;&#x7684;&#x76EE;&#x9304;&#x8DEF;&#x5F91;&#x8207; API &#x7DB2;&#x5740;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x5132;&#x5B58;&#x6A94;&#x6848;&#x7684;&#x76EE;&#x9304;&#x8DEF;&#x5F91;</span>
+<span class="hljs-keyword">let</span> urls = <span class="hljs-type">FileManager</span>.<span class="hljs-keyword">default</span>.urls(
+    <span class="hljs-keyword">for</span>: .documentDirectory, <span class="hljs-keyword">in</span>: .userDomainMask)
+documentsPath = urls[urls.<span class="hljs-built_in">count</span>-<span class="hljs-number">1</span>].absoluteString
+
+taipeiDataUrl = 
+  <span class="hljs-string">&quot;http://data.taipei/opendata/datalist&quot;</span>
+  + <span class="hljs-string">&quot;/apiAccess?scope=resourceAquire&amp;rid=&quot;</span>
+</code></pre>
+<h3 id="&#x7372;&#x53D6;&#x9060;&#x7AEF;-api-&#x8CC7;&#x6599;">&#x7372;&#x53D6;&#x9060;&#x7AEF; API &#x8CC7;&#x6599;</h3>
+<p>&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#x8981;&#x8207;&#x9060;&#x7AEF;&#x4EA4;&#x63DB;&#x8CC7;&#x6599;&#x5FC5;&#x9808;&#x4F7F;&#x7528; URLSession &#x76F8;&#x95DC;&#x51FD;&#x5F0F;&#x5EAB;&#xFF0C;&#x9019;&#x908A;&#x6703;&#x4ECB;&#x7D39;&#x5169;&#x7A2E;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5728;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x4E4B;&#x524D;&#xFF0C;&#x8ACB;&#x5148;&#x4E86;&#x89E3; iOS 9 &#x4E4B;&#x5F8C;&#x9810;&#x8A2D;&#x70BA;&#x53EA;&#x80FD;&#x8F09;&#x5165; https &#x7684;&#x7DB2;&#x9801;(&#x4E5F;&#x5C31;&#x662F;&#x52A0;&#x5BC6;&#x904E;&#x7684;)&#xFF0C;&#x8981;&#x5982;&#x4F55;&#x8A2D;&#x5B9A;&#x6210;&#x53EF;&#x958B;&#x555F; http &#x7DB2;&#x9801;&#x8ACB;&#x53C3;&#x8003;&#x524D;&#x9762;&#x7AE0;&#x7BC0;<a href="../../uikit/uiwebview.html#http">&#x7121;&#x6CD5;&#x8F09;&#x5165; http &#x7684;&#x7DB2;&#x5740;</a>&#x7684;&#x8AAA;&#x660E;&#x3002;</p>
+<h4 id="&#x57FA;&#x672C;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;">&#x57FA;&#x672C;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;</h4>
+<p>&#x5148;&#x4ECB;&#x7D39;&#x57FA;&#x672C;&#x7372;&#x53D6;&#x65B9;&#x5F0F;&#xFF0C;&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#x6C92;&#x6709;&#x7528;&#x5230;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#xFF0C;&#x6703;&#x55AE;&#x7D14;&#x7684;&#x4E0B;&#x8F09;&#x9060;&#x7AEF;&#x6A94;&#x6848;&#x5230;&#x672C;&#x5730;&#x7AEF;&#x4EE5;&#x4F9B;&#x4F7F;&#x7528;&#xFF0C;&#x4E0B;&#x9762;&#x5C07;&#x5176;&#x5BEB;&#x5728;&#x4E00;&#x500B;&#x65B9;&#x6CD5;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">simpleGet</span><span class="hljs-params">(<span class="hljs-number">_</span> myUrl :String, targetPath :String)</span></span> {
+    <span class="hljs-type">URLSession</span>.shared.dataTask(
+        with: <span class="hljs-type">URL</span>(string: myUrl)!, 
+        completionHandler: {data, response, error <span class="hljs-keyword">in</span>
+            <span class="hljs-comment">// &#x5C07;&#x53D6;&#x5F97;&#x7684;&#x8CC7;&#x8A0A;&#x8F49;&#x6210;&#x5B57;&#x4E32;&#x5370;&#x51FA;</span>
+            <span class="hljs-built_in">print</span>(<span class="hljs-type">String</span>(data: data!, encoding: .utf8))        
+    }).resume()
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#xFF0C;&#x5148;&#x4F7F;&#x7528;<code>URLSession.shared</code>&#x7372;&#x5F97;&#x4E00;&#x500B;&#x5171;&#x7528;&#x7684; URLSession &#x5BE6;&#x9AD4;&#x4EE5;&#x4F9B;&#x9023;&#x7DDA;&#xFF0C;&#x63A5;&#x8457;&#x5E36;&#x5165;&#x8981;&#x63A5;&#x6536;&#x8CC7;&#x6599;&#x7684;&#x7DB2;&#x5740;&#x5230;<code>dataTask(with: completionHandler:)</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x5F8C;&#x5E36;&#x4E00;&#x500B;&#x9589;&#x5305;&#x4F86;&#x8655;&#x7406;&#x7372;&#x5F97;&#x7684;&#x8CC7;&#x6599;&#x3002;</p>
+<p>&#x8ACB;&#x6CE8;&#x610F;&#x5230;&#x5F8C;&#x9762;&#x9084;&#x63A5;&#x4E86;&#x4E00;&#x500B;&#x65B9;&#x6CD5;<code>resume()</code>&#xFF0C;&#x56E0;&#x70BA;&#x9019;&#x500B;&#x9023;&#x7DDA;&#x5FC5;&#x9808;&#x624B;&#x52D5;&#x57F7;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8A2D;&#x7F6E;&#x5B8C;&#x5F8C;&#x5FC5;&#x9808;&#x63A5;&#x8457;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;<code>resume()</code>&#x4F86;&#x9001;&#x51FA;&#x9023;&#x7DDA;&#x3002;</p>
+<p>&#x9589;&#x5305;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578;<code>data</code>&#x4FBF;&#x70BA;&#x7372;&#x5F97;&#x7684;&#x8CC7;&#x8A0A;&#xFF0C;&#x9019;&#x908A;&#x5148;&#x8F49;&#x6210;&#x5B57;&#x4E32;&#x5370;&#x51FA;&#x4F86;&#xFF0C;&#x5F8C;&#x7E8C;&#x6703;&#x518D;&#x505A;&#x66F4;&#x591A;&#x8655;&#x7406;&#x3002;</p>
+<h4 id="&#x666E;&#x901A;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;">&#x666E;&#x901A;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;</h4>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;&#x4E0B;&#x8F09;&#x8CC7;&#x6599;&#x7684;&#x5404;&#x500B;&#x968E;&#x6BB5;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5BE6;&#x4F5C;&#x59D4;&#x4EFB;&#x65B9;&#x6CD5;&#xFF0C;&#x9996;&#x5148;&#x70BA;<code>ViewController</code>&#x52A0;&#x4E0A;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x9075;&#x5FAA;&#x7684;&#x5354;&#x5B9A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span>,
+  <span class="hljs-title">URLSessionDelegate</span>, <span class="hljs-title">URLSessionDownloadDelegate</span> </span>{
+
+  <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x63A5;&#x8457;&#x662F;&#x53EF;&#x4EE5;&#x5BE6;&#x4F5C;&#x7684;&#x59D4;&#x4EFB;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x4E0B;&#x8F09;&#x5B8C;&#x6210;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">urlSession</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> session: URLSession, 
+    downloadTask: URLSessionDownloadTask, 
+    didFinishDownloadingTo location: URL)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x4E0B;&#x8F09;&#x5B8C;&#x6210;&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x4E0B;&#x8F09;&#x904E;&#x7A0B;&#x4E2D;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">urlSession</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> session: URLSession, 
+    downloadTask: URLSessionDownloadTask, 
+    didWriteData bytesWritten: Int64, 
+    totalBytesWritten: Int64, 
+    totalBytesExpectedToWrite: Int64)</span></span> {
+    <span class="hljs-comment">// &#x5982;&#x679C; totalBytesExpectedToWrite &#x4E00;&#x76F4;&#x70BA; -1</span>
+    <span class="hljs-comment">// &#x8868;&#x793A;&#x9060;&#x7AEF;&#x4E3B;&#x6A5F;&#x672A;&#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x6A94;&#x6848;&#x5927;&#x5C0F;&#x8CC7;&#x8A0A;</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x4E0B;&#x8F09;&#x9032;&#x5EA6;&#xFF1A; <span class="hljs-subst">\(totalBytesWritten)</span>/<span class="hljs-subst">\(totalBytesExpectedToWrite)</span>&quot;</span>)
+}
+</code></pre>
+<p>&#x6700;&#x5F8C;&#x5C07;&#x7372;&#x53D6;&#x65B9;&#x5F0F;&#x5BEB;&#x5728;&#x4E00;&#x500B;&#x65B9;&#x6CD5;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x666E;&#x901A;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x7684;&#x65B9;&#x5F0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">normalGet</span><span class="hljs-params">(<span class="hljs-number">_</span> myUrl :String)</span></span> {
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> url = <span class="hljs-type">URL</span>(string: myUrl) {
+        <span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x70BA;&#x9810;&#x8A2D;&#x7684; session &#x8A2D;&#x5B9A;</span>
+        <span class="hljs-keyword">let</span> sessionWithConfigure = <span class="hljs-type">URLSessionConfiguration</span>.<span class="hljs-keyword">default</span>
+
+        <span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;</span>
+        <span class="hljs-keyword">let</span> session = <span class="hljs-type">URLSession</span>(
+            configuration: sessionWithConfigure, 
+            delegate: <span class="hljs-keyword">self</span>, 
+            delegateQueue: <span class="hljs-literal">nil</span>)
+
+        <span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x9060;&#x7AEF; API &#x7DB2;&#x5740;</span>
+        <span class="hljs-keyword">let</span> dataTask = session.downloadTask(with: url)
+
+        <span class="hljs-comment">// &#x57F7;&#x884C;&#x52D5;&#x4F5C;</span>
+        dataTask.resume()
+    }
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x9996;&#x5148;&#x4F7F;&#x7528;<code>URLSessionConfiguration.default</code>&#x8A2D;&#x7F6E;&#x4E00;&#x500B; session &#x7684;&#x9810;&#x8A2D;&#x6A21;&#x5F0F;&#x3002;&#x53E6;&#x5916;&#x9084;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>URLSessionConfiguration.ephemeral</code>&#xFF0C;&#x9019;&#x500B;&#x6A21;&#x5F0F;&#x4E0D;&#x6703;&#x5C07;&#x9023;&#x7DDA;&#x4E2D;&#x7684;&#x5FEB;&#x53D6;&#x3001;Cookie &#x6216;&#x8A8D;&#x8B49;&#x8CC7;&#x8A0A;&#x505A;&#x5132;&#x5B58;&#xFF0C;&#x5C31;&#x50CF;&#x662F;&#x700F;&#x89BD;&#x5668;&#x7684;&#x96B1;&#x79C1;&#x6A21;&#x5F0F;&#x3002;&#x6216;&#x662F;&#x4F7F;&#x7528;<code>URLSessionConfiguration.background(withIdentifier:)</code>&#xFF0C;&#x8B93;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x88AB;&#x5207;&#x63DB;&#x5230;&#x80CC;&#x666F;&#x6642;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x57F7;&#x884C;&#x9023;&#x7DDA;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x63A5;&#x8457;&#x4F7F;&#x7528;<code>URLSession(configuration:delegate:delegateQueue:)</code>&#x8A2D;&#x7F6E;&#x4E00;&#x500B; URLSession &#x5BE6;&#x9AD4;(&#x76F8;&#x8F03;&#x65BC;&#x57FA;&#x672C;&#x7372;&#x53D6;&#x65B9;&#x5F0F;&#x7684;&#x5171;&#x7528;&#x5BE6;&#x9AD4;&#xFF0C;&#x9019;&#x908A;&#x8A2D;&#x7F6E;&#x70BA;&#x4E00;&#x500B;&#x65B0;&#x7684; URLSession &#x5BE6;&#x9AD4;&#x3002;)&#xFF0C;&#x53C3;&#x6578;&#x50B3;&#x5165;&#x524D;&#x9762;&#x8A2D;&#x7F6E;&#x7684; session &#x8A2D;&#x5B9A;&#xFF0C;&#x4EE5;&#x53CA;&#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x3002;&#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x5F8C;&#xFF0C;&#x5728;&#x4E0B;&#x8F09;&#x904E;&#x7A0B;&#x4E2D;&#x8207;&#x5B8C;&#x6210;&#x6642;&#xFF0C;&#x90FD;&#x6703;&#x57F7;&#x884C;&#x59D4;&#x4EFB;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6700;&#x5F8C;&#x4F7F;&#x7528;<code>downloadTask(with:)</code>&#x586B;&#x5165;&#x9060;&#x7AEF; API &#x7DB2;&#x5740;&#xFF0C;&#x53CA;&#x57F7;&#x884C;&#x52D5;&#x4F5C;<code>resume()</code>&#x3002;</p>
+<h4 id="&#x57F7;&#x884C;&#x7372;&#x53D6;&#x8CC7;&#x8A0A;">&#x57F7;&#x884C;&#x7372;&#x53D6;&#x8CC7;&#x8A0A;</h4>
+<p>&#x5728;<code>viewDidload()</code>&#x4E2D;&#xFF0C;&#x57F7;&#x884C;&#x7372;&#x53D6;&#x5169;&#x500B;&#x793A;&#x7BC4; API &#x8CC7;&#x6599;&#xFF0C;&#x5206;&#x5225;&#x4F7F;&#x7528;&#x524D;&#x9762;&#x4ECB;&#x7D39;&#x7684;<strong>&#x57FA;&#x672C;&#x7372;&#x53D6;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;</strong>&#x8207;<strong>&#x666E;&#x901A;&#x7372;&#x53D6;&#x8CC7;&#x8A0A;&#x65B9;&#x5F0F;</strong>&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x53F0;&#x5317;&#x4F4F;&#x5BBF;&#x8CC7;&#x6599; &#x4E2D;&#x6587;</span>
+<span class="hljs-keyword">let</span> strHotelID = 
+  <span class="hljs-string">&quot;6f4e0b9b-8cb1-4b1d-a5c4-febd90f62469&quot;</span>
+<span class="hljs-keyword">self</span>.simpleGet(taipeiDataUrl + strHotelID,
+  targetPath: documentsPath + <span class="hljs-string">&quot;hotel.json&quot;</span>)
+
+<span class="hljs-comment">// &#x53F0;&#x5317;&#x666F;&#x9EDE;&#x8CC7;&#x6599; &#x4E2D;&#x6587;</span>
+<span class="hljs-keyword">let</span> strTouringSiteID = 
+  <span class="hljs-string">&quot;36847f3f-deff-4183-a5bb-800737591de5&quot;</span>
+touringSiteTargetUrl = 
+  documentsPath + <span class="hljs-string">&quot;touringSite.json&quot;</span>
+<span class="hljs-keyword">self</span>.normalGet(taipeiDataUrl + strTouringSiteID)
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4FBF;&#x6703;&#x958B;&#x59CB;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x6599;&#x3002;&#x65B9;&#x6CD5;<code>simpleGet()</code>&#x7684;&#x7B2C;&#x4E8C;&#x500B;&#x53C3;&#x6578;<code>targetPath</code>&#x5F8C;&#x7E8C;&#x6703;&#x518D;&#x505A;&#x8AAA;&#x660E;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5132;&#x5B58;&#x70BA;&#x672C;&#x5730;&#x6A94;&#x6848;">&#x5132;&#x5B58;&#x70BA;&#x672C;&#x5730;&#x6A94;&#x6848;</h3>
+<p>&#x5728;&#x524D;&#x9762;&#x9806;&#x5229;&#x7372;&#x5F97;&#x8CC7;&#x6599;&#x5F8C;&#xFF0C;&#x63A5;&#x8457;&#x5C07;&#x8CC7;&#x6599;&#x5B58;&#x6210;&#x672C;&#x5730;&#x6A94;&#x6848;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x662F;&#x7A0D;&#x524D;&#x5EFA;&#x7ACB;&#x7684;&#x65B9;&#x6CD5;<code>simpleGet()</code>&#xFF0C;&#x7372;&#x5F97;&#x7684;&#x8CC7;&#x6599;<code>data</code>&#x70BA; Data? &#x578B;&#x5225;&#xFF0C;&#x4EE5;&#x4E0B;&#x70BA;&#x5132;&#x5B58;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x6A94;&#x6848;</span>
+<span class="hljs-keyword">let</span> fileurl = <span class="hljs-type">URL</span>(string: targetPath)!
+<span class="hljs-keyword">do</span> {
+    <span class="hljs-keyword">try</span> data?.write(to: fileurl, options: .atomic)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x57FA;&#x672C;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x5132;&#x5B58;&#x8CC7;&#x8A0A;&#x6210;&#x529F;&quot;</span>)
+    <span class="hljs-keyword">self</span>.jsonParse(fileurl)
+} <span class="hljs-keyword">catch</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x57FA;&#x672C;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x5132;&#x5B58;&#x8CC7;&#x8A0A;&#x5931;&#x6557;&quot;</span>)
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;<code>simpleGet()</code>&#x50B3;&#x5165;&#x7684;&#x7B2C;&#x4E8C;&#x500B;&#x53C3;&#x6578;<code>targetPath</code>&#x578B;&#x5225;&#x70BA; String &#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x5C07;&#x5176;&#x8F49;&#x70BA; URL &#xFF0C;&#x4E26;&#x5E36;&#x5165;&#x578B;&#x5225;&#x70BA; Data? &#x7684;&#x9589;&#x5305;&#x53C3;&#x6578;<code>data</code>&#x7684;&#x65B9;&#x6CD5;<code>write(to:options:)</code>&#xFF0C;&#x4EE5;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x672C;&#x5730;&#x7AEF;&#x6A94;&#x6848;&#x3002;</p>
+<p>&#x63A5;&#x8457;&#x662F;&#x65B9;&#x6CD5;<code>normalGet()</code>&#xFF0C;&#x6703;&#x5728;&#x4E0B;&#x8F09;&#x5B8C;&#x6210;&#x7684;&#x59D4;&#x4EFB;&#x65B9;&#x6CD5;&#x4E2D;&#x7372;&#x5F97;&#x8CC7;&#x6599;<code>location</code>&#xFF0C;&#x5176;&#x578B;&#x5225;&#x70BA; URL&#xFF0C;&#x662F;&#x4E00;&#x500B;&#x672C;&#x5730;&#x7684;&#x66AB;&#x5B58;&#x6A94;&#x6848;&#x8DEF;&#x5F91;&#xFF0C;&#x4EE5;&#x4E0B;&#x70BA;&#x5132;&#x5B58;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> targetUrl = <span class="hljs-type">URL</span>(string: touringSiteTargetUrl)!
+<span class="hljs-keyword">do</span> {
+    <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">try</span>? <span class="hljs-type">Data</span>(contentsOf: location)
+    <span class="hljs-keyword">try</span> data?.write(to: targetUrl, options: .atomic)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x666E;&#x901A;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x5132;&#x5B58;&#x8CC7;&#x8A0A;&#x6210;&#x529F;&quot;</span>)
+    <span class="hljs-keyword">self</span>.jsonParse(targetUrl)
+} <span class="hljs-keyword">catch</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x666E;&#x901A;&#x7372;&#x53D6;&#x9060;&#x7AEF;&#x8CC7;&#x8A0A;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x5132;&#x5B58;&#x8CC7;&#x8A0A;&#x5931;&#x6557;&quot;</span>)
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4E00;&#x958B;&#x59CB;&#x8A2D;&#x7F6E;&#x7684;&#x5C6C;&#x6027;<code>touringSiteTargetUrl</code>&#x4F86;&#x751F;&#x6210;&#x4E00;&#x500B; URL &#xFF0C;&#x7528;&#x4F86;&#x8868;&#x793A;&#x65B0;&#x7684;&#x672C;&#x5730;&#x7AEF;&#x6A94;&#x6848;&#x8DEF;&#x5F91;&#x3002;&#x63A5;&#x8457;&#x5C07;<code>location</code>&#x8F49;&#x70BA;&#x578B;&#x5225; Data &#x7684;&#x8CC7;&#x6599;&#x5F8C;&#xFF0C;&#x518D;&#x4EE5;&#x65B9;&#x6CD5;<code>write(to:options:)</code>&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x672C;&#x5730;&#x6A94;&#x6848;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x5982;&#x679C;&#x90FD;&#x9806;&#x5229;&#x5132;&#x5B58;&#x6210;&#x529F;&#xFF0C;&#x6703;&#x5728;&#x672C;&#x5730;&#x7684; Documents &#x76EE;&#x9304;&#x4E2D;&#xFF0C;&#x5206;&#x5225;&#x5EFA;&#x7ACB; hotel.json &#x8207; touringSite.json &#x6A94;&#x6848;&#x3002;</p>
+<h3 id="&#x89E3;&#x6790;-json-&#x6A94;&#x6848;">&#x89E3;&#x6790; JSON &#x6A94;&#x6848;</h3>
+<p>&#x524D;&#x9762;&#x5EFA;&#x7ACB;&#x597D;&#x5169;&#x500B; JSON &#x6A94;&#x6848;&#x5F8C;&#xFF0C;&#x5FC5;&#x9808;&#x518D;&#x5C07;&#x5176;&#x505A;&#x89E3;&#x6790;&#x4EE5;&#x53D6;&#x5F97;&#x5176;&#x5167;&#x7684;&#x8CC7;&#x6599;&#x3002;&#x9996;&#x5148;&#x4F7F;&#x7528;&#x5148;&#x524D;&#x4ECB;&#x7D39;&#x7684;&#x700F;&#x89BD;&#x5668;&#x64F4;&#x5145;&#x5957;&#x4EF6;&#x6AA2;&#x8996;&#x4E00;&#x4E0B;&#x9019;&#x500B; JSON &#x5167;&#x5BB9;&#xFF1A;</p>
+<p><img src="../../images/apps/taipeitravel/taipeitravel06.png" alt="taipeitravel06"></p>
+<p>&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript">{
+  result: {
+    offset: <span class="hljs-number">0</span>,
+    limit: <span class="hljs-number">10000</span>,
+    count: <span class="hljs-number">517</span>,
+    sort: <span class="hljs-string">&quot;&quot;</span>,
+    results: [
+      <span class="hljs-comment">// &#x7701;&#x7565;</span>
+    ]
+  }
+}
+</code></pre>
+<p>&#x6700;&#x5916;&#x5C64;&#x53EF;&#x4EE5;&#x8F49;&#x63DB;&#x6210;&#x4E00;&#x500B;&#x5B57;&#x5178;( Dictionary )&#xFF0C;&#x5176;&#x5167;&#x53EA;&#x6709;&#x4E00;&#x7B46;&#x8CC7;&#x6599;&#xFF0C; key &#x503C;&#x70BA;<code>result</code>&#xFF0C;&#x5C0D;&#x61C9;&#x8457;&#x5176;&#x5167;&#x7684;&#x8CC7;&#x6599;&#x4E5F;&#x662F;&#x4E00;&#x500B;&#x5B57;&#x5178;&#xFF0C;&#x5176;&#x5167;&#x6709;&#x4E94;&#x7B46;&#x8CC7;&#x6599;&#xFF0C;&#x4EE3;&#x8868;&#x610F;&#x601D;&#x5206;&#x5225;&#x70BA;&#xFF1A;</p>
+<ul>
+<li>offset&#xFF1A;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x8A2D;&#x7F6E;&#x70BA; 3 &#xFF0C;&#x5247;&#x8868;&#x793A;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x8981;&#x8DF3;&#x904E;&#x524D;&#x9762; 3 &#x7B46;&#xFF0C;&#x5F9E;&#x7B2C;&#x56DB;&#x7B46;&#x958B;&#x59CB;&#x53D6;&#x5F97;&#x3002;</li>
+<li>limit&#xFF1A;&#x7372;&#x53D6;&#x8CC7;&#x6599;&#x7684;&#x6700;&#x591A;&#x6578;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x8A2D;&#x7F6E;&#x70BA; 10 &#xFF0C;&#x5247;&#x6700;&#x591A;&#x53EA;&#x6703;&#x53D6;&#x5F97; 10 &#x7B46;&#x8CC7;&#x6599;&#x3002;</li>
+<li>count&#xFF1A;&#x5168;&#x90E8;&#x7684;&#x8CC7;&#x6599;&#x6578;&#x91CF;&#x3002;</li>
+<li>sort:&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#xFF0C;&#x8207; SQL &#x6307;&#x4EE4;&#x985E;&#x4F3C;&#xFF0C;&#x5982;&#x679C;&#x8A2D;&#x7F6E;&#x70BA; &quot;id asc, RowNumber desc&quot;&#xFF0C;&#x5247;&#x662F;&#x4EE5; id &#x5F9E;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x4EE5;&#x53CA;&#x4EE5; RowNumber &#x5F9E;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;&#x3002;</li>
+<li>results&#xFF1A;&#x7372;&#x53D6;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x6703;&#x4F9D;&#x7167;&#x524D;&#x9762;&#x8A2D;&#x7F6E;&#x7684;&#x8A2D;&#x5B9A;&#x53D6;&#x5F97;&#x8CC7;&#x6599;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x9019;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7A0D;&#x524D;&#x63D0;&#x5230;&#x7684; API &#x7DB2;&#x5740;&#x5F8C;&#x9762;&#x52A0;&#x4E0A;&#xFF0C;&#x50CF;&#x662F;&#x8981;&#x8A2D;&#x7F6E; offset &#x70BA; 5 &#x4EE5;&#x53CA; limit &#x70BA; 10 &#xFF0C;&#x5247;&#x662F;&#x5728;&#x8A72;&#x7DB2;&#x5740;&#x5F8C;&#x9762;&#x52A0;&#x4E0A;<code>&amp;offset=5&amp;limit=10</code>&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x4F9D;&#x7167;&#x4E0A;&#x8FF0;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x5C07;&#x5176;&#x8F49;&#x63DB;&#x70BA;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; [String:[String:AnyObject]] &#x7684;&#x5B57;&#x5178;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#x3002;&#x63A5;&#x8457;&#x9019;&#x908A;&#x5C07;&#x89E3;&#x6790; JSON &#x7684;&#x529F;&#x80FD;&#x5BEB;&#x5728;&#x4E00;&#x500B;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x89E3;&#x6790; json &#x6A94;&#x6848;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">jsonParse</span><span class="hljs-params">(<span class="hljs-number">_</span> url :URL)</span></span> {
+    <span class="hljs-keyword">do</span> {
+        <span class="hljs-keyword">let</span> dict = <span class="hljs-keyword">try</span> <span class="hljs-type">JSONSerialization</span>.jsonObject(
+            with: <span class="hljs-type">Data</span>(contentsOf: url), 
+            options: 
+                <span class="hljs-type">JSONSerialization</span>.<span class="hljs-type">ReadingOptions</span>.allowFragments) 
+                <span class="hljs-keyword">as</span>! [<span class="hljs-type">String</span>:[<span class="hljs-type">String</span>:<span class="hljs-type">AnyObject</span>]]
+        <span class="hljs-built_in">print</span>(dict.<span class="hljs-built_in">count</span>)
+        <span class="hljs-keyword">let</span> dataArr = dict[<span class="hljs-string">&quot;result&quot;</span>]![<span class="hljs-string">&quot;results&quot;</span>] <span class="hljs-keyword">as</span>! [<span class="hljs-type">AnyObject</span>]
+        <span class="hljs-built_in">print</span>(dataArr.<span class="hljs-built_in">count</span>)
+        <span class="hljs-built_in">print</span>(dataArr[<span class="hljs-number">3</span>][<span class="hljs-string">&quot;stitle&quot;</span>])
+    } <span class="hljs-keyword">catch</span> {
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x89E3;&#x6790; json &#x5931;&#x6557;&quot;</span>)
+    }
+
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x5373;&#x70BA;&#x9019;&#x5C0F;&#x7BC0;&#x7BC4;&#x4F8B;&#x7684;&#x5167;&#x5BB9;&#x3002;</p>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/apps/taipeitravel" target="_blank">apps/taipeitravel</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="intro.html" class="navigation navigation-prev " aria-label="Previous page: 規劃與實作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="map.html" class="navigation navigation-next " aria-label="Next page: 地圖與定位">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"取得遠端 API 資料並儲存","level":"1.6.2.2","depth":3,"next":{"title":"地圖與定位","level":"1.6.2.3","depth":3,"path":"apps/taipeitravel/map.md","ref":"apps/taipeitravel/map.md","articles":[]},"previous":{"title":"規劃與實作","level":"1.6.2.1","depth":3,"path":"apps/taipeitravel/intro.md","ref":"apps/taipeitravel/intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apps/taipeitravel/fetchdataandstorage.md","mtime":"2017-12-07T04:25:38.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

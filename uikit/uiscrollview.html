@@ -1,0 +1,1641 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>滑動視圖 UIScrollView · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="multipages.html" />
+    
+    
+    <link rel="prev" href="uisearchcontroller.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch1/ch1.html">
+            
+                <a href="../ch1/ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../ch1/basics.html">
+            
+                <a href="../ch1/basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../ch1/types.html">
+            
+                <a href="../ch1/types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../ch1/basic_operators.html">
+            
+                <a href="../ch1/basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../ch1/strings_characters.html">
+            
+                <a href="../ch1/strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../ch1/collection_types.html">
+            
+                <a href="../ch1/collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../ch1/control_flow.html">
+            
+                <a href="../ch1/control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../ch1/functions.html">
+            
+                <a href="../ch1/functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../ch1/closures.html">
+            
+                <a href="../ch1/closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2/ch2.html">
+            
+                <a href="../ch2/ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch2/enumerations.html">
+            
+                <a href="../ch2/enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch2/classes_structures.html">
+            
+                <a href="../ch2/classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ch2/properties.html">
+            
+                <a href="../ch2/properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ch2/methods.html">
+            
+                <a href="../ch2/methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ch2/subscripts.html">
+            
+                <a href="../ch2/subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ch2/inheritance.html">
+            
+                <a href="../ch2/inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ch2/initialization_deinitialization.html">
+            
+                <a href="../ch2/initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ch2/arc.html">
+            
+                <a href="../ch2/arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ch2/optional-chaining.html">
+            
+                <a href="../ch2/optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../ch2/error-handling.html">
+            
+                <a href="../ch2/error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../ch2/type-casting.html">
+            
+                <a href="../ch2/type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../ch2/nested-types.html">
+            
+                <a href="../ch2/nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../ch2/extensions.html">
+            
+                <a href="../ch2/extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../ch2/protocols.html">
+            
+                <a href="../ch2/protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../ch2/generics.html">
+            
+                <a href="../ch2/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../ch2/access-control.html">
+            
+                <a href="../ch2/access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="uikit.html">
+            
+                <a href="uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="uikit_intro.html">
+            
+                <a href="uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="uilabel.html">
+            
+                <a href="uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="uitextfield.html">
+            
+                <a href="uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="uitextview.html">
+            
+                <a href="uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="uibutton.html">
+            
+                <a href="uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="uialertcontroller.html">
+            
+                <a href="uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="uiimageview.html">
+            
+                <a href="uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="uidatepicker.html">
+            
+                <a href="uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="uipickerview.html">
+            
+                <a href="uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="uiswitch.html">
+            
+                <a href="uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="uisegmentedcontrol.html">
+            
+                <a href="uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="uiprogressview.html">
+            
+                <a href="uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="uislider.html">
+            
+                <a href="uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="uistepper.html">
+            
+                <a href="uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="uiwebview.html">
+            
+                <a href="uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="uitableview.html">
+            
+                <a href="uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="uicollectionview.html">
+            
+                <a href="uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="uisearchcontroller.html">
+            
+                <a href="uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.19" data-path="uiscrollview.html">
+            
+                <a href="uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="multipages.html">
+            
+                <a href="multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="uinavigationcontroller.html">
+            
+                <a href="uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="uitabbarcontroller.html">
+            
+                <a href="uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="uigesturerecognizer.html">
+            
+                <a href="uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="animations.html">
+            
+                <a href="animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="userdefaults.html">
+            
+                <a href="userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../database/sqlite.html">
+            
+                <a href="../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../database/coredata.html">
+            
+                <a href="../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps/apps.html">
+            
+                <a href="../apps/apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../apps/todo/todo.html">
+            
+                <a href="../apps/todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../apps/todo/intro.html">
+            
+                <a href="../apps/todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../apps/todo/settings.html">
+            
+                <a href="../apps/todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../apps/todo/sound.html">
+            
+                <a href="../apps/todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../apps/todo/edituitableview.html">
+            
+                <a href="../apps/todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apps/taipeitravel/taipeitravel.html">
+            
+                <a href="../apps/taipeitravel/taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../apps/taipeitravel/intro.html">
+            
+                <a href="../apps/taipeitravel/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                <a href="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../apps/taipeitravel/map.html">
+            
+                <a href="../apps/taipeitravel/map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../apps/money/money.html">
+            
+                <a href="../apps/money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../apps/money/intro.html">
+            
+                <a href="../apps/money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../more/more.html">
+            
+                <a href="../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../more/xcode_intro.html">
+            
+                <a href="../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../more/xcode_install.html">
+            
+                <a href="../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../more/open_playground.html">
+            
+                <a href="../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../more/open_project.html">
+            
+                <a href="../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../more/interface_intro.html">
+            
+                <a href="../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../more/addfile.html">
+            
+                <a href="../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../more/copyfile.html">
+            
+                <a href="../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../more/deletefile.html">
+            
+                <a href="../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../more/addframework.html">
+            
+                <a href="../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../more/simulator.html">
+            
+                <a href="../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../more/hotkey.html">
+            
+                <a href="../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../more/keywords.html">
+            
+                <a href="../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../more/camel_case_naming.html">
+            
+                <a href="../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >滑動視圖 UIScrollView</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6ED1;&#x52D5;&#x8996;&#x5716;-uiscrollview">&#x6ED1;&#x52D5;&#x8996;&#x5716; UIScrollView</h1>
+<p>&#x7576;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684;<strong>&#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D;</strong>&#x6BD4;<strong>&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;</strong>&#x5927;&#x6642;&#xFF0C;&#x6703;&#x52A0;&#x4E0A;&#x6ED1;&#x52D5;&#x689D;( scroll bar )&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x81EA;&#x7531;&#x6ED1;&#x52D5;&#xFF0C;UIScrollView &#x5C31;&#x662F;&#x6709;&#x9019;&#x4E00;&#x7279;&#x6027;&#x7684;&#x6700;&#x57FA;&#x672C;&#x5143;&#x4EF6;&#x3002;&#x5BE6;&#x969B;&#x4E0A;&#xFF0C;&#x524D;&#x9762;&#x7AE0;&#x7BC0;&#x4ECB;&#x7D39;&#x904E;&#x7684; <a href="uitextview.html">UITextView</a> &#x3001; <a href="uitableview.html">UITableView</a> &#x53CA; <a href="uicollectionview.html">UICollectionView</a> &#x90FD;&#x662F;&#x7E7C;&#x627F;&#x81EA; UIScrollView &#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x5011;&#x4E5F;&#x90FD;&#x7E7C;&#x627F;&#x4E86; UIScrollView &#x7684;&#x7279;&#x6027;&#x3002;</p>
+<p>&#x672C;&#x7BC0;&#x6703;&#x5148;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x57FA;&#x672C;&#x7684; UIScrollView &#x4E26;&#x4ECB;&#x7D39;&#x5E38;&#x7528;&#x7684;&#x5C6C;&#x6027;&#x53CA;&#x65B9;&#x6CD5;&#xFF0C;&#x63A5;&#x8457;&#x6703;&#x914D;&#x5408; UIPageControl &#x5143;&#x4EF6;&#x5EFA;&#x7ACB;&#x50CF;&#x662F;&#x65B0;&#x624B;&#x5C0E;&#x89BD;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x7684;&#x5206;&#x9801;&#x529F;&#x80FD;&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x7684;-uiscrollview">&#x57FA;&#x672C;&#x7684; UIScrollView</h3>
+<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIScrollView &#x3002;</p>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x5169;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>{
+    <span class="hljs-keyword">var</span> myScrollView: <span class="hljs-type">UIScrollView</span>!
+    <span class="hljs-keyword">var</span> fullSize :<span class="hljs-type">CGSize</span>!
+
+    <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
+fullSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
+</code></pre>
+<p>&#x4E0B;&#x5716;&#x662F;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x793A;&#x610F;&#x5716;&#xFF0C;&#x7D05;&#x8272;&#x77E9;&#x5F62;&#x70BA;&#x5C6C;&#x6027;<code>frame</code>&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;&#x3002;&#x9ED1;&#x8272;&#x77E9;&#x5F62;&#x70BA;&#x5C6C;&#x6027;<code>contentSize</code>&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D;&#x3002;&#x85CD;&#x8272;&#x9EDE;&#x9EDE;&#x5247;&#x662F;&#x5C6C;&#x6027;<code>contentOffset</code>&#x8A2D;&#x7F6E;&#x7684;&#x9EDE;( CGPoint )&#xFF0C;&#x8868;&#x793A;&#x8D77;&#x59CB;&#x756B;&#x9762;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8A2D;&#x5B9A;&#x5247;&#x662F;&#x9810;&#x8A2D;&#x70BA;&#x7D05;&#x8272;&#x9EDE;&#x9EDE;<code>(0, 0)</code>&#xFF1A;</p>
+<p><img src="../images/uikit/uiscrollview/uiscrollview01.png" alt="uiscrollview01"></p>
+<p>&#x63A5;&#x8457;&#x4F7F;&#x7528;&#x7A0B;&#x5F0F;&#x78BC;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; UIScrollView &#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB; UIScrollView</span>
+myScrollView = <span class="hljs-type">UIScrollView</span>()
+
+<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x5C3A;&#x5BF8; &#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;</span>
+myScrollView.frame = <span class="hljs-type">CGRect</span>(
+  x: <span class="hljs-number">0</span>, y: <span class="hljs-number">20</span>, width: fullSize.width,
+  height: fullSize.height - <span class="hljs-number">20</span>)
+
+<span class="hljs-comment">// &#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D; &#x70BA; 3*2 &#x500B;&#x87A2;&#x5E55;&#x5927;&#x5C0F;</span>
+myScrollView.contentSize = <span class="hljs-type">CGSize</span>(
+  width: fullSize.width * <span class="hljs-number">3</span>,
+  height: fullSize.height * <span class="hljs-number">2</span>)
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x986F;&#x793A;&#x6C34;&#x5E73;&#x7684;&#x6ED1;&#x52D5;&#x689D;</span>
+myScrollView.showsHorizontalScrollIndicator = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x986F;&#x793A;&#x5782;&#x76F4;&#x7684;&#x6ED1;&#x52D5;&#x689D;</span>
+myScrollView.showsVerticalScrollIndicator = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x6ED1;&#x52D5;&#x689D;&#x7684;&#x6A23;&#x5F0F;</span>
+myScrollView.indicatorStyle = .black
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6ED1;&#x52D5;</span>
+myScrollView.isScrollEnabled = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6309;&#x72C0;&#x614B;&#x5217;&#x56DE;&#x5230;&#x6700;&#x4E0A;&#x65B9;</span>
+myScrollView.scrollsToTop = <span class="hljs-literal">false</span>
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x9650;&#x5236;&#x6ED1;&#x52D5;&#x6642;&#x53EA;&#x80FD;&#x55AE;&#x500B;&#x65B9;&#x5411; &#x5782;&#x76F4;&#x6216;&#x6C34;&#x5E73;&#x6ED1;&#x52D5;</span>
+myScrollView.isDirectionalLockEnabled = <span class="hljs-literal">false</span>
+
+<span class="hljs-comment">// &#x6ED1;&#x52D5;&#x8D85;&#x904E;&#x7BC4;&#x570D;&#x6642;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x5F48;&#x56DE;&#x6548;&#x679C;</span>
+myScrollView.bounces = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x5143;&#x4EF6;&#x7684;&#x9810;&#x8A2D;&#x7E2E;&#x653E;&#x5927;&#x5C0F;</span>
+myScrollView.zoomScale = <span class="hljs-number">1.0</span>
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x5143;&#x4EF6;&#x53EF;&#x7E2E;&#x5C0F;&#x5230;&#x7684;&#x6700;&#x5C0F;&#x500D;&#x6578;</span>
+myScrollView.minimumZoomScale = <span class="hljs-number">0.5</span>
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x5143;&#x4EF6;&#x53EF;&#x653E;&#x5927;&#x5230;&#x7684;&#x6700;&#x5927;&#x500D;&#x6578;</span>
+myScrollView.maximumZoomScale = <span class="hljs-number">2.0</span>
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x5143;&#x4EF6;&#x7E2E;&#x653E;&#x6642;&#x662F;&#x5426;&#x5728;&#x8D85;&#x904E;&#x7E2E;&#x653E;&#x500D;&#x6578;&#x5F8C;&#x4F7F;&#x7528;&#x5F48;&#x56DE;&#x6548;&#x679C;</span>
+myScrollView.bouncesZoom = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;</span>
+myScrollView.delegate = <span class="hljs-keyword">self</span>
+
+<span class="hljs-comment">// &#x8D77;&#x59CB;&#x7684;&#x53EF;&#x898B;&#x8996;&#x5716;&#x504F;&#x79FB;&#x91CF; &#x9810;&#x8A2D;&#x70BA; (0, 0)</span>
+<span class="hljs-comment">// &#x8A2D;&#x5B9A;&#x9019;&#x500B;&#x503C;&#x5F8C; &#x5C31;&#x6703;&#x5C07;&#x539F;&#x9EDE;&#x6ED1;&#x52D5;&#x81F3;&#x9019;&#x500B;&#x9EDE;&#x8D77;&#x59CB;</span>
+myScrollView.contentOffset = <span class="hljs-type">CGPoint</span>(
+  x: fullSize.width * <span class="hljs-number">0.5</span>, y: fullSize.height * <span class="hljs-number">0.5</span>)
+
+<span class="hljs-comment">// &#x4EE5;&#x4E00;&#x9801;&#x70BA;&#x55AE;&#x4F4D;&#x6ED1;&#x52D5;</span>
+myScrollView.isPagingEnabled = <span class="hljs-literal">false</span>
+
+<span class="hljs-comment">// &#x52A0;&#x5165;&#x5230;&#x756B;&#x9762;&#x4E2D;</span>
+<span class="hljs-keyword">self</span>.view.addSubview(myScrollView)
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x7528;&#x4F86;&#x5354;&#x52A9;&#x986F;&#x793A;&#x6ED1;&#x52D5;&#x6548;&#x679C;&#x7684;&#x516D;&#x500B; UIView &#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x516D;&#x500B; UIView &#x4F86;&#x5354;&#x52A9;&#x986F;&#x793A;&#x51FA;&#x6ED1;&#x52D5;&#x7684;&#x8DEF;&#x5F91;</span>
+<span class="hljs-keyword">var</span> myUIView = <span class="hljs-type">UIView</span>()
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>...<span class="hljs-number">2</span> {
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>...<span class="hljs-number">1</span> {
+        myUIView = <span class="hljs-type">UIView</span>(frame: <span class="hljs-type">CGRect</span>(
+          x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, width: <span class="hljs-number">100</span>, height: <span class="hljs-number">100</span>))
+        myUIView.tag = i * <span class="hljs-number">10</span> + j + <span class="hljs-number">1</span>
+        myUIView.center = <span class="hljs-type">CGPoint</span>(
+          x: fullSize.width * (<span class="hljs-number">0.5</span> + <span class="hljs-type">CGFloat</span>(i)),
+          y: fullSize.height * (<span class="hljs-number">0.5</span> + <span class="hljs-type">CGFloat</span>(j)))
+        <span class="hljs-keyword">let</span> color =
+          ((<span class="hljs-type">CGFloat</span>(i) + <span class="hljs-number">1</span>) * (<span class="hljs-type">CGFloat</span>(j) + <span class="hljs-number">1</span>)) / <span class="hljs-number">12.0</span>
+        myUIView.backgroundColor = <span class="hljs-type">UIColor</span>(
+          red: color, green: color, blue: color, alpha: <span class="hljs-number">1</span>)
+        myScrollView.addSubview(myUIView)
+    }
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x7E2E;&#x653E;&#x7684;&#x5143;&#x4EF6;&#x9084;&#x9700;&#x8981;&#x7531;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x5BE6;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#x4F86;&#x8A2D;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x7DCA;&#x63A5;&#x8457;&#x518D;&#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x9700;&#x8981;&#x7684;&#x5354;&#x5B9A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span>, <span class="hljs-title">UIScrollViewDelegate</span> </span>{
+  <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5BE6;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#x3002; UIScrollView &#x63D0;&#x4F9B;&#x7D66;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;&#x53EF;&#x4EE5;&#x5BE6;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#x5F88;&#x591A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6ED1;&#x52D5;&#x6216;&#x662F;&#x7E2E;&#x653E;&#x7684;&#x5404;&#x500B;&#x968E;&#x6BB5;(&#x958B;&#x59CB;&#x3001;&#x9032;&#x884C;&#x4E2D;&#x8207;&#x7D50;&#x675F;&#x7B49;&#x7B49;)&#x8A2D;&#x7F6E;&#x81EA;&#x5B9A;&#x7FA9;&#x7684;&#x52D5;&#x4F5C;&#xFF0C;&#x4EE5;&#x4E0B;&#x793A;&#x7BC4;&#x5E7E;&#x500B;&#x5E38;&#x7528;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x958B;&#x59CB;&#x6ED1;&#x52D5;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewWillBeginDragging</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewWillBeginDragging&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x6ED1;&#x52D5;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewDidScroll</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewDidScroll&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x7D50;&#x675F;&#x6ED1;&#x52D5;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewDidEndDragging</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView, 
+    willDecelerate decelerate: Bool)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewDidEndDragging&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x7684;&#x5143;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">viewForZooming</span><span class="hljs-params">(
+    <span class="hljs-keyword">in</span> scrollView: UIScrollView)</span></span> -&gt; <span class="hljs-type">UIView</span>? {
+    <span class="hljs-comment">// &#x9019;&#x908A;&#x7528;&#x4F86;&#x793A;&#x7BC4;&#x7E2E;&#x653E;&#x7684;&#x5143;&#x4EF6;&#x662F; tag &#x70BA; 1 &#x7684; UIView</span>
+    <span class="hljs-comment">// &#x4E5F;&#x5C31;&#x662F;&#x5DE6;&#x4E0A;&#x89D2;&#x90A3;&#x500B; UIView</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.view.viewWithTag(<span class="hljs-number">1</span>)
+}
+
+<span class="hljs-comment">// &#x958B;&#x59CB;&#x7E2E;&#x653E;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewWillBeginZooming</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView, 
+    with view: UIView?)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewWillBeginZooming&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x7E2E;&#x653E;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewDidZoom</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewDidZoom&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x7D50;&#x675F;&#x7E2E;&#x653E;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewDidEndZooming</span><span class="hljs-params">(
+    <span class="hljs-number">_</span> scrollView: UIScrollView, 
+    with view: UIView?, 
+    atScale scale: CGFloat)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;scrollViewDidEndZooming&quot;</span>)
+
+    <span class="hljs-comment">// &#x7E2E;&#x653E;&#x5143;&#x4EF6;&#x6642; &#x6703;&#x5C07; contentSize &#x8A2D;&#x70BA;&#x9019;&#x500B;&#x5143;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;</span>
+    <span class="hljs-comment">// &#x6703;&#x5C0E;&#x81F4; contentSize &#x904E;&#x5C0F;&#x800C;&#x7121;&#x6CD5;&#x6ED1;&#x52D5;</span>
+    <span class="hljs-comment">// &#x6240;&#x4EE5;&#x7E2E;&#x653E;&#x5B8C;&#x5F8C;&#x518D;&#x5C07; contentSize &#x8A2D;&#x56DE;&#x539F;&#x672C;&#x5927;&#x5C0F;</span>
+    myScrollView.contentSize = 
+        <span class="hljs-type">CGSize</span>(width: fullSize.width * <span class="hljs-number">3</span>, height: fullSize.height * <span class="hljs-number">2</span>)
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5728;&#x6A21;&#x64EC;&#x5668;&#x4E0A;&#x4F7F;&#x7528;&#x7E2E;&#x653E;&#x624B;&#x52E2;&#xFF0C;&#x8ACB;&#x6309;&#x8457;<code>option</code>&#xFF0C;&#x6A21;&#x64EC;&#x5668;&#x756B;&#x9762;&#x4E0A;&#x6703;&#x51FA;&#x73FE;&#x5169;&#x500B;&#x7070;&#x8272;&#x7684;&#x5708;&#x5708;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x958B;&#x59CB;&#x505A;&#x7E2E;&#x653E;&#x7684;&#x52D5;&#x4F5C;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x5167;&#x5BB9;&#x3002;</p>
+<h3 id="&#x8207;-uipagecontrol-&#x7684;&#x7D9C;&#x5408;&#x61C9;&#x7528;">&#x8207; UIPageControl &#x7684;&#x7D9C;&#x5408;&#x61C9;&#x7528;</h3>
+<p>UIPageControl &#x5176;&#x5BE6;&#x5C31;&#x662F;&#x5F88;&#x5E38;&#x898B;&#x653E;&#x5728;&#x756B;&#x9762;&#x4E0B;&#x65B9;&#x7684;&#x4E00;&#x6392;&#x5713;&#x9EDE;&#x9EDE;&#xFF0C;&#x7528;&#x4F86;&#x8868;&#x793A;&#x76EE;&#x524D;&#x6240;&#x5728;&#x9801;&#x6578;&#xFF0C;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x6703;&#x793A;&#x7BC4;&#x4E00;&#x500B;&#x5E38;&#x7528;&#x65BC;&#x9996;&#x6B21;&#x6253;&#x958B;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x6642;&#xFF0C;&#x65B0;&#x624B;&#x5C0E;&#x89BD;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x70BA;&#x82E5;&#x5E72;&#x9801;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x4F86;&#x89C0;&#x770B;&#x5C0E;&#x89BD;&#x6B65;&#x9A5F;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x70BA;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x76EE;&#x6A19;&#xFF0C;&#x5206;&#x70BA;&#x4E94;&#x9801;&#xFF0C;&#x5404;&#x653E;&#x7F6E;&#x4E00;&#x500B; UILabel &#x4F86;&#x8868;&#x793A;&#x6BCF;&#x9801;&#x7684;&#x5167;&#x5BB9;&#xFF0C;&#x4E26;&#x4F7F;&#x7528; UIPageControl &#x8868;&#x793A;&#x76EE;&#x524D;&#x6240;&#x5728;&#x9801;&#x6578;&#xFF1A;</p>
+<p><img src="../images/uikit/uiscrollview/uiscrollview03.png" alt="uiscrollview03"></p>
+<p>&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x793A;&#x610F;&#x5716;&#xFF0C;&#x6574;&#x500B;&#x9801;&#x9762;&#x70BA; 5 &#x500B;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x63DB;&#x9801;&#xFF1A;</p>
+<p><img src="../images/uikit/uiscrollview/uiscrollview02.png" alt="uiscrollview02"></p>
+<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExIntroStepByStep &#x3002;</p>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x4E09;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>{
+    <span class="hljs-keyword">var</span> myScrollView: <span class="hljs-type">UIScrollView</span>!
+    <span class="hljs-keyword">var</span> pageControl: <span class="hljs-type">UIPageControl</span>!
+    <span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
+    <span class="hljs-keyword">var</span> fullSize :<span class="hljs-type">CGSize</span>! = 
+        <span class="hljs-type">UIScreen</span>.main.bounds.size
+
+    <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x9996;&#x5148;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; UIScrollView &#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB; UIScrollView</span>
+myScrollView = <span class="hljs-type">UIScrollView</span>()
+
+<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x5C3A;&#x5BF8; &#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;</span>
+myScrollView.frame = <span class="hljs-type">CGRect</span>(
+  x: <span class="hljs-number">0</span>, y: <span class="hljs-number">20</span>,
+  width: fullSize.width, height: fullSize.height - <span class="hljs-number">20</span>)
+
+<span class="hljs-comment">// &#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D;</span>
+myScrollView.contentSize = <span class="hljs-type">CGSize</span>(
+  width: fullSize.width * <span class="hljs-number">5</span>, height: fullSize.height - <span class="hljs-number">20</span>)
+
+<span class="hljs-comment">// &#x662F;&#x5426;&#x986F;&#x793A;&#x6ED1;&#x52D5;&#x689D;</span>
+myScrollView.showsHorizontalScrollIndicator = <span class="hljs-literal">false</span>
+myScrollView.showsVerticalScrollIndicator = <span class="hljs-literal">false</span>
+
+<span class="hljs-comment">// &#x6ED1;&#x52D5;&#x8D85;&#x904E;&#x7BC4;&#x570D;&#x6642;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x5F48;&#x56DE;&#x6548;&#x679C;</span>
+myScrollView.bounces = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x59D4;&#x4EFB;&#x5C0D;&#x8C61;</span>
+myScrollView.delegate = <span class="hljs-keyword">self</span>
+
+<span class="hljs-comment">// &#x4EE5;&#x4E00;&#x9801;&#x70BA;&#x55AE;&#x4F4D;&#x6ED1;&#x52D5;</span>
+myScrollView.isPagingEnabled = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">// &#x52A0;&#x5165;&#x5230;&#x756B;&#x9762;&#x4E2D;</span>
+<span class="hljs-keyword">self</span>.view.addSubview(myScrollView)
+</code></pre>
+<p>&#x63A5;&#x8457;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x7528;&#x4F86;&#x986F;&#x793A;&#x9801;&#x6578;&#x7684; UIPageControl &#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB; UIPageControl &#x8A2D;&#x7F6E;&#x4F4D;&#x7F6E;&#x53CA;&#x5C3A;&#x5BF8;</span>
+pageControl = <span class="hljs-type">UIPageControl</span>(frame: <span class="hljs-type">CGRect</span>(
+  x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, width: fullSize.width * <span class="hljs-number">0.85</span>, height: <span class="hljs-number">50</span>))
+pageControl.center = <span class="hljs-type">CGPoint</span>(
+  x: fullSize.width * <span class="hljs-number">0.5</span>, y: fullSize.height * <span class="hljs-number">0.85</span>)
+
+<span class="hljs-comment">// &#x6709;&#x5E7E;&#x9801; &#x5C31;&#x662F;&#x6709;&#x5E7E;&#x500B;&#x9EDE;&#x9EDE;</span>
+pageControl.numberOfPages = <span class="hljs-number">5</span>
+
+<span class="hljs-comment">// &#x8D77;&#x59CB;&#x9810;&#x8A2D;&#x7684;&#x9801;&#x6578;</span>
+pageControl.currentPage = <span class="hljs-number">0</span>
+
+<span class="hljs-comment">// &#x76EE;&#x524D;&#x6240;&#x5728;&#x9801;&#x6578;&#x7684;&#x9EDE;&#x9EDE;&#x984F;&#x8272;</span>
+pageControl.currentPageIndicatorTintColor =
+  <span class="hljs-type">UIColor</span>.black
+
+<span class="hljs-comment">// &#x5176;&#x9918;&#x9801;&#x6578;&#x7684;&#x9EDE;&#x9EDE;&#x984F;&#x8272;</span>
+pageControl.pageIndicatorTintColor = <span class="hljs-type">UIColor</span>.lightGray
+
+<span class="hljs-comment">// &#x589E;&#x52A0;&#x4E00;&#x500B;&#x503C;&#x6539;&#x8B8A;&#x6642;&#x7684;&#x4E8B;&#x4EF6;</span>
+pageControl.addTarget(
+  <span class="hljs-keyword">self</span>, 
+  action: #selector(<span class="hljs-type">ViewController</span>.pageChanged),
+  <span class="hljs-keyword">for</span>: .valueChanged)
+
+<span class="hljs-comment">// &#x52A0;&#x5165;&#x5230;&#x57FA;&#x5E95;&#x7684;&#x8996;&#x5716;&#x4E2D; (&#x4E0D;&#x662F;&#x52A0;&#x5230; UIScrollView &#x88E1;)</span>
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x6BD4;&#x8F03;&#x5F8C;&#x9762;&#x52A0;&#x5165; &#x6240;&#x4EE5;&#x6703;&#x84CB;&#x5728; UIScrollView &#x4E0A;&#x9762;</span>
+<span class="hljs-keyword">self</span>.view.addSubview(pageControl)
+</code></pre>
+<p>&#x6700;&#x5F8C;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x52A0;&#x5165;&#x4E94;&#x500B; UILabel &#x7528;&#x4F86;&#x4EE3;&#x8868;&#x6BCF;&#x500B;&#x9801;&#x9762;&#x7684;&#x5167;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB; 5 &#x500B; UILabel &#x4F86;&#x986F;&#x793A;&#x6BCF;&#x500B;&#x9801;&#x9762;&#x5167;&#x5BB9;</span>
+<span class="hljs-keyword">var</span> myLabel = <span class="hljs-type">UILabel</span>()
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>...<span class="hljs-number">4</span> {
+    myLabel = <span class="hljs-type">UILabel</span>(frame: <span class="hljs-type">CGRect</span>(
+      x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, width: fullSize.width, height: <span class="hljs-number">40</span>))
+    myLabel.center = <span class="hljs-type">CGPoint</span>(
+      x: fullSize.width * (<span class="hljs-number">0.5</span> + <span class="hljs-type">CGFloat</span>(i)),
+      y: fullSize.height * <span class="hljs-number">0.2</span>)
+    myLabel.font = <span class="hljs-type">UIFont</span>(name: <span class="hljs-string">&quot;Helvetica-Light&quot;</span>, size: <span class="hljs-number">48.0</span>)
+    myLabel.textAlignment = .center
+    myLabel.text = <span class="hljs-string">&quot;<span class="hljs-subst">\(i + <span class="hljs-number">1</span>)</span>&quot;</span>
+    myScrollView.addSubview(myLabel)
+}
+</code></pre>
+<p>&#x56E0;&#x70BA;&#x6703;&#x7528;&#x5230; UIScrollView &#x59D4;&#x4EFB;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x70BA;<code>ViewController</code>&#x52A0;&#x4E0A;&#x59D4;&#x4EFB;&#x9700;&#x8981;&#x7684;&#x5354;&#x5B9A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span>, <span class="hljs-title">UIScrollViewDelegate</span> </span>{
+  <span class="hljs-comment">// &#x7701;&#x7565;</span>
+}
+</code></pre>
+<p>&#x518D;&#x5728;<code>ViewController</code>&#x4E2D;&#x5BE6;&#x4F5C;&#x9700;&#x8981;&#x7684;&#x59D4;&#x4EFB;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x6ED1;&#x52D5;&#x7D50;&#x675F;&#x6642;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">scrollViewDidEndDecelerating</span><span class="hljs-params">(<span class="hljs-number">_</span> scrollView: UIScrollView)</span></span> {
+    <span class="hljs-comment">// &#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x5230;&#x65B0;&#x9801;&#x6642; &#x66F4;&#x65B0; UIPageControl &#x986F;&#x793A;&#x7684;&#x9801;&#x6578;</span>
+    <span class="hljs-keyword">let</span> page = <span class="hljs-type">Int</span>(scrollView.contentOffset.x / scrollView.frame.size.width)
+    pageControl.currentPage = page
+}
+</code></pre>
+<p>&#x6700;&#x5F8C;&#x5728;<code>ViewController</code>&#x4E2D;&#x52A0;&#x4E0A;&#x9EDE;&#x64CA; UIPageControl &#x7684;&#x9EDE;&#x9EDE;&#x6642;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x9EDE;&#x64CA;&#x9EDE;&#x9EDE;&#x63DB;&#x9801;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pageChanged</span><span class="hljs-params">(<span class="hljs-number">_</span> sender: UIPageControl)</span></span> {
+    <span class="hljs-comment">// &#x4F9D;&#x7167;&#x76EE;&#x524D;&#x5713;&#x9EDE;&#x5728;&#x7684;&#x9801;&#x6578;&#x7B97;&#x51FA;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">var</span> frame = myScrollView.frame
+    frame.origin.x = 
+      frame.size.width * <span class="hljs-type">CGFloat</span>(sender.currentPage)
+    frame.origin.y = <span class="hljs-number">0</span>
+
+    <span class="hljs-comment">// &#x518D;&#x5C07; UIScrollView &#x6ED1;&#x52D5;&#x5230;&#x8A72;&#x9EDE;</span>
+    myScrollView.scrollRectToVisible(frame, animated:<span class="hljs-literal">true</span>)
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x5373;&#x70BA;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x5167;&#x5BB9;&#x3002;</p>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/uikit/uiscrollview" target="_blank">uikit/uiscrollview</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uisearchcontroller.html" class="navigation navigation-prev " aria-label="Previous page: 搜尋 UISearchController">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="multipages.html" class="navigation navigation-next " aria-label="Next page: 多頁面">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"滑動視圖 UIScrollView","level":"1.4.19","depth":2,"next":{"title":"多頁面","level":"1.4.20","depth":2,"path":"uikit/multipages.md","ref":"uikit/multipages.md","articles":[]},"previous":{"title":"搜尋 UISearchController","level":"1.4.18","depth":2,"path":"uikit/uisearchcontroller.md","ref":"uikit/uisearchcontroller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiscrollview.md","mtime":"2017-12-07T04:25:38.672Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

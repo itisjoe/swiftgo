@@ -1,0 +1,1754 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>控制流程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="functions.html" />
+    
+    
+    <link rel="prev" href="collection_types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    Swift 基礎
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基本知識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="types.html">
+            
+                <a href="types.html">
+            
+                    
+                    基本型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="basic_operators.html">
+            
+                <a href="basic_operators.html">
+            
+                    
+                    基本運算子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="strings_characters.html">
+            
+                <a href="strings_characters.html">
+            
+                    
+                    字串及字元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="collection_types.html">
+            
+                <a href="collection_types.html">
+            
+                    
+                    集合型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    控制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="closures.html">
+            
+                <a href="closures.html">
+            
+                    
+                    閉包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2/ch2.html">
+            
+                <a href="../ch2/ch2.html">
+            
+                    
+                    Swift 進階
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch2/enumerations.html">
+            
+                <a href="../ch2/enumerations.html">
+            
+                    
+                    列舉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch2/classes_structures.html">
+            
+                <a href="../ch2/classes_structures.html">
+            
+                    
+                    類別及結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ch2/properties.html">
+            
+                <a href="../ch2/properties.html">
+            
+                    
+                    屬性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ch2/methods.html">
+            
+                <a href="../ch2/methods.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ch2/subscripts.html">
+            
+                <a href="../ch2/subscripts.html">
+            
+                    
+                    下標
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ch2/inheritance.html">
+            
+                <a href="../ch2/inheritance.html">
+            
+                    
+                    繼承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ch2/initialization_deinitialization.html">
+            
+                <a href="../ch2/initialization_deinitialization.html">
+            
+                    
+                    建構過程及解構過程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ch2/arc.html">
+            
+                <a href="../ch2/arc.html">
+            
+                    
+                    自動參考計數
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ch2/optional-chaining.html">
+            
+                <a href="../ch2/optional-chaining.html">
+            
+                    
+                    可選鏈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../ch2/error-handling.html">
+            
+                <a href="../ch2/error-handling.html">
+            
+                    
+                    錯誤處理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../ch2/type-casting.html">
+            
+                <a href="../ch2/type-casting.html">
+            
+                    
+                    型別轉換
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../ch2/nested-types.html">
+            
+                <a href="../ch2/nested-types.html">
+            
+                    
+                    巢狀型別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../ch2/extensions.html">
+            
+                <a href="../ch2/extensions.html">
+            
+                    
+                    擴展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../ch2/protocols.html">
+            
+                <a href="../ch2/protocols.html">
+            
+                    
+                    協定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../ch2/generics.html">
+            
+                <a href="../ch2/generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../ch2/access-control.html">
+            
+                <a href="../ch2/access-control.html">
+            
+                    
+                    存取控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../uikit/uikit.html">
+            
+                <a href="../uikit/uikit.html">
+            
+                    
+                    UIKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../uikit/uikit_intro.html">
+            
+                <a href="../uikit/uikit_intro.html">
+            
+                    
+                    UIKit 初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../uikit/uilabel.html">
+            
+                <a href="../uikit/uilabel.html">
+            
+                    
+                    文字標籤 UILabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../uikit/uitextfield.html">
+            
+                <a href="../uikit/uitextfield.html">
+            
+                    
+                    文字輸入 UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../uikit/uitextview.html">
+            
+                <a href="../uikit/uitextview.html">
+            
+                    
+                    輸入多行文字 UITextView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../uikit/uibutton.html">
+            
+                <a href="../uikit/uibutton.html">
+            
+                    
+                    按鈕 UIButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../uikit/uialertcontroller.html">
+            
+                <a href="../uikit/uialertcontroller.html">
+            
+                    
+                    提示框 UIAlertController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../uikit/uiimageview.html">
+            
+                <a href="../uikit/uiimageview.html">
+            
+                    
+                    圖片 UIImageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../uikit/uidatepicker.html">
+            
+                <a href="../uikit/uidatepicker.html">
+            
+                    
+                    選取日期時間 UIDatePicker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../uikit/uipickerview.html">
+            
+                <a href="../uikit/uipickerview.html">
+            
+                    
+                    選擇器 UIPickerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../uikit/uiswitch.html">
+            
+                <a href="../uikit/uiswitch.html">
+            
+                    
+                    開關 UISwitch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../uikit/uisegmentedcontrol.html">
+            
+                <a href="../uikit/uisegmentedcontrol.html">
+            
+                    
+                    分段控制 UISegmentedControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../uikit/uiprogressview.html">
+            
+                <a href="../uikit/uiprogressview.html">
+            
+                    
+                    進度條 UIProgressView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../uikit/uislider.html">
+            
+                <a href="../uikit/uislider.html">
+            
+                    
+                    滑桿 UISlider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../uikit/uistepper.html">
+            
+                <a href="../uikit/uistepper.html">
+            
+                    
+                    步進器 UIStepper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../uikit/uiwebview.html">
+            
+                <a href="../uikit/uiwebview.html">
+            
+                    
+                    網頁 UIWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../uikit/uitableview.html">
+            
+                <a href="../uikit/uitableview.html">
+            
+                    
+                    表格 UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../uikit/uicollectionview.html">
+            
+                <a href="../uikit/uicollectionview.html">
+            
+                    
+                    網格 UICollectionView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../uikit/uisearchcontroller.html">
+            
+                <a href="../uikit/uisearchcontroller.html">
+            
+                    
+                    搜尋 UISearchController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../uikit/uiscrollview.html">
+            
+                <a href="../uikit/uiscrollview.html">
+            
+                    
+                    滑動視圖 UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../uikit/multipages.html">
+            
+                <a href="../uikit/multipages.html">
+            
+                    
+                    多頁面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../uikit/uinavigationcontroller.html">
+            
+                <a href="../uikit/uinavigationcontroller.html">
+            
+                    
+                    導覽控制器 UINavigationController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../uikit/uitabbarcontroller.html">
+            
+                <a href="../uikit/uitabbarcontroller.html">
+            
+                    
+                    標籤列控制器 UITabBarController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../uikit/uigesturerecognizer.html">
+            
+                <a href="../uikit/uigesturerecognizer.html">
+            
+                    
+                    手勢 UIGestureRecognizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../uikit/animations.html">
+            
+                <a href="../uikit/animations.html">
+            
+                    
+                    簡單動畫 Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../uikit/userdefaults.html">
+            
+                <a href="../uikit/userdefaults.html">
+            
+                    
+                    儲存資訊 UserDefaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    資料庫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../database/sqlite.html">
+            
+                <a href="../database/sqlite.html">
+            
+                    
+                    SQLite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../database/coredata.html">
+            
+                <a href="../database/coredata.html">
+            
+                    
+                    Core Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../apps/apps.html">
+            
+                <a href="../apps/apps.html">
+            
+                    
+                    iPhone Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../apps/todo/todo.html">
+            
+                <a href="../apps/todo/todo.html">
+            
+                    
+                    待辦事項
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../apps/todo/intro.html">
+            
+                <a href="../apps/todo/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../apps/todo/settings.html">
+            
+                <a href="../apps/todo/settings.html">
+            
+                    
+                    程式之外的設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../apps/todo/sound.html">
+            
+                <a href="../apps/todo/sound.html">
+            
+                    
+                    播放音效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../apps/todo/edituitableview.html">
+            
+                <a href="../apps/todo/edituitableview.html">
+            
+                    
+                    UITableView 的編輯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apps/taipeitravel/taipeitravel.html">
+            
+                <a href="../apps/taipeitravel/taipeitravel.html">
+            
+                    
+                    遊玩臺北
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../apps/taipeitravel/intro.html">
+            
+                <a href="../apps/taipeitravel/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                <a href="../apps/taipeitravel/fetchdataandstorage.html">
+            
+                    
+                    取得遠端 API 資料並儲存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../apps/taipeitravel/map.html">
+            
+                <a href="../apps/taipeitravel/map.html">
+            
+                    
+                    地圖與定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../apps/money/money.html">
+            
+                <a href="../apps/money/money.html">
+            
+                    
+                    記帳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../apps/money/intro.html">
+            
+                <a href="../apps/money/intro.html">
+            
+                    
+                    規劃與實作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../more/more.html">
+            
+                <a href="../more/more.html">
+            
+                    
+                    補充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../more/xcode_intro.html">
+            
+                <a href="../more/xcode_intro.html">
+            
+                    
+                    Xcode 介紹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../more/xcode_install.html">
+            
+                <a href="../more/xcode_install.html">
+            
+                    
+                    安裝 Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../more/open_playground.html">
+            
+                <a href="../more/open_playground.html">
+            
+                    
+                    開啟 playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../more/open_project.html">
+            
+                <a href="../more/open_project.html">
+            
+                    
+                    開啟專案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../more/interface_intro.html">
+            
+                <a href="../more/interface_intro.html">
+            
+                    
+                    介面簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../more/addfile.html">
+            
+                <a href="../more/addfile.html">
+            
+                    
+                    新增檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../more/copyfile.html">
+            
+                <a href="../more/copyfile.html">
+            
+                    
+                    加入檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../more/deletefile.html">
+            
+                <a href="../more/deletefile.html">
+            
+                    
+                    刪除檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../more/addframework.html">
+            
+                <a href="../more/addframework.html">
+            
+                    
+                    新增 Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../more/simulator.html">
+            
+                <a href="../more/simulator.html">
+            
+                    
+                    使用模擬器及實機測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../more/hotkey.html">
+            
+                <a href="../more/hotkey.html">
+            
+                    
+                    熱鍵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../more/keywords.html">
+            
+                <a href="../more/keywords.html">
+            
+                    
+                    系統關鍵字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../more/camel_case_naming.html">
+            
+                <a href="../more/camel_case_naming.html">
+            
+                    
+                    駝峰式命名法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    關於本書
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >控制流程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x63A7;&#x5236;&#x6D41;&#x7A0B;">&#x63A7;&#x5236;&#x6D41;&#x7A0B;</h1>
+<ul>
+<li><a href="#for">For-in &#x5FAA;&#x74B0;</a></li>
+<li><a href="#while_loop">While &#x5FAA;&#x74B0;</a></li>
+<li><a href="#condition">&#x689D;&#x4EF6;&#x8A9E;&#x53E5;</a></li>
+<li><a href="#optional_binding">&#x53EF;&#x9078;&#x7D81;&#x5B9A;</a></li>
+<li><a href="#switch">Switch</a></li>
+<li><a href="#control_transfer_statement">&#x63A7;&#x5236;&#x8F49;&#x79FB;&#x8A9E;&#x53E5;</a></li>
+<li><a href="#guard">&#x63D0;&#x524D;&#x9000;&#x51FA;</a></li>
+<li><a href="#api">&#x6AA2;&#x6E2C; API &#x53EF;&#x7528;&#x6027;</a></li>
+</ul>
+<p>Swift &#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x4EE5;<strong>&#x5FAA;&#x74B0;&#x57F7;&#x884C;&#x4EFB;&#x52D9;</strong>&#x7684;<code>for-in</code>&#x548C;<code>while</code>&#x8FF4;&#x5708;&#xFF0C;&#x4EE5;&#x53CA;<strong>&#x6839;&#x64DA;&#x689D;&#x4EF6;&#x9078;&#x64C7;&#x57F7;&#x884C;&#x4E0D;&#x540C;&#x7A0B;&#x5F0F;&#x78BC;&#x5206;&#x652F;</strong>&#x7684;<code>if</code>&#x548C;<code>switch</code>&#x8A9E;&#x53E5;&#xFF0C;&#x9084;&#x6709;&#x63A7;&#x5236;&#x6D41;&#x7A0B;<strong>&#x8DF3;&#x8F49;&#x5230;&#x5176;&#x4ED6;&#x7A0B;&#x5F0F;&#x78BC;</strong>&#x7684;<code>break</code>&#x548C;<code>continue</code>&#x8A9E;&#x53E5;&#x3002;</p>
+<p><a id="for"></a></p>
+<h3 id="for-in-&#x5FAA;&#x74B0;">For-in &#x5FAA;&#x74B0;</h3>
+<p>&#x4F7F;&#x7528;<code>for-in</code>&#x904D;&#x6B77;&#x4E00;&#x500B;&#x96C6;&#x5408;&#x5167;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x50CF;&#x662F;&#x4E00;&#x500B;&#x6578;&#x5B57;&#x5340;&#x9593;&#x3001;&#x9663;&#x5217;&#x3001;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x503C;&#x6216;&#x662F;&#x5B57;&#x4E32;&#x5167;&#x7684;&#x5B57;&#x5143;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x4E00;&#x500B;&#x4E00;&#x5230;&#x4E09;&#x7684;&#x9589;&#x5340;&#x9593;</span>
+<span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>...<span class="hljs-number">3</span> {
+    <span class="hljs-built_in">print</span>(index)
+}
+<span class="hljs-comment">// &#x6703;&#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// 3</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x5167;&#x7684;<code>index</code>&#x4E0D;&#x7528;&#x505A;&#x5BA3;&#x544A;&#x7684;&#x52D5;&#x4F5C;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x904D;&#x6B77;&#x958B;&#x59CB;&#x6642;&#x6703;&#x88AB;&#x81EA;&#x52D5;&#x6307;&#x6D3E;&#x503C;&#xFF0C;&#x9810;&#x8A2D;&#x662F;&#x4E00;&#x500B;&#x5E38;&#x6578;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5982;&#x679C;&#x53EA;&#x662F;&#x8981;&#x7D14;&#x7CB9;&#x7684;&#x5FAA;&#x74B0;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x5230;&#x5340;&#x9593;&#x5167;&#x7684;&#x6BCF;&#x4E00;&#x500B;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x5E95;&#x7DDA;<code>_</code>&#x4F86;&#x4EE3;&#x66FF;&#x3002;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> base = <span class="hljs-number">2</span>
+<span class="hljs-keyword">var</span> total = <span class="hljs-number">1</span>
+<span class="hljs-keyword">for</span> <span class="hljs-number">_</span> <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>...<span class="hljs-number">3</span> {
+    total *= base
+}
+
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x5FAA;&#x74B0;&#x4E86;&#x4E09;&#x6B21; &#x6240;&#x4EE5;&#x4E58;&#x4E86;&#x4E09;&#x6B21; &#x5370;&#x51FA;&#xFF1A;8</span>
+<span class="hljs-built_in">print</span>(total)
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>for-in</code>&#x904D;&#x6B77;&#x4E00;&#x500B;&#x9663;&#x5217;(<code>array</code>)&#x6216;&#x662F;&#x5B57;&#x5178;(<code>dictionary</code>)&#x3002;&#x904D;&#x6B77;&#x5B57;&#x5178;&#x6642;&#xFF0C;&#x6703;&#x4F7F;&#x7528;&#x5143;&#x7D44;(<code>tuple</code>)&#x4F86;&#x5206;&#x5225;&#x8868;&#x793A;&#x9375;&#x8207;&#x503C;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> arr = [<span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Book&quot;</span>, <span class="hljs-string">&quot;Cat&quot;</span>]
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> arr {
+    <span class="hljs-built_in">print</span>(n)
+}
+<span class="hljs-comment">// &#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// Apple</span>
+<span class="hljs-comment">// Book</span>
+<span class="hljs-comment">// Cat</span>
+
+<span class="hljs-keyword">let</span> dict = [<span class="hljs-string">&quot;Apple&quot;</span>:<span class="hljs-number">12</span>, <span class="hljs-string">&quot;Book&quot;</span>:<span class="hljs-number">3</span>, <span class="hljs-string">&quot;Cat&quot;</span>:<span class="hljs-number">5</span>]
+<span class="hljs-keyword">for</span> (key, values) <span class="hljs-keyword">in</span> dict {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(key)</span> : <span class="hljs-subst">\(values)</span>&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;(&#x56E0;&#x70BA;&#x5B57;&#x5178;&#x6C92;&#x6709;&#x9806;&#x5E8F; &#x6240;&#x4EE5;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x9019;&#x6A23;&#x7684;&#x9806;&#x5E8F;)</span>
+<span class="hljs-comment">// Apple : 12</span>
+<span class="hljs-comment">// Book : 3</span>
+<span class="hljs-comment">// Cat : 5</span>
+</code></pre>
+<p><a id="while_loop"></a></p>
+<h3 id="while-&#x5FAA;&#x74B0;">While &#x5FAA;&#x74B0;</h3>
+<p>Swift &#x63D0;&#x4F9B;&#x5169;&#x7A2E;<code>while</code>&#x5FAA;&#x74B0;&#x65B9;&#x5F0F;&#xFF1A;<code>while</code>&#x53CA;<code>repeat-while</code>&#xFF0C;&#x5169;&#x8005;&#x90FD;&#x662F;&#x5FAA;&#x74B0;&#x5730;&#x57F7;&#x884C;&#x7A0B;&#x5F0F;&#x76F4;&#x5230;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>false</code>&#xFF0C;&#x5DEE;&#x5225;&#x5728;&#x65BC;&#xFF0C;&#x5F8C;&#x8005;&#x4E00;&#x958B;&#x59CB;&#x5728;&#x6AA2;&#x67E5;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x4E4B;&#x524D;&#xFF0C;&#x4E00;&#x5B9A;&#x6703;&#x5148;&#x57F7;&#x884C;&#x4E00;&#x6B21;&#x5167;&#x90E8;&#x7A0B;&#x5F0F;&#x3002;</p>
+<h4 id="while">While</h4>
+<p><code>while</code> &#x5FAA;&#x74B0;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">while</span> &#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F; {
+    &#x6BCF;&#x6B21;&#x5FAA;&#x74B0;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+}
+</code></pre>
+<p><code>while</code> &#x6703;&#x5FAA;&#x74B0;&#x5730;&#x57F7;&#x884C;&#x7A0B;&#x5F0F;&#x76F4;&#x5230;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>false</code>&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> n = <span class="hljs-number">2</span>
+<span class="hljs-keyword">while</span> n &lt; <span class="hljs-number">20</span> {
+    n = n * <span class="hljs-number">2</span>
+}
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;32</span>
+<span class="hljs-built_in">print</span>(n)
+</code></pre>
+<h4 id="repeat-while">Repeat-while</h4>
+<p><code>repeat-while</code> &#x5FAA;&#x74B0;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">repeat</span> {
+    &#x6BCF;&#x6B21;&#x5FAA;&#x74B0;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+} <span class="hljs-keyword">while</span> &#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;
+</code></pre>
+<p><code>repeat-while</code> &#x6703;&#x5148;&#x57F7;&#x884C;&#x4E00;&#x6B21;&#x7A0B;&#x5F0F;&#xFF0C;&#x518D;&#x6AA2;&#x67E5;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#xFF0C;&#x63A5;&#x8457;&#x5FAA;&#x74B0;&#x5730;&#x57F7;&#x884C;&#x7A0B;&#x5F0F;&#x76F4;&#x5230;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>false</code>&#x3002;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> m = <span class="hljs-number">512</span>
+<span class="hljs-keyword">repeat</span> {
+    m = m * <span class="hljs-number">2</span>
+} <span class="hljs-keyword">while</span> m &lt; <span class="hljs-number">100</span>
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;1024</span>
+<span class="hljs-built_in">print</span>(m)
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x4E0D;&#x8AD6;&#x5982;&#x4F55; &#x90FD;&#x6703;&#x5148;&#x57F7;&#x884C;&#x4E00;&#x6B21;&#x7A0B;&#x5F0F; &#x6240;&#x4EE5; m &#x6703;&#x5148;&#x4E58;&#x4E00;&#x6B21; 2 &#x70BA; 1024</span>
+<span class="hljs-comment">// &#x63A5;&#x8457;&#x6AA2;&#x67E5;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F; &#x6703;&#x8FD4;&#x56DE; false &#x5373;&#x7D50;&#x675F;&#x9019;&#x500B;&#x5FAA;&#x74B0;</span>
+</code></pre>
+<p><a id="condition"></a></p>
+<h3 id="&#x689D;&#x4EF6;&#x8A9E;&#x53E5;">&#x689D;&#x4EF6;&#x8A9E;&#x53E5;</h3>
+<p>&#x689D;&#x4EF6;&#x8A9E;&#x53E5;&#x70BA;<strong>&#x6839;&#x64DA;&#x4E0D;&#x540C;&#x7279;&#x5B9A;&#x689D;&#x4EF6;&#x57F7;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x7A0B;&#x5F0F;</strong>&#x3002;Swift &#x63D0;&#x4F9B;&#x5169;&#x7A2E;&#x689D;&#x4EF6;&#x8A9E;&#x53E5;&#xFF1A;<code>if</code>&#x8207;<code>switch</code>&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5224;&#x65B7;&#x7684;&#x689D;&#x4EF6;&#x8F03;&#x55AE;&#x7D14;&#x6216;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x6CC1;&#x8F03;&#x5C11;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>if</code>&#xFF0C;&#x53CD;&#x4E4B;&#x4F7F;&#x7528;<code>switch</code>&#x3002;</p>
+<h4 id="if">If</h4>
+<p>&#x6700;&#x7C21;&#x55AE;&#x7684;&#x5F62;&#x5F0F;&#x70BA;&#x53EA;&#x6709;&#x4E00;&#x500B;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#xFF0C;&#x800C;&#x53EA;&#x6709;&#x7576;&#x9019;&#x500B;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>true</code>&#xFF0C;&#x624D;&#x57F7;&#x884C;&#x5176;&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> someNumber = <span class="hljs-number">2</span>
+<span class="hljs-keyword">if</span> someNumber == <span class="hljs-number">2</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It is 2 .&quot;</span>)
+}
+</code></pre>
+<p>&#x6216;&#x662F;&#x7576;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>false</code>&#x6642;&#xFF0C;&#x9700;&#x8981;&#x57F7;&#x884C;&#x53E6;&#x4E00;&#x6BB5;&#x7A0B;&#x5F0F;&#xFF0C;&#x5247;&#x4F7F;&#x7528;<code>else</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number = <span class="hljs-number">10</span>
+<span class="hljs-keyword">if</span> number &gt; <span class="hljs-number">20</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;Number is larger than 20 .&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;Number is smaller than 20 or equal to 20 .&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Number is smaller than 20 or equal to 20 .</span>
+</code></pre>
+<p>&#x53C8;&#x6216;&#x662F;&#x6709;&#x591A;&#x500B;&#x689D;&#x4EF6;&#x9700;&#x8981;&#x5224;&#x65B7;&#xFF0C;&#x53EF;&#x4EE5;&#x5C07;<code>else</code>&#x8DDF;<code>if</code>&#x9023;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6700;&#x5F8C;&#x4E00;&#x500B;<code>else</code>&#x6703;&#x5728;&#x6240;&#x6709;&#x689D;&#x4EF6;&#x90FD;&#x4E0D;&#x6210;&#x7ACB;(&#x8FD4;&#x56DE;<code>false</code>)&#x6642;&#x88AB;&#x57F7;&#x884C;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number2 = <span class="hljs-number">100</span>
+<span class="hljs-keyword">if</span> number2 &lt; <span class="hljs-number">20</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;&#x6578;&#x5B57;&#x5C0F;&#x65BC; 20&quot;</span>)
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> number2 &lt; <span class="hljs-number">200</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;&#x6578;&#x5B57;&#x4E0D;&#x5C0F;&#x65BC; 20&#xFF0C;&#x4F46;&#x5C0F;&#x65BC; 200&quot;</span>)
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> number2 &lt; <span class="hljs-number">1000</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;&#x6578;&#x5B57;&#x4E0D;&#x5C0F;&#x65BC; 200&#xFF0C;&#x4F46;&#x5C0F;&#x65BC; 1000&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;&#x6578;&#x5B57;&#x4E0D;&#x5C0F;&#x65BC; 1000&quot;</span>)
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x6578;&#x5B57;&#x4E0D;&#x5C0F;&#x65BC; 20&#xFF0C;&#x4F46;&#x5C0F;&#x65BC; 200</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x6700;&#x5F8C;&#x4E00;&#x500B;<code>else</code>&#x4E0D;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x4F46;&#x5C31;&#x53EF;&#x80FD;&#x6703;&#x6C92;&#x6709;&#x8FD4;&#x56DE;<code>true</code>&#x7684;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number3 = <span class="hljs-number">10</span>
+<span class="hljs-keyword">if</span> number3 &gt; <span class="hljs-number">50</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;number3 &gt; 50&quot;</span>)
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> number3 &gt; <span class="hljs-number">200</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;number3 &gt; 200&quot;</span>)
+}
+<span class="hljs-comment">// &#x9019;&#x6642;&#x5019;&#x4E0D;&#x6703;&#x6709;&#x6771;&#x897F;&#x88AB;&#x5370;&#x51FA;&#x4F86;</span>
+</code></pre>
+<p><a id="optional_binding"></a></p>
+<h3 id="&#x53EF;&#x9078;&#x7D81;&#x5B9A;">&#x53EF;&#x9078;&#x7D81;&#x5B9A;</h3>
+<p>&#x4F7F;&#x7528;<strong>&#x53EF;&#x9078;&#x7D81;&#x5B9A;</strong>(<code>optional binding</code>)&#x4F86;&#x5224;&#x65B7;&#x53EF;&#x9078;&#x578B;&#x5225;&#x662F;&#x5426;&#x6709;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x503C;&#x7684;&#x8A71;&#x5C31;&#x6307;&#x6D3E;&#x7D66;&#x4E00;&#x500B;&#x81E8;&#x6642;&#x5E38;&#x6578;&#x6216;&#x81E8;&#x6642;&#x8B8A;&#x6578;&#xFF0C;&#x4E26;&#x57F7;&#x884C;&#x5176;&#x5167;&#x90E8;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x9019;&#x500B;&#x81E8;&#x6642;&#x5E38;&#x6578;&#x6216;&#x8B8A;&#x6578;&#x53EA;&#x80FD;&#x5728;&#x5176;&#x5167;&#x90E8;&#x4F7F;&#x7528;&#x3002;<code>if</code>&#x8DDF;<code>while</code>&#x8A9E;&#x53E5;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53EF;&#x9078;&#x7D81;&#x5B9A;&#x3002;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> &#x81E8;&#x6642;&#x5E38;&#x6578; = &#x53EF;&#x9078;&#x578B;&#x5225; {
+    &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+} <span class="hljs-keyword">else</span> {
+    &#x53EF;&#x9078;&#x578B;&#x5225;&#x6C92;&#x6709;&#x503C; &#x4E5F;&#x5C31;&#x662F; <span class="hljs-literal">nil</span> &#x6642; &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x662F;&#x7D14;&#x6574;&#x6578; &#x6240;&#x4EE5;&#x7D93;&#x904E;&#x8F49;&#x63DB;&#x5F8C;&#x6703;&#x662F;&#x4E00;&#x500B;&#x6574;&#x6578;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> number = <span class="hljs-type">Int</span>(str) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5B57;&#x4E32; \&quot;<span class="hljs-subst">\(str)</span>\&quot; &#x8F49;&#x63DB;&#x6210;&#x4E00;&#x500B;&#x6574;&#x6578; <span class="hljs-subst">\(number)</span>&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5B57;&#x4E32; \&quot;<span class="hljs-subst">\(str)</span>\&quot; &#x4E0D;&#x662F;&#x4E00;&#x500B;&#x6574;&#x6578;&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x5982;&#x679C;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x4E0D;&#x662F;&#x6574;&#x6578; &#x8F49;&#x63DB;&#x5F8C;&#x6703;&#x8FD4;&#x56DE; nil </span>
+<span class="hljs-keyword">let</span> str2 = <span class="hljs-string">&quot;It is a string .&quot;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> number = <span class="hljs-type">Int</span>(str2) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5B57;&#x4E32; \&quot;<span class="hljs-subst">\(str2)</span>\&quot; &#x8F49;&#x63DB;&#x6210;&#x4E00;&#x500B;&#x6574;&#x6578; <span class="hljs-subst">\(number)</span>&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5B57;&#x4E32; \&quot;<span class="hljs-subst">\(str2)</span>\&quot; &#x4E0D;&#x662F;&#x4E00;&#x500B;&#x6574;&#x6578;&quot;</span>)
+}
+</code></pre>
+<p><a id="switch"></a></p>
+<h3 id="switch">Switch</h3>
+<p><code>switch</code>&#x6703;<strong>&#x5C07;&#x4E00;&#x500B;&#x503C;&#x8207;&#x591A;&#x500B;&#x60C5;&#x6CC1;&#x4F5C;&#x6BD4;&#x5C0D;</strong>&#xFF0C;&#x6839;&#x64DA;&#x7B2C;&#x4E00;&#x500B;&#x6BD4;&#x5C0D;&#x6210;&#x529F;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;&#x6703;&#x57F7;&#x884C;&#x76F8;&#x5C0D;&#x61C9;&#x7684;&#x7A0B;&#x5F0F;&#x3002;&#x6240;&#x6709;<code>case</code>&#x5FC5;&#x9808;&#x6DB5;&#x84CB;&#x5168;&#x90E8;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x672A;&#x6DB5;&#x84CB;&#x7684;&#x90E8;&#x4EFD;&#xFF0C;&#x6700;&#x5F8C;&#x9700;&#x8981;&#x88DC;&#x4E0A;<code>default</code>&#x3002;&#x6700;&#x7C21;&#x55AE;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">switch</span> &#x503C; {
+<span class="hljs-keyword">case</span> &#x6BD4;&#x5C0D;&#x60C5;&#x6CC1;<span class="hljs-number">1</span>:
+    &#x76F8;&#x5C0D;&#x61C9;&#x60C5;&#x6CC1;<span class="hljs-number">1</span> &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+<span class="hljs-keyword">case</span> &#x6BD4;&#x5C0D;&#x60C5;&#x6CC1;<span class="hljs-number">2</span>, &#x6BD4;&#x5C0D;&#x60C5;&#x6CC1;<span class="hljs-number">3</span>: <span class="hljs-comment">// &#x591A;&#x500B;&#x60C5;&#x6CC1;&#x53EF;&#x4EE5;&#x7528;&#x9017;&#x865F; , &#x9694;&#x958B;</span>
+    &#x76F8;&#x5C0D;&#x61C9;&#x60C5;&#x6CC1;<span class="hljs-number">2</span>&#x6216;&#x60C5;&#x6CC1;<span class="hljs-number">3</span> &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+<span class="hljs-keyword">default</span>:
+    &#x4EE5;&#x4E0A;&#x60C5;&#x6CC1;&#x6BD4;&#x5C0D;&#x90FD;&#x4E0D;&#x6210;&#x529F;&#x6642; &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+}
+</code></pre>
+<p>&#x6BCF;&#x500B;<code>case</code>&#x4E2D;&#xFF0C;&#x90FD;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x76F8;&#x5C0D;&#x61C9;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x6C92;&#x6709;&#x7684;&#x8A71;&#x6703;&#x5831;&#x932F;&#x8AA4;&#xFF0C;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number4 = <span class="hljs-number">2</span>
+<span class="hljs-keyword">switch</span> number4 {
+<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It is 2 .&quot;</span>)
+<span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+<span class="hljs-keyword">default</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x6C92;&#x6709;&#x6BD4;&#x5C0D;&#x5230;&quot;</span>)
+}
+<span class="hljs-comment">// case 1 &#x4EE5;&#x53CA; case 3 &#x5167;&#x90E8;&#x90FD;&#x6C92;&#x6709;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F; &#x6240;&#x4EE5;&#x9019;&#x908A;&#x6703;&#x5831;&#x932F;&#x8AA4;</span>
+</code></pre>
+<p>&#x8207;&#x5176;&#x4ED6;&#x7A0B;&#x5F0F;&#x8A9E;&#x8A00;&#x4E0D;&#x4E00;&#x6A23;&#x7684;&#x662F;&#xFF0C;&#x6709;&#x4E9B;&#x7A0B;&#x5F0F;&#x8A9E;&#x8A00;&#x7684;<code>switch</code>&#x9700;&#x8981;&#x5728;&#x6BCF;&#x500B;<code>case</code>&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#x6700;&#x5F8C;&#x4E00;&#x884C;&#x52A0;&#x4E0A;<code>break</code>&#x4F86;&#x7D50;&#x675F;&#xFF0C;&#x5426;&#x5247;&#x6703;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x5E95;&#x4E0B;&#x5176;&#x4ED6;<code>case</code>&#x4E2D;&#x7684;&#x7A0B;&#x5F0F;&#x3002;</p>
+<p>Swift &#x5728;&#x9047;&#x5230;&#x7B2C;&#x4E00;&#x500B;&#x60C5;&#x6CC1;<code>case</code>&#x6BD4;&#x5C0D;&#x6210;&#x529F;&#x5F8C;&#xFF0C;&#x5373;&#x6703;&#x7D50;&#x675F;<code>switch</code>&#x9019;&#x90E8;&#x4EFD;&#x7684;&#x52D5;&#x4F5C;&#xFF0C;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;<code>}</code>&#x4E4B;&#x5F8C;&#x7684;&#x7A0B;&#x5F0F;&#x3002;(&#x9664;&#x975E;&#x4F7F;&#x7528;<code>fallthrough</code>&#xFF0C;&#x7A0D;&#x5F8C;&#x5373;&#x6703;&#x63D0;&#x5230;&#x3002;)</p>
+<h4 id="&#x5340;&#x9593;&#x5339;&#x914D;">&#x5340;&#x9593;&#x5339;&#x914D;</h4>
+<p><code>case</code>&#x4E2D;&#x6BD4;&#x5C0D;&#x7684;&#x60C5;&#x6CC1;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x500B;&#x5340;&#x9593;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number5 = <span class="hljs-number">120</span>
+<span class="hljs-keyword">var</span> str3: <span class="hljs-type">String</span>
+<span class="hljs-keyword">switch</span> number5 {
+<span class="hljs-keyword">case</span> <span class="hljs-number">0</span>...<span class="hljs-number">10</span>:
+    str3 = <span class="hljs-string">&quot;&#x5E7E;&quot;</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">11</span>...<span class="hljs-number">100</span>:
+    str3 = <span class="hljs-string">&quot;&#x5F88;&#x591A;&quot;</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">101</span>...<span class="hljs-number">1000</span>:
+    str3 = <span class="hljs-string">&quot;&#x975E;&#x5E38;&#x591A;&quot;</span>
+<span class="hljs-keyword">default</span>:
+    str3 = <span class="hljs-string">&quot;&#x8D85;&#x7D1A;&#x591A;&quot;</span>
+}
+
+<span class="hljs-comment">// &#x56E0;&#x70BA; 120 &#x5728; 101...1000 &#x9019;&#x500B;&#x5340;&#x9593;&#x5167;</span>
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x6211;&#x6709;&#x975E;&#x5E38;&#x591A;&#x9846;&#x860B;&#x679C;</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x6211;&#x6709;<span class="hljs-subst">\(str3)</span>&#x9846;&#x860B;&#x679C;&quot;</span>)
+</code></pre>
+<h4 id="&#x5143;&#x7D44;">&#x5143;&#x7D44;</h4>
+<p><code>switch</code>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5143;&#x7D44;(<code>tuple</code>)&#x4F86;&#x4E00;&#x6B21;&#x6BD4;&#x5C0D;&#x591A;&#x500B;&#x503C;&#xFF0C;&#x5143;&#x7D44;&#x5167;&#x53EF;&#x4EE5;&#x662F;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5340;&#x9593;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5FFD;&#x7565;&#x6BD4;&#x5C0D;&#x5176;&#x4E2D;&#x4E00;&#x9805;&#x7684;&#x8A71;&#xFF0C;&#x53EF;&#x4EE5;&#x586B;&#x5165;&#x4E0B;&#x5E95;&#x7DDA;<code>_</code>&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> somePoint = (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+<span class="hljs-keyword">switch</span> somePoint {
+<span class="hljs-keyword">case</span> (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(0, 0) &#x5728;&#x539F;&#x9EDE;&quot;</span>)
+<span class="hljs-keyword">case</span> (<span class="hljs-number">_</span>, <span class="hljs-number">0</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(<span class="hljs-subst">\(somePoint.<span class="hljs-number">0</span>)</span>, 0) &#x5728; X &#x8EF8;&#x4E0A;&quot;</span>)
+<span class="hljs-keyword">case</span> (<span class="hljs-number">0</span>, <span class="hljs-number">_</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(0, <span class="hljs-subst">\(somePoint.<span class="hljs-number">1</span>)</span>) &#x5728; Y &#x8EF8;&#x4E0A;&quot;</span>)
+<span class="hljs-keyword">case</span> (-<span class="hljs-number">2</span>...<span class="hljs-number">2</span>, -<span class="hljs-number">2</span>...<span class="hljs-number">2</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(<span class="hljs-subst">\(somePoint.<span class="hljs-number">0</span>)</span>, <span class="hljs-subst">\(somePoint.<span class="hljs-number">1</span>)</span>) &#x5728;&#x65B9;&#x5F62;&#x5167;&quot;</span>)
+<span class="hljs-keyword">default</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(<span class="hljs-subst">\(somePoint.<span class="hljs-number">0</span>)</span>, <span class="hljs-subst">\(somePoint.<span class="hljs-number">1</span>)</span>) &#x5728;&#x65B9;&#x5F62;&#x5916;&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;(1, 1) &#x5728;&#x65B9;&#x5F62;&#x5167;</span>
+</code></pre>
+<h4 id="&#x503C;&#x7D81;&#x5B9A;">&#x503C;&#x7D81;&#x5B9A;</h4>
+<p><code>case</code>&#x53EF;&#x4EE5;&#x5C07;&#x6BD4;&#x5C0D;&#x7684;&#x503C;&#x7D81;&#x5B9A;(<code>value binding</code>)&#x5230;&#x4E00;&#x500B;&#x81E8;&#x6642;&#x7684;&#x5E38;&#x6578;&#x6216;&#x8B8A;&#x6578;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x5176;&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> onePoint = (<span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
+<span class="hljs-keyword">switch</span> onePoint {
+<span class="hljs-keyword">case</span> (<span class="hljs-keyword">let</span> x, <span class="hljs-number">0</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5728; X &#x8EF8;&#x4E0A;, x &#x7684;&#x503C;&#x70BA; <span class="hljs-subst">\(x)</span>&quot;</span>)
+<span class="hljs-keyword">case</span> (<span class="hljs-number">0</span>, <span class="hljs-keyword">let</span> y):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5728; Y &#x8EF8;&#x4E0A;, y &#x7684;&#x503C;&#x70BA; <span class="hljs-subst">\(y)</span>&quot;</span>)
+<span class="hljs-keyword">case</span> <span class="hljs-keyword">let</span> (x, y):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;(<span class="hljs-subst">\(x)</span>, <span class="hljs-subst">\(y)</span>) &#x4E0D;&#x5728; X &#x8EF8;&#x4E5F;&#x4E0D;&#x5728; Y &#x8EF8;&#x4E0A;&quot;</span>)
+}
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x5728; X &#x8EF8;&#x4E0A;, x &#x7684;&#x503C;&#x70BA; 2</span>
+</code></pre>
+<p>&#x53E6;&#x5916;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>where</code>&#x4F86;&#x5224;&#x65B7;&#x984D;&#x5916;&#x7684;&#x689D;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number6 = <span class="hljs-number">20</span>
+<span class="hljs-keyword">switch</span> number6 {
+<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>...<span class="hljs-number">100</span> <span class="hljs-keyword">where</span> number6 == <span class="hljs-number">50</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5728; 1...100 &#x5340;&#x9593;&#x5167; &#x4E14;&#x503C;&#x70BA; 50&quot;</span>)
+<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>...<span class="hljs-number">100</span> <span class="hljs-keyword">where</span> number6 == <span class="hljs-number">20</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5728; 1...100 &#x5340;&#x9593;&#x5167; &#x4E14;&#x503C;&#x70BA; 20&quot;</span>)
+<span class="hljs-keyword">default</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x6C92;&#x6709;&#x6BD4;&#x5C0D;&#x5230;&quot;</span>)
+}
+</code></pre>
+<p><a id="control_transfer_statement"></a></p>
+<h3 id="&#x63A7;&#x5236;&#x8F49;&#x79FB;&#x8A9E;&#x53E5;">&#x63A7;&#x5236;&#x8F49;&#x79FB;&#x8A9E;&#x53E5;</h3>
+<p>&#x63A7;&#x5236;&#x8F49;&#x79FB;&#x8A9E;&#x53E5;(<code>control transfer statement</code>)&#x53EF;&#x4EE5;&#x6539;&#x8B8A;&#x7A0B;&#x5F0F;&#x7684;&#x57F7;&#x884C;&#x9806;&#x5E8F;&#xFF0C;&#x6216;&#x662F;&#x8DF3;&#x8F49;&#x57F7;&#x884C;&#x7A0B;&#x5F0F;&#x3002;</p>
+<h4 id="continue">Continue</h4>
+<p><code>continue</code>&#x8868;&#x793A;&#x5728;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;&#x4E2D;&#xFF0C;&#x7ACB;&#x5373;<strong>&#x505C;&#x6B62;&#x672C;&#x6B21;&#x5FAA;&#x74B0;&#xFF0C;&#x91CD;&#x65B0;&#x958B;&#x59CB;&#x6B64;&#x6D41;&#x7A0B;&#x7684;&#x4E0B;&#x500B;&#x5FAA;&#x74B0;</strong>&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>...<span class="hljs-number">10</span> {
+    <span class="hljs-comment">// n &#x9664;&#x4EE5; 2 &#x7684;&#x9918;&#x6578;&#x70BA;&#x96F6;&#x6642;(&#x5373; n &#x70BA;&#x5076;&#x6578;&#x6642;) </span>
+    <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> {
+        <span class="hljs-comment">// &#x505C;&#x6B62;&#x672C;&#x6B21;&#x5FAA;&#x74B0; &#x91CD;&#x65B0;&#x958B;&#x59CB;&#x6B64;&#x6D41;&#x7A0B;&#x7684;&#x4E0B;&#x500B;&#x5FAA;&#x74B0;</span>
+        <span class="hljs-keyword">continue</span>
+    }
+    <span class="hljs-built_in">print</span>(n)
+}
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x7576; n &#x70BA;&#x5076;&#x6578;&#x6642; &#x90FD;&#x6703;&#x8D70;&#x5230; continue &#x5373;&#x7ACB;&#x5373;&#x505C;&#x6B62;&#x672C;&#x6B21;&#x5FAA;&#x74B0;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x6703;&#x88AB;&#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#x7684;&#x53EA;&#x6709; 1, 3, 5, 7, 9</span>
+</code></pre>
+<h4 id="break">Break</h4>
+<p><code>break</code>&#x6703;&#x7ACB;&#x5373;<strong>&#x505C;&#x6B62;&#x9019;&#x500B;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;</strong>&#xFF0C;&#x63A5;&#x8457;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x4E4B;&#x5F8C;&#x7684;&#x7A0B;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x8981;&#x63D0;&#x65E9;&#x7D50;&#x675F;<code>switch</code>&#x6642;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>...<span class="hljs-number">10</span> {
+    <span class="hljs-comment">// n &#x5927;&#x65BC; 2 &#x6642;</span>
+    <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">2</span> {
+        <span class="hljs-comment">// &#x7ACB;&#x5373;&#x505C;&#x6B62;&#x9019;&#x500B;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;</span>
+        <span class="hljs-keyword">break</span>
+    }
+    <span class="hljs-built_in">print</span>(n)
+}
+<span class="hljs-comment">// &#x7576;&#x8FF4;&#x5708;&#x9032;&#x884C;&#x5230;&#x7B2C;&#x4E09;&#x5708;&#x6642; &#x56E0;&#x70BA; n &#x70BA; 3 &#x5DF2;&#x7D93;&#x5927;&#x65BC; 2 &#x4E86;</span>
+<span class="hljs-comment">// &#x5373;&#x6703;&#x9032;&#x5230; break &#x540C;&#x6642;&#x7ACB;&#x5373;&#x505C;&#x6B62;&#x9019;&#x500B;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x9019;&#x908A;&#x53EA;&#x6703;&#x5370;&#x51FA; 1, 2</span>
+</code></pre>
+<h4 id="fallthrough">Fallthrough</h4>
+<p>Swift &#x7684;<code>switch</code>&#x4E2D;&#xFF0C;&#x53EA;&#x8981;&#x6BD4;&#x5C0D;&#x5230;&#x4E00;&#x500B;<code>case</code>&#x5373;&#x6703;&#x57F7;&#x884C;&#x5176;&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x4E26;&#x7D50;&#x675F;&#x9019;&#x6574;&#x500B;<code>switch</code>&#x7684;&#x52D5;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7279;&#x6B8A;&#x60C5;&#x6CC1;&#x4E0B;&#x9700;&#x8981;&#x57F7;&#x884C;&#x7DCA;&#x63A5;&#x8457;&#x7684;&#x4E0B;&#x4E00;&#x500B;<code>case</code>&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x5C31;&#x8981;&#x7528;&#x5230;<code>fallthrough</code>&#x3002;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> number7 = <span class="hljs-number">5</span>
+<span class="hljs-keyword">var</span> str4 = <span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-keyword">switch</span> number7 {
+<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-number">11</span>,<span class="hljs-number">13</span>,<span class="hljs-number">17</span>,<span class="hljs-number">19</span>:
+    str4 += <span class="hljs-string">&quot;It is a prime number. &quot;</span>
+    <span class="hljs-keyword">fallthrough</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">100</span>,<span class="hljs-number">200</span>:
+    str4 += <span class="hljs-string">&quot;Fallthrough once. &quot;</span>
+    <span class="hljs-keyword">fallthrough</span>
+<span class="hljs-keyword">default</span>:
+    str4 += <span class="hljs-string">&quot;Fallthrough twice.&quot;</span>
+}
+
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;</span>
+<span class="hljs-comment">// It is a prime number. Fallthrough once. Fallthrough twice.</span>
+<span class="hljs-built_in">print</span>(str4)
+<span class="hljs-comment">// &#x96D6;&#x7136;&#x53EA;&#x6BD4;&#x5C0D;&#x5230;&#x7B2C;&#x4E00;&#x500B; case &#x4F46;&#x5169;&#x500B; case &#x90FD;&#x6709;&#x4F7F;&#x7528; fallthrough</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x6700;&#x5F8C; str4 &#x662F;&#x5C07;&#x6240;&#x6709;&#x5B57;&#x4E32;&#x76F8;&#x52A0;</span>
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li>&#x52A0;&#x4E0A;<code>fallthrough</code>&#x5F8C;&#x9032;&#x5165;&#x5230;&#x7684;&#x4E0B;&#x4E00;&#x500B;<code>case</code>(&#x6216;&#x662F;<code>default</code>)&#xFF0C;&#x4E0D;&#x6703;&#x5C0D;&#x5176;&#x689D;&#x4EF6;&#x505A;&#x6BD4;&#x5C0D;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x57F7;&#x884C;&#x5176;&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#x3002;</li>
+</ul>
+<h4 id="&#x5E36;&#x6A19;&#x7C64;&#x7684;&#x8A9E;&#x53E5;">&#x5E36;&#x6A19;&#x7C64;&#x7684;&#x8A9E;&#x53E5;</h4>
+<p>&#x6709;&#x6642;&#x6703;&#x9700;&#x8981;&#x8F03;&#x8907;&#x96DC;&#x7684;&#x6DF7;&#x7528;&#x591A;&#x500B;<code>switch</code>&#x3001;<code>for</code>&#x6216;&#x662F;<code>while</code>&#xFF0C;&#x7576;&#x9700;&#x8981;&#x5C0D;&#x5176;&#x4E2D;&#x4E00;&#x500B;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;&#x4F7F;&#x7528;<code>continue</code>&#x6216;<code>break</code>&#x4F86;&#x8DF3;&#x8F49;&#x6216;&#x505C;&#x6B62;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x984D;&#x5916;&#x5730;&#x5C0D;<code>continue</code>&#x6216;<code>break</code>&#x6307;&#x540D;&#x662F;&#x5C6C;&#x65BC;&#x54EA;&#x500B;&#x5FAA;&#x74B0;&#x6D41;&#x7A0B;&#x3002;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift">&#x6A19;&#x7C64;&#x540D;&#x7A31;: <span class="hljs-keyword">while</span> &#x689D;&#x4EF6; {
+    &#x5FAA;&#x74B0;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> number8 = <span class="hljs-number">1</span>
+gameLoop: <span class="hljs-keyword">while</span> number8 &lt; <span class="hljs-number">10</span> {
+    <span class="hljs-keyword">switch</span> number8 {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>...<span class="hljs-number">4</span>:
+        number8 += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+        number8 *= <span class="hljs-number">10</span>
+        <span class="hljs-comment">// break &#x6A19;&#x8A3B;&#x70BA; gameLoop &#x7684; while &#x8FF4;&#x5708;</span>
+        <span class="hljs-keyword">break</span> gameLoop
+    <span class="hljs-keyword">default</span>:
+        number8 += <span class="hljs-number">1</span>
+    }
+}
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;50</span>
+<span class="hljs-built_in">print</span>(number8)
+<span class="hljs-comment">// &#x5728; 1...4 &#x5340;&#x9593;&#x5167;&#x6642; &#x6703;&#x5C07; number8 &#x52A0; 1</span>
+<span class="hljs-comment">// &#x76F4;&#x5230; n==5 &#x6642; &#x6703;&#x4E58;&#x4EE5; 10 &#x4E26;&#x7D50;&#x675F; while &#x5FAA;&#x74B0;</span>
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x6709;&#x5C07; while &#x52A0;&#x4E0A;&#x540D;&#x70BA; gameLoop &#x7684;&#x6A19;&#x7C64;</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F88;&#x660E;&#x767D;&#x7684;&#x4E86;&#x89E3; case 5 &#x4E2D;&#x7684; break &#x662F;&#x8981;&#x7D50;&#x675F; while</span>
+<span class="hljs-comment">// &#x56E0;&#x6B64;&#x9019;&#x500B; while &#x5176;&#x5BE6;&#x53EA;&#x5FAA;&#x74B0; 5 &#x6B21;&#x5373;&#x7D50;&#x675F;</span>
+</code></pre>
+<p><a id="guard"></a></p>
+<h3 id="&#x63D0;&#x524D;&#x9000;&#x51FA;">&#x63D0;&#x524D;&#x9000;&#x51FA;</h3>
+<p>&#x6709;&#x9EDE;&#x985E;&#x4F3C;<code>if</code>&#x7684;&#x7528;&#x6CD5;&#xFF0C;<code>guard</code>&#x540C;&#x6A23;&#x6703;&#x6709;&#x4E00;&#x500B;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x4E14;&#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5E03;&#x6797;&#x503C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x5728;&#x65BC;&#xFF0C;<code>guard</code>&#x5F8C;&#x9762;&#x4E00;&#x5B9A;&#x8981;&#x63A5;&#x4E00;&#x500B;<code>else</code>&#xFF0C;&#x5982;&#x679C;&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE;<code>false</code>&#x6642;&#xFF0C;&#x6703;&#x57F7;&#x884C;<code>{}</code>&#x5167;&#x7684;&#x7A0B;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">guard</span> &#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F; <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE; false &#x6642; &#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;</span>
+    <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x914D;&#x5408; continue, break &#x6216; return &#x4F86;&#x63A7;&#x5236;&#x8F49;&#x79FB;&#x6D41;&#x7A0B;</span>
+}
+
+<span class="hljs-comment">// &#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x8FD4;&#x56DE; true &#x6642; &#x5247;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x63A5;&#x4E0B;&#x4F86;&#x7684;&#x7A0B;&#x5F0F;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x540D;&#x53EB; post() &#x7684;&#x51FD;&#x5F0F;</span>
+<span class="hljs-comment">// &#x9700;&#x8981;&#x50B3;&#x5165;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; [String: String] &#x7684;&#x5B57;&#x5178;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">post</span><span class="hljs-params">(article: [String: String])</span></span> {
+    <span class="hljs-comment">// &#x9996;&#x5148;&#x53D6;&#x5F97;&#x50B3;&#x5165;&#x5B57;&#x5178;&#x4E2D; &#x9375;&#x70BA; title &#x7684;&#x503C; &#x4E26;&#x6307;&#x6D3E;&#x7D66;&#x4E00;&#x500B;&#x5E38;&#x6578;</span>
+    <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> insideTitle = article[<span class="hljs-string">&quot;title&quot;</span>] <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x6C92;&#x6709;&#x9375;&#x70BA; title &#x7684;&#x503C; &#x9019;&#x88E1;&#x9762;&#x7684;&#x7A0B;&#x5F0F;&#x5C31;&#x6703;&#x88AB;&#x57F7;&#x884C;</span>
+        <span class="hljs-comment">// &#x51FD;&#x5F0F;&#x4E2D;&#x7684; return &#x8868;&#x793A;&#x6703;&#x76F4;&#x63A5;&#x7D50;&#x675F;&#x9019;&#x500B;&#x51FD;&#x5F0F;</span>
+        <span class="hljs-keyword">return</span>
+    }
+
+    <span class="hljs-comment">// &#x4E0A;&#x9762;&#x7684; insideTitle &#x5982;&#x679C;&#x6709;&#x6B63;&#x78BA;&#x7684;&#x88AB;&#x6307;&#x6D3E;&#x503C; &#x5247;&#x6703;&#x7E7C;&#x7E8C;&#x9032;&#x884C;&#x5230;&#x9019;&#x88E1;</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x6A19;&#x984C;&#x662F; <span class="hljs-subst">\(insideTitle)</span> &#xFF0C;&quot;</span>)
+
+    <span class="hljs-comment">// &#x63A5;&#x8457;&#x53D6;&#x5F97;&#x50B3;&#x5165;&#x5B57;&#x5178;&#x4E2D; &#x9375;&#x70BA; content &#x7684;&#x503C; &#x4E26;&#x6307;&#x6D3E;&#x7D66;&#x4E00;&#x500B;&#x5E38;&#x6578;</span>
+    <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> insideContent = article[<span class="hljs-string">&quot;content&quot;</span>] <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x6C92;&#x6709;&#x9375;&#x70BA; content &#x7684;&#x503C; &#x9019;&#x88E1;&#x9762;&#x7684;&#x7A0B;&#x5F0F;&#x5C31;&#x6703;&#x88AB;&#x57F7;&#x884C;</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x4F46;&#x662F;&#x6C92;&#x6709;&#x5167;&#x5BB9;&#x3002;&quot;</span>)
+        <span class="hljs-keyword">return</span>
+    }
+
+    <span class="hljs-comment">// &#x4E0A;&#x9762;&#x7684; insideContent &#x5982;&#x679C;&#x6709;&#x6B63;&#x78BA;&#x7684;&#x88AB;&#x6307;&#x6D3E;&#x503C; &#x5247;&#x6703;&#x7E7C;&#x7E8C;&#x9032;&#x884C;&#x5230;&#x9019;&#x88E1;</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x5167;&#x5BB9;&#x70BA; <span class="hljs-subst">\(insideContent)</span>&#x3002;&quot;</span>)
+}
+
+post(article: [<span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Article_1&quot;</span>])
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x6A19;&#x984C;&#x662F; Article_1 &#xFF0C;</span>
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x4F46;&#x662F;&#x6C92;&#x6709;&#x5167;&#x5BB9;&#x3002;</span>
+
+post(article: [<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;Article_2&quot;</span>,<span class="hljs-string">&quot;content&quot;</span>:<span class="hljs-string">&quot;Article_2_full_content&quot;</span>])
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x6A19;&#x984C;&#x662F; Article_2 &#xFF0C;</span>
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x5167;&#x5BB9;&#x70BA; Article_2_full_content&#x3002;</span>
+</code></pre>
+<h5 id="hint">Hint</h5>
+<ul>
+<li><code>guard</code>&#x689D;&#x4EF6;&#x8868;&#x9054;&#x5F0F;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<strong>&#x53EF;&#x9078;&#x7D81;&#x5B9A;</strong>&#x800C;&#x88AB;&#x6307;&#x6D3E;&#x7684;&#x5E38;&#x6578;&#x6216;&#x8B8A;&#x6578;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x51FD;&#x5F0F;<code>{}</code>&#x7BC4;&#x570D;&#x88E1;&#x63A5;&#x4E0B;&#x4F86;&#x7684;&#x7A0B;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<p>&#x96D6;&#x7136;<code>guard</code>&#x7528;&#x6CD5;&#x8207;<code>if</code>&#x985E;&#x4F3C;&#xFF0C;&#x4F46;&#x4F7F;&#x7528;<code>guard</code>&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x5C08;&#x6CE8;&#x65BC;&#x4E00;&#x7A2E;&#x689D;&#x4EF6;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;&#x63D0;&#x9AD8;&#x7A0B;&#x5F0F;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8B93;&#x51FD;&#x5F0F;&#x5167;&#x5BB9;&#x66F4;&#x6E05;&#x6670;&#x597D;&#x8B80;&#x3002;</p>
+<p>&#x5F8C;&#x9762;&#x7AE0;&#x7BC0;&#x6703;&#x6B63;&#x5F0F;&#x4ECB;&#x7D39;<a href="functions.html">&#x51FD;&#x5F0F;</a>&#x3002;</p>
+<p><a id="api"></a></p>
+<h3 id="&#x6AA2;&#x6E2C;-api-&#x53EF;&#x7528;&#x6027;">&#x6AA2;&#x6E2C; API &#x53EF;&#x7528;&#x6027;</h3>
+<p>Swift &#x53EF;&#x4EE5;&#x8B93;&#x4F60;&#x6AA2;&#x67E5; API &#x7684;&#x9810;&#x8A2D;&#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x4E0D;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x5C0D;&#x65BC;&#x7576;&#x524D;&#x90E8;&#x5C6C;&#x76EE;&#x6A19;&#x4E0D;&#x53EF;&#x7528;&#x7684; API&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">if</span> #available(&#x5E73;&#x53F0;&#x540D;&#x7A31; &#x7248;&#x672C;&#x865F;, ..., *) {
+    <span class="hljs-comment">// &#x5728;&#x67D0;&#x500B;&#x5E73;&#x53F0;&#x6216;&#x7248;&#x672C;&#x4E0B;&#x4F7F;&#x7528;&#x7279;&#x5225;&#x7684; API</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x800C;&#x5176;&#x4ED6;&#x7684;&#x5E73;&#x53F0;&#x6216;&#x7248;&#x672C;&#x5247;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7684; API</span>
+}
+</code></pre>
+<p>&#x5E73;&#x53F0;&#x540D;&#x7A31;&#x53EF;&#x4EE5;&#x662F;<code>iOS</code>&#x3001;<code>macOS</code>&#x6216;<code>watchOS</code>&#x3002;&#x7248;&#x672C;&#x865F;&#x53EF;&#x4EE5;&#x662F;&#x5927;&#x7248;&#x672C;&#x865F;&#x50CF;&#x662F;<code>iOS 10</code>&#xFF0C;&#x6216;&#x662F;&#x8F03;&#x5C0F;&#x7684;&#x7248;&#x672C;&#x50CF;&#x662F;<code>macOS 10.12</code>&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">if</span> #available(iOS <span class="hljs-number">10</span>, macOS <span class="hljs-number">10.12</span>, *) {
+    <span class="hljs-comment">// &#x5728; iOS &#x4F7F;&#x7528; iOS 10 &#x7684; API</span>
+    <span class="hljs-comment">// &#x5728; macOS &#x4F7F;&#x7528; OSX 10.12 &#x7684; API</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x5148;&#x524D;&#x7248;&#x672C;&#x7684; iOS &#x548C; macOS &#x7684; API</span>
+}
+</code></pre>
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/ch1/control_flow.playground" target="_blank">ch1/control_flow.playground</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="collection_types.html" class="navigation navigation-prev " aria-label="Previous page: 集合型別">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="functions.html" class="navigation navigation-next " aria-label="Next page: 函式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"控制流程","level":"1.2.6","depth":2,"next":{"title":"函式","level":"1.2.7","depth":2,"path":"ch1/functions.md","ref":"ch1/functions.md","articles":[]},"previous":{"title":"集合型別","level":"1.2.5","depth":2,"path":"ch1/collection_types.md","ref":"ch1/collection_types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/control_flow.md","mtime":"2017-12-07T04:25:38.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
