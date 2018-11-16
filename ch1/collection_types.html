@@ -1605,7 +1605,7 @@ myDict2[<span class="hljs-string">&quot;LHR&quot;</span>] = <span class="hljs-li
 <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x5C0D;&#x61C9;&#x503C;&#x7684;&#x578B;&#x5225;&#x7684;&#x53EF;&#x9078;&#x503C; (&#x9019;&#x908A;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x500B; String? )</span>
 myDict3.updateValue(<span class="hljs-string">&quot;London Heathrow&quot;</span>, forKey: <span class="hljs-string">&quot;LHR&quot;</span>)
 <span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;London Heathrow</span>
-<span class="hljs-built_in">print</span>(myDict3[<span class="hljs-string">&quot;LHR&quot;</span>])
+<span class="hljs-built_in">print</span>(myDict3[<span class="hljs-string">&quot;LHR&quot;</span>]!)
 
 <span class="hljs-comment">// &#x4F7F;&#x7528; removeValue(forKey:) &#x79FB;&#x9664;&#x4E00;&#x500B;&#x503C;</span>
 <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x88AB;&#x522A;&#x9664;&#x7684;&#x503C;, &#x5982;&#x679C;&#x6C92;&#x6709;&#x5C0D;&#x61C9;&#x7684;&#x503C;&#x7684;&#x8A71;&#x5247;&#x6703;&#x8FD4;&#x56DE; nil</span>
@@ -1696,7 +1696,7 @@ someArr2.sorted()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"集合型別","level":"1.2.5","depth":2,"next":{"title":"控制流程","level":"1.2.6","depth":2,"path":"ch1/control_flow.md","ref":"ch1/control_flow.md","articles":[]},"previous":{"title":"字串及字元","level":"1.2.4","depth":2,"path":"ch1/strings_characters.md","ref":"ch1/strings_characters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/collection_types.md","mtime":"2017-12-07T04:25:38.603Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"集合型別","level":"1.2.5","depth":2,"next":{"title":"控制流程","level":"1.2.6","depth":2,"path":"ch1/control_flow.md","ref":"ch1/control_flow.md","articles":[]},"previous":{"title":"字串及字元","level":"1.2.4","depth":2,"path":"ch1/strings_characters.md","ref":"ch1/strings_characters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/collection_types.md","mtime":"2017-10-31T07:59:08.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1704,10 +1704,6 @@ someArr2.sorted()
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

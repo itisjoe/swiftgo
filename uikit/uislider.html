@@ -1285,11 +1285,7 @@
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
 </code></pre>
-<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-</code></pre>
-<p>&#x5148;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x5F35;&#x5716;&#x7247;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x793A;&#x7BC4;&#x4F7F;&#x7528;&#xFF1A;</p>
+<p>&#x63A5;&#x8457;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x5F35;&#x5716;&#x7247;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x793A;&#x7BC4;&#x4F7F;&#x7528;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UIImageView</span>
 imageView = <span class="hljs-type">UIImageView</span>(
   image: <span class="hljs-type">UIImage</span>(named: <span class="hljs-string">&quot;01.jpg&quot;</span>))
@@ -1302,7 +1298,7 @@ imageView.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(imageView)
 </code></pre>
 <h3 id="&#x5EFA;&#x7ACB;-uislider">&#x5EFA;&#x7ACB; UISlider</h3>
-<p>&#x63A5;&#x8457;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; UISlider &#xFF1A;</p>
+<p>&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; UISlider &#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UISlider</span>
 mySlider=<span class="hljs-type">UISlider</span>(frame: <span class="hljs-type">CGRect</span>(
   x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, 
@@ -1347,7 +1343,7 @@ mySlider.center = <span class="hljs-type">CGPoint</span>(
 </code></pre>
 <p>&#x8ACB;&#x6CE8;&#x610F; UISlider &#x53EF;&#x4EE5;&#x8A2D;&#x5B9A;&#x5BEC;&#x5EA6;( width )&#xFF0C;&#x800C;&#x9AD8;&#x5EA6;( height )&#x5247;&#x662F;&#x56FA;&#x5B9A;&#x7121;&#x6CD5;&#x8B8A;&#x52D5;&#x3002;</p>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x4E2D;&#x52A0;&#x5165;&#x6ED1;&#x52D5;&#x6ED1;&#x687F;&#x6642;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">onSliderChange</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">onSliderChange</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x5716;&#x7247;&#x7684;&#x900F;&#x660E;&#x5EA6;</span>
     imageView.alpha = <span class="hljs-type">CGFloat</span>(
       mySlider.value / mySlider.maximumValue)
@@ -1404,7 +1400,7 @@ mySlider.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"滑桿 UISlider","level":"1.4.13","depth":2,"next":{"title":"步進器 UIStepper","level":"1.4.14","depth":2,"path":"uikit/uistepper.md","ref":"uikit/uistepper.md","articles":[]},"previous":{"title":"進度條 UIProgressView","level":"1.4.12","depth":2,"path":"uikit/uiprogressview.md","ref":"uikit/uiprogressview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uislider.md","mtime":"2017-12-07T04:25:38.675Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"滑桿 UISlider","level":"1.4.13","depth":2,"next":{"title":"步進器 UIStepper","level":"1.4.14","depth":2,"path":"uikit/uistepper.md","ref":"uikit/uistepper.md","articles":[]},"previous":{"title":"進度條 UIProgressView","level":"1.4.12","depth":2,"path":"uikit/uiprogressview.md","ref":"uikit/uiprogressview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uislider.md","mtime":"2017-11-14T10:19:39.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1412,10 +1408,6 @@ mySlider.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

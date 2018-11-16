@@ -1278,11 +1278,7 @@
 <h3 id="&#x5EFA;&#x7ACB;-uiimageview">&#x5EFA;&#x7ACB; UIImageView</h3>
 <p>&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x76EE;&#x6A19;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
 <p><img src="../images/uikit/uiimageview/uiimageview01.png" alt="uiimageview01"></p>
-<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIImageView &#x3002;</p>
-<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x4EE5;<a href="../more/copyfile.html">&#x52A0;&#x5165;&#x6A94;&#x6848;</a>&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x56DB;&#x5F35;&#x5716;&#x7247;&#xFF0C;&#x4E26;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-</code></pre>
+<p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIImageView &#x3002;&#x4E00;&#x958B;&#x59CB;&#x5148;&#x4EE5;<a href="../more/copyfile.html">&#x52A0;&#x5165;&#x6A94;&#x6848;</a>&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x56DB;&#x5F35;&#x5716;&#x7247;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x25BC; &#x7B2C;&#x4E00;&#x500B;&#x5EFA;&#x7ACB; UIImageView &#x7684;&#x65B9;&#x5F0F;&#x70BA;&#x4F7F;&#x7528;<code>UIImageView(frame:)</code>&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x4F7F;&#x7528; UIImageView(frame:) &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UIImageView</span>
 <span class="hljs-keyword">var</span> myImageView = <span class="hljs-type">UIImageView</span>(
@@ -1371,10 +1367,6 @@ myImageView.center = <span class="hljs-type">CGPoint</span>(
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
 </code></pre>
-<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-</code></pre>
 <h4 id="&#x8A2D;&#x7F6E;&#x8F2A;&#x64AD;&#x5716;&#x7247;&#x7684;&#x8CC7;&#x8A0A;">&#x8A2D;&#x7F6E;&#x8F2A;&#x64AD;&#x5716;&#x7247;&#x7684;&#x8CC7;&#x8A0A;</h4>
 <pre><code class="lang-swift">myImageView = <span class="hljs-type">UIImageView</span>(
   frame: <span class="hljs-type">CGRect</span>(x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>, width: <span class="hljs-number">200</span>, height: <span class="hljs-number">200</span>))
@@ -1459,12 +1451,12 @@ stopButton.center = <span class="hljs-type">CGPoint</span>(
 </code></pre>
 <p>&#x6309;&#x9215;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6587;&#x5B57;&#x4E4B;&#x5916;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8A2D;&#x7F6E;&#x6210;&#x5716;&#x7247;&#xFF0C;&#x5229;&#x7528; UIButton &#x7684;&#x65B9;&#x6CD5;<code>setImage()</code>&#xFF0C;&#x8A2D;&#x7F6E;&#x4E00;&#x500B; UIImage &#x7D66;&#x5B83;&#x5373;&#x53EF;&#x3002; UIButton &#x7684;&#x8A73;&#x7D30;&#x8AAA;&#x660E;&#x8ACB;&#x53C3;&#x8003;<a href="uibutton.html">&#x524D;&#x7BC0;&#x8AAA;&#x660E;</a>&#x3002;</p>
 <p>&#x63A5;&#x8457;<code>ViewController</code>&#x65B0;&#x589E;&#x5169;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">play</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">play</span><span class="hljs-params">()</span></span> {
     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;play images auto play&quot;</span>)
     myImageView.startAnimating()
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span></span> {
     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;stop images auto play&quot;</span>)
     myImageView.stopAnimating()
 }
@@ -1528,7 +1520,7 @@ stopButton.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"圖片 UIImageView","level":"1.4.7","depth":2,"next":{"title":"選取日期時間 UIDatePicker","level":"1.4.8","depth":2,"path":"uikit/uidatepicker.md","ref":"uikit/uidatepicker.md","articles":[]},"previous":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"path":"uikit/uialertcontroller.md","ref":"uikit/uialertcontroller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiimageview.md","mtime":"2017-12-07T04:25:38.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"圖片 UIImageView","level":"1.4.7","depth":2,"next":{"title":"選取日期時間 UIDatePicker","level":"1.4.8","depth":2,"path":"uikit/uidatepicker.md","ref":"uikit/uidatepicker.md","articles":[]},"previous":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"path":"uikit/uialertcontroller.md","ref":"uikit/uialertcontroller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiimageview.md","mtime":"2017-11-13T09:48:36.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1536,10 +1528,6 @@ stopButton.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

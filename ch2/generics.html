@@ -1281,6 +1281,8 @@
 <li><a href="#type">&#x6CDB;&#x578B;&#x578B;&#x5225;</a></li>
 <li><a href="#constraint">&#x578B;&#x5225;&#x7D04;&#x675F;</a></li>
 <li><a href="#associatedtype">&#x95DC;&#x806F;&#x578B;&#x5225;</a></li>
+<li><a href="#where_clauses">where &#x8A9E;&#x53E5;</a></li>
+<li><a href="#generic_subscripts">&#x6CDB;&#x578B;&#x4E0B;&#x6A19;</a></li>
 </ul>
 <p>&#x6CDB;&#x578B;(<code>generic</code>)&#x662F; Swift &#x4E00;&#x500B;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x8B93;&#x4F60;&#x81EA;&#x5B9A;&#x7FA9;&#x51FA;&#x4E00;&#x500B;<strong>&#x9069;&#x7528;&#x4EFB;&#x610F;&#x578B;&#x5225;</strong>&#x7684;&#x51FD;&#x5F0F;&#x53CA;&#x578B;&#x5225;&#x3002;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x4E14;&#x6E05;&#x695A;&#x7684;&#x8868;&#x9054;&#x7A0B;&#x5F0F;&#x78BC;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
 <p>&#x8A31;&#x591A; Swift &#x6A19;&#x6E96;&#x51FD;&#x5F0F;&#x5EAB;&#x5C31;&#x662F;&#x7D93;&#x7531;&#x6CDB;&#x578B;&#x7A0B;&#x5F0F;&#x78BC;&#x5EFA;&#x69CB;&#x51FA;&#x4F86;&#x7684;&#xFF0C;&#x50CF;&#x662F;&#x9663;&#x5217;(<code>Array</code>)&#x548C;&#x5B57;&#x5178;(<code>Dictionary</code>)&#x90FD;&#x662F;&#x6CDB;&#x578B;&#x7684;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5BA3;&#x544A;&#x4E00;&#x500B;<code>[Int]</code>&#x9663;&#x5217;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5BA3;&#x544A;&#x4E00;&#x500B;<code>[String]</code>&#x9663;&#x5217;&#x3002;&#x540C;&#x6A23;&#x5730;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5BA3;&#x544A;&#x4EFB;&#x610F;&#x6307;&#x5B9A;&#x578B;&#x5225;&#x7684;&#x5B57;&#x5178;&#x3002;</p>
@@ -1321,7 +1323,7 @@ swapTwoInts(&amp;oneInt, &amp;anotherInt)
 }
 </code></pre>
 <p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x7684;&#x51FD;&#x5F0F;&#x4F7F;&#x7528;&#x4E86;<strong>&#x4F54;&#x4F4D;&#x578B;&#x5225;&#x540D;&#x7A31;</strong>(<code>placeholder type name</code>&#xFF0C;&#x7FD2;&#x6163;&#x4EE5;&#x5B57;&#x6BCD;<code>T</code>&#x4F86;&#x8868;&#x793A;)&#x4F86;&#x4EE3;&#x66FF;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x540D;&#x7A31;(&#x50CF;&#x662F;<code>Int</code>&#x3001;<code>Double</code>&#x6216;<code>String</code>)&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x6CE8;&#x610F;&#x5230;&#x51FD;&#x5F0F;&#x540D;&#x7A31;&#x5F8C;&#x9762;&#x7DCA;&#x63A5;&#x8457;&#x4E00;&#x7D44;<strong>&#x89D2;&#x62EC;&#x865F;<code>&lt;&gt;</code></strong>&#xFF0C;&#x4E14;&#x5305;&#x8457;<code>T</code>&#x3002;&#x9019;&#x4EE3;&#x8868;&#x89D2;&#x62EC;&#x865F;&#x5167;&#x7684;<code>T</code>&#x662F;&#x51FD;&#x5F0F;&#x5B9A;&#x7FA9;&#x7684;&#x4E00;&#x500B;&#x4F54;&#x4F4D;&#x578B;&#x5225;&#x540D;&#x7A31;&#xFF0C;&#x56E0;&#x6B64; Swift &#x4E0D;&#x6703;&#x53BB;&#x67E5;&#x627E;&#x540D;&#x7A31;&#x70BA;<code>T</code>&#x7684;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x6CE8;&#x610F;&#x5230;&#x51FD;&#x5F0F;&#x540D;&#x7A31;&#x5F8C;&#x9762;&#x7DCA;&#x63A5;&#x8457;&#x4E00;&#x7D44;<strong>&#x89D2;&#x62EC;&#x865F;<code>&lt;&gt;</code></strong>&#xFF0C;&#x4E14;&#x5305;&#x8457;<code>T</code>&#x3002;&#x9019;&#x4EE3;&#x8868;&#x89D2;&#x62EC;&#x865F;&#x5167;&#x7684;<code>T</code>&#x662F;&#x51FD;&#x5F0F;&#x5B9A;&#x7FA9;&#x7684;&#x4E00;&#x500B;<strong>&#x4F54;&#x4F4D;&#x578B;&#x5225;&#x540D;&#x7A31;</strong>&#xFF0C;&#x56E0;&#x6B64; Swift &#x4E0D;&#x6703;&#x53BB;&#x67E5;&#x627E;&#x540D;&#x7A31;&#x70BA;<code>T</code>&#x7684;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x3002;</p>
 <p>&#x5B9A;&#x7FA9;&#x4F54;&#x4F4D;&#x578B;&#x5225;&#x540D;&#x7A31;&#x6642;&#x4E0D;&#x6703;&#x660E;&#x78BA;&#x8868;&#x793A;<code>T</code>&#x662F;&#x4EC0;&#x9EBC;&#x578B;&#x5225;&#xFF0C;&#x4F46;&#x53C3;&#x6578;<code>a</code>&#x8207;<code>b</code>&#x90FD;&#x5FC5;&#x9808;&#x662F;&#x9019;&#x500B;<code>T</code>&#x578B;&#x5225;&#x3002;&#x800C;&#x53EA;&#x6709;&#x7576;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x88AB;&#x547C;&#x53EB;&#x6642;&#xFF0C;&#x624D;&#x6703;&#x6839;&#x64DA;&#x50B3;&#x5165;&#x53C3;&#x6578;&#x7684;&#x5BE6;&#x969B;&#x578B;&#x5225;&#xFF0C;&#x4F86;&#x6C7A;&#x5B9A;<code>T</code>&#x6240;&#x4EE3;&#x8868;&#x7684;&#x578B;&#x5225;&#x3002;</p>
 <p>&#x9019;&#x6642;&#x4FBF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9019;&#x500B;&#x6CDB;&#x578B;&#x51FD;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">//  &#x9996;&#x5148;&#x662F;&#x5169;&#x500B;&#x6574;&#x6578;</span>
@@ -1412,7 +1414,7 @@ stackOfStrings.pop()
 <p>&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x7684;&#x578B;&#x5225;&#x7D04;&#x675F;&#x6703;&#x4F7F;&#x7528;&#x5230;&#x53E6;&#x4E00;&#x500B; Swift &#x6A19;&#x6E96;&#x51FD;&#x5F0F;&#x5EAB;&#x4E2D;&#x7684;<code>Equatable</code>&#x5354;&#x5B9A;&#xFF0C;&#x9019;&#x500B;&#x5354;&#x5B9A;&#x8981;&#x6C42;&#x4EFB;&#x4F55;&#x9075;&#x5FAA;&#x8A72;&#x5354;&#x5B9A;&#x7684;&#x578B;&#x5225;&#x5FC5;&#x9808;&#x5BE6;&#x4F5C;<code>==</code>&#x53CA;<code>!=</code>&#xFF0C;&#x9032;&#x800C;&#x53EF;&#x4EE5;&#x5C0D;&#x8A72;&#x578B;&#x5225;&#x7684;&#x4EFB;&#x610F;&#x5169;&#x500B;&#x503C;&#x9032;&#x884C;&#x6BD4;&#x8F03;&#x3002;(&#x6240;&#x6709;&#x7684; Swift &#x6A19;&#x6E96;&#x578B;&#x5225;&#x9810;&#x8A2D;&#x90FD;&#x7B26;&#x5408;<code>Equatable</code>&#x5354;&#x5B9A;&#x3002;)</p>
 <pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">findIndex</span>&lt;T: Equatable&gt;<span class="hljs-params">(
   of valueToFind: T, <span class="hljs-keyword">in</span> array:[T])</span></span> -&gt; <span class="hljs-type">Int</span>? {
-    <span class="hljs-keyword">for</span> (index, value) <span class="hljs-keyword">in</span> array.<span class="hljs-built_in">enumerate</span>() {
+    <span class="hljs-keyword">for</span> (index, value) <span class="hljs-keyword">in</span> array.enumerated() {
         <span class="hljs-keyword">if</span> value == valueToFind {
             <span class="hljs-keyword">return</span> index
         }
@@ -1432,16 +1434,16 @@ stackOfStrings.pop()
 <p><a id="associatedtype"></a></p>
 <h3 id="&#x95DC;&#x806F;&#x578B;&#x5225;">&#x95DC;&#x806F;&#x578B;&#x5225;</h3>
 <p>&#x95DC;&#x806F;&#x578B;&#x5225;(<code>associated type</code>)&#x8868;&#x793A;&#x6703;&#x70BA;&#x5354;&#x5B9A;&#x4E2D;&#x7684;&#x67D0;&#x500B;&#x578B;&#x5225;&#x63D0;&#x4F9B;&#x4E00;&#x500B;&#x4F54;&#x4F4D;&#x540D;&#x7A31;(<code>placeholder name</code>)&#xFF0C;&#x5176;&#x4EE3;&#x8868;&#x7684;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x6703;&#x5728;&#x5354;&#x5B9A;&#x88AB;&#x9075;&#x5FAA;&#x6642;&#x624D;&#x6703;&#x88AB;&#x6307;&#x5B9A;&#x3002;&#x4F7F;&#x7528;<code>associatedtype</code>&#x95DC;&#x9375;&#x5B57;&#x4F86;&#x6307;&#x5B9A;&#x4E00;&#x500B;&#x95DC;&#x806F;&#x578B;&#x5225;&#x3002;</p>
-<p>&#x5E95;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x5354;&#x5B9A;<code>Container</code>&#xFF0C;&#x5354;&#x5B9A;&#x4E2D;&#x5B9A;&#x7FA9;&#x4E86;&#x4E00;&#x500B;&#x95DC;&#x806F;&#x578B;&#x5225;<code>ItemType</code>&#xFF1A;</p>
+<p>&#x5E95;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x5354;&#x5B9A;<code>Container</code>&#xFF0C;&#x5354;&#x5B9A;&#x4E2D;&#x5B9A;&#x7FA9;&#x4E86;&#x4E00;&#x500B;&#x95DC;&#x806F;&#x578B;&#x5225;<code>Item</code>&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">protocol</span> <span class="hljs-title">Container</span> </span>{
-    associatedtype <span class="hljs-type">ItemType</span>
-    <span class="hljs-keyword">mutating</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-number">_</span> item: ItemType)</span></span>
+    associatedtype <span class="hljs-type">Item</span>
+    <span class="hljs-keyword">mutating</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-number">_</span> item: Item)</span></span>
     <span class="hljs-keyword">var</span> <span class="hljs-built_in">count</span>: <span class="hljs-type">Int</span> { <span class="hljs-keyword">get</span> }
-    <span class="hljs-keyword">subscript</span>(i: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">ItemType</span> { <span class="hljs-keyword">get</span> }
+    <span class="hljs-keyword">subscript</span>(i: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Item</span> { <span class="hljs-keyword">get</span> }
 }
 </code></pre>
-<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5354;&#x5B9A;&#x5B9A;&#x7FA9;&#x7684;<strong>&#x65B9;&#x6CD5;<code>append()</code>&#x53C3;&#x6578;&#x7684;&#x578B;&#x5225;</strong>&#x53CA;<strong>&#x4E0B;&#x6A19;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x578B;&#x5225;</strong>&#x90FD;&#x662F;<code>ItemType</code>&#xFF0C;&#x76EE;&#x524D;&#x4ECD;&#x662F;&#x4F54;&#x4F4D;&#x540D;&#x7A31;&#xFF0C;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x8981;&#x7B49;&#x5230;&#x9019;&#x500B;&#x5354;&#x5B9A;&#x88AB;&#x9075;&#x5FAA;&#x5F8C;&#x624D;&#x6703;&#x88AB;&#x6307;&#x5B9A;&#x3002;</p>
-<p>&#x63A5;&#x8457;&#x6211;&#x5011;&#x5C07;&#x524D;&#x9762;&#x5B9A;&#x7FA9;&#x7684;&#x5806;&#x758A;(<code>Stack</code>)&#x9075;&#x5FAA;&#x9019;&#x500B;&#x5354;&#x5B9A;<code>Container</code>&#xFF0C;&#x5728;&#x5BE6;&#x4F5C;&#x5354;&#x5B9A;<code>Container</code>&#x7684;&#x5168;&#x90E8;&#x529F;&#x80FD;&#x5F8C;&#xFF0C;Swift &#x6703;&#x81EA;&#x52D5;&#x63A8;&#x65B7;<code>ItemType</code>&#x7684;&#x578B;&#x5225;&#x5C31;&#x662F;<code>Element</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x4E0A;&#x8FF0;&#x7A0B;&#x5F0F;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5354;&#x5B9A;&#x5B9A;&#x7FA9;&#x7684;<strong>&#x65B9;&#x6CD5;<code>append()</code>&#x53C3;&#x6578;&#x7684;&#x578B;&#x5225;</strong>&#x53CA;<strong>&#x4E0B;&#x6A19;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x578B;&#x5225;</strong>&#x90FD;&#x662F;<code>Item</code>&#xFF0C;&#x76EE;&#x524D;&#x4ECD;&#x662F;&#x4F54;&#x4F4D;&#x540D;&#x7A31;&#xFF0C;&#x5BE6;&#x969B;&#x578B;&#x5225;&#x8981;&#x7B49;&#x5230;&#x9019;&#x500B;&#x5354;&#x5B9A;&#x88AB;&#x9075;&#x5FAA;&#x5F8C;&#x624D;&#x6703;&#x88AB;&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x63A5;&#x8457;&#x6211;&#x5011;&#x5C07;&#x524D;&#x9762;&#x5B9A;&#x7FA9;&#x7684;&#x5806;&#x758A;(<code>Stack</code>)&#x9075;&#x5FAA;&#x9019;&#x500B;&#x5354;&#x5B9A;<code>Container</code>&#xFF0C;&#x5728;&#x5BE6;&#x4F5C;&#x5354;&#x5B9A;<code>Container</code>&#x7684;&#x5168;&#x90E8;&#x529F;&#x80FD;&#x5F8C;&#xFF0C;Swift &#x6703;&#x81EA;&#x52D5;&#x63A8;&#x65B7;<code>Item</code>&#x7684;&#x578B;&#x5225;&#x5C31;&#x662F;<code>Element</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">NewStack</span>&lt;<span class="hljs-title">Element</span>&gt;: <span class="hljs-title">Container</span> </span>{
     <span class="hljs-comment">// Stack&lt;Element&gt; &#x539F;&#x5BE6;&#x4F5C;&#x7684;&#x5167;&#x5BB9;</span>
     <span class="hljs-keyword">var</span> items = [<span class="hljs-type">Element</span>]()
@@ -1454,7 +1456,7 @@ stackOfStrings.pop()
 
     <span class="hljs-comment">// &#x539F;&#x672C;&#x61C9;&#x8A72;&#x8981;&#x5BEB; typealias </span>
     <span class="hljs-comment">// &#x4F46;&#x56E0;&#x70BA; Swift &#x6703;&#x81EA;&#x52D5;&#x63A8;&#x65B7;&#x578B;&#x5225; &#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x9019;&#x884C;&#x53EF;&#x4EE5;&#x7701;&#x7565;</span>
-    <span class="hljs-comment">// typealias ItemType = Element</span>
+    <span class="hljs-comment">// typealias Item = Element</span>
 
     <span class="hljs-comment">// &#x5354;&#x5B9A; Container &#x5BE6;&#x4F5C;&#x7684;&#x5167;&#x5BB9;</span>
     <span class="hljs-keyword">mutating</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-number">_</span> item: Element)</span></span> {
@@ -1473,12 +1475,22 @@ stackOfStrings.pop()
 <p>Swift &#x5167;&#x5EFA;&#x7684;&#x9663;&#x5217;(<code>Array</code>)&#x578B;&#x5225;&#x6070;&#x6070;&#x597D;&#x5DF2;&#x7D93;&#x6709;&#x524D;&#x9762;&#x63D0;&#x904E;&#x7684;&#x5354;&#x5B9A;<code>Container</code>&#x9700;&#x8981;&#x5BE6;&#x4F5C;&#x7684;&#x529F;&#x80FD;(&#x5206;&#x5225;&#x662F;&#x65B9;&#x6CD5;<code>append()</code>&#x3001;&#x5C6C;&#x6027;<code>count</code>&#x53CA;&#x4E0B;&#x6A19;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x4F9D;&#x7D22;&#x5F15;&#x503C;&#x53D6;&#x5F97;&#x7684;&#x5143;&#x7D20;)&#x3002;&#x6240;&#x4EE5;&#x73FE;&#x5728;&#x53EF;&#x4EE5;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x5229;&#x7528;&#x4E00;&#x500B;&#x7A7A;&#x7684;&#x64F4;&#x5C55;&#x4F86;&#x8B93;<code>Array</code>&#x9075;&#x5FAA;&#x9019;&#x500B;&#x5354;&#x5B9A;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">Array</span>: <span class="hljs-title">Container</span> </span>{}
 </code></pre>
-<h4 id="where-&#x8A9E;&#x53E5;">Where &#x8A9E;&#x53E5;</h4>
+<h4 id="&#x95DC;&#x806F;&#x578B;&#x5225;&#x4F7F;&#x7528;&#x578B;&#x5225;&#x6A19;&#x8A3B;">&#x95DC;&#x806F;&#x578B;&#x5225;&#x4F7F;&#x7528;&#x578B;&#x5225;&#x6A19;&#x8A3B;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x70BA;&#x5354;&#x5B9A;&#x4E2D;&#x7684;&#x95DC;&#x806F;&#x578B;&#x5225;&#x589E;&#x52A0;&#x4E00;&#x500B;&#x578B;&#x5225;&#x6A19;&#x8A3B;&#xFF0C;&#x8B93;&#x9019;&#x500B;&#x95DC;&#x806F;&#x578B;&#x5225;&#x4E5F;&#x5FC5;&#x9808;&#x9075;&#x5FAA;&#x9019;&#x500B;&#x689D;&#x4EF6;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5B9A;&#x7FA9;&#x4E86;&#x4E00;&#x500B;<code>Item</code>&#x5FC5;&#x9808;&#x9075;&#x5FAA;<code>Equatable</code>&#x7684;<code>OtherContainer</code>&#x5354;&#x5B9A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">protocol</span> <span class="hljs-title">OtherContainer</span> </span>{
+    associatedtype <span class="hljs-type">Item</span>: <span class="hljs-type">Equatable</span>
+    <span class="hljs-keyword">mutating</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-number">_</span> item: Item)</span></span>
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">count</span>: <span class="hljs-type">Int</span> { <span class="hljs-keyword">get</span> }
+    <span class="hljs-keyword">subscript</span>(i: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Item</span> { <span class="hljs-keyword">get</span> }
+}
+</code></pre>
+<p><a id="where_clauses"></a></p>
+<h3 id="where-&#x8A9E;&#x53E5;">where &#x8A9E;&#x53E5;</h3>
 <p>&#x6709;&#x6642;&#x5019;&#x4F60;&#x4E5F;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5C0D;&#x95DC;&#x806F;&#x578B;&#x5225;&#x5B9A;&#x7FA9;&#x66F4;&#x591A;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x9019;&#x6642;&#x53EF;&#x4EE5;&#x7D93;&#x7531;&#x5728;&#x53C3;&#x6578;&#x5217;&#x8868;&#x52A0;&#x4E0A;&#x4E00;&#x500B;<code>where</code>&#x8A9E;&#x53E5;&#xFF0C;&#x4E26;&#x7DCA;&#x63A5;&#x8457;&#x9650;&#x5236;&#x689D;&#x4EF6;&#x4F86;&#x5B9A;&#x7FA9;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x9650;&#x5236;&#x4E00;&#x500B;&#x95DC;&#x806F;&#x578B;&#x5225;&#x8981;&#x9075;&#x5FAA;&#x67D0;&#x500B;&#x5354;&#x5B9A;&#xFF0C;&#x6216;&#x662F;&#x67D0;&#x500B;&#x578B;&#x5225;&#x53C3;&#x6578;&#x548C;&#x95DC;&#x806F;&#x578B;&#x5225;&#x5FC5;&#x9808;&#x76F8;&#x540C;&#x578B;&#x5225;&#x3002;</p>
 <p>&#x5E95;&#x4E0B;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x6CDB;&#x578B;&#x51FD;&#x5F0F;<code>allItemsMatch()</code>&#xFF0C;&#x529F;&#x80FD;&#x70BA;&#x6AA2;&#x67E5;&#x5169;&#x500B;&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5305;&#x542B;&#x76F8;&#x540C;&#x9806;&#x5E8F;&#x7684;&#x76F8;&#x540C;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x689D;&#x4EF6;&#x90FD;&#x7B26;&#x5408;&#x6703;&#x8FD4;&#x56DE;<code>true</code>&#xFF0C;&#x5426;&#x5247;&#x8FD4;&#x56DE;<code>false</code>&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">allItemsMatch</span>&lt;C1: Container, C2: Container&gt;
     <span class="hljs-params">(<span class="hljs-number">_</span> someContainer: C1, <span class="hljs-number">_</span> anotherContainer: C2)</span></span> -&gt; <span class="hljs-type">Bool</span>
-    <span class="hljs-keyword">where</span> <span class="hljs-type">C1</span>.<span class="hljs-type">ItemType</span> == <span class="hljs-type">C2</span>.<span class="hljs-type">ItemType</span>, <span class="hljs-type">C1</span>.<span class="hljs-type">ItemType</span>: <span class="hljs-type">Equatable</span> {
+    <span class="hljs-keyword">where</span> <span class="hljs-type">C1</span>.<span class="hljs-type">Item</span> == <span class="hljs-type">C2</span>.<span class="hljs-type">Item</span>, <span class="hljs-type">C1</span>.<span class="hljs-type">Item</span>: <span class="hljs-type">Equatable</span> {
 
     <span class="hljs-comment">// &#x6AA2;&#x67E5;&#x5169;&#x500B;&#x5BB9;&#x5668;&#x542B;&#x6709;&#x76F8;&#x540C;&#x6578;&#x91CF;&#x7684;&#x5143;&#x7D20;</span>
     <span class="hljs-keyword">if</span> someContainer.<span class="hljs-built_in">count</span> != anotherContainer.<span class="hljs-built_in">count</span> {
@@ -1500,8 +1512,8 @@ stackOfStrings.pop()
 <ul>
 <li>C1 &#x5FC5;&#x9808;&#x7B26;&#x5408;&#x5354;&#x5B9A;<code>Container</code>(&#x5373;<code>C1: Container</code>)&#x3002;</li>
 <li>C2 &#x5FC5;&#x9808;&#x7B26;&#x5408;&#x5354;&#x5B9A;<code>Container</code>(&#x5373;<code>C2: Container</code>)&#x3002;</li>
-<li>C1 &#x7684;<code>ItemType</code>&#x5FC5;&#x9808;&#x8207; C2 &#x7684;<code>ItemType</code>&#x578B;&#x5225;&#x76F8;&#x540C;(&#x5373;<code>C1.ItemType == C2.ItemType</code>)&#x3002;</li>
-<li>C1 &#x7684;<code>ItemType</code>&#x5FC5;&#x9808;&#x7B26;&#x5408;&#x5354;&#x5B9A;<code>Equatable</code>(&#x5373;<code>C1.ItemType: Equatable</code>)&#x3002;</li>
+<li>C1 &#x7684;<code>Item</code>&#x5FC5;&#x9808;&#x8207; C2 &#x7684;<code>Item</code>&#x578B;&#x5225;&#x76F8;&#x540C;(&#x5373;<code>C1.Item == C2.Item</code>)&#x3002;</li>
+<li>C1 &#x7684;<code>Item</code>&#x5FC5;&#x9808;&#x7B26;&#x5408;&#x5354;&#x5B9A;<code>Equatable</code>(&#x5373;<code>C1.Item: Equatable</code>)&#x3002;</li>
 </ul>
 <p>&#x63A5;&#x8457;&#x53EF;&#x4EE5;&#x5BE6;&#x969B;&#x4F7F;&#x7528;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; NewStack &#x7684;&#x8B8A;&#x6578; &#x4E26;&#x4F9D;&#x5E8F;&#x653E;&#x5165;&#x4E09;&#x500B;&#x5B57;&#x4E32;</span>
@@ -1523,6 +1535,72 @@ newStackOfStrings.push(<span class="hljs-string">&quot;three&quot;</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x4E0D;&#x7B26;&#x5408;&quot;</span>)
 }
 <span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x7B26;&#x5408;</span>
+</code></pre>
+<h4 id="&#x4F7F;&#x7528;-where-&#x8A9E;&#x53E5;&#x7684;&#x64F4;&#x5C55;">&#x4F7F;&#x7528; where &#x8A9E;&#x53E5;&#x7684;&#x64F4;&#x5C55;</h4>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x64F4;&#x5C55;&#x4E2D;&#x4F7F;&#x7528; where &#x8A9E;&#x53E5;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x70BA;&#x6CDB;&#x578B;&#x7D50;&#x69CB;<code>Stack</code>&#x589E;&#x52A0;&#x4E00;&#x500B;<code>isTop(_:)</code>&#x65B9;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">Stack</span> <span class="hljs-title">where</span> <span class="hljs-title">Element</span>: <span class="hljs-title">Equatable</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">isTop</span><span class="hljs-params">(<span class="hljs-number">_</span> item: Element)</span></span> -&gt; <span class="hljs-type">Bool</span> {
+        <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> topItem = items.last <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+        <span class="hljs-keyword">return</span> topItem == item
+    }
+}
+</code></pre>
+<p>&#x9019;&#x500B;<code>isTop(_:)</code>&#x65B9;&#x6CD5;&#x6703;&#x5148;&#x6AA2;&#x67E5;&#x9019;&#x500B; Stack &#x662F;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x63A5;&#x8457;&#x518D;&#x6BD4;&#x5C0D;&#x50B3;&#x5165;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5426;&#x8207;&#x6700;&#x9802;&#x7AEF;&#x7684;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x3002;&#x9019;&#x500B;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;<code>==</code>&#x904B;&#x7B97;&#x5B50;&#x4F86;&#x6BD4;&#x5C0D;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x4E00;&#x958B;&#x59CB;&#x5B9A;&#x7FA9;&#x6CDB;&#x578B;&#x7D50;&#x69CB; Stack &#x6642;&#x4E26;&#x672A;&#x5B9A;&#x7FA9;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x8981;&#x9075;&#x5FAA;<code>Equatable</code>&#x5354;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x9808;&#x5728;&#x64F4;&#x5C55;&#x4E2D;&#x4F7F;&#x7528; where &#x8A9E;&#x53E5;&#x4F86;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x689D;&#x4EF6;&#xFF0C;&#x4EE5;&#x898F;&#x7BC4;&#x50B3;&#x5165;&#x7684;&#x5143;&#x7D20;&#x8981;&#x9075;&#x5FAA;<code>Equatable</code>&#x5354;&#x5B9A;&#xFF0C;&#x4E5F;&#x624D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x9019;&#x500B;&#x65B0;&#x7684;&#x65B9;&#x6CD5;<code>isTop(_:)</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5617;&#x8A66;&#x5728;&#x4E00;&#x500B;&#x5143;&#x7D20;&#x6C92;&#x6709;&#x9075;&#x5FAA;<code>Equatable</code>&#x5354;&#x5B9A;&#x7684; Stack &#x4F7F;&#x7528;&#x65B9;&#x6CD5;<code>isTop(_:)</code>&#xFF0C;&#x5247;&#x6703;&#x767C;&#x751F;&#x7DE8;&#x8B6F;&#x6642;&#x932F;&#x8AA4;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x7A7A;&#x7684;&#x7D50;&#x69CB;</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">NotEquatable</span> </span>{ }
+
+<span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x5143;&#x7D20;&#x578B;&#x5225;&#x70BA; NotEquatable &#x7684; Stack</span>
+<span class="hljs-keyword">var</span> notEquatableStack = <span class="hljs-type">Stack</span>&lt;<span class="hljs-type">NotEquatable</span>&gt;()
+
+<span class="hljs-comment">// &#x5BA3;&#x544A;&#x4E00;&#x500B;&#x578B;&#x5225;&#x70BA; NotEquatable &#x7684;&#x503C; &#x4E26;&#x52A0;&#x5165;&#x9019;&#x500B; Stack &#x4E2D;</span>
+<span class="hljs-keyword">let</span> notEquatableValue = <span class="hljs-type">NotEquatable</span>()
+notEquatableStack.push(notEquatableValue)
+
+<span class="hljs-comment">// &#x56E0;&#x70BA;&#x578B;&#x5225; NotEquatable &#x6C92;&#x6709;&#x9075;&#x5FAA; Equatable &#x5354;&#x5B9A;</span>
+notEquatableStack.isTop(notEquatableValue) <span class="hljs-comment">// &#x9019;&#x884C;&#x6703;&#x5831;&#x932F;&#x8AA4;</span>
+</code></pre>
+<p>&#x9664;&#x4E86;&#x9075;&#x5FAA;&#x5354;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9650;&#x5236;&#x5143;&#x7D20;&#x5FC5;&#x9808;&#x70BA;&#x7279;&#x5B9A;&#x7684;&#x578B;&#x5225;&#xFF0C;&#x4EE5;&#x4E0B;&#x7684;&#x4F8B;&#x5B50;&#x70BA;&#x5143;&#x7D20;&#x7684;&#x578B;&#x5225;&#x5FC5;&#x9808;&#x662F;<code>Double</code>&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">Container</span> <span class="hljs-title">where</span> <span class="hljs-title">Item</span> == <span class="hljs-title">Double</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">average</span><span class="hljs-params">()</span></span> -&gt; <span class="hljs-type">Double</span> {
+        <span class="hljs-keyword">var</span> sum = <span class="hljs-number">0.0</span>
+        <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..&lt;<span class="hljs-built_in">count</span> {
+            sum += <span class="hljs-keyword">self</span>[index]
+        }
+        <span class="hljs-keyword">return</span> sum / <span class="hljs-type">Double</span>(<span class="hljs-built_in">count</span>)
+    }
+}
+<span class="hljs-built_in">print</span>([<span class="hljs-number">1260.0</span>, <span class="hljs-number">1200.0</span>, <span class="hljs-number">98.6</span>, <span class="hljs-number">37.0</span>].average())
+<span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;648.9</span>
+</code></pre>
+<p>&#x8207;&#x5148;&#x524D;&#x63D0;&#x5230;&#x6CDB;&#x578B; where &#x8A9E;&#x53E5;&#x4E00;&#x6A23;&#xFF0C;&#x5982;&#x679C;&#x9019;&#x500B;&#x64F4;&#x5C55;&#x7684; where &#x8A9E;&#x53E5;&#x6709;&#x591A;&#x500B;&#x689D;&#x4EF6;&#xFF0C;&#x5247;&#x662F;&#x4F7F;&#x7528;&#x9017;&#x865F;<code>,</code>&#x4F86;&#x5206;&#x9694;&#x5404;&#x689D;&#x4EF6;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;-where-&#x8A9E;&#x53E5;&#x7684;&#x95DC;&#x806F;&#x578B;&#x5225;">&#x4F7F;&#x7528; where &#x8A9E;&#x53E5;&#x7684;&#x95DC;&#x806F;&#x578B;&#x5225;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x95DC;&#x806F;&#x578B;&#x5225;&#x5F8C;&#x9762;&#x52A0;&#x4E0A; where &#x8A9E;&#x53E5;&#x4F86;&#x589E;&#x52A0;&#x689D;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">protocol</span> <span class="hljs-title">AnotherContainer</span> </span>{
+    associatedtype <span class="hljs-type">Item</span>
+    <span class="hljs-keyword">mutating</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-number">_</span> item: Item)</span></span>
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">count</span>: <span class="hljs-type">Int</span> { <span class="hljs-keyword">get</span> }
+    <span class="hljs-keyword">subscript</span>(i: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Item</span> { <span class="hljs-keyword">get</span> }
+
+    associatedtype <span class="hljs-type">Iterator</span>: <span class="hljs-type">IteratorProtocol</span> <span class="hljs-keyword">where</span> <span class="hljs-type">Iterator</span>.<span class="hljs-type">Element</span> == <span class="hljs-type">Item</span>
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">makeIterator</span><span class="hljs-params">()</span></span> -&gt; <span class="hljs-type">Iterator</span>
+}
+</code></pre>
+<p><a id="generic_subscripts"></a></p>
+<h3 id="&#x6CDB;&#x578B;&#x4E0B;&#x6A19;">&#x6CDB;&#x578B;&#x4E0B;&#x6A19;</h3>
+<p>&#x4E0B;&#x6A19;(<code>subscript</code>)&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6CDB;&#x578B;&#xFF0C;&#x4E5F;&#x80FD;&#x4F7F;&#x7528;&#x6CDB;&#x578B; where &#x8A9E;&#x53E5;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">Container</span> </span>{
+    <span class="hljs-keyword">subscript</span>&lt;<span class="hljs-type">Indices</span>: <span class="hljs-type">Sequence</span>&gt;(<span class="hljs-built_in">indices</span>: <span class="hljs-type">Indices</span>) -&gt; [<span class="hljs-type">Item</span>]
+        <span class="hljs-keyword">where</span> <span class="hljs-type">Indices</span>.<span class="hljs-type">Iterator</span>.<span class="hljs-type">Element</span> == <span class="hljs-type">Int</span> {
+            <span class="hljs-keyword">var</span> result = [<span class="hljs-type">Item</span>]()
+            <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> <span class="hljs-built_in">indices</span> {
+                result.append(<span class="hljs-keyword">self</span>[index])
+            }
+            <span class="hljs-keyword">return</span> result
+    }
+}
 </code></pre>
 <h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
 <p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/ch2/generics.playground" target="_blank">ch2/generics.playground</a></p>
@@ -1569,7 +1647,7 @@ newStackOfStrings.push(<span class="hljs-string">&quot;three&quot;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"泛型","level":"1.3.15","depth":2,"next":{"title":"存取控制","level":"1.3.16","depth":2,"path":"ch2/access-control.md","ref":"ch2/access-control.md","articles":[]},"previous":{"title":"協定","level":"1.3.14","depth":2,"path":"ch2/protocols.md","ref":"ch2/protocols.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2/generics.md","mtime":"2017-12-07T04:25:38.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"泛型","level":"1.3.15","depth":2,"next":{"title":"存取控制","level":"1.3.16","depth":2,"path":"ch2/access-control.md","ref":"ch2/access-control.md","articles":[]},"previous":{"title":"協定","level":"1.3.14","depth":2,"path":"ch2/protocols.md","ref":"ch2/protocols.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2/generics.md","mtime":"2017-11-02T11:07:59.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1577,10 +1655,6 @@ newStackOfStrings.push(<span class="hljs-string">&quot;three&quot;</span>)
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

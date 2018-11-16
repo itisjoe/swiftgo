@@ -1275,20 +1275,15 @@
                                 
                                 <h1 id="&#x6ED1;&#x52D5;&#x8996;&#x5716;-uiscrollview">&#x6ED1;&#x52D5;&#x8996;&#x5716; UIScrollView</h1>
 <p>&#x7576;&#x4E00;&#x500B;&#x5143;&#x4EF6;&#x7684;<strong>&#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D;</strong>&#x6BD4;<strong>&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;</strong>&#x5927;&#x6642;&#xFF0C;&#x6703;&#x52A0;&#x4E0A;&#x6ED1;&#x52D5;&#x689D;( scroll bar )&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x81EA;&#x7531;&#x6ED1;&#x52D5;&#xFF0C;UIScrollView &#x5C31;&#x662F;&#x6709;&#x9019;&#x4E00;&#x7279;&#x6027;&#x7684;&#x6700;&#x57FA;&#x672C;&#x5143;&#x4EF6;&#x3002;&#x5BE6;&#x969B;&#x4E0A;&#xFF0C;&#x524D;&#x9762;&#x7AE0;&#x7BC0;&#x4ECB;&#x7D39;&#x904E;&#x7684; <a href="uitextview.html">UITextView</a> &#x3001; <a href="uitableview.html">UITableView</a> &#x53CA; <a href="uicollectionview.html">UICollectionView</a> &#x90FD;&#x662F;&#x7E7C;&#x627F;&#x81EA; UIScrollView &#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x5011;&#x4E5F;&#x90FD;&#x7E7C;&#x627F;&#x4E86; UIScrollView &#x7684;&#x7279;&#x6027;&#x3002;</p>
-<p>&#x672C;&#x7BC0;&#x6703;&#x5148;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x57FA;&#x672C;&#x7684; UIScrollView &#x4E26;&#x4ECB;&#x7D39;&#x5E38;&#x7528;&#x7684;&#x5C6C;&#x6027;&#x53CA;&#x65B9;&#x6CD5;&#xFF0C;&#x63A5;&#x8457;&#x6703;&#x914D;&#x5408; UIPageControl &#x5143;&#x4EF6;&#x5EFA;&#x7ACB;&#x50CF;&#x662F;&#x65B0;&#x624B;&#x5C0E;&#x89BD;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x7684;&#x5206;&#x9801;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x672C;&#x7BC0;&#x6709;&#x5169;&#x500B;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#xFF0C;&#x7B2C;&#x4E00;&#x500B;&#x6703;&#x5148;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x57FA;&#x672C;&#x7684; UIScrollView &#x4E26;&#x4ECB;&#x7D39;&#x5E38;&#x7528;&#x7684;&#x5C6C;&#x6027;&#x53CA;&#x65B9;&#x6CD5;&#x3002;&#x63A5;&#x8457;&#x7B2C;&#x4E8C;&#x500B;&#x6703;&#x914D;&#x5408; UIPageControl &#x5143;&#x4EF6;&#x5EFA;&#x7ACB;&#x50CF;&#x662F;&#x65B0;&#x624B;&#x5C0E;&#x89BD;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x7684;&#x5206;&#x9801;&#x529F;&#x80FD;&#x3002;</p>
 <h3 id="&#x57FA;&#x672C;&#x7684;-uiscrollview">&#x57FA;&#x672C;&#x7684; UIScrollView</h3>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIScrollView &#x3002;</p>
-<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x5169;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>{
     <span class="hljs-keyword">var</span> myScrollView: <span class="hljs-type">UIScrollView</span>!
-    <span class="hljs-keyword">var</span> fullSize :<span class="hljs-type">CGSize</span>!
 
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
-</code></pre>
-<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-fullSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
 </code></pre>
 <p>&#x4E0B;&#x5716;&#x662F;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x793A;&#x610F;&#x5716;&#xFF0C;&#x7D05;&#x8272;&#x77E9;&#x5F62;&#x70BA;&#x5C6C;&#x6027;<code>frame</code>&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x898B;&#x8996;&#x5716;&#x7BC4;&#x570D;&#x3002;&#x9ED1;&#x8272;&#x77E9;&#x5F62;&#x70BA;&#x5C6C;&#x6027;<code>contentSize</code>&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BE6;&#x969B;&#x8996;&#x5716;&#x7BC4;&#x570D;&#x3002;&#x85CD;&#x8272;&#x9EDE;&#x9EDE;&#x5247;&#x662F;&#x5C6C;&#x6027;<code>contentOffset</code>&#x8A2D;&#x7F6E;&#x7684;&#x9EDE;( CGPoint )&#xFF0C;&#x8868;&#x793A;&#x8D77;&#x59CB;&#x756B;&#x9762;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8A2D;&#x5B9A;&#x5247;&#x662F;&#x9810;&#x8A2D;&#x70BA;&#x7D05;&#x8272;&#x9EDE;&#x9EDE;<code>(0, 0)</code>&#xFF1A;</p>
 <p><img src="../images/uikit/uiscrollview/uiscrollview01.png" alt="uiscrollview01"></p>
@@ -1441,13 +1436,10 @@ myScrollView.isPagingEnabled = <span class="hljs-literal">false</span>
 <p>&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x793A;&#x610F;&#x5716;&#xFF0C;&#x6574;&#x500B;&#x9801;&#x9762;&#x70BA; 5 &#x500B;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x5DE6;&#x53F3;&#x6ED1;&#x52D5;&#x63DB;&#x9801;&#xFF1A;</p>
 <p><img src="../images/uikit/uiscrollview/uiscrollview02.png" alt="uiscrollview02"></p>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExIntroStepByStep &#x3002;</p>
-<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x4E09;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x70BA;<code>ViewController</code>&#x5EFA;&#x7ACB;&#x5169;&#x500B;&#x5C6C;&#x6027;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>{
     <span class="hljs-keyword">var</span> myScrollView: <span class="hljs-type">UIScrollView</span>!
     <span class="hljs-keyword">var</span> pageControl: <span class="hljs-type">UIPageControl</span>!
-    <span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-    <span class="hljs-keyword">var</span> fullSize :<span class="hljs-type">CGSize</span>! = 
-        <span class="hljs-type">UIScreen</span>.main.bounds.size
 
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
@@ -1541,7 +1533,7 @@ pageControl.addTarget(
 </code></pre>
 <p>&#x6700;&#x5F8C;&#x5728;<code>ViewController</code>&#x4E2D;&#x52A0;&#x4E0A;&#x9EDE;&#x64CA; UIPageControl &#x7684;&#x9EDE;&#x9EDE;&#x6642;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x9EDE;&#x64CA;&#x9EDE;&#x9EDE;&#x63DB;&#x9801;</span>
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pageChanged</span><span class="hljs-params">(<span class="hljs-number">_</span> sender: UIPageControl)</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pageChanged</span><span class="hljs-params">(<span class="hljs-number">_</span> sender: UIPageControl)</span></span> {
     <span class="hljs-comment">// &#x4F9D;&#x7167;&#x76EE;&#x524D;&#x5713;&#x9EDE;&#x5728;&#x7684;&#x9801;&#x6578;&#x7B97;&#x51FA;&#x4F4D;&#x7F6E;</span>
     <span class="hljs-keyword">var</span> frame = myScrollView.frame
     frame.origin.x = 
@@ -1598,7 +1590,7 @@ pageControl.addTarget(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"滑動視圖 UIScrollView","level":"1.4.19","depth":2,"next":{"title":"多頁面","level":"1.4.20","depth":2,"path":"uikit/multipages.md","ref":"uikit/multipages.md","articles":[]},"previous":{"title":"搜尋 UISearchController","level":"1.4.18","depth":2,"path":"uikit/uisearchcontroller.md","ref":"uikit/uisearchcontroller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiscrollview.md","mtime":"2017-12-07T04:25:38.672Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"滑動視圖 UIScrollView","level":"1.4.19","depth":2,"next":{"title":"多頁面","level":"1.4.20","depth":2,"path":"uikit/multipages.md","ref":"uikit/multipages.md","articles":[]},"previous":{"title":"搜尋 UISearchController","level":"1.4.18","depth":2,"path":"uikit/uisearchcontroller.md","ref":"uikit/uisearchcontroller.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiscrollview.md","mtime":"2017-11-16T05:54:00.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1606,10 +1598,6 @@ pageControl.addTarget(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

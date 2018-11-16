@@ -1279,11 +1279,8 @@
 <p><img src="../images/uikit/multipages/multipages01.png" alt="multipages01"></p>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExMultiPages &#x3002;</p>
 <p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x4EE5;<a href="../more/addfile.html">&#x65B0;&#x589E;&#x6A94;&#x6848;</a>&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x4E09;&#x500B;&#x7E7C;&#x627F;&#x81EA; UIViewController &#x7684;<code>.swift</code>&#x6A94;&#x6848;&#xFF0C;&#x5206;&#x5225;&#x547D;&#x540D;&#x70BA;<code>IntroViewController</code>&#x3001;<code>ArticleViewController</code>&#x53CA;<code>ArticleDetailViewController</code>&#x3002;</p>
-<p>&#x5C07;&#x4E0A;&#x8FF0;&#x4E09;&#x500B; UIViewController &#x8207;<code>ViewController</code>&#x90FD;&#x5206;&#x5225;&#x5728;&#x5404;&#x81EA;&#x7684;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#x53CA;&#x8A2D;&#x7F6E;&#x5E95;&#x8272;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-
-<span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x5E95;&#x8272;</span>
+<p>&#x5C07;&#x4E0A;&#x8FF0;&#x4E09;&#x500B; UIViewController &#x8207;<code>ViewController</code>&#x90FD;&#x5206;&#x5225;&#x5728;&#x5404;&#x81EA;&#x7684;<code>viewDidLoad()</code>&#x4E2D;&#x8A2D;&#x7F6E;&#x5E95;&#x8272;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x5E95;&#x8272;</span>
 <span class="hljs-keyword">self</span>.view.backgroundColor = <span class="hljs-type">UIColor</span>.white
 </code></pre>
 <h3 id="&#x5207;&#x63DB;&#x9801;&#x9762;">&#x5207;&#x63DB;&#x9801;&#x9762;</h3>
@@ -1322,12 +1319,12 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x4EE5;&#x53CA;&#x5728;<code>ViewController</code>&#x52A0;&#x4E0A;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goArticle</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goArticle</span><span class="hljs-params">()</span></span> {
     <span class="hljs-keyword">self</span>.present(<span class="hljs-type">ArticleViewController</span>(), 
         animated: <span class="hljs-literal">true</span>, completion: <span class="hljs-literal">nil</span>)
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goIntro</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goIntro</span><span class="hljs-params">()</span></span> {
     <span class="hljs-keyword">self</span>.present(<span class="hljs-type">IntroViewController</span>(), 
         animated: <span class="hljs-literal">true</span>, completion: <span class="hljs-literal">nil</span>)
 }
@@ -1340,7 +1337,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 </ul>
 <h3 id="&#x9000;&#x51FA;&#x9801;&#x9762;">&#x9000;&#x51FA;&#x9801;&#x9762;</h3>
 <p>&#x63A5;&#x8457;&#x770B;&#x5230;<code>IntroViewController.swift</code>&#xFF0C;&#x4E00;&#x6A23;&#x662F;&#x52A0;&#x4E0A;&#x4E00;&#x500B; UILabel &#x53CA;&#x4E00;&#x500B; UIButton&#xFF0C;&#x9019;&#x500B;&#x6309;&#x9215;&#x5247;&#x662F;&#x7528;&#x4F86;&#x9000;&#x51FA;&#x9801;&#x9762;&#xFF0C;&#x7A0B;&#x5F0F;&#x78BC;&#x8207;&#x524D;&#x8FF0;&#x985E;&#x4F3C;&#xFF0C;&#x9019;&#x908A;&#x5C31;&#x7565;&#x904E;&#x3002;&#x4E3B;&#x8981;&#x770B;&#x5230;&#x6309;&#x4E0B;&#x9000;&#x51FA;&#x9801;&#x9762;&#x6309;&#x9215;&#x5F8C;&#x57F7;&#x884C;&#x7684;&#x52D5;&#x4F5C;&#xFF0C;&#x5728;<code>IntroViewController</code>&#x5167;&#x52A0;&#x4E0A;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goBack</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goBack</span><span class="hljs-params">()</span></span> {
     <span class="hljs-keyword">self</span>.dismiss(animated: <span class="hljs-literal">true</span>, completion:<span class="hljs-literal">nil</span>)
 }
 </code></pre>
@@ -1431,7 +1428,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"多頁面","level":"1.4.20","depth":2,"next":{"title":"導覽控制器 UINavigationController","level":"1.4.21","depth":2,"path":"uikit/uinavigationcontroller.md","ref":"uikit/uinavigationcontroller.md","articles":[]},"previous":{"title":"滑動視圖 UIScrollView","level":"1.4.19","depth":2,"path":"uikit/uiscrollview.md","ref":"uikit/uiscrollview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/multipages.md","mtime":"2017-12-07T04:25:38.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"多頁面","level":"1.4.20","depth":2,"next":{"title":"導覽控制器 UINavigationController","level":"1.4.21","depth":2,"path":"uikit/uinavigationcontroller.md","ref":"uikit/uinavigationcontroller.md","articles":[]},"previous":{"title":"滑動視圖 UIScrollView","level":"1.4.19","depth":2,"path":"uikit/uiscrollview.md","ref":"uikit/uiscrollview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/multipages.md","mtime":"2017-11-16T06:03:08.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1439,10 +1436,6 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

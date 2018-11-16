@@ -1274,7 +1274,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="uitableview-&#x7684;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;">UITableView &#x7684;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;</h1>
-<p>&#x5728;&#x7A0D;&#x524D;<a href="../../uikit/uitableview.html">&#x8868;&#x683C; UITableView </a>&#x7AE0;&#x7BC0;&#x5DF2;&#x7D93;&#x4ECB;&#x7D39;&#x904E;&#x57FA;&#x672C;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x5BE6; UITableView &#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x7684;&#x591A;&#xFF0C;&#x9019;&#x5C0F;&#x7BC0;&#x6703;&#x518D;&#x4ECB;&#x7D39;&#x53E6;&#x4E00;&#x500B;&#x4E5F;&#x662F;&#x5341;&#x5206;&#x5E38;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x5728;&#x7A0D;&#x524D;<a href="../../uikit/uitableview.html">&#x8868;&#x683C; UITableView</a> &#x7AE0;&#x7BC0;&#x5DF2;&#x7D93;&#x4ECB;&#x7D39;&#x904E;&#x57FA;&#x672C;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x5BE6; UITableView &#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x9019;&#x5C0F;&#x7BC0;&#x6703;&#x4ECB;&#x7D39;&#x53E6;&#x4E00;&#x500B;&#x4E5F;&#x662F;&#x5E38;&#x4F7F;&#x7528;&#x5230;&#x7684;<strong>&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;</strong>&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x672C;&#x5C0F;&#x7BC0;&#x76EE;&#x6A19;&#xFF1A;
 <img src="../../images/apps/todo/todo17.png" alt="todo17"></p>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExEditUITableView &#x3002;</p>
@@ -1318,7 +1318,7 @@ myTableView.setEditing(<span class="hljs-literal">true</span>, animated: <span c
 <h3 id="&#x5207;&#x63DB;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;">&#x5207;&#x63DB;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;</h3>
 <p>&#x6309;&#x4E0B;&#x7DE8;&#x8F2F;&#x6309;&#x9215;&#x4F86;&#x5207;&#x63DB;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x6309;&#x4E0B;&#x7DE8;&#x8F2F;&#x6309;&#x9215;&#x6642;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;</span>
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">editBtnAction</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">editBtnAction</span><span class="hljs-params">()</span></span> {
     myTableView.setEditing(
         !myTableView.isEditing, animated: <span class="hljs-literal">true</span>)
     <span class="hljs-keyword">if</span> (!myTableView.isEditing) {
@@ -1361,7 +1361,7 @@ myTableView.setEditing(<span class="hljs-literal">true</span>, animated: <span c
 <h3 id="&#x65B0;&#x589E;&#x4E00;&#x7B46;&#x8CC7;&#x6599;">&#x65B0;&#x589E;&#x4E00;&#x7B46;&#x8CC7;&#x6599;</h3>
 <p>&#x5728;&#x975E;&#x7DE8;&#x8F2F;&#x6A21;&#x5F0F;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x5C0E;&#x89BD;&#x5217;&#x53F3;&#x908A;&#x6309;&#x9215;&#x65B0;&#x589E;&#x4E00;&#x7B46;&#x8CC7;&#x6599;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x6309;&#x4E0B;&#x65B0;&#x589E;&#x6309;&#x9215;&#x6642;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;</span>
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">addBtnAction</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">addBtnAction</span><span class="hljs-params">()</span></span> {
     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x65B0;&#x589E;&#x4E00;&#x7B46;&#x8CC7;&#x6599;&quot;</span>)
     info.insert(<span class="hljs-string">&quot;new row&quot;</span>, at: <span class="hljs-number">0</span>)
 
@@ -1488,7 +1488,7 @@ myTableView.setEditing(<span class="hljs-literal">true</span>, animated: <span c
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"UITableView 的編輯模式","level":"1.6.1.4","depth":3,"next":{"title":"遊玩臺北","level":"1.6.2","depth":2,"path":"apps/taipeitravel/taipeitravel.md","ref":"apps/taipeitravel/taipeitravel.md","articles":[{"title":"規劃與實作","level":"1.6.2.1","depth":3,"path":"apps/taipeitravel/intro.md","ref":"apps/taipeitravel/intro.md","articles":[]},{"title":"取得遠端 API 資料並儲存","level":"1.6.2.2","depth":3,"path":"apps/taipeitravel/fetchdataandstorage.md","ref":"apps/taipeitravel/fetchdataandstorage.md","articles":[]},{"title":"地圖與定位","level":"1.6.2.3","depth":3,"path":"apps/taipeitravel/map.md","ref":"apps/taipeitravel/map.md","articles":[]}]},"previous":{"title":"播放音效","level":"1.6.1.3","depth":3,"path":"apps/todo/sound.md","ref":"apps/todo/sound.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apps/todo/edituitableview.md","mtime":"2017-12-07T04:25:38.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"UITableView 的編輯模式","level":"1.6.1.4","depth":3,"next":{"title":"遊玩臺北","level":"1.6.2","depth":2,"path":"apps/taipeitravel/taipeitravel.md","ref":"apps/taipeitravel/taipeitravel.md","articles":[{"title":"規劃與實作","level":"1.6.2.1","depth":3,"path":"apps/taipeitravel/intro.md","ref":"apps/taipeitravel/intro.md","articles":[]},{"title":"取得遠端 API 資料並儲存","level":"1.6.2.2","depth":3,"path":"apps/taipeitravel/fetchdataandstorage.md","ref":"apps/taipeitravel/fetchdataandstorage.md","articles":[]},{"title":"地圖與定位","level":"1.6.2.3","depth":3,"path":"apps/taipeitravel/map.md","ref":"apps/taipeitravel/map.md","articles":[]}]},"previous":{"title":"播放音效","level":"1.6.1.3","depth":3,"path":"apps/todo/sound.md","ref":"apps/todo/sound.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apps/todo/edituitableview.md","mtime":"2017-12-06T05:27:39.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1496,10 +1496,6 @@ myTableView.setEditing(<span class="hljs-literal">true</span>, animated: <span c
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

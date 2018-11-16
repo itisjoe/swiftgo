@@ -1322,7 +1322,7 @@ myLabel.shadowOffset = <span class="hljs-type">CGSize</span>(width: <span class=
 <p>&#x53E6;&#x5916;&#x6CE8;&#x610F;&#x5230; UILabel &#x7684;<code>textAlignment</code>&#x53CA;<code>lineBreakMode</code>&#x9019;&#x5169;&#x500B;&#x5C6C;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x4F7F;&#x7528;&#x5230; <a href="../ch2/enumerations.html">Swift &#x5217;&#x8209;</a>&#x7684;&#x7279;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7C21;&#x5BEB;&#x6210;<code>.center</code>&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x5FD8;&#x8A18;&#x4E86;&#x53EF;&#x4EE5;&#x56DE;&#x53BB;&#x8A72;&#x7AE0;&#x7BC0;&#x518D;&#x770B;&#x770B;&#x3002;</p>
 <p>&#x9084;&#x6709;&#x95DC;&#x65BC;<code>lineBreakMode</code>&#x9019;&#x500B;&#x5C6C;&#x6027;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x6587;&#x5B57;&#x904E;&#x591A;&#x6642;&#xFF0C;&#x8981;&#x5982;&#x4F55;&#x8655;&#x7406;&#xFF0C;&#x50CF;&#x662F;<code>.byTruncatingTail</code>&#x5C31;&#x662F;&#x4FDD;&#x7559;&#x958B;&#x982D;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x800C;&#x5C07;&#x5F8C;&#x9762;&#x8D85;&#x51FA;&#x7684;&#x6587;&#x5B57;&#x4EE5;<code>...</code>&#x4EE3;&#x66FF;&#x3002;</p>
 <h4 id="&#x901A;&#x7528;&#x5C6C;&#x6027;">&#x901A;&#x7528;&#x5C6C;&#x6027;</h4>
-<p>&#x524D;&#x4E00;&#x7BC0;&#x63D0;&#x5230;&#x5927;&#x591A;&#x6578;&#x7684;&#x5143;&#x4EF6;&#x90FD;&#x662F;&#x7E7C;&#x627F;&#x81EA;<code>UIView</code>&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x591A;&#x5C6C;&#x6027;&#x90FD;&#x662F;&#x901A;&#x7528;&#x7684;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x524D;&#x4E00;&#x7BC0;&#x63D0;&#x5230;&#x904E;&#xFF0C;&#x5927;&#x591A;&#x6578;&#x7684;&#x5143;&#x4EF6;&#x90FD;&#x662F;&#x7E7C;&#x627F;&#x81EA;<code>UIView</code>&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x591A;&#x5C6C;&#x6027;&#x90FD;&#x662F;&#x901A;&#x7528;&#x7684;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x53EF;&#x4EE5;&#x55AE;&#x7368;&#x8A2D;&#x7F6E;&#x65B0;&#x7684; x &#x6216; y</span>
 myLabel.bounds.origin.x = <span class="hljs-number">50</span>
 myLabel.bounds.origin.y = <span class="hljs-number">100</span>
@@ -1338,10 +1338,6 @@ myLabel.bounds.size = <span class="hljs-type">CGSize</span>(width: <span class="
 <span class="hljs-comment">// &#x6216;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x4E00;&#x8D77;&#x8A2D;&#x7F6E;&#x65B0;&#x7684;&#x539F;&#x9EDE;&#x53CA;&#x5C3A;&#x5BF8;</span>
 myLabel.bounds = <span class="hljs-type">CGRect</span>(
   x: <span class="hljs-number">60</span>, y: <span class="hljs-number">120</span>, width: <span class="hljs-number">250</span>, height: <span class="hljs-number">80</span>)
-
-
-<span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
 
 <span class="hljs-comment">// &#x8A2D;&#x7F6E;&#x65BC;&#x756B;&#x9762;&#x7684;&#x4E2D;&#x5FC3;&#x9EDE;</span>
 myLabel.center = <span class="hljs-type">CGPoint</span>(
@@ -1399,7 +1395,7 @@ myLabel.backgroundColor = <span class="hljs-type">UIColor</span>.orange
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文字標籤 UILabel","level":"1.4.2","depth":2,"next":{"title":"文字輸入 UITextField","level":"1.4.3","depth":2,"path":"uikit/uitextfield.md","ref":"uikit/uitextfield.md","articles":[]},"previous":{"title":"UIKit 初探","level":"1.4.1","depth":2,"path":"uikit/uikit_intro.md","ref":"uikit/uikit_intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uilabel.md","mtime":"2017-12-07T04:25:38.668Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文字標籤 UILabel","level":"1.4.2","depth":2,"next":{"title":"文字輸入 UITextField","level":"1.4.3","depth":2,"path":"uikit/uitextfield.md","ref":"uikit/uitextfield.md","articles":[]},"previous":{"title":"UIKit 初探","level":"1.4.1","depth":2,"path":"uikit/uikit_intro.md","ref":"uikit/uikit_intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uilabel.md","mtime":"2017-11-13T09:02:11.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1407,10 +1403,6 @@ myLabel.backgroundColor = <span class="hljs-type">UIColor</span>.orange
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

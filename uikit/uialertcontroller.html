@@ -1278,10 +1278,6 @@
 <p>&#x672C;&#x7BC0;&#x7684;&#x76EE;&#x6A19;&#x6703;&#x5EFA;&#x7ACB;&#x4E94;&#x500B;&#x6309;&#x9215;&#xFF0C;&#x6309;&#x4E0B;&#x5F8C;&#x6703;&#x5206;&#x5225;&#x793A;&#x7BC4;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#x7684;&#x63D0;&#x793A;&#x6846;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><img src="../images/uikit/uialert/uialert01.png" alt="uialert01"></p>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIAlert &#x3002;</p>
-<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-</code></pre>
 <h3 id="&#x7C21;&#x55AE;&#x7684;&#x63D0;&#x793A;">&#x7C21;&#x55AE;&#x7684;&#x63D0;&#x793A;</h3>
 <p>&#x9996;&#x5148;&#x5148;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x8AAA;&#x660E;&#x4E00;&#x4E9B;&#x7C21;&#x55AE;&#x7684;&#x5167;&#x5BB9;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><img src="../images/uikit/uialert/uialert02.png" alt="uialert02"></p>
@@ -1303,7 +1299,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x8981;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">simpleHint</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">simpleHint</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x63D0;&#x793A;&#x6846;</span>
     <span class="hljs-keyword">let</span> alertController = <span class="hljs-type">UIAlertController</span>(
         title: <span class="hljs-string">&quot;&#x63D0;&#x793A;&quot;</span>, 
@@ -1359,7 +1355,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x8981;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">confirm</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">confirm</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x63D0;&#x793A;&#x6846;</span>
     <span class="hljs-keyword">let</span> alertController = <span class="hljs-type">UIAlertController</span>(
         title: <span class="hljs-string">&quot;&#x9001;&#x51FA;&quot;</span>, 
@@ -1411,7 +1407,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x8981;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">deleteSomething</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">deleteSomething</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x63D0;&#x793A;&#x6846;</span>
     <span class="hljs-keyword">let</span> alertController = <span class="hljs-type">UIAlertController</span>(
         title: <span class="hljs-string">&quot;&#x522A;&#x9664;&quot;</span>, 
@@ -1458,7 +1454,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x8981;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">login</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">login</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x63D0;&#x793A;&#x6846;</span>
     <span class="hljs-keyword">let</span> alertController = <span class="hljs-type">UIAlertController</span>(
         title: <span class="hljs-string">&quot;&#x767B;&#x5165;&quot;</span>, 
@@ -1493,8 +1489,8 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         <span class="hljs-keyword">let</span> acc = (alertController.textFields?.first)! <span class="hljs-keyword">as</span> <span class="hljs-type">UITextField</span>
         <span class="hljs-keyword">let</span> password = (alertController.textFields?.last)! <span class="hljs-keyword">as</span> <span class="hljs-type">UITextField</span>
 
-        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x8F38;&#x5165;&#x7684;&#x5E33;&#x865F;&#x70BA;&#xFF1A;<span class="hljs-subst">\(acc.text)</span>&quot;</span>)
-        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x8F38;&#x5165;&#x7684;&#x5BC6;&#x78BC;&#x70BA;&#xFF1A;<span class="hljs-subst">\(password.text)</span>&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x8F38;&#x5165;&#x7684;&#x5E33;&#x865F;&#x70BA;&#xFF1A;<span class="hljs-subst">\(acc.text!)</span>&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&#x8F38;&#x5165;&#x7684;&#x5BC6;&#x78BC;&#x70BA;&#xFF1A;<span class="hljs-subst">\(password.text!)</span>&quot;</span>)
     }
     alertController.addAction(okAction)
 
@@ -1529,7 +1525,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.view.addSubview(myButton)
 </code></pre>
 <p>&#x63A5;&#x8457;&#x5728;<code>ViewController</code>&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x8981;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">bottomAlert</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">bottomAlert</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x63D0;&#x793A;&#x6846;</span>
     <span class="hljs-keyword">let</span> alertController = <span class="hljs-type">UIAlertController</span>(
         title: <span class="hljs-string">&quot;&#x5E95;&#x90E8;&#x63D0;&#x793A;&quot;</span>, 
@@ -1606,7 +1602,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"next":{"title":"圖片 UIImageView","level":"1.4.7","depth":2,"path":"uikit/uiimageview.md","ref":"uikit/uiimageview.md","articles":[]},"previous":{"title":"按鈕 UIButton","level":"1.4.5","depth":2,"path":"uikit/uibutton.md","ref":"uikit/uibutton.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uialertcontroller.md","mtime":"2017-12-07T04:25:38.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"next":{"title":"圖片 UIImageView","level":"1.4.7","depth":2,"path":"uikit/uiimageview.md","ref":"uikit/uiimageview.md","articles":[]},"previous":{"title":"按鈕 UIButton","level":"1.4.5","depth":2,"path":"uikit/uibutton.md","ref":"uikit/uibutton.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uialertcontroller.md","mtime":"2017-11-13T09:32:11.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1614,10 +1610,6 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

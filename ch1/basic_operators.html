@@ -1463,6 +1463,33 @@ newScore = newScore + (newScore &lt; <span class="hljs-number">60</span> ? <span
 <span class="hljs-comment">// 3 * 5 = 15</span>
 <span class="hljs-comment">// 4 * 5 = 20</span>
 </code></pre>
+<h4 id="&#x55AE;&#x5074;&#x5340;&#x9593;&#x904B;&#x7B97;&#x5B50;">&#x55AE;&#x5074;&#x5340;&#x9593;&#x904B;&#x7B97;&#x5B50;</h4>
+<p>&#x8868;&#x793A;&#x65B9;&#x5F0F;&#x70BA;&#xFF1A;<code>a...</code>&#x6216;<code>...a</code>&#xFF0C;&#x4EE3;&#x8868;&#x4E00;&#x500B;&#x53EA;&#x6709;&#x4EE5;&#x4E00;&#x908A;<code>a</code>&#x70BA;&#x8D77;&#x9EDE;&#x6216;&#x7D42;&#x9EDE;&#xFF0C;&#x53E6;&#x4E00;&#x908A;&#x5247;&#x662F;&#x7121;&#x9650;&#x5EF6;&#x4F38;&#x7684;&#x5340;&#x9593;&#xFF0C;&#x4E0B;&#x9762;&#x5247;&#x662F;&#x4EE5;&#x986F;&#x793A;&#x4E00;&#x500B;&#x9663;&#x5217;&#x7684;&#x5143;&#x7D20;&#x70BA;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> names = [<span class="hljs-string">&quot;Anna&quot;</span>, <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;Brian&quot;</span>, <span class="hljs-string">&quot;Jack&quot;</span>]
+
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names[<span class="hljs-number">2</span>...] {
+    <span class="hljs-built_in">print</span>(name)
+}
+<span class="hljs-comment">// &#x5F9E;&#x9663;&#x5217;&#x7D22;&#x5F15;&#x503C;&#x70BA; 2 &#x7684;&#x503C;&#x958B;&#x59CB;&#x4F9D;&#x5E8F;&#x5370;&#x51FA;</span>
+<span class="hljs-comment">// Brian</span>
+<span class="hljs-comment">// Jack</span>
+
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names[...<span class="hljs-number">1</span>] {
+    <span class="hljs-built_in">print</span>(name)
+}
+<span class="hljs-comment">// &#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#x81F3;&#x9663;&#x5217;&#x7D22;&#x5F15;&#x503C;&#x70BA; 1 &#x7684;&#x503C;</span>
+<span class="hljs-comment">// Anna</span>
+<span class="hljs-comment">// Alex</span>
+</code></pre>
+<p>&#x5F8C;&#x9762;&#x7AE0;&#x7BC0;&#x6703;&#x6B63;&#x5F0F;&#x4ECB;&#x7D39; <a href="collection_types.html#array">&#x9663;&#x5217;</a>&#x3002;</p>
+<p>&#x534A;&#x958B;&#x5340;&#x9593;&#x904B;&#x7B97;&#x5B50;&#x540C;&#x6A23;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x55AE;&#x5074;&#x5340;&#x9593;&#x4F86;&#x8868;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names[..&lt;<span class="hljs-number">2</span>] {
+    <span class="hljs-built_in">print</span>(name)
+}
+<span class="hljs-comment">// &#x4F9D;&#x5E8F;&#x5370;&#x51FA;&#x81F3;&#x9663;&#x5217;&#x7D22;&#x5F15;&#x503C;&#x70BA; 1 &#x7684;&#x503C; &#x4E0D;&#x5305;&#x62EC;&#x7D22;&#x5F15;&#x503C;&#x70BA; 2 &#x7684;&#x503C;</span>
+<span class="hljs-comment">// Anna</span>
+<span class="hljs-comment">// Alex</span>
+</code></pre>
 <p><a id="logical"></a></p>
 <h3 id="&#x908F;&#x8F2F;&#x904B;&#x7B97;&#x5B50;">&#x908F;&#x8F2F;&#x904B;&#x7B97;&#x5B50;</h3>
 <p>Swift &#x652F;&#x63F4;&#x4E09;&#x500B;&#x6A19;&#x6E96;&#x908F;&#x8F2F;&#x904B;&#x7B97;&#xFF0C;&#x5E38;&#x8207;&#x689D;&#x4EF6;&#x5F0F;&#x5408;&#x7528;&#x3002;</p>
@@ -1583,7 +1610,7 @@ newScore = newScore + (newScore &lt; <span class="hljs-number">60</span> ? <span
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本運算子","level":"1.2.3","depth":2,"next":{"title":"字串及字元","level":"1.2.4","depth":2,"path":"ch1/strings_characters.md","ref":"ch1/strings_characters.md","articles":[]},"previous":{"title":"基本型別","level":"1.2.2","depth":2,"path":"ch1/types.md","ref":"ch1/types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/basic_operators.md","mtime":"2017-12-07T04:25:38.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本運算子","level":"1.2.3","depth":2,"next":{"title":"字串及字元","level":"1.2.4","depth":2,"path":"ch1/strings_characters.md","ref":"ch1/strings_characters.md","articles":[]},"previous":{"title":"基本型別","level":"1.2.2","depth":2,"path":"ch1/types.md","ref":"ch1/types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/basic_operators.md","mtime":"2018-11-16T11:01:32.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1591,10 +1618,6 @@ newScore = newScore + (newScore &lt; <span class="hljs-number">60</span> ? <span
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

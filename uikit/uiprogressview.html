@@ -1290,10 +1290,6 @@
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
 </code></pre>
-<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-</code></pre>
 <h3 id="&#x5EFA;&#x7ACB;-uiprogressview">&#x5EFA;&#x7ACB; UIProgressView</h3>
 <p>&#x5148;&#x5728;<code>viewDidload</code>&#x88E1;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x9577;&#x689D;&#x9032;&#x5EA6;&#x689D; UIProgressView &#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB;&#x4E00;&#x500B; UIProgressView</span>
@@ -1358,7 +1354,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <span class="hljs-keyword">self</span>.clickButton()
 </code></pre>
 <p>&#x63A5;&#x8457;&#x662F;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">clickButton</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">clickButton</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x9032;&#x5EA6;&#x63A8;&#x9032;&#x6642;&#x8B93;&#x6309;&#x9215;&#x7121;&#x6CD5;&#x4F5C;&#x7528;</span>
     myButton.isEnabled = <span class="hljs-literal">false</span>
 
@@ -1386,7 +1382,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <li>repeats&#xFF1A;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x91CD;&#x8907;&#x57F7;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x586B;<code>false</code>&#x5247;&#x662F;&#x57F7;&#x884C;&#x4E00;&#x6B21;&#x5373;&#x4E0D;&#x518D;&#x52D5;&#x4F5C;&#x3002;</li>
 </ul>
 <p>&#x5728;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#xFF0C;&#x5C31;&#x6703;&#x555F;&#x52D5;&#x4E00;&#x500B; Timer &#xFF0C;&#x4EE5;&#x4E0B;&#x5247;&#x662F;&#x9019;&#x500B;&#x8A08;&#x6642;&#x5668;&#x5B9A;&#x6642;&#x57F7;&#x884C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">showProgress</span><span class="hljs-params">(<span class="hljs-number">_</span> sender: Timer)</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">showProgress</span><span class="hljs-params">(<span class="hljs-number">_</span> sender: Timer)</span></span> {
     <span class="hljs-comment">// &#x4EE5;&#x4E00;&#x500B;&#x8A08;&#x6578;&#x5668;&#x6A21;&#x64EC;&#x80CC;&#x666F;&#x8655;&#x7406;&#x7684;&#x52D5;&#x4F5C;</span>
     <span class="hljs-built_in">count</span> += <span class="hljs-number">5</span>
 
@@ -1400,7 +1396,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         <span class="hljs-keyword">var</span> info = 
           sender.userInfo <span class="hljs-keyword">as</span>? 
             <span class="hljs-type">Dictionary</span>&lt;<span class="hljs-type">String</span>, <span class="hljs-type">AnyObject</span>&gt;
-        <span class="hljs-built_in">print</span>(info?[<span class="hljs-string">&quot;test&quot;</span>])
+        <span class="hljs-built_in">print</span>(info?[<span class="hljs-string">&quot;test&quot;</span>] ?? <span class="hljs-string">&quot;&quot;</span>)
 
         <span class="hljs-comment">// &#x91CD;&#x8A2D;&#x8A08;&#x6578;&#x5668;&#x53CA; Timer &#x4F9B;&#x4E0B;&#x6B21;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x6E2C;&#x8A66;</span>
         <span class="hljs-built_in">count</span> = <span class="hljs-number">0</span>
@@ -1462,7 +1458,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"進度條 UIProgressView","level":"1.4.12","depth":2,"next":{"title":"滑桿 UISlider","level":"1.4.13","depth":2,"path":"uikit/uislider.md","ref":"uikit/uislider.md","articles":[]},"previous":{"title":"分段控制 UISegmentedControl","level":"1.4.11","depth":2,"path":"uikit/uisegmentedcontrol.md","ref":"uikit/uisegmentedcontrol.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiprogressview.md","mtime":"2017-12-07T04:25:38.671Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"進度條 UIProgressView","level":"1.4.12","depth":2,"next":{"title":"滑桿 UISlider","level":"1.4.13","depth":2,"path":"uikit/uislider.md","ref":"uikit/uislider.md","articles":[]},"previous":{"title":"分段控制 UISegmentedControl","level":"1.4.11","depth":2,"path":"uikit/uisegmentedcontrol.md","ref":"uikit/uisegmentedcontrol.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiprogressview.md","mtime":"2017-11-14T10:14:58.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1470,10 +1466,6 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

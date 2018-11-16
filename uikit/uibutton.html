@@ -1277,11 +1277,8 @@
 <p>&#x6309;&#x9215;&#x662F;&#x6700;&#x5E38;&#x898B;&#x7684;&#x63A7;&#x5236;&#x5143;&#x4EF6;&#xFF0C;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x5F8C;&#x53EF;&#x4EE5;&#x57F7;&#x884C;&#x8A31;&#x591A;&#x52D5;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x9001;&#x51FA;&#x8868;&#x55AE;&#x3001;&#x5207;&#x63DB;&#x9801;&#x9762;&#x7B49;&#x7B49;&#xFF0C;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;&#x4E92;&#x52D5;&#x5E7E;&#x4E4E;&#x90FD;&#x8207; UIButton &#x6709;&#x95DC;&#xFF0C;&#x662F;&#x4E0D;&#x53EF;&#x7F3A;&#x5C11;&#x7684;&#x5143;&#x4EF6;&#x3002;&#x672C;&#x7BC0;&#x7684;&#x76EE;&#x6A19;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><img src="../images/uikit/uibutton/uibutton01.png" alt="uibutton01"></p>
 <p>&#x9996;&#x5148;&#x5728; Xcode &#x88E1;&#xFF0C;<a href="../more/open_project.html#create_a_new_project">&#x65B0;&#x5EFA;&#x4E00;&#x500B; <strong>Single View Application</strong> &#x985E;&#x578B;&#x7684;&#x5C08;&#x6848;</a>&#xFF0C;&#x53D6;&#x540D;&#x70BA; ExUIButton &#x3002;</p>
-<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x53CA;&#x8A2D;&#x7F6E;<code>self.view</code>&#x7684;&#x5E95;&#x8272;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-
-<span class="hljs-comment">// &#x70BA;&#x57FA;&#x5E95;&#x7684; self.view &#x8A2D;&#x7F6E;&#x5E95;&#x8272;</span>
+<p>&#x4E00;&#x958B;&#x59CB;&#x5148;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x8A2D;&#x7F6E;<code>self.view</code>&#x7684;&#x5E95;&#x8272;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x70BA;&#x57FA;&#x5E95;&#x7684; self.view &#x8A2D;&#x7F6E;&#x5E95;&#x8272;</span>
 <span class="hljs-keyword">self</span>.view.backgroundColor = <span class="hljs-type">UIColor</span>.white
 </code></pre>
 <h3 id="&#x5EFA;&#x7ACB;&#x9810;&#x8A2D;&#x6A23;&#x5F0F;&#x7684;&#x6309;&#x9215;">&#x5EFA;&#x7ACB;&#x9810;&#x8A2D;&#x6A23;&#x5F0F;&#x7684;&#x6309;&#x9215;</h3>
@@ -1342,7 +1339,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
 <li><code>#selector()</code>&#x4E5F;&#x53EF;&#x4EE5;&#x586B;&#x5165;&#x9700;&#x8981;&#x53C3;&#x6578;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x50CF;&#x662F;<code>clickButton(_:)</code>&#x6216;&#x662F;<code>clickButton(_:otherSender:)</code>&#xFF0C;&#x8ACB;&#x518D;&#x53E6;&#x5916;&#x5B9A;&#x7FA9;&#x9019;&#x5169;&#x500B;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8ACB;&#x8A18;&#x5F97;&#x65B9;&#x6CD5;(&#x4EE5;&#x53CA;&#x51FD;&#x5F0F;)&#x5C31;&#x7B97;&#x540D;&#x7A31;&#x4E00;&#x6A23;&#xFF0C;&#x53C3;&#x6578;&#x4E0D;&#x540C;&#x7684;&#x8A71;&#x4E5F;&#x662F;&#x4EE3;&#x8868;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x66F4;&#x591A;&#x51FD;&#x5F0F;&#x8AAA;&#x660E;&#x8ACB;&#x53C3;&#x8003;<a href="../ch1/functions.html">&#x51FD;&#x5F0F;</a>&#x7AE0;&#x7BC0;&#x3002;</li>
 </ul>
 <p>&#x63A5;&#x8457;&#x5247;&#x662F;&#x70BA;<code>ViewController</code>&#x65B0;&#x589E;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x9700;&#x8981;&#x7684;&#x65B9;&#x6CD5;<code>clickButton()</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">clickButton</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">clickButton</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x70BA;&#x57FA;&#x5E95;&#x7684; self.view &#x7684;&#x5E95;&#x8272;&#x5728;&#x9ED1;&#x8272;&#x8207;&#x767D;&#x8272;&#x5169;&#x8005;&#x9593;&#x5207;&#x63DB;</span>
     <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.view.backgroundColor!.isEqual(
       <span class="hljs-type">UIColor</span>.white) {
@@ -1401,7 +1398,7 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"按鈕 UIButton","level":"1.4.5","depth":2,"next":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"path":"uikit/uialertcontroller.md","ref":"uikit/uialertcontroller.md","articles":[]},"previous":{"title":"輸入多行文字 UITextView","level":"1.4.4","depth":2,"path":"uikit/uitextview.md","ref":"uikit/uitextview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uibutton.md","mtime":"2017-12-07T04:25:38.661Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"按鈕 UIButton","level":"1.4.5","depth":2,"next":{"title":"提示框 UIAlertController","level":"1.4.6","depth":2,"path":"uikit/uialertcontroller.md","ref":"uikit/uialertcontroller.md","articles":[]},"previous":{"title":"輸入多行文字 UITextView","level":"1.4.4","depth":2,"path":"uikit/uitextview.md","ref":"uikit/uitextview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uibutton.md","mtime":"2017-11-13T09:07:41.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1409,10 +1406,6 @@ myButton.center = <span class="hljs-type">CGPoint</span>(
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

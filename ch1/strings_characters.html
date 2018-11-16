@@ -1276,6 +1276,7 @@
                                 <h1 id="&#x5B57;&#x4E32;&#x53CA;&#x5B57;&#x5143;">&#x5B57;&#x4E32;&#x53CA;&#x5B57;&#x5143;</h1>
 <ul>
 <li><a href="#string_literal">&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;</a></li>
+<li><a href="#multiline_string_literal">&#x591A;&#x884C;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;</a></li>
 <li><a href="#initializing_an_empty_string">&#x521D;&#x59CB;&#x5316;&#x7A7A;&#x5B57;&#x4E32;</a></li>
 <li><a href="#string_mutability">&#x5B57;&#x4E32;&#x53EF;&#x8B8A;&#x6027;</a></li>
 <li><a href="#working_with_characters">&#x4F7F;&#x7528;&#x5B57;&#x5143;</a></li>
@@ -1291,6 +1292,16 @@
 <p>&#x5728;&#x7A0B;&#x5F0F;&#x78BC;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x6BB5;&#x9810;&#x5148;&#x5B9A;&#x7FA9;&#x7684;&#x5B57;&#x4E32;&#x503C;&#x4F5C;&#x70BA;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;(<code>string literal</code>)&#x3002;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x662F;&#x7531;&#x4E00;&#x5C0D;&#x96D9;&#x5F15;&#x865F;<code>&quot;&quot;</code>&#x5305;&#x8457;&#x7684;&#x5177;&#x6709;&#x56FA;&#x5B9A;&#x9806;&#x5E8F;&#x7684;&#x6587;&#x5B57;&#x5B57;&#x5143;&#x96C6;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x70BA;&#x5E38;&#x6578;&#x548C;&#x8B8A;&#x6578;&#x63D0;&#x4F9B;&#x521D;&#x59CB;&#x503C;&#x3002;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5C07;&#x4E00;&#x500B;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x6307;&#x6D3E;&#x7D66;&#x4E00;&#x500B;&#x5E38;&#x6578;</span>
 <span class="hljs-keyword">let</span> someString = <span class="hljs-string">&quot;Some string literal value&quot;</span>
+</code></pre>
+<p><a id="multiline_string_literal"></a></p>
+<h3 id="&#x591A;&#x884C;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;">&#x591A;&#x884C;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B57;&#x4E32;&#x9700;&#x8981;&#x4EE5;&#x591A;&#x884C;&#x986F;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x524D;&#x5F8C;&#x6210;&#x5C0D;&#x7684;&#x4E09;&#x500B;&#x96D9;&#x5F15;&#x865F;<code>&quot;&quot;&quot;</code>&#x5305;&#x8D77;&#x4F86;&#xFF0C;&#x4F86;&#x8868;&#x793A;&#x4E00;&#x500B;&#x591A;&#x884C;&#x5B57;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-swift">// &#x986F;&#x793A;&#x591A;&#x884C;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;
+let someMultiLineString = &quot;&quot;&quot;
+&#x591A;&#x884C;&#x6587;&#x5B57;
+&#x4E5F;&#x5C31;&#x662F;&#x591A;&#x884C;&#x5B57;&#x4E32;&#x5B57;&#x9762;&#x91CF;
+&#x53EF;&#x4EE5;&#x4E00;&#x4F75;&#x986F;&#x793A;
+&quot;&quot;&quot;
 </code></pre>
 <p><a id="initializing_an_empty_string"></a></p>
 <h3 id="&#x521D;&#x59CB;&#x5316;&#x7A7A;&#x5B57;&#x4E32;">&#x521D;&#x59CB;&#x5316;&#x7A7A;&#x5B57;&#x4E32;</h3>
@@ -1312,7 +1323,7 @@ variableString = <span class="hljs-string">&quot;Book&quot;</span>
 <p><a id="working_with_characters"></a></p>
 <h3 id="&#x4F7F;&#x7528;&#x5B57;&#x5143;">&#x4F7F;&#x7528;&#x5B57;&#x5143;</h3>
 <p>&#x5B57;&#x4E32;&#x662F;&#x6709;&#x5E8F;&#x7684;&#x5B57;&#x5143;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>for-in</code>&#x8FF4;&#x5708;&#x4F86;&#x904D;&#x6B77;&#x5B57;&#x4E32;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x500B;&#x5B57;&#x5143;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-keyword">for</span> character <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;Dog!&quot;</span>.characters {
+<pre><code class="lang-swift"><span class="hljs-keyword">for</span> character <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;Dog!&quot;</span> {
     <span class="hljs-built_in">print</span>(character)
 }
 <span class="hljs-comment">// &#x4F9D;&#x5E8F;&#x5370;&#x51FA;</span>
@@ -1365,7 +1376,7 @@ anotherStr += <span class="hljs-string">&quot; Have a nice day .&quot;</span>
 <pre><code class="lang-swift"><span class="hljs-keyword">let</span> str2 = <span class="hljs-string">&quot;What a lovely day !&quot;</span>
 
 <span class="hljs-comment">// &#x5370;&#x51FA;&#x5B57;&#x5143;&#x6578;&#x91CF;&#xFF1A;19</span>
-<span class="hljs-built_in">print</span>(str2.characters.<span class="hljs-built_in">count</span>)
+<span class="hljs-built_in">print</span>(str2.<span class="hljs-built_in">count</span>)
 </code></pre>
 <p><a id="comparing_strings"></a></p>
 <h3 id="&#x6BD4;&#x8F03;&#x5B57;&#x4E32;">&#x6BD4;&#x8F03;&#x5B57;&#x4E32;</h3>
@@ -1399,8 +1410,8 @@ anotherStr += <span class="hljs-string">&quot; Have a nice day .&quot;</span>
 }
 <span class="hljs-comment">// &#x5370;&#x51FA;&#xFF1A;Failure</span>
 </code></pre>
-<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;<code>str.characters</code>&#x3001;<code>str.characters.count</code>&#x6216;&#x662F;<code>str.hasPrefix()</code>&#x9019;&#x7A2E;&#x4EE5;&#x5C0F;&#x6578;&#x9EDE;<code>.</code>&#x9023;&#x63A5;&#x7684;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x7684;&#x5C6C;&#x6027;&#x6216;&#x662F;&#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x6703;&#x4F9D;&#x7167;&#x5176;&#x8A2D;&#x5B9A;&#x7684;&#x898F;&#x5247;&#x8868;&#x793A;&#xFF0C;&#x50CF;&#x662F;<code>str.characters</code>&#x5C31;&#x662F;&#x9019;&#x500B;&#x5B57;&#x4E32;&#x7684;&#x5B57;&#x5143;&#x96C6;&#x5408;&#xFF0C;<code>str.characters.count</code>&#x662F;&#x5B57;&#x5143;&#x96C6;&#x5408;&#x7684;&#x5B57;&#x5143;&#x6578;&#x91CF;&#x3002;&#x800C;<code>str.hasPrefix()</code>&#x5247;&#x662F;&#x6703;&#x5C0D;&#x8B8A;&#x6578;&#x4F5C;&#x8655;&#x7406;&#x5F8C;&#x518D;&#x8FD4;&#x56DE;&#x3002;&#x5F80;&#x5F8C;&#x6703;&#x5F88;&#x5E38;&#x898B;&#x5230;&#x9019;&#x7A2E;&#x7528;&#x6CD5;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;<code>str.count</code>&#x6216;&#x662F;<code>str.hasPrefix()</code>&#x9019;&#x7A2E;&#x4EE5;&#x5C0F;&#x6578;&#x9EDE;<code>.</code>&#x9023;&#x63A5;&#x7684;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x7684;&#x5C6C;&#x6027;&#x6216;&#x662F;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x6703;&#x4F9D;&#x7167;&#x5176;&#x8A2D;&#x5B9A;&#x7684;&#x898F;&#x5247;&#x8868;&#x793A;&#xFF0C;&#x50CF;&#x662F;<code>str.count</code>&#x662F;&#x5B57;&#x5143;&#x96C6;&#x5408;&#x7684;&#x5B57;&#x5143;&#x6578;&#x91CF;&#x3002;&#x800C;<code>str.hasPrefix()</code>&#x5247;&#x662F;&#x6703;&#x5C0D;&#x8B8A;&#x6578;&#x4F5C;&#x8655;&#x7406;&#x5F8C;&#x518D;&#x8FD4;&#x56DE;&#x3002;&#x5F80;&#x5F8C;&#x6703;&#x5F88;&#x5E38;&#x898B;&#x5230;&#x9019;&#x7A2E;&#x7528;&#x6CD5;&#x3002;</p>
 <h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
 <p>&#x672C;&#x7BC0;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x5728; <a href="https://github.com/itisjoe/swiftgo_files/tree/master/ch1/strings_characters.playground" target="_blank">ch1/strings_characters.playground</a></p>
 
@@ -1446,7 +1457,7 @@ anotherStr += <span class="hljs-string">&quot; Have a nice day .&quot;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字串及字元","level":"1.2.4","depth":2,"next":{"title":"集合型別","level":"1.2.5","depth":2,"path":"ch1/collection_types.md","ref":"ch1/collection_types.md","articles":[]},"previous":{"title":"基本運算子","level":"1.2.3","depth":2,"path":"ch1/basic_operators.md","ref":"ch1/basic_operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/strings_characters.md","mtime":"2017-12-07T04:25:38.606Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字串及字元","level":"1.2.4","depth":2,"next":{"title":"集合型別","level":"1.2.5","depth":2,"path":"ch1/collection_types.md","ref":"ch1/collection_types.md","articles":[]},"previous":{"title":"基本運算子","level":"1.2.3","depth":2,"path":"ch1/basic_operators.md","ref":"ch1/basic_operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1/strings_characters.md","mtime":"2017-10-31T07:39:46.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1454,10 +1465,6 @@ anotherStr += <span class="hljs-string">&quot; Have a nice day .&quot;</span>
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

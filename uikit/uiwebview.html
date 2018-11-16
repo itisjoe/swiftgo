@@ -1290,11 +1290,8 @@
     <span class="hljs-comment">// &#x7701;&#x7565;</span>
 }
 </code></pre>
-<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x5C3A;&#x5BF8;&#x8DDF;&#x9810;&#x8A2D;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// &#x53D6;&#x5F97;&#x87A2;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;</span>
-<span class="hljs-keyword">let</span> fullScreenSize = <span class="hljs-type">UIScreen</span>.main.bounds.size
-
-<span class="hljs-comment">// &#x9810;&#x8A2D;&#x5C3A;&#x5BF8;</span>
+<p>&#x4EE5;&#x53CA;&#x5728;<code>viewDidLoad()</code>&#x4E2D;&#x53D6;&#x5F97;&#x9810;&#x8A2D;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F8C;&#x7E8C;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x9810;&#x8A2D;&#x5C3A;&#x5BF8;</span>
 <span class="hljs-keyword">let</span> goWidth = <span class="hljs-number">100.0</span>
 <span class="hljs-keyword">let</span> actionWidth =
   ( <span class="hljs-type">Double</span>(fullScreenSize.width) - goWidth ) / <span class="hljs-number">4</span>
@@ -1376,22 +1373,22 @@ myTextField.delegate = <span class="hljs-keyword">self</span>
 }
 </code></pre>
 <p>&#x518D;&#x65BC;<code>ViewController</code>&#x4E2D;&#xFF0C;&#x5C07;&#x6309;&#x4E0B;&#x6309;&#x9215;&#x53CA;&#x9375;&#x76E4;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#x52A0;&#x5165;&#xFF1A;</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">back</span><span class="hljs-params">()</span></span> {
+<pre><code class="lang-swift"><span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">back</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x4E0A;&#x4E00;&#x9801;</span>
     myWebView.goBack()
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">forward</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">forward</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x4E0B;&#x4E00;&#x9801;</span>
     myWebView.goForward()
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reload</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reload</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x91CD;&#x65B0;&#x8B80;&#x53D6;</span>
     myWebView.reload()
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x53D6;&#x6D88;&#x8B80;&#x53D6;</span>
     myWebView.stopLoading()
 
@@ -1399,7 +1396,7 @@ myTextField.delegate = <span class="hljs-keyword">self</span>
     myActivityIndicator.stopAnimating()
 }
 
-<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">go</span><span class="hljs-params">()</span></span> {
+<span class="hljs-meta">@objc</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">go</span><span class="hljs-params">()</span></span> {
     <span class="hljs-comment">// &#x96B1;&#x85CF;&#x9375;&#x76E4;</span>
     <span class="hljs-keyword">self</span>.view.endEditing(<span class="hljs-literal">true</span>)
 
@@ -1416,7 +1413,7 @@ myTextField.delegate = <span class="hljs-keyword">self</span>
 }
 </code></pre>
 <h3 id="&#x5EFA;&#x7ACB;-wkwebview">&#x5EFA;&#x7ACB; WKWebView</h3>
-<p>&#x5728;<code>viewDidLoad()</code>&#x88E1;&#x5EFA;&#x7ACB; WKWebView &#x4EE5;&#x53CA;&#x8B80;&#x53D6;&#x7DB2;&#x9801;&#x6642;&#x986F;&#x793A;&#x7684;&#x74B0;&#x72C0;&#x9032;&#x5EA6;&#x689D;&#x3002;&#x5728;<code>viewDidLoad()</code>&#x7684;&#x6700;&#x5F8C;&#x5148;&#x8B80;&#x53D6;&#x4E00;&#x6B21;&#x7DB2;&#x5740;&#xFF1A;</p>
+<p>&#x5728;<code>viewDidLoad()</code>&#x88E1;&#x5EFA;&#x7ACB; WKWebView &#x4EE5;&#x53CA;&#x8B80;&#x53D6;&#x7DB2;&#x9801;&#x6642;&#x986F;&#x793A;&#x7684;&#x74B0;&#x72C0;&#x9032;&#x5EA6;&#x689D;&#x3002;&#x5728;<code>viewDidLoad()</code>&#x7684;&#x6700;&#x5F8C;&#xFF0C;&#x5148;&#x8B80;&#x53D6;&#x4E00;&#x6B21;&#x7DB2;&#x5740;&#xFF1A;</p>
 <pre><code class="lang-swift"><span class="hljs-comment">// &#x5EFA;&#x7ACB; WKWebView</span>
 myWebView = <span class="hljs-type">WKWebView</span>(frame: <span class="hljs-type">CGRect</span>(
     x: <span class="hljs-number">0</span>, y: <span class="hljs-number">60.0</span> + <span class="hljs-type">CGFloat</span>(actionWidth), 
@@ -1475,17 +1472,6 @@ myActivityIndicator.center = <span class="hljs-type">CGPoint</span>(
   <span class="hljs-string">&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World !&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>
 myWebView.loadHTMLString(content, baseURL: <span class="hljs-literal">nil</span>)
 </code></pre>
-<p><a name="http"></a></p>
-<h3 id="&#x7121;&#x6CD5;&#x8F09;&#x5165;-http-&#x7684;&#x7DB2;&#x5740;">&#x7121;&#x6CD5;&#x8F09;&#x5165; http &#x7684;&#x7DB2;&#x5740;</h3>
-<p>&#x5728; iOS 9 &#x4E4B;&#x5F8C;&#xFF0C;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x5167;&#x7684; WKWebView &#x9810;&#x8A2D;&#x70BA;&#x53EA;&#x80FD;&#x8F09;&#x5165; https &#x7684;&#x7DB2;&#x9801;(&#x4E5F;&#x5C31;&#x662F;&#x52A0;&#x5BC6;&#x904E;&#x7684;)&#xFF0C;&#x5982;&#x679C;&#x662F;&#x666E;&#x901A; http &#x7684;&#x7DB2;&#x9801;&#x6703;&#x7121;&#x6CD5;&#x958B;&#x555F;&#xFF0C;&#x9019;&#x908A;&#x4ECB;&#x7D39;&#x5982;&#x4F55;&#x8A2D;&#x5B9A;&#x6210;&#x53EF;&#x958B;&#x555F; http &#x7DB2;&#x9801;&#x3002;</p>
-<p>&#x9996;&#x5148;&#x5728; Xcode &#x5DE6;&#x5074;&#x5C08;&#x6848;&#x7684;&#x6A94;&#x6848;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x627E;&#x5230; info.plist &#x4E26;&#x9EDE;&#x958B;&#xFF0C;&#x5728;&#x5176;&#x5167;&#x7A7A;&#x767D;&#x8655;&#x9EDE;&#x53F3;&#x9375;&#xFF0C;&#x63A5;&#x8457;&#x6309;&#x4E0B;<code>Add Row</code>&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
-<p><img src="../images/uikit/uiwebview/uiwebview02.png" alt="uiwebview02"></p>
-<p>&#x63A5;&#x8457;&#x4ED6;&#x6703;&#x591A;&#x51FA;&#x4E00;&#x5217;&#xFF0C;&#x4E26;&#x8981;&#x4F60;&#x586B;&#x5BEB;&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#xFF1A;</p>
-<p><img src="../images/uikit/uiwebview/uiwebview03.png" alt="uiwebview03"></p>
-<p>&#x5148;&#x586B;&#x5165;<code>NSAppTransportSecurity</code>&#xFF0C;&#x518D;&#x5C0D;&#x525B;&#x65B0;&#x589E;&#x7684;&#x9019;&#x5217;&#x6309;&#x53F3;&#x9375;&#x9EDE;&#x9078;<code>Add Row</code>&#xFF0C;&#x586B;&#x5165;<code>NSAllowsArbitraryLoads</code>&#x4E26;&#x8A2D;&#x70BA;<code>YES</code>&#xFF0C;&#x6700;&#x5F8C;&#x6703;&#x8B8A;&#x6210;&#x5982;&#x4E0B;&#x5716;&#x6240;&#x793A;(&#x586B;&#x5165;&#x7684;&#x503C;&#x6703;&#x8207;&#x6700;&#x5F8C;&#x986F;&#x793A;&#x7684;&#x5B57;&#x4E0D;&#x540C;&#xFF0C;&#x8ACB;&#x548C;&#x4E0B;&#x5716;&#x88E1;&#x6587;&#x5B57;&#x6BD4;&#x5C0D;&#x662F;&#x5426;&#x8A2D;&#x5B9A;&#x6B63;&#x78BA;)&#xFF1A;</p>
-<p><img src="../images/uikit/uiwebview/uiwebview04.png" alt="uiwebview04"></p>
-<p>&#x9019;&#x6A23;&#x4FBF;&#x8A2D;&#x5B9A;&#x5B8C;&#x6210;&#xFF0C;&#x4F60;&#x7684; WKWebView &#x5C31;&#x53EF;&#x4EE5;&#x8F09;&#x5165; http &#x7DB2;&#x9801;&#x4E86;&#x3002;</p>
-<p>&#x5728; iOS 10 &#x4E4B;&#x5F8C;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x9019;&#x6A23;&#x8A2D;&#x5B9A;&#xFF0C;&#x4F46; Apple &#x5DF2;&#x7D93;&#x9032;&#x4E00;&#x6B65;&#x5730;&#x9650;&#x7E2E;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x7DB2;&#x9801;&#x9023;&#x7DDA;(&#x4E5F;&#x5C31;&#x662F; http &#x7684;&#x7DB2;&#x9801;)&#x3002;&#x7576;&#x4F60;&#x8981;&#x4E0A;&#x67B6;&#x81F3; App Store &#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x9019;&#x500B;&#x8A2D;&#x5B9A;&#xFF0C;&#x4F60;&#x5FC5;&#x9808;&#x8981;&#x6709;&#x5408;&#x7406;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x50CF;&#x662F;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9; API &#x5C1A;&#x672A;&#x63D0;&#x4F9B;&#x52A0;&#x5BC6;&#x9023;&#x7DDA;(&#x5373; https )&#xFF0C;&#x624D;&#x6709;&#x53EF;&#x80FD;&#x6703;&#x901A;&#x904E;&#xFF0C;&#x7576;&#x7136;&#x5982;&#x679C;&#x662F;&#x9023;&#x7DDA;&#x81F3;&#x81EA;&#x5BB6;&#x9060;&#x7AEF;&#x4E3B;&#x6A5F;&#x800C;&#x5C1A;&#x672A;&#x8A2D;&#x7F6E; https &#xFF0C;&#x9019;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x7121;&#x6CD5;&#x901A;&#x904E;&#x7684;&#x3002;&#x89E3;&#x6C7A;&#x7684;&#x65B9;&#x6CD5;&#x7576;&#x7136;&#x662F;&#x5118;&#x5FEB;&#x5C07;&#x6240;&#x6709;&#x9060;&#x7AEF;&#x4E3B;&#x6A5F;&#x90FD;&#x8A2D;&#x7F6E;&#x597D; https &#xFF0C;&#x672A;&#x4F86;&#x4E00;&#x5B9A;&#x662F;&#x671D;&#x53EA;&#x80FD;&#x9023;&#x7DDA;&#x81F3;&#x52A0;&#x5BC6;&#x7DB2;&#x9801;&#x4F86;&#x524D;&#x9032;&#x7684;&#x3002;</p>
 <h3 id="&#x5716;&#x7247;&#x4F86;&#x6E90;">&#x5716;&#x7247;&#x4F86;&#x6E90;</h3>
 <ul>
 <li><a href="https://www.iconfinder.com/icons/211686/arrow_back_icon" target="_blank">https://www.iconfinder.com/icons/211686/arrow_back_icon</a></li>
@@ -1538,7 +1524,7 @@ myWebView.loadHTMLString(content, baseURL: <span class="hljs-literal">nil</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"網頁 UIWebView","level":"1.4.15","depth":2,"next":{"title":"表格 UITableView","level":"1.4.16","depth":2,"path":"uikit/uitableview.md","ref":"uikit/uitableview.md","articles":[]},"previous":{"title":"步進器 UIStepper","level":"1.4.14","depth":2,"path":"uikit/uistepper.md","ref":"uikit/uistepper.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiwebview.md","mtime":"2017-12-07T04:25:38.682Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-07T04:28:20.765Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"網頁 UIWebView","level":"1.4.15","depth":2,"next":{"title":"表格 UITableView","level":"1.4.16","depth":2,"path":"uikit/uitableview.md","ref":"uikit/uitableview.md","articles":[]},"previous":{"title":"步進器 UIStepper","level":"1.4.14","depth":2,"path":"uikit/uistepper.md","ref":"uikit/uistepper.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uikit/uiwebview.md","mtime":"2017-11-14T10:36:13.307Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-16T11:02:19.677Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1546,10 +1532,6 @@ myWebView.loadHTMLString(content, baseURL: <span class="hljs-literal">nil</span>
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
